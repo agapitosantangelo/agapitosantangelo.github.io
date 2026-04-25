@@ -856,6 +856,17 @@ h3 {
   border-bottom: 1px solid var(--accent);
 }
 
+/* Manifesto — bold opening line on About page ----------------- */
+.manifesto {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  margin: 0 0 1.75rem;
+}
+
 /* Cross-reference between experiences and projects ----------- */
 .cross-ref {
   margin-top: 0.7rem;
