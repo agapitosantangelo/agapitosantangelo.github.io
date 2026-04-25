@@ -458,6 +458,81 @@ h3 {
 .foot a { color: var(--ink-soft); border: none; }
 .foot a:hover { color: var(--accent-h); }
 
+/* Experience cards (rich variant of timeline) ---------------- */
+.exp-item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.exp-item:last-child { border-bottom: none; }
+
+.exp-date {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.04em;
+  padding-top: 0.2rem;
+}
+.exp-date.current::before {
+  content: "● ";
+  color: #6a8859;
+  font-size: 0.7em;
+  vertical-align: 1px;
+}
+
+.exp-role {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.exp-org {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.005em;
+}
+
+.exp-org a {
+  color: var(--ink-soft);
+  border-bottom: 1px dotted var(--rule);
+}
+.exp-org a:hover { color: var(--accent-h); border-bottom-color: var(--accent-h); }
+
+.exp-org .badge {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.4rem;
+  border: 1px solid var(--rule);
+  color: var(--ink-mute);
+  vertical-align: 1px;
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0.3rem 0 0 0;
+}
+
+.exp-keywords {
+  margin-top: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
 /* Mobile ------------------------------------------------------ */
 @media (max-width: 880px) {
   .shell {
@@ -475,6 +550,7 @@ h3 {
   }
   .page-title { font-size: 2rem; }
   .tl-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
   .skills-grid { grid-template-columns: 1fr; gap: 0.3rem 0; }
   .skills-grid dt { margin-top: 1rem; }
 }

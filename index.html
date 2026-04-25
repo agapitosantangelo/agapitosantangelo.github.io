@@ -1,181 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agapito E. Santangelo · Applied Economist</title>
-  <meta name="description" content="Personal academic site of Agapito Emanuele Santangelo — applied economist working at the intersection of causal inference and digital trace data for policy evaluation.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<title>Agapito E. Santangelo, PhD · Applied Economist</title>
+<meta name="description" content="Personal site of Agapito E. Santangelo, PhD — applied economist using causal inference and digital trace data for policy evaluation. Available in English, Italian, Spanish.">
+<script>
+(function(){
+  var supported = ['en', 'it', 'es'];
+  var browserLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+  var target = supported.indexOf(browserLang) !== -1 ? browserLang : 'en';
+  window.location.replace(target + '/');
+})();
+</script>
+<meta http-equiv="refresh" content="0; url=en/">
+<link rel="canonical" href="https://agapitosantangelo.github.io/en/">
+<link rel="alternate" hreflang="en" href="https://agapitosantangelo.github.io/en/">
+<link rel="alternate" hreflang="it" href="https://agapitosantangelo.github.io/it/">
+<link rel="alternate" hreflang="es" href="https://agapitosantangelo.github.io/es/">
+<style>
+body { font-family: Georgia, serif; max-width: 480px; margin: 4rem auto; padding: 0 2rem; color: #1a1a1a; line-height: 1.6; }
+a { color: #1a3a6e; }
+</style>
 </head>
 <body>
-<div class="shell">
-
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="sidebar">
-    <img class="profile-img" src="assets/profile.jpg" alt="Agapito E. Santangelo">
-
-    <h1 class="name">Agapito E.<br>Santangelo</h1>
-    <p class="tagline">
-      Applied economist. <em>Causal inference</em> &amp; digital methods for policy evaluation.
-    </p>
-
-    <div class="sidebar-block">
-      PhD candidate &mdash; <a href="https://www.unimol.it/english/">University of Molise</a><br>
-      Department of Economics
-    </div>
-
-    <div class="sidebar-block">
-      <a href="mailto:emanuele.santangelo@unimol.it">emanuele.santangelo@unimol.it</a>
-    </div>
-
-    <div class="sidebar-block">
-      <a class="cv-button" href="assets/cv.pdf" target="_blank">Download CV (PDF)</a>
-    </div>
-
-    <div class="sidebar-block" style="margin-top: 1.5rem; font-size: 0.82rem;">
-      <a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ">Google Scholar</a> &nbsp;·&nbsp;
-      <a href="https://orcid.org/0009-0004-5369-1594">ORCID</a> &nbsp;·&nbsp;
-      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a>
-    </div>
-
-    <ul class="nav">
-      <li><a class="current" href="index.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="conferences.html">Talks &amp; Conferences</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="lang-switch">
-      <a href="index.html" class="active">EN</a>
-      <a href="#">IT</a>
-    </div>
-  </aside>
-
-  <!-- ============ MAIN ============ -->
-  <main class="main">
-
-    <h1 class="page-title">About</h1>
-
-    <p class="lead">
-      I am an applied economist working at the intersection of <strong>causal inference</strong> and <strong>digital trace data</strong> for the evaluation of public policies. My research combines difference-in-differences designs, machine learning and text mining applied to large-scale web, social media and administrative data.
-    </p>
-
-    <p>
-      I am currently a PhD candidate in <em>Law and Economics</em> at the <a href="https://www.unimol.it/english/">University of Molise</a> (XXXVIII cycle, expected April&nbsp;2026), with a research stay at the <a href="https://www.upv.es/en">Universitat Politècnica de València</a> under Prof.&nbsp;Josep&nbsp;Domenech. My work has appeared in <em>Scientific&nbsp;Reports</em> and the <em>Accounting, Auditing&nbsp;&amp; Accountability&nbsp;Journal</em>, and has been presented at international venues including CARMA, AISRe, SIE and the EUI Centre for a Digital Society.
-    </p>
-
-    <p>
-      Active research lines cover <strong>EU cohesion policy</strong>, <strong>digital divide and digital public services</strong>, <strong>institutional quality and governance</strong>, and the social determinants of <strong>health and food insecurity</strong>. Across these strands the unifying thread is the use of digital footprints &mdash; web pages, search trends, social platforms &mdash; combined with quasi-experimental methods to recover credible policy effects.
-    </p>
-
-    <div class="callout">
-      &ldquo;Digital traces, when paired with credible identification strategies, turn the web into a laboratory for evaluating the public policies that shape our economies and institutions.&rdquo;
-    </div>
-
-    <!-- Research interests -->
-    <h2>Research interests &amp; methods</h2>
-
-    <dl class="skills-grid">
-      <dt>Research areas</dt>
-      <dd>Policy evaluation; EU cohesion and structural funds; digital divide and digital public services; institutional quality and governance; public economics; health and food security.</dd>
-
-      <dt>Causal inference</dt>
-      <dd>Generalized and staggered Difference-in-Differences; panel data econometrics; bibliometric and quasi-experimental designs.</dd>
-
-      <dt>Machine learning &amp; NLP</dt>
-      <dd>Text mining, word embeddings, supervised classification (best models with AUC&nbsp;~&nbsp;0.91 on policy-relevant tasks).</dd>
-
-      <dt>Digital trace data</dt>
-      <dd>Large-scale web scraping, social media data, high-frequency online data, integration with administrative micro-data.</dd>
-
-      <dt>Tools</dt>
-      <dd>R · Stata · Python · LaTeX</dd>
-    </dl>
-
-    <!-- Education -->
-    <h2>Education</h2>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-date">2022 — 2026</div>
-        <div class="tl-body">
-          <strong>PhD in Law and Economics &mdash; XXXVIII Cycle</strong>
-          <em>University of Molise</em>
-          <p>Public economics · Policy evaluation · Development economics · Data analytics. Visiting scholar at Universitat Politècnica de València (Jan–Jul&nbsp;2024, supervisor: Prof.&nbsp;Josep&nbsp;Domenech).</p>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">2017 — 2019</div>
-        <div class="tl-body">
-          <strong>MSc in Management, Entrepreneurship &amp; Innovation</strong>
-          <em>University of Molise &mdash; LM-77, summa cum laude</em>
-          <p>Microeconomics, macroeconomics, institutional economics, econometrics.</p>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">2019 — 2020</div>
-        <div class="tl-body">
-          <strong>Master in Global Marketing Communication &amp; Made in Italy</strong>
-          <em>Italy USA Foundation</em>
-          <p>International trade, digital strategy, geopolitics.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Awards -->
-    <h2>Awards &amp; credentials</h2>
-    <ul class="entries">
-      <li class="entry">
-        <span class="entry-tag">Award</span>
-        Recognised among the top <strong>1,000 graduates in Italy</strong> for economic disciplines (2019).
-      </li>
-      <li class="entry">
-        <span class="entry-tag">Credential</span>
-        <strong>Chartered Accountant</strong> &mdash; Albo Dottori Commercialisti (2022).
-      </li>
-      <li class="entry">
-        <span class="entry-tag">Credential</span>
-        <strong>Statutory Auditor</strong> &mdash; Italian Ministry of Economy and Finance (2023).
-      </li>
-    </ul>
-
-    <!-- Advanced training -->
-    <h2>Advanced training</h2>
-    <ul class="entries">
-      <li class="entry">
-        <span class="entry-title">Advanced Econometrics &amp; Applied Econometrics and Big Data</span>
-        <span class="entry-venue">LSE Summer School &mdash; Dr.&nbsp;M.&nbsp;Schafgans, Dr.&nbsp;M.&nbsp;Gmeiner; Prof.&nbsp;T.&nbsp;Komarova</span>
-      </li>
-      <li class="entry">
-        <span class="entry-title">Modern Causal Inference: Bridging Theory and Practice</span>
-        <span class="entry-venue">Summer School in Advanced Economics &mdash; Prof.&nbsp;J.&nbsp;M.&nbsp;Wooldridge, Prof.&nbsp;P.&nbsp;Sant'Anna</span>
-      </li>
-      <li class="entry">
-        <span class="entry-title">Introductory Econometrics &amp; Panel Data Econometrics</span>
-        <span class="entry-venue">SIdE &mdash; Prof.&nbsp;G.&nbsp;Calzolari (2024); Prof.&nbsp;M.&nbsp;E.&nbsp;Bontempi, Prof.&nbsp;R.&nbsp;Golinelli, Dr.&nbsp;I.&nbsp;Mammi (2024)</span>
-      </li>
-      <li class="entry">
-        <span class="entry-title">Evaluation of Development Policies</span>
-        <span class="entry-venue">International School for Advanced Training &mdash; Prof.&nbsp;P.&nbsp;Montalbano, Prof.&nbsp;F.&nbsp;C.&nbsp;Rosati, Prof.&nbsp;C.&nbsp;Pietrobelli (2023)</span>
-      </li>
-      <li class="entry">
-        <span class="entry-title">Professional Certificate in Data Science</span>
-        <span class="entry-venue">Harvard Online (2023)</span>
-      </li>
-    </ul>
-
-    <div class="foot">
-      © 2026 Agapito Emanuele Santangelo · Last updated April 2026
-    </div>
-  </main>
-</div>
+<h1 style="font-weight: 500;">Agapito E. Santangelo, PhD</h1>
+<p>Redirecting&hellip; choose your language:</p>
+<p><a href="en/">English</a> &nbsp;·&nbsp; <a href="it/">Italiano</a> &nbsp;·&nbsp; <a href="es/">Español</a></p>
 </body>
 </html>

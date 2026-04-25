@@ -1,156 +1,139 @@
-# Personal academic website — Agapito E. Santangelo
+# Personal academic website — Agapito E. Santangelo, PhD
 
-A static, single-stack personal site (HTML + CSS, no build step, no JavaScript framework). Five pages — About, Research, Teaching, Talks &amp; Conferences, Contact — sharing one stylesheet and one sidebar layout.
+Trilingual static site (English · Italian · Spanish) for the personal academic profile of Agapito E. Santangelo, PhD. Pure HTML + CSS, no build step, no JavaScript framework, no static-site generator. Auto-detects browser language at the root and redirects to the appropriate version.
 
 ## File structure
 
 ```
 website/
-├── index.html          About (home)
-├── research.html       Publications, working papers, conference papers, reports
-├── teaching.html       Teaching activities
-├── conferences.html    Talks & conferences
-├── contact.html        Contact details and online presence
-└── assets/
-    ├── style.css       All styles
-    ├── cv.pdf          Downloadable CV (the LaTeX-built one)
-    └── (profile.jpg)   Place your portrait here, then update the HTML — see below
+├── index.html              # auto-redirects by browser language → en/, it/, or es/
+├── README.md
+├── assets/
+│   ├── style.css           # single stylesheet shared by all pages
+│   ├── cv.pdf              # downloadable CV
+│   └── profile.jpg         # profile picture
+├── en/                     # English version
+│   ├── index.html              About — bio, research interests, professional experience, education
+│   ├── research.html           Publications, working papers, conference papers, reports
+│   ├── teaching.html           Teaching activities
+│   ├── conferences.html        Talks & conferences
+│   └── contact.html            Contact details
+├── it/                     # Italian version (Profilo / Ricerca / Didattica / Talk e Conferenze / Contatti)
+│   └── …same five pages
+└── es/                     # Spanish version (Sobre mí / Investigación / Docencia / Charlas / Contacto)
+    └── …same five pages
 ```
 
----
+## Live URLs
 
-## Things to customize before going live
+- `https://agapitosantangelo.github.io/`        → auto-redirects to your browser's language
+- `https://agapitosantangelo.github.io/en/`     → English
+- `https://agapitosantangelo.github.io/it/`     → Italiano
+- `https://agapitosantangelo.github.io/es/`     → Español
 
-Open the five `.html` files and search-replace these placeholders:
-
-| Placeholder                                | Replace with                                                    |
-|--------------------------------------------|------------------------------------------------------------------|
-| `agapito.santangelo@example.com`           | Your real email (5 occurrences total: one per page)              |
-| `https://orcid.org/` (no ID)               | Your ORCID URL, e.g. `https://orcid.org/0000-0000-0000-0000`     |
-| `https://www.researchgate.net/profile/Agapito-Santangelo` | Your real ResearchGate URL                          |
-| Google Scholar URL (already correct)       | Verify it matches your profile                                   |
-| `Via F. De Sanctis, 86100 Campobasso`      | Your actual office address (only on `contact.html`)              |
-
-### Profile photo
-The sidebar currently shows a placeholder text box with your initials (`AES`). To use a real photo:
-
-1. Save a square portrait as `assets/profile.jpg` (recommended: 600×600 px, JPG or WebP).
-2. In each `.html` file, replace:
-   ```html
-   <div class="profile-img placeholder" aria-label="Profile picture placeholder">AES</div>
-   ```
-   with:
-   ```html
-   <img class="profile-img" src="assets/profile.jpg" alt="Agapito E. Santangelo">
-   ```
-
-### Italian version (optional)
-The language switcher at the bottom of the sidebar links to a non-existent `IT` page. Either:
-- Remove the IT link until you build it, or
-- Duplicate the five HTML files in an `it/` subfolder and translate the content. Update the relative links accordingly.
+The language switcher at the bottom of every sidebar lets visitors switch language while staying on the same page.
 
 ---
 
-## How to view it locally
+## How to deploy this update onto your existing GitHub Pages repo
 
-Just open `index.html` in your browser. No build step, no server needed:
+You already have the site live at `https://agapitosantangelo.github.io/` from the earlier (single-language) version. This update **restructures everything** into language folders. To deploy cleanly:
 
-```bash
-cd website
-xdg-open index.html      # Linux
-open index.html          # macOS
-start index.html         # Windows
+### Step 1 — Delete the orphan files from the previous version
+
+Open <https://github.com/agapitosantangelo/agapitosantangelo.github.io>. The four files below at the root level are no longer needed (their replacements live inside `en/`, `it/`, `es/`). Delete them one by one:
+
+1. Click on `research.html` → click the trash icon (top right) → "Commit changes"
+2. Same for `teaching.html`
+3. Same for `conferences.html`
+4. Same for `contact.html`
+
+Don't worry about `index.html`, `README.md`, or the files inside `assets/` — those will be overwritten by the upload in step 2.
+
+### Step 2 — Upload the new contents
+
+Extract this ZIP to a folder on your computer. You should see:
+
+```
+index.html      assets/      en/      it/      es/      README.md
 ```
 
-For a slightly better local experience (so the relative paths behave like in production):
+In the GitHub repo, click `Add file → Upload files`, then drag the **contents** of the extracted folder (NOT the wrapping folder itself) onto the upload zone:
 
-```bash
-cd website
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
+- `index.html` (the auto-redirect)
+- `README.md`
+- the `assets/` folder
+- the `en/`, `it/`, `es/` folders
 
----
+GitHub uploads everything, including subfolders, in one go. Wait for the bar to complete. Scroll to the bottom, write a commit message ("Trilingual restructure") and click **Commit changes**.
 
-## How to put it online with GitHub Pages — step by step
+### Step 3 — Wait for the build
 
-GitHub Pages is free, supports custom domains, and is the standard hosting for academic personal sites (the reference site you sent uses exactly this stack).
+GitHub Pages rebuilds automatically. Check progress at the **Actions** tab in the repo: when the workflow `pages build and deployment` shows ✅, the new site is live.
 
-### Option A — recommended: at `agapitosantangelo.github.io`
+### Step 4 — Verify
 
-This gives you a clean URL with no subdirectory.
+Open in a fresh browser window:
 
-1. **Create a GitHub account** if you don't already have one: <https://github.com/signup>. Pick a username close to your name — say `agapitosantangelo` or `aesantangelo`. The username will appear in your URL.
+- <https://agapitosantangelo.github.io/> — should auto-redirect (English on most setups, Italian if your browser language is `it`, Spanish if `es`).
+- <https://agapitosantangelo.github.io/en/> — English homepage
+- <https://agapitosantangelo.github.io/it/> — Italian homepage
+- <https://agapitosantangelo.github.io/es/> — Spanish homepage
 
-2. **Create a new repository** at <https://github.com/new>. Two important fields:
-   - **Repository name**: must be exactly `<your-username>.github.io` (e.g. `agapitosantangelo.github.io`). The trailing `.github.io` is what tells GitHub to serve the repo as a website.
-   - **Visibility**: Public.
-   - Leave "Add a README file" unchecked.
+In each version:
+- The language switcher at the bottom of the sidebar should show the current language as active and the others as clickable links.
+- Clicking the navigation should navigate inside the same language.
+- The CV button and profile picture should load.
 
-3. **Upload the website files**. Two ways:
-
-   **(a) Web upload — easiest, no command line:**
-   - Open the new repository.
-   - Click `Add file → Upload files`.
-   - Drag and drop the **contents** of the `website/` folder (the five `.html` files and the `assets/` folder). Do NOT drag the `website/` folder itself — drop its contents.
-   - Scroll down, write a commit message ("Initial site"), click `Commit changes`.
-
-   **(b) Git CLI — if you'll be updating it often:**
-   ```bash
-   cd website
-   git init
-   git add .
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
-   git push -u origin main
-   ```
-
-4. **Enable GitHub Pages**. In the repository, go to `Settings → Pages`. Under "Build and deployment":
-   - Source: `Deploy from a branch`
-   - Branch: `main`, folder: `/ (root)`
-   - Click `Save`.
-
-5. **Wait 1–2 minutes** for the first build. The `Pages` settings page will show a green banner with the live URL: `https://<your-username>.github.io/`.
-
-That's it. From now on, every time you push or upload a change, the site rebuilds automatically.
-
-### Option B — at `<username>.github.io/site` (project page)
-
-If you want to keep the `<username>.github.io` URL free for something else later, name the repository anything you like (e.g. `web` or `site`). The site will live at `https://<username>.github.io/<repo-name>/`. Same upload steps; same `Settings → Pages → main → /` activation.
-
-**Important:** if you go this route, all relative links inside the HTML will still work fine — they're already relative (`href="research.html"`, not `href="/research.html"`).
-
----
-
-## Custom domain (optional)
-
-If you buy `santangelo.eu` or similar:
-
-1. In the repo: `Settings → Pages → Custom domain` → enter your domain → `Save`.
-2. At your domain registrar, add a CNAME record pointing your domain to `<your-username>.github.io`.
-3. Tick "Enforce HTTPS" once GitHub provisions the certificate (usually within a few minutes).
+If anything looks broken: do a hard reload (Ctrl+Shift+R / Cmd+Shift+R) to bypass browser cache.
 
 ---
 
 ## How to update the site later
 
-Whatever workflow you use:
+### Editing one language
 
-- **Edit a page**: open the relevant `.html` in any editor, change the text, save, and either re-upload via the web or `git commit && git push`.
-- **Replace the CV**: rebuild `cv.pdf` from your LaTeX source, drop it into `assets/`, replacing the old file.
-- **Add a new publication**: open `research.html`, copy an existing `<li class="entry">…</li>` block, paste, edit. The styling is automatic.
+Open the relevant `.html` file in `en/` (or `it/`, `es/`) on GitHub, click the pencil icon, edit, commit. Live in ~60 seconds.
 
-A change is live ~30–90 seconds after pushing.
+### Adding a new publication
+
+Open `en/research.html`, find an existing `<li class="entry">…</li>` block under "Peer-reviewed publications", copy it, paste it as the new top entry, edit the authors / title / venue / link. Then do the same in `it/research.html` and `es/research.html`. The publication metadata (titles, journal names) stays in English; only intro paragraphs and section headings are translated.
+
+### Replacing the CV
+
+Build the new `cv.pdf` from your LaTeX source. Upload it to `assets/cv.pdf` (replacing the old one). All language versions point to the same file at `../assets/cv.pdf`, so one update covers everything.
+
+### Adding a new conference
+
+Edit all three `conferences.html` files (en/it/es). The structure is identical; only the text differs.
 
 ---
 
-## What this is NOT (and why that's fine for now)
+## Things to verify periodically
 
-This site does not use Jekyll, AcademicPages, or any static-site generator. The reference site (`santirimedio.github.io`) uses AcademicPages, which adds:
+- ORCID profile is populated (works, employment, education) — your sidebar links to it from every page.
+- Google Scholar profile reflects all your peer-reviewed work — same.
+- ResearchGate has the latest preprints uploaded.
+- The CV in `assets/cv.pdf` is the latest version.
+- The "expected April 2026" / "Apr 2026" wording remains aligned with reality (when the PhD is officially conferred, you may want to update Education to read "PhD obtained in [month] 2026").
 
-- A sidebar / header / footer template that lives in one file (so you don't update navigation in five places).
-- Markdown for content instead of HTML.
-- A blog / talks / publications collection format with auto-generated index pages.
+---
 
-If at some point you want any of these, the natural upgrade path is to fork [AcademicPages](https://github.com/academicpages/academicpages.github.io) into your `<username>.github.io` repo and migrate the content. Until you have many more publications or want a blog, the static HTML approach here is faster to maintain and won't break.
+## Site mechanics
+
+- **Auto-redirect on root**: a small JS reads `navigator.language`, picks `en`/`it`/`es` if supported, otherwise falls back to English. The `<meta http-equiv="refresh">` is a no-JS fallback.
+- **`<link rel="alternate" hreflang>`** tags are present on every page, telling search engines about the multilingual structure.
+- **No tracking, no cookies, no third-party scripts** beyond Google Fonts (Crimson Pro + Geist).
+- **Mobile responsive** below 880px viewport: sidebar becomes a horizontal banner, content flows below.
+
+---
+
+## Long-term: when to consider Jekyll / AcademicPages
+
+This static structure works well for ≤30 publications and 3 languages. If you reach a point where:
+
+- you find yourself updating the same change in three files repeatedly,
+- you want a blog or a "talks" page with auto-generated index,
+- you want tag-based filtering of publications,
+
+then it's time to migrate to [AcademicPages](https://github.com/academicpages/academicpages.github.io) (the same stack used by `santirimedio.github.io`). The content is portable: keep the same URLs, fork the AcademicPages repo, paste your existing text into Markdown front-matter files, and you're done.
