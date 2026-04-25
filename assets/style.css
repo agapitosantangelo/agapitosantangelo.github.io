@@ -187,26 +187,37 @@ body {
 }
 
 .lang-switch {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
+  display: flex;
+  gap: 0.4rem;
+  margin: 0 0 2rem 0;
+  padding: 0 0 1.2rem 0;
+  border-bottom: 1px solid var(--rule);
   font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--ink-mute);
-  letter-spacing: 0.05em;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
 }
 
 .lang-switch a {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
   color: var(--ink-soft);
   text-decoration: none;
-  margin-right: 0.5rem;
-  border-bottom: 1px dotted var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .lang-switch a.active {
-  color: var(--ink);
-  font-weight: 500;
-  border-bottom-color: var(--accent);
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+  font-weight: 600;
 }
 
 /* Main content ----------------------------------------------- */
@@ -813,6 +824,64 @@ h3 {
   color: var(--ink-mute);
 }
 
+/* Top bar (language switcher) -------------------------------- */
+.top-bar {
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.7rem 2rem;
+}
+.top-bar-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.top-bar a {
+  color: var(--ink-mute);
+  text-decoration: none;
+  border: none;
+  padding: 0.15rem 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.top-bar a:hover { color: var(--accent); }
+.top-bar a.active {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+}
+
+/* Cross-reference between experiences and projects ----------- */
+.cross-ref {
+  margin-top: 0.7rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--rule-soft);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+.cross-ref a {
+  color: var(--accent);
+  border-bottom: 1px dotted var(--accent);
+  font-style: normal;
+  font-weight: 500;
+}
+.cross-ref a:hover {
+  color: var(--accent-h);
+  border-bottom-style: solid;
+}
+
+/* Anchor offset so jumps don't land under top-bar */
+.project[id], .exp-item[id] {
+  scroll-margin-top: 80px;
+}
+
 /* Inline photo on entry list ---------------------------------- */
 .entry-photo {
   margin: 0.7rem 0 0.4rem 0;
@@ -837,6 +906,8 @@ h3 {
 
 /* Mobile ------------------------------------------------------ */
 @media (max-width: 880px) {
+  .top-bar { padding: 0.6rem 1.5rem; }
+  .top-bar-inner { font-size: 0.75rem; gap: 0.8rem; }
   .shell {
     grid-template-columns: 1fr;
   }

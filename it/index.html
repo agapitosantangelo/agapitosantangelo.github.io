@@ -15,6 +15,13 @@
   <link rel="alternate" hreflang="es" href="../es/index.html">
 </head>
 <body>
+<nav class="top-bar" aria-label="Language">
+  <div class="top-bar-inner">
+      <a href="../en/index.html">EN</a>
+      <a class="active">IT</a>
+      <a href="../es/index.html">ES</a>
+  </div>
+</nav>
 <div class="shell">
   <aside class="sidebar">
     <img class="profile-img" src="../assets/profile.jpg" alt="Agapito E. Santangelo">
@@ -30,7 +37,8 @@
     <div class="sidebar-block" style="margin-top: 1.5rem; font-size: 0.82rem;">
       <a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ">Google Scholar</a> &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0004-5369-1594">ORCID</a> &nbsp;·&nbsp;
-      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a>
+      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/">LinkedIn</a>
     </div>
     <ul class="nav">
       <li><a class="current" href="index.html">Profilo</a></li>
@@ -41,18 +49,13 @@
       <li><a href="dissemination.html">Divulgazione</a></li>
       <li><a href="contact.html">Contatti</a></li>
     </ul>
-    <div class="lang-switch">
-      <a href="../en/index.html">EN</a>
-      <a class="active">IT</a>
-      <a href="../es/index.html">ES</a>
-    </div>
   </aside>
   <main class="main">
 
     <h1 class="page-title">Profilo</h1>
 
     <p class="lead">
-      Sono un <strong>economista PhD</strong> che utilizza <strong>inferenza causale</strong> e <strong>dati digitali</strong> per la valutazione delle politiche pubbliche, della digitalizzazione del settore pubblico e della qualità istituzionale. La mia ricerca combina disegni difference-in-differences, machine learning e text mining applicati a dati web, social media e amministrativi su larga scala.
+      Sono un <strong>economista con dottorato di ricerca in Diritto ed Economia</strong>, specializzato nell'applicazione di <strong>metodi di inferenza causale</strong> e <strong>dati digitali</strong> alla valutazione delle politiche pubbliche, della digitalizzazione del settore pubblico e della qualità istituzionale. La mia ricerca combina disegni difference-in-differences, machine learning e text mining applicati a dati web, social media e amministrativi su larga scala.
     </p>
     <div class="latest">
       <span class="latest-label">Aggiornamenti</span>
@@ -82,7 +85,7 @@
 
 
     <p>
-      Ho conseguito il Dottorato di Ricerca in <em>Diritto ed Economia</em> presso l'<a href="https://www.unimol.it/">Università del Molise</a> (XXXVIII ciclo, 2022&ndash;2026), con un periodo di ricerca alla <a href="https://www.upv.es/">Universitat Politècnica de València</a> sotto la supervisione del Prof.&nbsp;Josep&nbsp;Domenech. I miei lavori sono apparsi su <em>Scientific&nbsp;Reports</em> e sull'<em>Accounting, Auditing&nbsp;&amp; Accountability&nbsp;Journal</em>, e sono stati presentati in sedi internazionali tra cui CARMA, AISRe, SIE e il Centre for a Digital Society dell'EUI.
+      Il percorso dottorale è stato svolto presso l'<a href="https://www.unimol.it/">Università del Molise</a> (XXXVIII ciclo, 2022&ndash;2026), con un periodo di ricerca alla <a href="https://www.upv.es/">Universitat Politècnica de València</a> sotto la supervisione del Prof.&nbsp;Josep&nbsp;Domenech. I miei lavori sono apparsi su <em>Scientific&nbsp;Reports</em> e sull'<em>Accounting, Auditing&nbsp;&amp; Accountability&nbsp;Journal</em>, e sono stati presentati in sedi internazionali tra cui CARMA, AISRe, SIE e il Centre for a Digital Society dell'EUI.
     </p>
 
     <p>
@@ -115,13 +118,14 @@
     <h2>Esperienze professionali</h2>
 
     <div class="timeline">
-      <div class="exp-item">
+      <div class="exp-item" id="exp-lazio">
         <div class="exp-date current">Mag 2025 — In corso</div>
         <div>
           <span class="exp-role">Assegnista di ricerca</span>
           <div class="exp-org"><a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a> &mdash; Sistema Statistico Regionale a supporto delle politiche regionali</div>
           <p class="exp-desc">Analisi di policy regionale evidence-based su dati amministrativi, territoriali e di finanza pubblica; valutazione della sostenibilità economica e finanziaria dei comuni nell'ambito dei Conti Pubblici Territoriali (CPT).</p>
           <div class="exp-keywords">Statistica regionale · Finanza locale · Valutazione delle politiche</div>
+          <div class="cross-ref">→ Progetto finanziato: <a href="projects.html#proj-lazio-cpt">Sostenibilità Economica dei Comuni Laziali (CPT)</a></div>
         </div>
       </div>
 
@@ -145,23 +149,25 @@
         </div>
       </div>
 
-      <div class="exp-item">
+      <div class="exp-item" id="exp-prin">
         <div class="exp-date">Mag 2024 — Mag 2025</div>
         <div>
           <span class="exp-role">Assegnista di ricerca — Progetto PRIN</span>
           <div class="exp-org">Università del Molise</div>
           <p class="exp-desc">Ricerca empirica sulla performance del settore pubblico, l'efficienza e l'equità del sistema sanitario italiano nel contesto post-pandemico, con contributi su vincoli di bilancio e disuguaglianze di salute.</p>
           <div class="exp-keywords">Economia sanitaria · Economia pubblica · Disuguaglianze</div>
+          <div class="cross-ref">→ Progetto finanziato: <a href="projects.html#proj-prin-health">Conciliare Efficienza ed Equità nel Sistema Sanitario Italiano</a></div>
         </div>
       </div>
 
-      <div class="exp-item">
+      <div class="exp-item" id="exp-ciat">
         <div class="exp-date">Ago 2023 — Mag 2024</div>
         <div>
           <span class="exp-role">Assegnista di ricerca — Progetto CIAT sull'insicurezza alimentare</span>
           <div class="exp-org">Università del Molise</div>
           <p class="exp-desc">Analisi data-driven dei trend e dei determinanti dell'insicurezza alimentare per l'International Center for Tropical Agriculture, combinando text mining di fonti testuali e indicatori strutturati a supporto delle politiche di sviluppo evidence-based.</p>
           <div class="exp-keywords">Insicurezza alimentare · Sviluppo · Text mining</div>
+          <div class="cross-ref">→ Progetto finanziato: <a href="projects.html#proj-climate-security">Climate Security Observatory</a></div>
         </div>
       </div>
 
@@ -244,22 +250,6 @@
       </li>
     </ul>
 
-    <div class="logo-bar">
-      <span class="logo-bar-label">Affiliazioni e collaborazioni</span>
-      <div class="logo-bar-items">
-                <a href="https://www.unimol.it/">Università del Molise</a>
-        <span class="sep">·</span>
-        <a href="https://www.upv.es/">Universitat Politècnica de València</a>
-        <span class="sep">·</span>
-        <a href="https://www.unifg.it/">Università di Foggia</a>
-        <span class="sep">·</span>
-        <a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a>
-        <span class="sep">·</span>
-        <a href="https://www.instantanalytics.it/">Instant Analytics</a>
-        <span class="sep">·</span>
-        <a href="https://www.eutalia.eu/">Eutalia</a>
-      </div>
-    </div>
     <div class="foot">
       © 2026 Agapito Emanuele Santangelo · Ultimo aggiornamento aprile 2026
     </div>

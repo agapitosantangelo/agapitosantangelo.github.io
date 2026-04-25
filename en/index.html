@@ -15,6 +15,13 @@
   <link rel="alternate" hreflang="es" href="../es/index.html">
 </head>
 <body>
+<nav class="top-bar" aria-label="Language">
+  <div class="top-bar-inner">
+      <a class="active">EN</a>
+      <a href="../it/index.html">IT</a>
+      <a href="../es/index.html">ES</a>
+  </div>
+</nav>
 <div class="shell">
   <aside class="sidebar">
     <img class="profile-img" src="../assets/profile.jpg" alt="Agapito E. Santangelo">
@@ -30,7 +37,8 @@
     <div class="sidebar-block" style="margin-top: 1.5rem; font-size: 0.82rem;">
       <a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ">Google Scholar</a> &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0004-5369-1594">ORCID</a> &nbsp;·&nbsp;
-      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a>
+      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/">LinkedIn</a>
     </div>
     <ul class="nav">
       <li><a class="current" href="index.html">About</a></li>
@@ -41,18 +49,13 @@
       <li><a href="dissemination.html">Dissemination</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="lang-switch">
-      <a class="active">EN</a>
-      <a href="../it/index.html">IT</a>
-      <a href="../es/index.html">ES</a>
-    </div>
   </aside>
   <main class="main">
 
     <h1 class="page-title">About</h1>
 
     <p class="lead">
-      I am a <strong>PhD economist</strong> using <strong>causal inference</strong> and <strong>digital trace data</strong> to evaluate public policies, public-sector digitalization, and institutional quality. My research combines difference-in-differences designs, machine learning, and text mining applied to large-scale web, social media, and administrative data.
+      I am an <strong>economist with a doctoral degree in Law and Economics</strong>, specialised in applying <strong>causal inference methods</strong> and <strong>digital trace data</strong> to the evaluation of public policies, public-sector digitalization, and institutional quality. My research combines difference-in-differences designs, machine learning, and text mining applied to large-scale web, social media, and administrative data.
     </p>
     <div class="latest">
       <span class="latest-label">Latest</span>
@@ -82,7 +85,7 @@
 
 
     <p>
-      I obtained my PhD in <em>Law and Economics</em> at the <a href="https://www.unimol.it/english/">University of Molise</a> (XXXVIII cycle, 2022&ndash;2026), with a research stay at the <a href="https://www.upv.es/en">Universitat Politècnica de València</a> under Prof.&nbsp;Josep&nbsp;Domenech. My work has appeared in <em>Scientific&nbsp;Reports</em> and the <em>Accounting, Auditing&nbsp;&amp; Accountability&nbsp;Journal</em>, and has been presented at international venues including CARMA, AISRe, SIE and the EUI Centre for a Digital Society.
+      My doctoral training was based at the <a href="https://www.unimol.it/english/">University of Molise</a> (XXXVIII cycle, 2022&ndash;2026), with a research stay at the <a href="https://www.upv.es/en">Universitat Politècnica de València</a> under Prof.&nbsp;Josep&nbsp;Domenech. My work has appeared in <em>Scientific&nbsp;Reports</em> and the <em>Accounting, Auditing&nbsp;&amp; Accountability&nbsp;Journal</em>, and has been presented at international venues including CARMA, AISRe, SIE and the EUI Centre for a Digital Society.
     </p>
 
     <p>
@@ -115,13 +118,14 @@
     <h2>Professional experience</h2>
 
     <div class="timeline">
-      <div class="exp-item">
+      <div class="exp-item" id="exp-lazio">
         <div class="exp-date current">May 2025 — Present</div>
         <div>
           <span class="exp-role">Research Assistant</span>
           <div class="exp-org"><a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a> &mdash; Regional Statistical System in Support of Regional Policies</div>
           <p class="exp-desc">Evidence-based regional policy analysis through administrative, territorial and public-finance data; evaluation of municipal economic and financial sustainability under the Territorial Public Accounts framework.</p>
           <div class="exp-keywords">Regional statistics · Municipal finance · Policy evaluation</div>
+          <div class="cross-ref">→ Funded project: <a href="projects.html#proj-lazio-cpt">Economic Sustainability of Lazio Municipalities (CPT)</a></div>
         </div>
       </div>
 
@@ -145,23 +149,25 @@
         </div>
       </div>
 
-      <div class="exp-item">
+      <div class="exp-item" id="exp-prin">
         <div class="exp-date">May 2024 — May 2025</div>
         <div>
           <span class="exp-role">Research Assistant — PRIN Project</span>
           <div class="exp-org">University of Molise</div>
           <p class="exp-desc">Empirical research on public-sector performance, healthcare efficiency and equity in the post-pandemic Italian health system, contributing to outputs on fiscal constraints and health inequality.</p>
           <div class="exp-keywords">Health economics · Public economics · Inequality</div>
+          <div class="cross-ref">→ Funded project: <a href="projects.html#proj-prin-health">Reconciling Efficiency and Equity in the Italian Healthcare System</a></div>
         </div>
       </div>
 
-      <div class="exp-item">
+      <div class="exp-item" id="exp-ciat">
         <div class="exp-date">Aug 2023 — May 2024</div>
         <div>
           <span class="exp-role">Research Assistant — CIAT food insecurity project</span>
           <div class="exp-org">University of Molise</div>
           <p class="exp-desc">Data-driven analysis of food insecurity trends and determinants for the International Center for Tropical Agriculture, combining text mining of textual sources with structured indicators to support evidence-based development policy.</p>
           <div class="exp-keywords">Food insecurity · Development · Text mining</div>
+          <div class="cross-ref">→ Funded project: <a href="projects.html#proj-climate-security">Climate Security Observatory</a></div>
         </div>
       </div>
 
@@ -244,22 +250,6 @@
       </li>
     </ul>
 
-    <div class="logo-bar">
-      <span class="logo-bar-label">Affiliations &amp; collaborations</span>
-      <div class="logo-bar-items">
-                <a href="https://www.unimol.it/">Università del Molise</a>
-        <span class="sep">·</span>
-        <a href="https://www.upv.es/">Universitat Politècnica de València</a>
-        <span class="sep">·</span>
-        <a href="https://www.unifg.it/">Università di Foggia</a>
-        <span class="sep">·</span>
-        <a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a>
-        <span class="sep">·</span>
-        <a href="https://www.instantanalytics.it/">Instant Analytics</a>
-        <span class="sep">·</span>
-        <a href="https://www.eutalia.eu/">Eutalia</a>
-      </div>
-    </div>
     <div class="foot">
       © 2026 Agapito Emanuele Santangelo · Last updated April 2026
     </div>

@@ -15,6 +15,13 @@
   <link rel="alternate" hreflang="es" href="../es/projects.html">
 </head>
 <body>
+<nav class="top-bar" aria-label="Language">
+  <div class="top-bar-inner">
+      <a class="active">EN</a>
+      <a href="../it/projects.html">IT</a>
+      <a href="../es/projects.html">ES</a>
+  </div>
+</nav>
 <div class="shell">
   <aside class="sidebar">
     <img class="profile-img" src="../assets/profile.jpg" alt="Agapito E. Santangelo">
@@ -30,7 +37,8 @@
     <div class="sidebar-block" style="margin-top: 1.5rem; font-size: 0.82rem;">
       <a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ">Google Scholar</a> &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0004-5369-1594">ORCID</a> &nbsp;·&nbsp;
-      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a>
+      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/">LinkedIn</a>
     </div>
     <ul class="nav">
       <li><a href="index.html">About</a></li>
@@ -41,129 +49,108 @@
       <li><a href="dissemination.html">Dissemination</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="lang-switch">
-      <a class="active">EN</a>
-      <a href="../it/projects.html">IT</a>
-      <a href="../es/projects.html">ES</a>
-    </div>
   </aside>
   <main class="main">
 
     <h1 class="page-title">Projects</h1>
 
     <p class="lead">
-      Active research projects at the intersection of <strong>causal policy evaluation</strong> and <strong>digital trace data</strong>. Each project combines a substantive policy question with a methodological contribution &mdash; usually a new use of web, social-media or administrative data integrated with quasi-experimental design.
+      Funded research projects I have contributed to as a member of the scientific team. Each is backed by a formal funding institution, has a defined activity period, and combines a substantive policy or development question with quantitative methods drawing on digital trace data, administrative microdata, machine learning, and causal-inference designs.
     </p>
 
-    <div class="project">
+    <div class="project" id="proj-lazio-cpt">
       <div class="project-header">
-        <h3 class="project-title">EU Cohesion Policy &amp; Digital Public Services</h3>
-        <span class="project-status published">Working paper · In submission</span>
+        <h3 class="project-title">Economic Sustainability of Lazio Municipalities — Territorial Public Accounts (CPT)</h3>
+        <span class="project-status ongoing">Ongoing · 2025–2026</span>
       </div>
-      <p class="project-summary">A causal evaluation of how EU Cohesion funds shape the supply of digital public services across Italian municipalities. Combines large-scale web scraping of municipal websites with administrative funding data; identifies effects through a generalized Difference-in-Differences design exploiting the staggered rollout of cohesion funding.</p>
+      <p class="project-summary">
+        Twelve-month research project on the economic sustainability of municipalities in the Lazio region, framed within the <em>Conti Pubblici Territoriali</em> (Territorial Public Accounts) system. Activities include the update, integration and validation of Lazio CPT data; merging CPT and demographic sources into a unified dataset; estimating the spending theoretically required to guarantee constitutionally protected rights (health, education, mobility); building municipal-level sustainability indicators based on the balance between revenue effectively collected, expenditure effectively incurred and the spending needed; constructing measures of territorial cohesion and divergence within Lazio; and producing forecasting scenarios that combine official ISTAT demographic projections with constitutional-reform and public-investment hypotheses. Activities are partly conducted on-site at the Nucleo CPT Lazio premises in Rome.
+      </p>
       <dl class="project-meta">
-        <dt>With</dt><dd>N. Caravaggio, G. Resce</dd>
-        <dt>Outputs</dt><dd>ESDP No.&nbsp;25100 working paper · CARMA 2024 conference paper · journal submission in progress</dd>
-        <dt>Data</dt><dd>~8,000 Italian municipalities · ESF/ERDF programmes 2014–2020</dd>
+        <dt>Funder</dt><dd>Nucleo regionale CPT Lazio &mdash; FSC 2014–2020 “Strengthening of the Territorial Public Accounts System” (CIPE Resolution 48/2017)</dd>
+        <dt>Period</dt><dd>May 2025 &mdash; May 2026</dd>
+        <dt>PI</dt><dd>Prof.&nbsp;Cecilia&nbsp;Tomassini &mdash; University of Molise (Protocol Regione Lazio – UNIMOL, d.G.r. 837/2024)</dd>
+        <dt>Role</dt><dd>Contributor on scientific activities</dd>
+        <dt>Methods</dt><dd>Public-finance accounting · Demographic forecasting · Territorial cohesion analysis · Municipal sustainability metrics</dd>
       </dl>
-      <div class="project-tags">DiD · Web scraping · EU policy · Public services digitalization</div>
+      <div class="project-tags">Public finance · Municipal sustainability · Territorial cohesion · Lazio · ISTAT projections</div>
+      <div class="cross-ref">→ Related role: <a href="index.html#exp-lazio">Research Assistant, May 2025 — Present</a></div>
     </div>
 
-    <div class="project">
+    <div class="project" id="proj-themia">
       <div class="project-header">
-        <h3 class="project-title">Nowcasting Food Insecurity with Multi-platform Digital Data</h3>
-        <span class="project-status published">Published · Ongoing</span>
+        <h3 class="project-title">THEMIA — THE Mood of Infrastructure&rsquo;s Accessibility</h3>
+        <span class="project-status published">Concluded · 2024–2025</span>
       </div>
-      <p class="project-summary">A multi-platform framework that combines text mining of public discourse, social media data, and structured indicators to nowcast food insecurity at country level. Demonstrates that digital traces can detect food security shocks earlier than traditional survey-based indicators.</p>
+      <p class="project-summary">
+        Assesses infrastructural and territorial accessibility, addressing data challenges for both <em>ex-ante</em> and <em>ex-post</em> evaluations. The project combines real-time activity data from private platforms (Google, Meta, Telegram, X, LinkedIn) with traditional demographic and territorial sources. Machine Learning and Big Data Analytics generate innovative accessibility indicators and predictive models for socio-economic outcomes; user feedback from social networks is integrated into the analysis. Results are released as interactive maps designed for policymakers, practitioners, and citizens, providing a thorough and timely assessment of infrastructure-accessibility policies at the national level in Italy with granular territorial detail.
+      </p>
       <dl class="project-meta">
-        <dt>With</dt><dd>B. Carneiro, G. Resce, G. Tucci, G. Ruscica, N. Caravaggio, L. Fanelli, P. Cruciata, K. Coffey</dd>
+        <dt>Funder</dt><dd>European Union — NextGenerationEU</dd>
+        <dt>Period</dt><dd>October 2024 — October 2025</dd>
+        <dt>PI</dt><dd>Prof.&nbsp;Giuliano&nbsp;Resce &mdash; University of Molise</dd>
+        <dt>Role</dt><dd>Contributor on scientific activities</dd>
+        <dt>Methods</dt><dd>Machine Learning · Big Data Analytics · Text Mining · Predictive modelling · Interactive cartography</dd>
+      </dl>
+      <div class="project-tags">Infrastructure · Accessibility · Digital trace data · Policy evaluation · NextGenerationEU</div>
+    </div>
+
+    <div class="project" id="proj-prin-health">
+      <div class="project-header">
+        <h3 class="project-title">Reconciling Efficiency and Equity in the Italian Healthcare System</h3>
+        <span class="project-status published">Concluded · 2023–2025</span>
+      </div>
+      <p class="project-summary">
+        PRIN 2022 project evaluating the performance of the Italian regional healthcare system over the past two decades along the dimensions of <em>efficiency</em> and <em>equity</em>. Three focus areas: (1) hospital efficiency in the wake of the territorial reorganisation, distinguishing public and private providers and accounting for regional heterogeneity in population needs; (2) equity in access to hospital services through analysis of patient mobility across regions; (3) regional healthcare-expenditure allocation, comparing the central-level method currently in use with a needs-based alternative. The project applies state-of-the-art econometric methods and new microeconomics tools to inform the debate on decentralised healthcare.
+      </p>
+      <dl class="project-meta">
+        <dt>Funder</dt><dd>Italian Ministry of University and Research — National Interest Research Projects (PRIN 2022)</dd>
+        <dt>Period</dt><dd>October 2023 — October 2025</dd>
+        <dt>PI</dt><dd>Prof.&nbsp;Raffaele&nbsp;Lagravinese &mdash; University of Bari Aldo Moro</dd>
+        <dt>Role</dt><dd>Contributor on scientific activities</dd>
+        <dt>Methods</dt><dd>Health-economics microeconomics · Panel-data econometrics · Regional inequality analysis</dd>
+      </dl>
+      <div class="project-tags">Health economics · Public economics · Equity · Hospital efficiency · Italian regions</div>
+      <div class="cross-ref">→ Related role: <a href="index.html#exp-prin">Research Assistant — PRIN Project, May 2024 — May 2025</a></div>
+    </div>
+
+    <div class="project" id="proj-back-in-town">
+      <div class="project-header">
+        <h3 class="project-title">BACK IN TOWN — Industrial Relations and Social Dialogue for Youth Employment</h3>
+        <span class="project-status published">Concluded · 2024–2025</span>
+      </div>
+      <p class="project-summary">
+        EU-funded research collaboration on the role of industrial relations and social dialogue in supporting young people's employment and social inclusion at an urban level. The project covered analysis of the European labour market, of European strategies for youth employment and social inclusion, the production of evidence-based research reports, and the design and creation of an observatory on collective bargaining for young workers.
+      </p>
+      <dl class="project-meta">
+        <dt>Funder</dt><dd>European Commission &mdash; Programme SOCPL-2022-IND-REL (Project GAP 101126432, CUP H93C23001040006)</dd>
+        <dt>Period</dt><dd>2024 &mdash; 2025</dd>
+        <dt>PI</dt><dd>Prof.&nbsp;Francesco&nbsp;Prota &mdash; Università degli Studi di Bari Aldo Moro (Department of Economics and Finance)</dd>
+        <dt>Role</dt><dd>Contributor on scientific activities</dd>
+        <dt>Methods</dt><dd>Labour-economics analysis · Industrial relations · Comparative European policy analysis · Observatory design</dd>
+      </dl>
+      <div class="project-tags">Labour economics · Youth employment · Social dialogue · Industrial relations · EU social policy</div>
+    </div>
+
+    <div class="project" id="proj-climate-security">
+      <div class="project-header">
+        <h3 class="project-title">Climate Security Observatory</h3>
+        <span class="project-status published">Concluded · 2021–2024</span>
+      </div>
+      <p class="project-summary">
+        Scientific support for the development of a permanent observatory on the climate crisis in Africa, hosted by the International Center for Tropical Agriculture (CIAT). The long-term goal is to migrate, onto a dynamic and policymaker-facing platform, the body of economic research conducted by the organisation on climate-change issues, making it operationally consultable for evidence-based decision-making.
+      </p>
+      <dl class="project-meta">
         <dt>Funder</dt><dd>International Center for Tropical Agriculture (CIAT)</dd>
-        <dt>Outputs</dt><dd>Scientific Reports (2025) · two CARMA 2024 conference papers</dd>
+        <dt>Period</dt><dd>November 2021 — September 2024</dd>
+        <dt>PI</dt><dd>Prof.&nbsp;Giuliano&nbsp;Resce &mdash; University of Molise</dd>
+        <dt>Role</dt><dd>Contributor on scientific activities</dd>
+        <dt>Methods</dt><dd>Applied development economics · Data integration · Policy-platform design</dd>
       </dl>
-      <div class="project-tags">Text mining · Machine learning · Nowcasting · Food security · Development</div>
+      <div class="project-tags">Climate · Africa · Development economics · CGIAR · Policy platform</div>
+      <div class="cross-ref">→ Related role: <a href="index.html#exp-ciat">Research Assistant — CIAT food insecurity project, Aug 2023 — May 2024</a></div>
     </div>
 
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Fiscal Constraints &amp; Health Inequality Research</h3>
-        <span class="project-status review">Working paper</span>
-      </div>
-      <p class="project-summary">A bibliometric perspective on how fiscal constraints shape the production of academic research on health inequality. Maps the research landscape and identifies gaps where weakened fiscal capacity may be limiting the evidence base for health-equity policy.</p>
-      <dl class="project-meta">
-        <dt>With</dt><dd>F. Pietrovito, A. Rancan, G. Resce</dd>
-        <dt>Outputs</dt><dd>ESDP No.&nbsp;26102 working paper</dd>
-      </dl>
-      <div class="project-tags">Bibliometrics · Health inequality · Public economics</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Digital Communication of Italian Municipalities (PNRR)</h3>
-        <span class="project-status ongoing">Ongoing</span>
-      </div>
-      <p class="project-summary">Web-based study of how Italian municipalities communicate about the Italian National Recovery and Resilience Plan (PNRR). Uses readability measures and text mining on official municipal communication to detect heterogeneity in transparency and engagement, with a particular focus on territorial disparities.</p>
-      <dl class="project-meta">
-        <dt>Outputs</dt><dd>Eticaeconomia article · paper in preparation</dd>
-        <dt>Data</dt><dd>Web-scraped corpus of Italian municipal websites and social-media accounts</dd>
-      </dl>
-      <div class="project-tags">PNRR · Text readability · Local government · Public communication</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Detecting Fake Innovators in the Italian Startup Ecosystem</h3>
-        <span class="project-status review">Conference paper · In progress</span>
-      </div>
-      <p class="project-summary">A web-scraping pipeline combined with supervised classification to identify firms registered as innovative startups under Italian law that show no real innovation activity online. Best models reach AUC ~0.91 on a labelled validation set, offering a low-cost screening tool for policy-makers.</p>
-      <dl class="project-meta">
-        <dt>With</dt><dd>I. Nigro, M. Modina</dd>
-        <dt>Outputs</dt><dd>CARMA 2025 conference paper · journal version in preparation</dd>
-      </dl>
-      <div class="project-tags">Machine learning · Web scraping · Innovation policy · Italy</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Public Interest in Environmental Issues — Google Trends</h3>
-        <span class="project-status review">Conference paper · In progress</span>
-      </div>
-      <p class="project-summary">Uses Google Trends search data to study the dynamics of public attention to environmental issues across countries and time. Combines search-based attention measures with structural country-level controls to assess whether public interest is in fact declining or being displaced by other concerns.</p>
-      <dl class="project-meta">
-        <dt>With</dt><dd>E. Cebrián&nbsp;Cerdá, J. Domenech (Universitat Politècnica de València)</dd>
-        <dt>Outputs</dt><dd>CARMA 2025 conference paper · journal version in preparation</dd>
-      </dl>
-      <div class="project-tags">Google Trends · Environmental concern · Cross-country panel</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Municipal Economic &amp; Financial Sustainability — Regione Lazio CPT</h3>
-        <span class="project-status ongoing">Ongoing</span>
-      </div>
-      <p class="project-summary">Active analytical work for the Regional Statistical System of Regione Lazio, focusing on the economic and financial sustainability of Lazio municipalities under the <em>Conti Pubblici Territoriali</em> (Territorial Public Accounts) framework.</p>
-      <dl class="project-meta">
-        <dt>Started</dt><dd>May 2025</dd>
-        <dt>Affiliation</dt><dd><a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a> &mdash; Sistema Statistico Regionale</dd>
-      </dl>
-      <div class="project-tags">Public finance · Municipal economics · Territorial Public Accounts · Lazio</div>
-    </div>
-
-    <div class="logo-bar">
-      <span class="logo-bar-label">Affiliations &amp; collaborations</span>
-      <div class="logo-bar-items">
-                <a href="https://www.unimol.it/">Università del Molise</a>
-        <span class="sep">·</span>
-        <a href="https://www.upv.es/">Universitat Politècnica de València</a>
-        <span class="sep">·</span>
-        <a href="https://www.unifg.it/">Università di Foggia</a>
-        <span class="sep">·</span>
-        <a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a>
-        <span class="sep">·</span>
-        <a href="https://www.instantanalytics.it/">Instant Analytics</a>
-        <span class="sep">·</span>
-        <a href="https://www.eutalia.eu/">Eutalia</a>
-      </div>
-    </div>
     <div class="foot">
       © 2026 Agapito Emanuele Santangelo · Last updated April 2026
     </div>

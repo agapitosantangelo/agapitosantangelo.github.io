@@ -15,6 +15,13 @@
   <link rel="alternate" hreflang="es" href="../es/projects.html">
 </head>
 <body>
+<nav class="top-bar" aria-label="Language">
+  <div class="top-bar-inner">
+      <a href="../en/projects.html">EN</a>
+      <a href="../it/projects.html">IT</a>
+      <a class="active">ES</a>
+  </div>
+</nav>
 <div class="shell">
   <aside class="sidebar">
     <img class="profile-img" src="../assets/profile.jpg" alt="Agapito E. Santangelo">
@@ -30,7 +37,8 @@
     <div class="sidebar-block" style="margin-top: 1.5rem; font-size: 0.82rem;">
       <a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ">Google Scholar</a> &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0004-5369-1594">ORCID</a> &nbsp;·&nbsp;
-      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a>
+      <a href="https://www.researchgate.net/profile/Agapito-Santangelo?ev=hdr_xprf">ResearchGate</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/">LinkedIn</a>
     </div>
     <ul class="nav">
       <li><a href="index.html">Sobre mí</a></li>
@@ -41,129 +49,108 @@
       <li><a href="dissemination.html">Divulgación</a></li>
       <li><a href="contact.html">Contacto</a></li>
     </ul>
-    <div class="lang-switch">
-      <a href="../en/projects.html">EN</a>
-      <a href="../it/projects.html">IT</a>
-      <a class="active">ES</a>
-    </div>
   </aside>
   <main class="main">
 
     <h1 class="page-title">Proyectos</h1>
 
     <p class="lead">
-      Proyectos de investigación activos en la frontera entre la <strong>evaluación causal de políticas</strong> y los <strong>datos digitales</strong>. Cada proyecto combina una pregunta sustantiva de política pública con una contribución metodológica — habitualmente un uso novedoso de datos web, redes sociales o administrativos integrados con diseños cuasi-experimentales.
+      Proyectos de investigaci&oacute;n financiados en los que he participado como miembro del equipo cient&iacute;fico. Cada uno cuenta con una entidad financiera formal, un per&iacute;odo de actividad definido, y combina una pregunta sustantiva de pol&iacute;tica o desarrollo con m&eacute;todos cuantitativos que integran datos digitales, microdatos administrativos, machine learning y dise&ntilde;os de inferencia causal.
     </p>
 
-    <div class="project">
+    <div class="project" id="proj-lazio-cpt">
       <div class="project-header">
-        <h3 class="project-title">Política de Cohesión de la UE y Servicios Públicos Digitales</h3>
-        <span class="project-status published">Working paper · En revisión</span>
+        <h3 class="project-title">Sostenibilidad Económica de los Municipios del Lacio — Cuentas Públicas Territoriales (CPT)</h3>
+        <span class="project-status ongoing">En curso · 2025–2026</span>
       </div>
-      <p class="project-summary">Evaluación causal del efecto de los fondos de cohesión de la UE sobre la oferta de servicios públicos digitales en los municipios italianos. Combina web scraping a gran escala de sitios municipales con datos administrativos de financiación; identifica los efectos mediante un Difference-in-Differences generalizado que aprovecha el despliegue escalonado de los fondos.</p>
+      <p class="project-summary">
+        Proyecto de investigación de 12 meses sobre la sostenibilidad económica de los municipios de la región del Lacio, en el marco del sistema de <em>Conti Pubblici Territoriali</em> (Cuentas Públicas Territoriales). Las actividades incluyen la actualización, integración y validación de los datos CPT del Lacio; la integración en un único conjunto de datos CPT y fuentes demográficas; la estimación del gasto teóricamente necesario para garantizar los derechos constitucionalmente protegidos (salud, educación, movilidad); la construcción de indicadores de sostenibilidad municipal basados en el equilibrio entre ingresos efectivamente percibidos, gasto efectivamente realizado y gasto necesario; medidas de cohesión o divergencia territorial en el Lacio; y escenarios de previsión que combinan las proyecciones demográficas oficiales del ISTAT con hipótesis de reforma constitucional y planificación de inversión pública. Parte de las actividades se desarrolla in situ en la sede del Nucleo CPT Lazio en Roma.
+      </p>
       <dl class="project-meta">
-        <dt>Con</dt><dd>N. Caravaggio, G. Resce</dd>
-        <dt>Productos</dt><dd>ESDP No.&nbsp;25100 working paper · CARMA 2024 paper · enviado a revista</dd>
-        <dt>Datos</dt><dd>~8.000 municipios italianos · programas FSE/FEDER 2014–2020</dd>
+        <dt>Financiador</dt><dd>Nucleo regional CPT Lazio &mdash; FSC 2014–2020 «Refuerzo del Sistema de Cuentas Públicas Territoriales» (Resolución CIPE n.&nbsp;48/2017)</dd>
+        <dt>Período</dt><dd>Mayo 2025 &mdash; Mayo 2026</dd>
+        <dt>IP</dt><dd>Prof.ª&nbsp;Cecilia&nbsp;Tomassini &mdash; Universidad de Molise (Protocolo de entendimiento Regione Lazio – UNIMOL, d.G.r. 837/2024)</dd>
+        <dt>Rol</dt><dd>Colaborador en las actividades científicas</dd>
+        <dt>Métodos</dt><dd>Contabilidad pública · Proyecciones demográficas · Análisis de cohesión territorial · Indicadores de sostenibilidad municipal</dd>
       </dl>
-      <div class="project-tags">DiD · Web scraping · Política UE · Digitalización de servicios públicos</div>
+      <div class="project-tags">Finanzas públicas · Sostenibilidad municipal · Cohesión territorial · Lacio · Proyecciones ISTAT</div>
+      <div class="cross-ref">→ Rol relacionado: <a href="index.html#exp-lazio">Investigador asociado, may 2025 — Actualidad</a></div>
     </div>
 
-    <div class="project">
+    <div class="project" id="proj-themia">
       <div class="project-header">
-        <h3 class="project-title">Nowcasting de la Inseguridad Alimentaria con Datos Digitales Multi-plataforma</h3>
-        <span class="project-status published">Publicado · En curso</span>
+        <h3 class="project-title">THEMIA — THE Mood of Infrastructure&rsquo;s Accessibility</h3>
+        <span class="project-status published">Concluido · 2024–2025</span>
       </div>
-      <p class="project-summary">Marco multi-plataforma que combina text mining del discurso público, datos de redes sociales e indicadores estructurados para el nowcasting de la inseguridad alimentaria a nivel nacional. Demuestra que las huellas digitales permiten detectar shocks de seguridad alimentaria antes que los indicadores basados en encuestas tradicionales.</p>
+      <p class="project-summary">
+        Eval&uacute;a la accesibilidad infraestructural y territorial, abordando los retos de datos tanto en evaluaciones <em>ex-ante</em> como <em>ex-post</em>. Combina datos de actividad en tiempo real de plataformas privadas (Google, Meta, Telegram, X, LinkedIn) con fuentes demogr&aacute;ficas y territoriales tradicionales. Machine Learning y Big Data Analytics generan indicadores innovadores de accesibilidad y modelos predictivos de resultados socioecon&oacute;micos; el feedback de los usuarios desde redes sociales se integra en el an&aacute;lisis. Los resultados se entregan mediante mapas interactivos destinados a responsables pol&iacute;ticos, profesionales y ciudadanos, ofreciendo una evaluaci&oacute;n exhaustiva y oportuna de las pol&iacute;ticas de accesibilidad infraestructural a escala nacional italiana con detalle territorial granular.
+      </p>
       <dl class="project-meta">
-        <dt>Con</dt><dd>B. Carneiro, G. Resce, G. Tucci, G. Ruscica, N. Caravaggio, L. Fanelli, P. Cruciata, K. Coffey</dd>
+        <dt>Financiador</dt><dd>Uni&oacute;n Europea — NextGenerationEU</dd>
+        <dt>Per&iacute;odo</dt><dd>Octubre 2024 — Octubre 2025</dd>
+        <dt>IP</dt><dd>Prof.&nbsp;Giuliano&nbsp;Resce &mdash; Universidad de Molise</dd>
+        <dt>Rol</dt><dd>Colaborador en las actividades cient&iacute;ficas</dd>
+        <dt>M&eacute;todos</dt><dd>Machine Learning · Big Data Analytics · Text Mining · Modelado predictivo · Cartograf&iacute;a interactiva</dd>
+      </dl>
+      <div class="project-tags">Infraestructura · Accesibilidad · Datos digitales · Evaluaci&oacute;n de pol&iacute;ticas · NextGenerationEU</div>
+    </div>
+
+    <div class="project" id="proj-prin-health">
+      <div class="project-header">
+        <h3 class="project-title">Conciliar Eficiencia y Equidad en el Sistema Sanitario Italiano</h3>
+        <span class="project-status published">Concluido · 2023–2025</span>
+      </div>
+      <p class="project-summary">
+        Proyecto PRIN 2022 que eval&uacute;a el desempe&ntilde;o del sistema sanitario regional italiano de las &uacute;ltimas dos d&eacute;cadas en t&eacute;rminos de <em>eficiencia</em> y <em>equidad</em>. Tres &aacute;reas de enfoque: (1) evoluci&oacute;n de la eficiencia hospitalaria tras la reorganizaci&oacute;n territorial, distinguiendo proveedores p&uacute;blicos y privados y considerando la heterogeneidad regional de las necesidades poblacionales; (2) equidad en el acceso a los servicios hospitalarios mediante el an&aacute;lisis de la movilidad de pacientes entre regiones; (3) asignaci&oacute;n del gasto sanitario regional, comparando el m&eacute;todo central vigente con una alternativa basada en las necesidades. Aplica m&eacute;todos econom&eacute;tricos de vanguardia y nuevas herramientas microecon&oacute;micas para alimentar el debate sobre el sistema sanitario descentralizado.
+      </p>
+      <dl class="project-meta">
+        <dt>Financiador</dt><dd>Ministerio italiano de Universidad e Investigaci&oacute;n — Proyectos de Investigaci&oacute;n de Inter&eacute;s Nacional (PRIN 2022)</dd>
+        <dt>Per&iacute;odo</dt><dd>Octubre 2023 — Octubre 2025</dd>
+        <dt>IP</dt><dd>Prof.&nbsp;Raffaele&nbsp;Lagravinese &mdash; Universidad de Bari Aldo Moro</dd>
+        <dt>Rol</dt><dd>Colaborador en las actividades cient&iacute;ficas</dd>
+        <dt>M&eacute;todos</dt><dd>Microeconom&iacute;a sanitaria · Econometr&iacute;a de datos de panel · An&aacute;lisis de desigualdades regionales</dd>
+      </dl>
+      <div class="project-tags">Econom&iacute;a de la salud · Econom&iacute;a p&uacute;blica · Equidad · Eficiencia hospitalaria · Regiones italianas</div>
+      <div class="cross-ref">→ Rol relacionado: <a href="index.html#exp-prin">Investigador asociado — Proyecto PRIN, may 2024 — may 2025</a></div>
+    </div>
+
+    <div class="project" id="proj-back-in-town">
+      <div class="project-header">
+        <h3 class="project-title">BACK IN TOWN — Relaciones Industriales y Diálogo Social para el Empleo Juvenil</h3>
+        <span class="project-status published">Concluido · 2024–2025</span>
+      </div>
+      <p class="project-summary">
+        Colaboración de investigación financiada por la UE sobre el papel de las relaciones industriales y el diálogo social en el apoyo al empleo y la inclusión social de los jóvenes a nivel urbano. El proyecto incluyó el análisis del mercado laboral europeo, el estudio de las estrategias europeas para el empleo juvenil y la inclusión social, la elaboración de informes de investigación basados en evidencia y el diseño de un observatorio sobre la negociación colectiva juvenil.
+      </p>
+      <dl class="project-meta">
+        <dt>Financiador</dt><dd>Comisión Europea &mdash; Programa SOCPL-2022-IND-REL (Código de proyecto GAP 101126432, CUP H93C23001040006)</dd>
+        <dt>Período</dt><dd>2024 &mdash; 2025</dd>
+        <dt>IP</dt><dd>Prof.&nbsp;Francesco&nbsp;Prota &mdash; Università degli Studi di Bari Aldo Moro (Departamento de Economía y Finanzas)</dd>
+        <dt>Rol</dt><dd>Colaborador en las actividades científicas</dd>
+        <dt>Métodos</dt><dd>Análisis de economía laboral · Relaciones industriales · Análisis comparativo de políticas europeas · Diseño de observatorios</dd>
+      </dl>
+      <div class="project-tags">Economía laboral · Empleo juvenil · Diálogo social · Relaciones industriales · Política social UE</div>
+    </div>
+
+    <div class="project" id="proj-climate-security">
+      <div class="project-header">
+        <h3 class="project-title">Climate Security Observatory</h3>
+        <span class="project-status published">Concluido · 2021–2024</span>
+      </div>
+      <p class="project-summary">
+        Apoyo cient&iacute;fico al desarrollo de un observatorio permanente sobre la crisis clim&aacute;tica en &Aacute;frica, en el International Center for Tropical Agriculture (CIAT). El objetivo a largo plazo es trasladar a una plataforma din&aacute;mica y accesible para los responsables pol&iacute;ticos todo el corpus de investigaci&oacute;n econ&oacute;mica realizado por la organizaci&oacute;n sobre el cambio clim&aacute;tico, haciendo este conocimiento operativamente consultable para la toma de decisiones basada en evidencia.
+      </p>
+      <dl class="project-meta">
         <dt>Financiador</dt><dd>International Center for Tropical Agriculture (CIAT)</dd>
-        <dt>Productos</dt><dd>Scientific Reports (2025) · dos artículos en CARMA 2024</dd>
+        <dt>Per&iacute;odo</dt><dd>Noviembre 2021 — Septiembre 2024</dd>
+        <dt>IP</dt><dd>Prof.&nbsp;Giuliano&nbsp;Resce &mdash; Universidad de Molise</dd>
+        <dt>Rol</dt><dd>Colaborador en las actividades cient&iacute;ficas</dd>
+        <dt>M&eacute;todos</dt><dd>Econom&iacute;a del desarrollo aplicada · Integraci&oacute;n de datos · Dise&ntilde;o de plataforma de pol&iacute;ticas</dd>
       </dl>
-      <div class="project-tags">Text mining · Machine learning · Nowcasting · Seguridad alimentaria · Desarrollo</div>
+      <div class="project-tags">Clima · &Aacute;frica · Econom&iacute;a del desarrollo · CGIAR · Plataforma de pol&iacute;ticas</div>
+      <div class="cross-ref">→ Rol relacionado: <a href="index.html#exp-ciat">Investigador asociado — Proyecto CIAT, ago 2023 — may 2024</a></div>
     </div>
 
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Restricciones Fiscales y Investigación sobre Desigualdades en Salud</h3>
-        <span class="project-status review">Working paper</span>
-      </div>
-      <p class="project-summary">Perspectiva bibliométrica sobre cómo las restricciones fiscales moldean la producción de investigación académica sobre desigualdades en salud. Mapea el panorama de investigación e identifica los vacíos donde la capacidad fiscal reducida puede estar limitando la base de evidencia para políticas de equidad sanitaria.</p>
-      <dl class="project-meta">
-        <dt>Con</dt><dd>F. Pietrovito, A. Rancan, G. Resce</dd>
-        <dt>Productos</dt><dd>ESDP No.&nbsp;26102 working paper</dd>
-      </dl>
-      <div class="project-tags">Bibliometría · Desigualdades en salud · Economía pública</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Comunicación Digital de los Municipios Italianos (PNRR)</h3>
-        <span class="project-status ongoing">En curso</span>
-      </div>
-      <p class="project-summary">Estudio basado en la web sobre cómo los municipios italianos comunican sobre el Plan Nacional de Recuperación y Resiliencia italiano (PNRR). Utiliza medidas de legibilidad y text mining sobre la comunicación municipal oficial para detectar heterogeneidad en transparencia y participación, con especial atención a las disparidades territoriales.</p>
-      <dl class="project-meta">
-        <dt>Productos</dt><dd>Artículo en Eticaeconomia · paper en preparación</dd>
-        <dt>Datos</dt><dd>Corpus web-scraped de sitios municipales y cuentas de redes sociales</dd>
-      </dl>
-      <div class="project-tags">PNRR · Legibilidad textual · Gobierno local · Comunicación pública</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Detección de Fake Innovators en el Ecosistema de Startups Italianas</h3>
-        <span class="project-status review">Artículo en congreso · En curso</span>
-      </div>
-      <p class="project-summary">Pipeline de web scraping combinada con clasificación supervisada para identificar empresas registradas como startups innovadoras bajo la ley italiana que no muestran actividad real de innovación online. Los mejores modelos alcanzan AUC ~0,91 en un conjunto de validación etiquetado, ofreciendo una herramienta de screening de bajo coste para los responsables de políticas.</p>
-      <dl class="project-meta">
-        <dt>Con</dt><dd>I. Nigro, M. Modina</dd>
-        <dt>Productos</dt><dd>Artículo en CARMA 2025 · versión para revista en preparación</dd>
-      </dl>
-      <div class="project-tags">Machine learning · Web scraping · Política de innovación · Italia</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Interés Público por los Temas Ambientales — Google Trends</h3>
-        <span class="project-status review">Artículo en congreso · En curso</span>
-      </div>
-      <p class="project-summary">Utiliza datos de búsqueda de Google Trends para estudiar la dinámica de la atención pública sobre temas ambientales entre países y en el tiempo. Combina medidas de atención basadas en búsquedas con controles estructurales a nivel país para evaluar si el interés público está realmente disminuyendo o siendo desplazado por otras preocupaciones.</p>
-      <dl class="project-meta">
-        <dt>Con</dt><dd>E. Cebrián&nbsp;Cerdá, J. Domenech (Universitat Politècnica de València)</dd>
-        <dt>Productos</dt><dd>Artículo en CARMA 2025 · versión para revista en preparación</dd>
-      </dl>
-      <div class="project-tags">Google Trends · Conciencia ambiental · Panel cross-country</div>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <h3 class="project-title">Sostenibilidad Económico-Financiera Municipal — Regione Lazio CPT</h3>
-        <span class="project-status ongoing">En curso</span>
-      </div>
-      <p class="project-summary">Trabajo analítico activo para el Sistema Estadístico Regional de la Regione Lazio, centrado en la sostenibilidad económica y financiera de los municipios de Lazio en el marco de las <em>Cuentas Públicas Territoriales</em> (CPT).</p>
-      <dl class="project-meta">
-        <dt>Inicio</dt><dd>May 2025</dd>
-        <dt>Afiliación</dt><dd><a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a> &mdash; Sistema Statistico Regionale</dd>
-      </dl>
-      <div class="project-tags">Finanzas públicas · Economía municipal · Cuentas Públicas Territoriales · Lazio</div>
-    </div>
-
-    <div class="logo-bar">
-      <span class="logo-bar-label">Afiliaciones y colaboraciones</span>
-      <div class="logo-bar-items">
-                <a href="https://www.unimol.it/">Università del Molise</a>
-        <span class="sep">·</span>
-        <a href="https://www.upv.es/">Universitat Politècnica de València</a>
-        <span class="sep">·</span>
-        <a href="https://www.unifg.it/">Università di Foggia</a>
-        <span class="sep">·</span>
-        <a href="https://statistica.regione.lazio.it/statistica/it/home">Regione Lazio</a>
-        <span class="sep">·</span>
-        <a href="https://www.instantanalytics.it/">Instant Analytics</a>
-        <span class="sep">·</span>
-        <a href="https://www.eutalia.eu/">Eutalia</a>
-      </div>
-    </div>
     <div class="foot">
       © 2026 Agapito Emanuele Santangelo · Última actualización abril 2026
     </div>
