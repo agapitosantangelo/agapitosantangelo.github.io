@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="it"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mondiale 2026 — Chi vince? Previsioni con dati reali · Instant Analytics</title>
-<meta name="description" content="Chi vince il Mondiale 2026? Previsioni basate su dati reali (sorteggio ufficiale + ranking FIFA) e 10.000 simulazioni Monte Carlo: favoriti, testa a testa, percorso squadra e tabellone interattivo.">
-<link rel="canonical" href="https://agapitosantangelo.github.io/mondiale2026/">
+<title>World Cup 2026 — Who wins? Predictions from real data · Instant Analytics</title>
+<meta name="description" content="Who wins the 2026 World Cup? Predictions from real data (official draw + FIFA rankings) and 10,000 Monte Carlo simulations: favourites, head-to-head, team paths and an interactive bracket.">
+<link rel="canonical" href="https://agapitosantangelo.github.io/mondiale2026/en/">
 <link rel="alternate" hreflang="it" href="https://agapitosantangelo.github.io/mondiale2026/">
 <link rel="alternate" hreflang="en" href="https://agapitosantangelo.github.io/mondiale2026/en/">
 <link rel="alternate" hreflang="x-default" href="https://agapitosantangelo.github.io/mondiale2026/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://agapitosantangelo.github.io/mondiale2026/">
-<meta property="og:title" content="Mondiale 2026 — Chi vince? Previsioni con dati reali">
-<meta property="og:description" content="Sorteggio ufficiale + ranking FIFA + 10.000 simulazioni Monte Carlo: favoriti, testa a testa, percorso squadra e tabellone interattivo. Gira tutto nel browser.">
-<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://agapitosantangelo.github.io/mondiale2026/en/">
+<meta property="og:title" content="World Cup 2026 — Who wins? Predictions from real data">
+<meta property="og:description" content="Official draw + FIFA rankings + 10,000 Monte Carlo simulations: favourites, head-to-head, team paths and an interactive bracket. Runs entirely in your browser.">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Agapito E. Santangelo, PhD">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -178,24 +178,24 @@ button.act:hover{background:var(--arancio-c)}
       </g>
     </g>
   </g>
-</svg></div><h1>Mondiale 2026<span>PREDICTION · DATI REALI</span></h1></header>
-<div class="sub"><div>Gironi ufficiali + ranking FIFA · <b id="nsimLabel"></b> simulazioni · <a href="en/" style="color:inherit;font-weight:800">🇬🇧 English version</a></div><div class="pill">DATA FOR PEOPLE</div></div>
+</svg></div><h1>World Cup 2026<span>PREDICTION · REAL DATA</span></h1></header>
+<div class="sub"><div>Official groups + FIFA rankings · <b id="nsimLabel"></b> simulations · <a href="../" style="color:inherit;font-weight:800">🇮🇹 Versione italiana</a></div><div class="pill">DATA FOR PEOPLE</div></div>
 
 <div class="tabs">
-  <button class="active" onclick="tab('home')">Come funziona</button>
-  <button onclick="tab('fav')">Favoriti</button>
-  <button onclick="tab('sim')">Simulatore</button>
-  <button onclick="tab('h2h')">Testa a testa</button>
-  <button onclick="tab('perc')">Percorso squadra</button>
-  <button onclick="tab('brk')">Tabellone</button>
+  <button class="active" onclick="tab('home')">How it works</button>
+  <button onclick="tab('fav')">Favourites</button>
+  <button onclick="tab('sim')">Simulator</button>
+  <button onclick="tab('h2h')">Head to head</button>
+  <button onclick="tab('perc')">Team path</button>
+  <button onclick="tab('brk')">Bracket</button>
 </div>
 
 <div id="vhome" class="view active">
   <div class="card">
     <div class="home-hero">
-      <h2>Come nasce questa previsione</h2>
-      <p>Dal dato reale alla simulazione: ogni passo del processo è trasparente.
-         Clicca uno step per i dettagli. I numeri sono quelli realmente usati.</p>
+      <h2>How this prediction is built</h2>
+      <p>From real data to simulation: every step of the process is transparent.
+         Click a step for details. The numbers are the ones actually used.</p>
     </div>
     <div class="flow" id="flow"></div>
     <div class="stepinfo" id="stepinfo"></div>
@@ -203,65 +203,65 @@ button.act:hover{background:var(--arancio-c)}
   </div>
 </div>
 <div id="vfav" class="view">
-  <div class="card"><h2>Favoriti alla vittoria</h2><div class="hint">Probabilita' di vincere il torneo (dati reali)</div>
+  <div class="card"><h2>Title favourites</h2><div class="hint">Probability of winning the tournament (real data)</div>
     <div id="favList"></div></div>
-  <div class="card"><h2>Probabilita' per fase</h2><div class="hint">Quanto lontano arriva ogni squadra</div>
+  <div class="card"><h2>Probability by stage</h2><div class="hint">How far each team is likely to go</div>
     <div style="max-height:460px;overflow:auto"><table id="phaseTable"></table></div></div>
 </div>
 
 <div id="vsim" class="view">
-  <div class="card"><h2>Simulatore interattivo</h2>
-    <div class="hint">Cambia i pesi del modello e rilancia le simulazioni nel browser (gira anche offline)</div>
+  <div class="card"><h2>Interactive simulator</h2>
+    <div class="hint">Change the model weights and re-run the simulations in your browser (works offline too)</div>
     <div class="controls">
-      <div class="slider">Peso ranking <input type="range" id="wRank" min="0" max="100" value="60"><span id="wRankV">60%</span></div>
-      <div class="slider">Peso attacco <input type="range" id="wAtt" min="0" max="100" value="20"><span id="wAttV">20%</span></div>
-      <div class="slider">Peso difesa <input type="range" id="wDif" min="0" max="100" value="20"><span id="wDifV">20%</span></div>
-      <div class="slider">Simulazioni <input type="range" id="nSim" min="500" max="5000" step="500" value="2000"><span id="nSimV">2000</span></div>
-      <button class="act" id="runBtn" onclick="rilancia()">▶ Rilancia</button>
+      <div class="slider">Ranking weight <input type="range" id="wRank" min="0" max="100" value="60"><span id="wRankV">60%</span></div>
+      <div class="slider">Attack weight <input type="range" id="wAtt" min="0" max="100" value="20"><span id="wAttV">20%</span></div>
+      <div class="slider">Defence weight <input type="range" id="wDif" min="0" max="100" value="20"><span id="wDifV">20%</span></div>
+      <div class="slider">Simulations <input type="range" id="nSim" min="500" max="5000" step="500" value="2000"><span id="nSimV">2000</span></div>
+      <button class="act" id="runBtn" onclick="rilancia()">▶ Re-run</button>
     </div>
     <div id="simResult"></div>
   </div>
 </div>
 
 <div id="vh2h" class="view">
-  <div class="card"><h2>Confronto testa a testa</h2><div class="hint">Probabilita' in una sfida diretta a eliminazione</div>
+  <div class="card"><h2>Head-to-head</h2><div class="hint">Win probability in a direct knockout tie</div>
     <div class="controls">
       <select id="teamA"></select><select id="teamB"></select>
-      <button class="act" onclick="confronta()">Confronta</button>
+      <button class="act" onclick="confronta()">Compare</button>
     </div>
     <div id="h2hResult"></div>
   </div>
 </div>
 
 <div id="vperc" class="view">
-  <div class="card"><h2>Percorso probabile</h2><div class="hint">Probabilita' di superare ogni fase</div>
+  <div class="card"><h2>Likely path</h2><div class="hint">Probability of getting past each stage</div>
     <div class="controls"><select id="teamPerc" onchange="percorso()"></select></div>
     <div id="percResult"></div></div>
 </div>
 
 <div id="vbrk" class="view">
-  <div class="card"><h2>Gironi e tabellone simulati</h2><div class="hint">Una simulazione completa: prima i gironi con le partite, poi la fase a eliminazione. Regola i pesi del modello e rigenera.</div>
+  <div class="card"><h2>Simulated groups and bracket</h2><div class="hint">One full simulation: first the groups with their matches, then the knockout stage. Adjust the model weights and regenerate.</div>
     <div class="controls" style="margin-bottom:14px">
-      <div class="slider">Peso ranking <input type="range" id="bRank" min="0" max="100" value="60"><span id="bRankV">60%</span></div>
-      <div class="slider">Peso attacco <input type="range" id="bAtt" min="0" max="100" value="20"><span id="bAttV">20%</span></div>
-      <div class="slider">Peso difesa <input type="range" id="bDif" min="0" max="100" value="20"><span id="bDifV">20%</span></div>
-      <button class="act" onclick="genBracket()">🎲 Genera simulazione</button>
+      <div class="slider">Ranking weight <input type="range" id="bRank" min="0" max="100" value="60"><span id="bRankV">60%</span></div>
+      <div class="slider">Attack weight <input type="range" id="bAtt" min="0" max="100" value="20"><span id="bAttV">20%</span></div>
+      <div class="slider">Defence weight <input type="range" id="bDif" min="0" max="100" value="20"><span id="bDifV">20%</span></div>
+      <button class="act" onclick="genBracket()">🎲 Generate simulation</button>
     </div>
-    <h3 style="font-weight:800;color:var(--petrolio);margin:6px 0 12px;font-size:1rem">Fase a gironi</h3>
+    <h3 style="font-weight:800;color:var(--petrolio);margin:6px 0 12px;font-size:1rem">Group stage</h3>
     <div id="gironiBox" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin-bottom:26px"></div>
-    <h3 style="font-weight:800;color:var(--petrolio);margin:14px 0 12px;font-size:1rem">Fase a eliminazione</h3>
+    <h3 style="font-weight:800;color:var(--petrolio);margin:14px 0 12px;font-size:1rem">Knockout stage</h3>
     <div class="bracket" id="bracket"></div></div>
 </div>
 
-<div class="footer">Instant Analytics · dati reali (sorteggio + ranking FIFA) · le percentuali sono stime probabilistiche<br>
-di <a href="https://agapitosantangelo.github.io/it/" style="color:inherit;font-weight:700">Agapito E. Santangelo, PhD</a> · <a href="https://www.instantanalytics.it/it/" style="color:inherit;font-weight:700">instantanalytics.it</a></div>
+<div class="footer">Instant Analytics · real data (official draw + FIFA rankings) · percentages are probabilistic estimates<br>
+by <a href="https://agapitosantangelo.github.io/en/" style="color:inherit;font-weight:700">Agapito E. Santangelo, PhD</a> · <a href="https://www.instantanalytics.it/it/" style="color:inherit;font-weight:700">instantanalytics.it</a></div>
 </div>
 <script>
-const DATA={"gironi": {"A": ["Messico", "Corea del Sud", "Sudafrica", "Rep. Ceca"], "B": ["Canada", "Svizzera", "Qatar", "Bosnia"], "C": ["Brasile", "Marocco", "Scozia", "Haiti"], "D": ["USA", "Australia", "Paraguay", "Turchia"], "E": ["Germania", "Ecuador", "Costa d'Avorio", "Curacao"], "F": ["Paesi Bassi", "Giappone", "Tunisia", "Svezia"], "G": ["Belgio", "Iran", "Egitto", "Nuova Zelanda"], "H": ["Spagna", "Uruguay", "Arabia Saudita", "Capo Verde"], "I": ["Francia", "Senegal", "Norvegia", "Iraq"], "J": ["Argentina", "Austria", "Algeria", "Giordania"], "K": ["Portogallo", "Colombia", "Uzbekistan", "Congo DR"], "L": ["Inghilterra", "Croazia", "Panama", "Ghana"]}, "rating": {"Messico": 1681.0, "Corea del Sud": 1555.0, "Sudafrica": 1400.0, "Rep. Ceca": 1410.0, "Canada": 1520.0, "Svizzera": 1649.0, "Qatar": 1430.0, "Bosnia": 1400.0, "Brasile": 1761.0, "Marocco": 1756.0, "Scozia": 1472.0, "Haiti": 1305.0, "USA": 1673.0, "Australia": 1540.0, "Paraguay": 1468.0, "Turchia": 1595.0, "Germania": 1730.0, "Ecuador": 1580.0, "Costa d'Avorio": 1498.0, "Curacao": 1310.0, "Paesi Bassi": 1758.0, "Giappone": 1660.0, "Tunisia": 1455.0, "Svezia": 1450.0, "Belgio": 1735.0, "Iran": 1605.0, "Egitto": 1525.0, "Nuova Zelanda": 1300.0, "Spagna": 1876.0, "Uruguay": 1673.0, "Arabia Saudita": 1395.0, "Capo Verde": 1360.0, "Francia": 1877.0, "Senegal": 1689.0, "Norvegia": 1512.0, "Iraq": 1420.0, "Argentina": 1875.0, "Austria": 1567.0, "Algeria": 1535.0, "Giordania": 1380.0, "Portogallo": 1764.0, "Colombia": 1693.0, "Uzbekistan": 1440.0, "Congo DR": 1480.0, "Inghilterra": 1826.0, "Croazia": 1717.0, "Panama": 1502.0, "Ghana": 1350.0}, "gf": {"Messico": 1.7, "Corea del Sud": 1.3, "Sudafrica": 1.3, "Rep. Ceca": 1.3, "Canada": 1.3, "Svizzera": 1.5, "Qatar": 1.3, "Bosnia": 1.3, "Brasile": 2.1, "Marocco": 1.7, "Scozia": 1.3, "Haiti": 1.3, "USA": 1.8, "Australia": 1.3, "Paraguay": 1.3, "Turchia": 1.3, "Germania": 2.0, "Ecuador": 1.3, "Costa d'Avorio": 1.3, "Curacao": 1.3, "Paesi Bassi": 2.0, "Giappone": 1.8, "Tunisia": 1.3, "Svezia": 1.3, "Belgio": 1.9, "Iran": 1.3, "Egitto": 1.3, "Nuova Zelanda": 1.3, "Spagna": 2.4, "Uruguay": 1.7, "Arabia Saudita": 1.3, "Capo Verde": 1.3, "Francia": 2.2, "Senegal": 1.6, "Norvegia": 1.3, "Iraq": 1.3, "Argentina": 2.2, "Austria": 1.3, "Algeria": 1.3, "Giordania": 1.3, "Portogallo": 2.1, "Colombia": 1.7, "Uzbekistan": 1.3, "Congo DR": 1.3, "Inghilterra": 2.0, "Croazia": 1.7, "Panama": 1.3, "Ghana": 1.3}, "gs": {"Messico": 1.0, "Corea del Sud": 1.3, "Sudafrica": 1.3, "Rep. Ceca": 1.3, "Canada": 1.3, "Svizzera": 1.0, "Qatar": 1.3, "Bosnia": 1.3, "Brasile": 0.8, "Marocco": 0.8, "Scozia": 1.3, "Haiti": 1.3, "USA": 1.1, "Australia": 1.3, "Paraguay": 1.3, "Turchia": 1.3, "Germania": 0.9, "Ecuador": 1.3, "Costa d'Avorio": 1.3, "Curacao": 1.3, "Paesi Bassi": 0.8, "Giappone": 1.0, "Tunisia": 1.3, "Svezia": 1.3, "Belgio": 0.9, "Iran": 1.3, "Egitto": 1.3, "Nuova Zelanda": 1.3, "Spagna": 0.6, "Uruguay": 0.9, "Arabia Saudita": 1.3, "Capo Verde": 1.3, "Francia": 0.8, "Senegal": 0.9, "Norvegia": 1.3, "Iraq": 1.3, "Argentina": 0.7, "Austria": 1.3, "Algeria": 1.3, "Giordania": 1.3, "Portogallo": 0.9, "Colombia": 0.9, "Uzbekistan": 1.3, "Congo DR": 1.3, "Inghilterra": 0.7, "Croazia": 0.9, "Panama": 1.3, "Ghana": 1.3}, "girone_di": {"Messico": "A", "Corea del Sud": "A", "Sudafrica": "A", "Rep. Ceca": "A", "Canada": "B", "Svizzera": "B", "Qatar": "B", "Bosnia": "B", "Brasile": "C", "Marocco": "C", "Scozia": "C", "Haiti": "C", "USA": "D", "Australia": "D", "Paraguay": "D", "Turchia": "D", "Germania": "E", "Ecuador": "E", "Costa d'Avorio": "E", "Curacao": "E", "Paesi Bassi": "F", "Giappone": "F", "Tunisia": "F", "Svezia": "F", "Belgio": "G", "Iran": "G", "Egitto": "G", "Nuova Zelanda": "G", "Spagna": "H", "Uruguay": "H", "Arabia Saudita": "H", "Capo Verde": "H", "Francia": "I", "Senegal": "I", "Norvegia": "I", "Iraq": "I", "Argentina": "J", "Austria": "J", "Algeria": "J", "Giordania": "J", "Portogallo": "K", "Colombia": "K", "Uzbekistan": "K", "Congo DR": "K", "Inghilterra": "L", "Croazia": "L", "Panama": "L", "Ghana": "L"}, "bandiere": {"Messico": "🇲🇽", "Corea del Sud": "🇰🇷", "Sudafrica": "🇿🇦", "Rep. Ceca": "🇨🇿", "Canada": "🇨🇦", "Svizzera": "🇨🇭", "Qatar": "🇶🇦", "Bosnia": "🇧🇦", "Brasile": "🇧🇷", "Marocco": "🇲🇦", "Scozia": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "Haiti": "🇭🇹", "USA": "🇺🇸", "Australia": "🇦🇺", "Paraguay": "🇵🇾", "Turchia": "🇹🇷", "Germania": "🇩🇪", "Ecuador": "🇪🇨", "Costa d'Avorio": "🇨🇮", "Curacao": "🇨🇼", "Paesi Bassi": "🇳🇱", "Giappone": "🇯🇵", "Tunisia": "🇹🇳", "Svezia": "🇸🇪", "Belgio": "🇧🇪", "Iran": "🇮🇷", "Egitto": "🇪🇬", "Nuova Zelanda": "🇳🇿", "Spagna": "🇪🇸", "Uruguay": "🇺🇾", "Arabia Saudita": "🇸🇦", "Capo Verde": "🇨🇻", "Francia": "🇫🇷", "Senegal": "🇸🇳", "Norvegia": "🇳🇴", "Iraq": "🇮🇶", "Argentina": "🇦🇷", "Austria": "🇦🇹", "Algeria": "🇩🇿", "Giordania": "🇯🇴", "Portogallo": "🇵🇹", "Colombia": "🇨🇴", "Uzbekistan": "🇺🇿", "Congo DR": "🇨🇩", "Inghilterra": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Croazia": "🇭🇷", "Panama": "🇵🇦", "Ghana": "🇬🇭"}, "prob": [{"Squadra": "Spagna", "Girone": "H", "Ottavi_%": 75.0, "Quarti_%": 60.6, "Semifinale_%": 46.1, "Finale_%": 32.9, "Vince_%": 21.9}, {"Squadra": "Argentina", "Girone": "J", "Ottavi_%": 71.5, "Quarti_%": 54.7, "Semifinale_%": 39.2, "Finale_%": 26.6, "Vince_%": 16.4}, {"Squadra": "Francia", "Girone": "I", "Ottavi_%": 68.5, "Quarti_%": 51.2, "Semifinale_%": 35.4, "Finale_%": 23.3, "Vince_%": 13.9}, {"Squadra": "Inghilterra", "Girone": "L", "Ottavi_%": 64.2, "Quarti_%": 46.4, "Semifinale_%": 30.6, "Finale_%": 17.7, "Vince_%": 9.5}, {"Squadra": "Brasile", "Girone": "C", "Ottavi_%": 60.2, "Quarti_%": 39.8, "Semifinale_%": 22.8, "Finale_%": 12.0, "Vince_%": 5.8}, {"Squadra": "Portogallo", "Girone": "K", "Ottavi_%": 58.8, "Quarti_%": 38.6, "Semifinale_%": 22.0, "Finale_%": 11.4, "Vince_%": 5.2}, {"Squadra": "Paesi Bassi", "Girone": "F", "Ottavi_%": 58.6, "Quarti_%": 38.5, "Semifinale_%": 22.6, "Finale_%": 11.6, "Vince_%": 5.0}, {"Squadra": "Germania", "Girone": "E", "Ottavi_%": 57.6, "Quarti_%": 35.5, "Semifinale_%": 19.3, "Finale_%": 8.8, "Vince_%": 3.8}, {"Squadra": "Belgio", "Girone": "G", "Ottavi_%": 56.0, "Quarti_%": 34.8, "Semifinale_%": 18.4, "Finale_%": 8.2, "Vince_%": 3.5}, {"Squadra": "Marocco", "Girone": "C", "Ottavi_%": 52.2, "Quarti_%": 32.0, "Semifinale_%": 17.1, "Finale_%": 7.9, "Vince_%": 3.3}, {"Squadra": "Croazia", "Girone": "L", "Ottavi_%": 47.4, "Quarti_%": 26.9, "Semifinale_%": 13.1, "Finale_%": 5.3, "Vince_%": 1.9}, {"Squadra": "Colombia", "Girone": "K", "Ottavi_%": 46.5, "Quarti_%": 25.3, "Semifinale_%": 11.8, "Finale_%": 4.7, "Vince_%": 1.6}, {"Squadra": "Uruguay", "Girone": "H", "Ottavi_%": 44.2, "Quarti_%": 24.0, "Semifinale_%": 10.9, "Finale_%": 4.2, "Vince_%": 1.4}, {"Squadra": "Senegal", "Girone": "I", "Ottavi_%": 43.8, "Quarti_%": 23.3, "Semifinale_%": 10.5, "Finale_%": 4.0, "Vince_%": 1.3}, {"Squadra": "Messico", "Girone": "A", "Ottavi_%": 46.7, "Quarti_%": 24.3, "Semifinale_%": 10.9, "Finale_%": 3.9, "Vince_%": 1.3}, {"Squadra": "Giappone", "Girone": "F", "Ottavi_%": 45.0, "Quarti_%": 23.2, "Semifinale_%": 10.2, "Finale_%": 3.7, "Vince_%": 1.2}, {"Squadra": "USA", "Girone": "D", "Ottavi_%": 46.9, "Quarti_%": 23.6, "Semifinale_%": 10.4, "Finale_%": 3.8, "Vince_%": 1.2}, {"Squadra": "Svizzera", "Girone": "B", "Ottavi_%": 41.4, "Quarti_%": 19.7, "Semifinale_%": 7.7, "Finale_%": 2.8, "Vince_%": 0.8}, {"Squadra": "Turchia", "Girone": "D", "Ottavi_%": 27.6, "Quarti_%": 10.0, "Semifinale_%": 3.0, "Finale_%": 0.8, "Vince_%": 0.1}, {"Squadra": "Corea del Sud", "Girone": "A", "Ottavi_%": 25.5, "Quarti_%": 8.2, "Semifinale_%": 2.0, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Norvegia", "Girone": "I", "Ottavi_%": 20.5, "Quarti_%": 6.2, "Semifinale_%": 1.4, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Algeria", "Girone": "J", "Ottavi_%": 23.2, "Quarti_%": 7.4, "Semifinale_%": 1.9, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Canada", "Girone": "B", "Ottavi_%": 25.8, "Quarti_%": 8.0, "Semifinale_%": 1.9, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Egitto", "Girone": "G", "Ottavi_%": 24.1, "Quarti_%": 7.7, "Semifinale_%": 2.0, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Iran", "Girone": "G", "Ottavi_%": 27.6, "Quarti_%": 10.5, "Semifinale_%": 3.1, "Finale_%": 0.7, "Vince_%": 0.1}, {"Squadra": "Australia", "Girone": "D", "Ottavi_%": 25.3, "Quarti_%": 8.2, "Semifinale_%": 1.9, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Costa d'Avorio", "Girone": "E", "Ottavi_%": 23.6, "Quarti_%": 7.2, "Semifinale_%": 1.7, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Ecuador", "Girone": "E", "Ottavi_%": 26.3, "Quarti_%": 9.0, "Semifinale_%": 2.4, "Finale_%": 0.6, "Vince_%": 0.1}, {"Squadra": "Austria", "Girone": "J", "Ottavi_%": 24.4, "Quarti_%": 8.8, "Semifinale_%": 2.7, "Finale_%": 0.6, "Vince_%": 0.1}, {"Squadra": "Qatar", "Girone": "B", "Ottavi_%": 21.2, "Quarti_%": 5.5, "Semifinale_%": 0.9, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Rep. Ceca", "Girone": "A", "Ottavi_%": 20.4, "Quarti_%": 4.9, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Congo DR", "Girone": "K", "Ottavi_%": 20.3, "Quarti_%": 5.7, "Semifinale_%": 1.4, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Sudafrica", "Girone": "A", "Ottavi_%": 18.8, "Quarti_%": 4.6, "Semifinale_%": 0.9, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Uzbekistan", "Girone": "K", "Ottavi_%": 18.6, "Quarti_%": 5.0, "Semifinale_%": 1.1, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Panama", "Girone": "L", "Ottavi_%": 20.1, "Quarti_%": 6.4, "Semifinale_%": 1.6, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Giordania", "Girone": "J", "Ottavi_%": 17.4, "Quarti_%": 4.0, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Capo Verde", "Girone": "H", "Ottavi_%": 13.7, "Quarti_%": 3.0, "Semifinale_%": 0.5, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Iraq", "Girone": "I", "Ottavi_%": 17.1, "Quarti_%": 4.3, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Bosnia", "Girone": "B", "Ottavi_%": 19.4, "Quarti_%": 4.5, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Scozia", "Girone": "C", "Ottavi_%": 19.4, "Quarti_%": 5.6, "Semifinale_%": 1.4, "Finale_%": 0.3, "Vince_%": 0.0}, {"Squadra": "Paraguay", "Girone": "D", "Ottavi_%": 22.0, "Quarti_%": 6.4, "Semifinale_%": 1.4, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Arabia Saudita", "Girone": "H", "Ottavi_%": 16.2, "Quarti_%": 4.0, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Haiti", "Girone": "C", "Ottavi_%": 13.4, "Quarti_%": 2.7, "Semifinale_%": 0.4, "Finale_%": 0.0, "Vince_%": 0.0}, {"Squadra": "Nuova Zelanda", "Girone": "G", "Ottavi_%": 15.2, "Quarti_%": 3.1, "Semifinale_%": 0.4, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Svezia", "Girone": "F", "Ottavi_%": 18.4, "Quarti_%": 5.0, "Semifinale_%": 1.1, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Tunisia", "Girone": "F", "Ottavi_%": 19.0, "Quarti_%": 5.3, "Semifinale_%": 1.1, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Curacao", "Girone": "E", "Ottavi_%": 15.5, "Quarti_%": 2.7, "Semifinale_%": 0.5, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Ghana", "Girone": "L", "Ottavi_%": 15.0, "Quarti_%": 3.5, "Semifinale_%": 0.5, "Finale_%": 0.0, "Vince_%": 0.0}], "pesi": {"ranking": 0.6, "attacco": 0.2, "difesa": 0.2}, "scala": 400.0, "pareggio": 0.25, "media_rating": 1565.6666666666667, "std_rating": 161.8572175259671, "media_gf": 1.5229166666666665, "std_gf": 0.32566761761513924, "media_gs": 1.1375, "std_gs": 0.22467470575090406};
+const DATA={"gironi": {"A": ["Mexico", "South Korea", "South Africa", "Czechia"], "B": ["Canada", "Switzerland", "Qatar", "Bosnia"], "C": ["Brazil", "Morocco", "Scotland", "Haiti"], "D": ["USA", "Australia", "Paraguay", "Türkiye"], "E": ["Germany", "Ecuador", "Ivory Coast", "Curaçao"], "F": ["Netherlands", "Japan", "Tunisia", "Sweden"], "G": ["Belgium", "Iran", "Egypt", "New Zealand"], "H": ["Spain", "Uruguay", "Saudi Arabia", "Cape Verde"], "I": ["France", "Senegal", "Norway", "Iraq"], "J": ["Argentina", "Austria", "Algeria", "Jordan"], "K": ["Portugal", "Colombia", "Uzbekistan", "DR Congo"], "L": ["England", "Croatia", "Panama", "Ghana"]}, "rating": {"Mexico": 1681.0, "South Korea": 1555.0, "South Africa": 1400.0, "Czechia": 1410.0, "Canada": 1520.0, "Switzerland": 1649.0, "Qatar": 1430.0, "Bosnia": 1400.0, "Brazil": 1761.0, "Morocco": 1756.0, "Scotland": 1472.0, "Haiti": 1305.0, "USA": 1673.0, "Australia": 1540.0, "Paraguay": 1468.0, "Türkiye": 1595.0, "Germany": 1730.0, "Ecuador": 1580.0, "Ivory Coast": 1498.0, "Curaçao": 1310.0, "Netherlands": 1758.0, "Japan": 1660.0, "Tunisia": 1455.0, "Sweden": 1450.0, "Belgium": 1735.0, "Iran": 1605.0, "Egypt": 1525.0, "New Zealand": 1300.0, "Spain": 1876.0, "Uruguay": 1673.0, "Saudi Arabia": 1395.0, "Cape Verde": 1360.0, "France": 1877.0, "Senegal": 1689.0, "Norway": 1512.0, "Iraq": 1420.0, "Argentina": 1875.0, "Austria": 1567.0, "Algeria": 1535.0, "Jordan": 1380.0, "Portugal": 1764.0, "Colombia": 1693.0, "Uzbekistan": 1440.0, "DR Congo": 1480.0, "England": 1826.0, "Croatia": 1717.0, "Panama": 1502.0, "Ghana": 1350.0}, "gf": {"Mexico": 1.7, "South Korea": 1.3, "South Africa": 1.3, "Czechia": 1.3, "Canada": 1.3, "Switzerland": 1.5, "Qatar": 1.3, "Bosnia": 1.3, "Brazil": 2.1, "Morocco": 1.7, "Scotland": 1.3, "Haiti": 1.3, "USA": 1.8, "Australia": 1.3, "Paraguay": 1.3, "Türkiye": 1.3, "Germany": 2.0, "Ecuador": 1.3, "Ivory Coast": 1.3, "Curaçao": 1.3, "Netherlands": 2.0, "Japan": 1.8, "Tunisia": 1.3, "Sweden": 1.3, "Belgium": 1.9, "Iran": 1.3, "Egypt": 1.3, "New Zealand": 1.3, "Spain": 2.4, "Uruguay": 1.7, "Saudi Arabia": 1.3, "Cape Verde": 1.3, "France": 2.2, "Senegal": 1.6, "Norway": 1.3, "Iraq": 1.3, "Argentina": 2.2, "Austria": 1.3, "Algeria": 1.3, "Jordan": 1.3, "Portugal": 2.1, "Colombia": 1.7, "Uzbekistan": 1.3, "DR Congo": 1.3, "England": 2.0, "Croatia": 1.7, "Panama": 1.3, "Ghana": 1.3}, "gs": {"Mexico": 1.0, "South Korea": 1.3, "South Africa": 1.3, "Czechia": 1.3, "Canada": 1.3, "Switzerland": 1.0, "Qatar": 1.3, "Bosnia": 1.3, "Brazil": 0.8, "Morocco": 0.8, "Scotland": 1.3, "Haiti": 1.3, "USA": 1.1, "Australia": 1.3, "Paraguay": 1.3, "Türkiye": 1.3, "Germany": 0.9, "Ecuador": 1.3, "Ivory Coast": 1.3, "Curaçao": 1.3, "Netherlands": 0.8, "Japan": 1.0, "Tunisia": 1.3, "Sweden": 1.3, "Belgium": 0.9, "Iran": 1.3, "Egypt": 1.3, "New Zealand": 1.3, "Spain": 0.6, "Uruguay": 0.9, "Saudi Arabia": 1.3, "Cape Verde": 1.3, "France": 0.8, "Senegal": 0.9, "Norway": 1.3, "Iraq": 1.3, "Argentina": 0.7, "Austria": 1.3, "Algeria": 1.3, "Jordan": 1.3, "Portugal": 0.9, "Colombia": 0.9, "Uzbekistan": 1.3, "DR Congo": 1.3, "England": 0.7, "Croatia": 0.9, "Panama": 1.3, "Ghana": 1.3}, "girone_di": {"Mexico": "A", "South Korea": "A", "South Africa": "A", "Czechia": "A", "Canada": "B", "Switzerland": "B", "Qatar": "B", "Bosnia": "B", "Brazil": "C", "Morocco": "C", "Scotland": "C", "Haiti": "C", "USA": "D", "Australia": "D", "Paraguay": "D", "Türkiye": "D", "Germany": "E", "Ecuador": "E", "Ivory Coast": "E", "Curaçao": "E", "Netherlands": "F", "Japan": "F", "Tunisia": "F", "Sweden": "F", "Belgium": "G", "Iran": "G", "Egypt": "G", "New Zealand": "G", "Spain": "H", "Uruguay": "H", "Saudi Arabia": "H", "Cape Verde": "H", "France": "I", "Senegal": "I", "Norway": "I", "Iraq": "I", "Argentina": "J", "Austria": "J", "Algeria": "J", "Jordan": "J", "Portugal": "K", "Colombia": "K", "Uzbekistan": "K", "DR Congo": "K", "England": "L", "Croatia": "L", "Panama": "L", "Ghana": "L"}, "bandiere": {"Mexico": "🇲🇽", "South Korea": "🇰🇷", "South Africa": "🇿🇦", "Czechia": "🇨🇿", "Canada": "🇨🇦", "Switzerland": "🇨🇭", "Qatar": "🇶🇦", "Bosnia": "🇧🇦", "Brazil": "🇧🇷", "Morocco": "🇲🇦", "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "Haiti": "🇭🇹", "USA": "🇺🇸", "Australia": "🇦🇺", "Paraguay": "🇵🇾", "Türkiye": "🇹🇷", "Germany": "🇩🇪", "Ecuador": "🇪🇨", "Ivory Coast": "🇨🇮", "Curaçao": "🇨🇼", "Netherlands": "🇳🇱", "Japan": "🇯🇵", "Tunisia": "🇹🇳", "Sweden": "🇸🇪", "Belgium": "🇧🇪", "Iran": "🇮🇷", "Egypt": "🇪🇬", "New Zealand": "🇳🇿", "Spain": "🇪🇸", "Uruguay": "🇺🇾", "Saudi Arabia": "🇸🇦", "Cape Verde": "🇨🇻", "France": "🇫🇷", "Senegal": "🇸🇳", "Norway": "🇳🇴", "Iraq": "🇮🇶", "Argentina": "🇦🇷", "Austria": "🇦🇹", "Algeria": "🇩🇿", "Jordan": "🇯🇴", "Portugal": "🇵🇹", "Colombia": "🇨🇴", "Uzbekistan": "🇺🇿", "DR Congo": "🇨🇩", "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Croatia": "🇭🇷", "Panama": "🇵🇦", "Ghana": "🇬🇭"}, "prob": [{"Squadra": "Spain", "Girone": "H", "Ottavi_%": 75.0, "Quarti_%": 60.6, "Semifinale_%": 46.1, "Finale_%": 32.9, "Vince_%": 21.9}, {"Squadra": "Argentina", "Girone": "J", "Ottavi_%": 71.5, "Quarti_%": 54.7, "Semifinale_%": 39.2, "Finale_%": 26.6, "Vince_%": 16.4}, {"Squadra": "France", "Girone": "I", "Ottavi_%": 68.5, "Quarti_%": 51.2, "Semifinale_%": 35.4, "Finale_%": 23.3, "Vince_%": 13.9}, {"Squadra": "England", "Girone": "L", "Ottavi_%": 64.2, "Quarti_%": 46.4, "Semifinale_%": 30.6, "Finale_%": 17.7, "Vince_%": 9.5}, {"Squadra": "Brazil", "Girone": "C", "Ottavi_%": 60.2, "Quarti_%": 39.8, "Semifinale_%": 22.8, "Finale_%": 12.0, "Vince_%": 5.8}, {"Squadra": "Portugal", "Girone": "K", "Ottavi_%": 58.8, "Quarti_%": 38.6, "Semifinale_%": 22.0, "Finale_%": 11.4, "Vince_%": 5.2}, {"Squadra": "Netherlands", "Girone": "F", "Ottavi_%": 58.6, "Quarti_%": 38.5, "Semifinale_%": 22.6, "Finale_%": 11.6, "Vince_%": 5.0}, {"Squadra": "Germany", "Girone": "E", "Ottavi_%": 57.6, "Quarti_%": 35.5, "Semifinale_%": 19.3, "Finale_%": 8.8, "Vince_%": 3.8}, {"Squadra": "Belgium", "Girone": "G", "Ottavi_%": 56.0, "Quarti_%": 34.8, "Semifinale_%": 18.4, "Finale_%": 8.2, "Vince_%": 3.5}, {"Squadra": "Morocco", "Girone": "C", "Ottavi_%": 52.2, "Quarti_%": 32.0, "Semifinale_%": 17.1, "Finale_%": 7.9, "Vince_%": 3.3}, {"Squadra": "Croatia", "Girone": "L", "Ottavi_%": 47.4, "Quarti_%": 26.9, "Semifinale_%": 13.1, "Finale_%": 5.3, "Vince_%": 1.9}, {"Squadra": "Colombia", "Girone": "K", "Ottavi_%": 46.5, "Quarti_%": 25.3, "Semifinale_%": 11.8, "Finale_%": 4.7, "Vince_%": 1.6}, {"Squadra": "Uruguay", "Girone": "H", "Ottavi_%": 44.2, "Quarti_%": 24.0, "Semifinale_%": 10.9, "Finale_%": 4.2, "Vince_%": 1.4}, {"Squadra": "Senegal", "Girone": "I", "Ottavi_%": 43.8, "Quarti_%": 23.3, "Semifinale_%": 10.5, "Finale_%": 4.0, "Vince_%": 1.3}, {"Squadra": "Mexico", "Girone": "A", "Ottavi_%": 46.7, "Quarti_%": 24.3, "Semifinale_%": 10.9, "Finale_%": 3.9, "Vince_%": 1.3}, {"Squadra": "Japan", "Girone": "F", "Ottavi_%": 45.0, "Quarti_%": 23.2, "Semifinale_%": 10.2, "Finale_%": 3.7, "Vince_%": 1.2}, {"Squadra": "USA", "Girone": "D", "Ottavi_%": 46.9, "Quarti_%": 23.6, "Semifinale_%": 10.4, "Finale_%": 3.8, "Vince_%": 1.2}, {"Squadra": "Switzerland", "Girone": "B", "Ottavi_%": 41.4, "Quarti_%": 19.7, "Semifinale_%": 7.7, "Finale_%": 2.8, "Vince_%": 0.8}, {"Squadra": "Türkiye", "Girone": "D", "Ottavi_%": 27.6, "Quarti_%": 10.0, "Semifinale_%": 3.0, "Finale_%": 0.8, "Vince_%": 0.1}, {"Squadra": "South Korea", "Girone": "A", "Ottavi_%": 25.5, "Quarti_%": 8.2, "Semifinale_%": 2.0, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Norway", "Girone": "I", "Ottavi_%": 20.5, "Quarti_%": 6.2, "Semifinale_%": 1.4, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Algeria", "Girone": "J", "Ottavi_%": 23.2, "Quarti_%": 7.4, "Semifinale_%": 1.9, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Canada", "Girone": "B", "Ottavi_%": 25.8, "Quarti_%": 8.0, "Semifinale_%": 1.9, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Egypt", "Girone": "G", "Ottavi_%": 24.1, "Quarti_%": 7.7, "Semifinale_%": 2.0, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Iran", "Girone": "G", "Ottavi_%": 27.6, "Quarti_%": 10.5, "Semifinale_%": 3.1, "Finale_%": 0.7, "Vince_%": 0.1}, {"Squadra": "Australia", "Girone": "D", "Ottavi_%": 25.3, "Quarti_%": 8.2, "Semifinale_%": 1.9, "Finale_%": 0.4, "Vince_%": 0.1}, {"Squadra": "Ivory Coast", "Girone": "E", "Ottavi_%": 23.6, "Quarti_%": 7.2, "Semifinale_%": 1.7, "Finale_%": 0.3, "Vince_%": 0.1}, {"Squadra": "Ecuador", "Girone": "E", "Ottavi_%": 26.3, "Quarti_%": 9.0, "Semifinale_%": 2.4, "Finale_%": 0.6, "Vince_%": 0.1}, {"Squadra": "Austria", "Girone": "J", "Ottavi_%": 24.4, "Quarti_%": 8.8, "Semifinale_%": 2.7, "Finale_%": 0.6, "Vince_%": 0.1}, {"Squadra": "Qatar", "Girone": "B", "Ottavi_%": 21.2, "Quarti_%": 5.5, "Semifinale_%": 0.9, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Czechia", "Girone": "A", "Ottavi_%": 20.4, "Quarti_%": 4.9, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "DR Congo", "Girone": "K", "Ottavi_%": 20.3, "Quarti_%": 5.7, "Semifinale_%": 1.4, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "South Africa", "Girone": "A", "Ottavi_%": 18.8, "Quarti_%": 4.6, "Semifinale_%": 0.9, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Uzbekistan", "Girone": "K", "Ottavi_%": 18.6, "Quarti_%": 5.0, "Semifinale_%": 1.1, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Panama", "Girone": "L", "Ottavi_%": 20.1, "Quarti_%": 6.4, "Semifinale_%": 1.6, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Jordan", "Girone": "J", "Ottavi_%": 17.4, "Quarti_%": 4.0, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Cape Verde", "Girone": "H", "Ottavi_%": 13.7, "Quarti_%": 3.0, "Semifinale_%": 0.5, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Iraq", "Girone": "I", "Ottavi_%": 17.1, "Quarti_%": 4.3, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Bosnia", "Girone": "B", "Ottavi_%": 19.4, "Quarti_%": 4.5, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Scotland", "Girone": "C", "Ottavi_%": 19.4, "Quarti_%": 5.6, "Semifinale_%": 1.4, "Finale_%": 0.3, "Vince_%": 0.0}, {"Squadra": "Paraguay", "Girone": "D", "Ottavi_%": 22.0, "Quarti_%": 6.4, "Semifinale_%": 1.4, "Finale_%": 0.2, "Vince_%": 0.0}, {"Squadra": "Saudi Arabia", "Girone": "H", "Ottavi_%": 16.2, "Quarti_%": 4.0, "Semifinale_%": 0.8, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Haiti", "Girone": "C", "Ottavi_%": 13.4, "Quarti_%": 2.7, "Semifinale_%": 0.4, "Finale_%": 0.0, "Vince_%": 0.0}, {"Squadra": "New Zealand", "Girone": "G", "Ottavi_%": 15.2, "Quarti_%": 3.1, "Semifinale_%": 0.4, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Sweden", "Girone": "F", "Ottavi_%": 18.4, "Quarti_%": 5.0, "Semifinale_%": 1.1, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Tunisia", "Girone": "F", "Ottavi_%": 19.0, "Quarti_%": 5.3, "Semifinale_%": 1.1, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Curaçao", "Girone": "E", "Ottavi_%": 15.5, "Quarti_%": 2.7, "Semifinale_%": 0.5, "Finale_%": 0.1, "Vince_%": 0.0}, {"Squadra": "Ghana", "Girone": "L", "Ottavi_%": 15.0, "Quarti_%": 3.5, "Semifinale_%": 0.5, "Finale_%": 0.0, "Vince_%": 0.0}], "pesi": {"ranking": 0.6, "attacco": 0.2, "difesa": 0.2}, "scala": 400.0, "pareggio": 0.25, "media_rating": 1565.6666666666667, "std_rating": 161.8572175259671, "media_gf": 1.5229166666666665, "std_gf": 0.32566761761513924, "media_gs": 1.1375, "std_gs": 0.22467470575090406};
 
 // === animazioni di processo per la home (Mondiale) ===
 const ANIM_SCRAPE = `
-<div class="atitle">🌐 Come avviene lo scraping</div>
+<div class="atitle">🌐 How the scraping works</div>
 <div class="scrape">
   <div class="node client">🖥️ Notebook<br><small>requests.get()</small></div>
   <div class="node server">🌐 FIFA.com<br><small>API ranking</small></div>
@@ -273,13 +273,13 @@ const ANIM_SCRAPE = `
 <table class="tblA" id="tblScrape"></table>`;
 
 const ANIM_MC = `
-<div class="atitle">🎲 10.000 tornei simulati</div>
+<div class="atitle">🎲 10,000 simulated tournaments</div>
 <div class="mc">
   <div class="mc-runs" id="mcRuns"></div>
   <div class="mc-bars" id="mcBars">
-    <div class="mc-bar" style="height:0%"><span>0%</span><small>🇪🇸 Spagna</small></div>
+    <div class="mc-bar" style="height:0%"><span>0%</span><small>🇪🇸 Spain</small></div>
     <div class="mc-bar" style="height:0%"><span>0%</span><small>🇦🇷 Argentina</small></div>
-    <div class="mc-bar" style="height:0%"><span>0%</span><small>🇫🇷 Francia</small></div>
+    <div class="mc-bar" style="height:0%"><span>0%</span><small>🇫🇷 France</small></div>
   </div>
 </div>`;
 
@@ -288,11 +288,11 @@ function clearAnim(){ animTimers.forEach(t=>clearInterval(t)||clearTimeout(t)); 
 
 function runScrapeAnim(){
   const t=document.getElementById('tblScrape'); if(!t) return;
-  const righe=[["🇫🇷 Francia","1877"],["🇪🇸 Spagna","1876"],["🇦🇷 Argentina","1875"]];
+  const righe=[["🇫🇷 France","1877"],["🇪🇸 Spain","1876"],["🇦🇷 Argentina","1875"]];
   function popola(){ t.innerHTML='';
     righe.forEach((r,i)=>animTimers.push(setTimeout(()=>{
       const tr=document.createElement('tr');
-      tr.innerHTML='<td>'+r[0]+'</td><td class="v">'+r[1]+' pt</td>'; t.appendChild(tr);
+      tr.innerHTML='<td>'+r[0]+'</td><td class="v">'+r[1]+' pts</td>'; t.appendChild(tr);
     },1900+i*330))); }
   popola(); animTimers.push(setInterval(popola,2800));
 }
@@ -313,19 +313,19 @@ function runMcAnim(){
 
 // ---- HOME / processo ----
 const STEPS = [
-  {ico:"🌐", t:"Web scraping", nKey:"squadre", nl:"squadre",
-   d:"Il ranking FIFA viene scaricato in tempo reale dall'API pubblica di FIFA.com tramite web scraping (con fallback ai valori verificati se la rete non è disponibile). I 12 gironi provengono dal sorteggio ufficiale, con i vincitori dei playoff di marzo già inseriti."},
-  {ico:"⚖️", t:"Rating combinato", nKey:null, nl:"",
-   d:"Per ogni squadra calcolo un rating che combina tre fattori via z-score: il ranking FIFA (peso 60%), la forza d'attacco (gol fatti, 20%) e la solidità difensiva (gol subiti, 20%). Così il modello non guarda solo la posizione FIFA ma anche come gioca la squadra."},
-  {ico:"🎲", t:"Monte Carlo", nKey:"nsim", nl:"simulazioni",
-   d:"Simulo l'intero torneo migliaia di volte. Ogni partita usa una formula tipo-Elo per le probabilità di vittoria/pareggio e una distribuzione di Poisson per i gol. Ripetendo il torneo tante volte, la frequenza con cui ogni squadra vince diventa la sua probabilità stimata."},
-  {ico:"📈", t:"Visualizzazione", nKey:null, nl:"",
-   d:"I risultati diventano grafici interattivi: favoriti, percorso di ogni squadra, confronti testa a testa, e un tabellone simulato coerente coi gironi. Tutto gira offline nel browser, anche il simulatore che puoi rilanciare cambiando i pesi."},
+  {ico:"🌐", t:"Web scraping", nKey:"squadre", nl:"teams",
+   d:"The FIFA rankings are downloaded in real time from FIFA.com\'s public API via web scraping (falling back to verified values when the network is unavailable). The 12 groups come from the official draw, with the March playoff winners already included."},
+  {ico:"⚖️", t:"Combined rating", nKey:null, nl:"",
+   d:"For every team I compute a rating that combines three factors via z-scores: the FIFA ranking (60% weight), attacking strength (goals scored, 20%) and defensive solidity (goals conceded, 20%). The model looks not only at the FIFA position but also at how the team plays."},
+  {ico:"🎲", t:"Monte Carlo", nKey:"nsim", nl:"simulations",
+   d:"I simulate the whole tournament thousands of times. Every match uses an Elo-style formula for win/draw probabilities and a Poisson distribution for goals. By repeating the tournament many times, the frequency with which each team wins becomes its estimated probability."},
+  {ico:"📈", t:"Visualisation", nKey:null, nl:"",
+   d:"The results become interactive charts: favourites, each team\'s path, head-to-head comparisons, and a simulated bracket consistent with the groups. Everything runs offline in the browser, including the simulator you can re-run with different weights."},
 ];
 function statNum(key){
   if(!key) return null;
   if(key==="squadre") return Object.keys(DATA.rating||{}).length || 48;
-  if(key==="nsim") return (typeof DATA.nsim!=="undefined")? DATA.nsim : "10.000";
+  if(key==="nsim") return (typeof DATA.nsim!=="undefined")? DATA.nsim : "10,000";
   return null;
 }
 function renderHome(){
@@ -503,12 +503,12 @@ function montecarlo(pesoR,pesoA,pesoD,n){
   let gh='';
   for(const g in tr.gironi){
     const cl=tr.gironi[g].classifica, pt=tr.gironi[g].partite;
-    gh+='<div class="gcard"><div class="gh">Girone '+g+'</div><table>';
+    gh+='<div class="gcard"><div class="gh">Group '+g+'</div><table>';
     cl.forEach((r,i)=>{
       const passa = i<2;   // prime due qualificate dirette (le terze dipendono dal ranking globale)
       gh+='<tr><td class="pos">'+(i+1)+'</td>'+
           '<td class="'+(passa?'qual':'')+'">'+flag(r.Squadra)+' '+r.Squadra+'</td>'+
-          '<td class="num" style="text-align:right">'+r.Pt+' pt</td></tr>';
+          '<td class="num" style="text-align:right">'+r.Pt+' pts</td></tr>';
     });
     gh+='</table>';
     pt.forEach(m=>{gh+='<div class="gmatch"><span>'+flag(m.a)+' '+shortName(m.a)+'</span>'+
@@ -529,7 +529,7 @@ function nomeF(s){return flag(s)+' '+s;}
 function score(m){
   if(!m) return '';
   let base=m.ga+'-'+m.gb;
-  if(m.rig) base+=' ('+m.rig[0]+'-'+m.rig[1]+' r)';
+  if(m.rig) base+=' ('+m.rig[0]+'-'+m.rig[1]+' pens)';
   return base;
 }
 function tab(t){['home','fav','sim','h2h','perc','brk'].forEach((x,i)=>{
@@ -546,8 +546,8 @@ function renderFav(rows){
   document.getElementById('favList').innerHTML=h;
 }
 function renderPhase(rows){
-  const cols=['Squadra','Girone','Ottavi','Quarti','Semifinale','Finale','Vince'];
-  let h='<thead><tr>'+cols.map(c=>`<th>${c}${c.length>3&&c!=='Squadra'&&c!=='Girone'?' %':''}</th>`).join('')+'</tr></thead><tbody>';
+  const cols=['Team','Group','Round of 16 %','Quarter-finals %','Semi-finals %','Final %','Wins %'];
+  let h='<thead><tr>'+cols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>';
   rows.forEach(r=>{h+='<tr>'+
     `<td>${flag(r.Squadra)} ${r.Squadra}</td><td>${r.Girone}</td>`+
     ['Ottavi','Quarti','Semifinale','Finale','Vince'].map(k=>{
@@ -559,11 +559,11 @@ function rilancia(){
   let r=+document.getElementById('wRank').value, a=+document.getElementById('wAtt').value, d=+document.getElementById('wDif').value;
   const n=+document.getElementById('nSim').value;
   const tot=(r+a+d)||1; r/=tot;a/=tot;d/=tot;
-  const btn=document.getElementById('runBtn');btn.innerHTML='<span class="spin"></span>Calcolo...';
+  const btn=document.getElementById('runBtn');btn.innerHTML='<span class="spin"></span>Computing…';
   setTimeout(()=>{
     const res=montecarlo(r,a,d,n);
     probCorrente=res;
-    let h='<div style="margin-bottom:10px;font-weight:700">Pesi usati: ranking '+(r*100|0)+'% · attacco '+(a*100|0)+'% · difesa '+(d*100|0)+'%</div>';
+    let h='<div style="margin-bottom:10px;font-weight:700">Weights used: ranking '+(r*100|0)+'% · attack '+(a*100|0)+'% · defence '+(d*100|0)+'%</div>';
     document.getElementById('simResult').innerHTML=h+'<div id="favList2"></div>';
     const max=Math.max(...res.map(x=>x.Vince_));
     let hh='';res.slice(0,12).forEach(x=>{hh+=`<div style="display:flex;align-items:center;gap:10px;margin:6px 0">
@@ -571,13 +571,13 @@ function rilancia(){
       <div class="bar" style="width:${Math.max(2,300*x.Vince_/max)}px"></div>
       <div style="font-weight:800;color:${C.arancio}">${x.Vince_}%</div></div>`;});
     document.getElementById('favList2').innerHTML=hh;
-    btn.innerHTML='▶ Rilancia';
+    btn.innerHTML='▶ Re-run';
   },30);
 }
 
 function confronta(){
   const a=document.getElementById('teamA').value,b=document.getElementById('teamB').value;
-  if(a===b){document.getElementById('h2hResult').innerHTML='<p style="color:'+C.beigeS+'">Scegli due squadre diverse.</p>';return;}
+  if(a===b){document.getElementById('h2hResult').innerHTML='<p style="color:'+C.beigeS+'">Pick two different teams.</p>';return;}
   const RAT=zRating(DATA.pesi.ranking,DATA.pesi.attacco,DATA.pesi.difesa);
   // simulo 3000 sfide dirette
   let wa=0;for(let i=0;i<3000;i++)if(simKO(RAT,a,b)===a)wa++;
@@ -585,17 +585,17 @@ function confronta(){
   const [ga,gb]=golAttesi(a,b);
   document.getElementById('h2hResult').innerHTML=`<div class="h2h">
     <div class="team"><div class="big" style="color:${C.turchese}">${pa}%</div><div style="font-weight:700">${flag(a)} ${a}</div>
-      <div style="font-size:.8rem;opacity:.7">rating ${DATA.rating[a]} · ${ga.toFixed(1)} gol attesi</div></div>
+      <div style="font-size:.8rem;opacity:.7">rating ${DATA.rating[a]} · ${ga.toFixed(1)} expected goals</div></div>
     <div class="vs">VS</div>
     <div class="team"><div class="big" style="color:${C.arancio}">${pb}%</div><div style="font-weight:700">${flag(b)} ${b}</div>
-      <div style="font-size:.8rem;opacity:.7">rating ${DATA.rating[b]} · ${gb.toFixed(1)} gol attesi</div></div>
+      <div style="font-size:.8rem;opacity:.7">rating ${DATA.rating[b]} · ${gb.toFixed(1)} expected goals</div></div>
   </div>`;
 }
 
 function percorso(){
   const s=document.getElementById('teamPerc').value;
   const r=probCorrente.find(x=>x.Squadra===s)||DATA.prob.find(x=>x.Squadra===s);
-  const fasi=[['Ottavi','Ottavi'],['Quarti','Quarti'],['Semifinale','Semifinale'],['Finale','Finale'],['Vince','Vince il torneo']];
+  const fasi=[['Ottavi','Round of 16'],['Quarti','Quarter-finals'],['Semifinale','Semi-finals'],['Finale','Final'],['Vince','Wins the tournament']];
   let h='<div style="max-width:520px">';
   fasi.forEach(([k,lab])=>{const v=r[k+'_']??r[k+'_%']??0;
     h+=`<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-weight:700">
@@ -620,9 +620,9 @@ function genBracket(){
     let gh='';
     for(const g in (tr.gironi||{})){
       const cl=tr.gironi[g].classifica, pts=tr.gironi[g].partite;
-      gh+='<div class="gcard"><div class="gh">Girone '+g+'</div><table>';
+      gh+='<div class="gcard"><div class="gh">Group '+g+'</div><table>';
       cl.forEach((r,i)=>{const passa=i<2;
-        gh+='<tr><td class="pos">'+(i+1)+'</td><td class="'+(passa?'qual':'')+'">'+flag(r.Squadra)+' '+shN(r.Squadra)+'</td><td style="text-align:right">'+r.Pt+' pt</td></tr>';});
+        gh+='<tr><td class="pos">'+(i+1)+'</td><td class="'+(passa?'qual':'')+'">'+flag(r.Squadra)+' '+shN(r.Squadra)+'</td><td style="text-align:right">'+r.Pt+' pts</td></tr>';});
       gh+='</table>';
       pts.forEach(m=>{gh+='<div class="gmatch"><span>'+flag(m.a)+' '+shN(m.a)+'</span><b>'+m.ga+'-'+m.gb+'</b><span style="text-align:right">'+shN(m.b)+' '+flag(m.b)+'</span></div>';});
       gh+='</div>';
@@ -714,7 +714,7 @@ function genBracket(){
   if(finale){
     const fy=H/2-matchH/2-10;
     svg+=box(centerX, fy, finale,'C');
-    svg+='<text x="'+(centerX+ (colW-18)/2)+'" y="'+(fy-8)+'" font-size="11" font-weight="800" text-anchor="middle" fill="'+C.ar+'">FINALE</text>';
+    svg+='<text x="'+(centerX+ (colW-18)/2)+'" y="'+(fy-8)+'" font-size="11" font-weight="800" text-anchor="middle" fill="'+C.ar+'">FINAL</text>';
     // trofeo campione
     svg+='<text x="'+(centerX+(colW-18)/2)+'" y="'+(fy+matchH+24)+'" font-size="18" font-weight="800" text-anchor="middle" fill="'+C.pet+'">\uD83C\uDFC6 '+flag(tr.Campione)+' '+tr.Campione+'</text>';
   }
@@ -740,7 +740,7 @@ function genBracket(){
 }
 
 // init
-document.getElementById('nsimLabel').textContent=(10000).toLocaleString();
+document.getElementById('nsimLabel').textContent=(10000).toLocaleString('en-US');
 ['wRank','wAtt','wDif','bRank','bAtt','bDif'].forEach(id=>{const e=document.getElementById(id);if(!e)return;
   e.oninput=()=>document.getElementById(id+'V').textContent=e.value+'%';});
 document.getElementById('nSim').oninput=e=>document.getElementById('nSimV').textContent=e.target.value;
