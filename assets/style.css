@@ -7,7 +7,7 @@
   --paper:    #ffffff;
   --ink:      #1a1a1a;
   --ink-soft: #4a4a4a;
-  --ink-mute: #7a7674;
+  --ink-mute: #6b6764;
   --rule:     #d6d3cc;
   --rule-soft:#ece9e0;
   --accent:   #1a3a6e;
@@ -15,12 +15,19 @@
 
   --serif:  "Crimson Pro", "EB Garamond", Georgia, "Times New Roman", serif;
   --sans:   "Geist", "Public Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  --mono:   "JetBrains Mono", "Geist Mono", "SF Mono", Menlo, monospace;
 
   --maxw: 1180px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+
+html {
+  /* 112.5% = 18px con default a 16px, ma scala con la dimensione di
+     carattere impostata dall'utente nel browser (WCAG 1.4.4).
+     Attenzione: la percentuale sta SOLO su html. Metterla su
+     "html, body" la farebbe comporre (body = 112.5% di 18px). */
+  font-size: 112.5%;
+}
 
 html, body {
   margin: 0;
@@ -28,13 +35,13 @@ html, body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 18px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  font-size: 1rem;
   background-image:
     radial-gradient(circle at 1px 1px, rgba(0,0,0,0.018) 1px, transparent 0);
   background-size: 22px 22px;
@@ -55,11 +62,15 @@ body {
   position: sticky;
   top: 0;
   align-self: start;
-  height: 100vh;
+  /* Era: height: 100vh + overflow-y: auto. Su un viewport da 720px il
+     contenuto della sidebar è alto 1012px, quindi 292px finivano dentro
+     una seconda barra di scorrimento e le voci "Divulgazione" e
+     "Contatti" sparivano. Senza vincolo di altezza la sidebar scorre
+     con la pagina quando è più alta del viewport, e resta sticky
+     quando ci sta: nulla è mai nascosto. */
   padding: 3rem 2rem 2rem 2rem;
   border-right: 1px solid var(--rule);
   background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, transparent 100%);
-  overflow-y: auto;
   font-family: var(--sans);
 }
 
@@ -168,12 +179,11 @@ body {
   text-decoration: none;
   border-bottom: none;
   letter-spacing: 0.005em;
-  transition: color 0.18s, padding 0.18s;
+  transition: color 0.18s;
 }
 
 .nav a:hover {
   color: var(--accent-h);
-  padding-left: 6px;
 }
 
 .nav a.current {
@@ -184,40 +194,6 @@ body {
 .nav a.current::before {
   content: "› ";
   color: var(--accent);
-}
-
-.lang-switch {
-  display: flex;
-  gap: 0.4rem;
-  margin: 0 0 2rem 0;
-  padding: 0 0 1.2rem 0;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--sans);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-}
-
-.lang-switch a {
-  display: inline-block;
-  padding: 0.3rem 0.65rem;
-  color: var(--ink-soft);
-  text-decoration: none;
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  font-weight: 500;
-  transition: all 0.15s ease;
-}
-
-.lang-switch a:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.lang-switch a.active {
-  color: #fff;
-  background: var(--ink);
-  border-color: var(--ink);
-  font-weight: 600;
 }
 
 /* Main content ----------------------------------------------- */
@@ -250,7 +226,7 @@ body {
   line-height: 1.65;
   color: var(--ink);
   margin: 0 0 2rem 0;
-  max-width: 64ch;
+  max-width: 50ch;
 }
 
 .lead strong {
@@ -259,7 +235,10 @@ body {
 }
 
 p {
-  max-width: 70ch;
+  /* Crimson Pro è stretto: la sua "0" (l'unità ch) è molto più larga del
+     carattere medio, quindi ch sovrastima di parecchio. Misurato sul
+     testo reale: 70ch = 101 caratteri per riga piena, 54ch = 79. */
+  max-width: 54ch;
   margin: 0 0 1rem 0;
 }
 
@@ -338,14 +317,6 @@ h3 {
 .entry-venue strong {
   color: var(--ink-soft);
   font-weight: 500;
-}
-
-.entry-meta {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--ink-mute);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
 }
 
 .entry .author-self {
@@ -487,10 +458,16 @@ h3 {
   padding-top: 0.2rem;
 }
 .exp-date.current::before {
-  content: "● ";
-  color: #6a8859;
-  font-size: 0.7em;
-  vertical-align: 1px;
+  content: "";              /* era "● ": veniva letto dagli screen reader.
+                               Ora è un disco grafico; il significato sta
+                               nello <span class="sr-only"> nell'HTML. */
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 50%;
+  background: #4f6841;      /* più scuro: 5.93:1, era 3.81:1 */
+  margin-right: 0.4em;
+  vertical-align: 0.08em;
 }
 
 .exp-role {
@@ -542,102 +519,6 @@ h3 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink-mute);
-}
-
-/* Latest / News block (home page) ----------------------------- */
-.latest {
-  margin: 1.5rem 0 2.5rem 0;
-  padding: 1.2rem 1.4rem;
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent-h);
-}
-
-.latest-label {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-h);
-  margin: 0 0 0.6rem 0;
-  display: block;
-}
-
-.latest-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.latest-list li {
-  padding: 0.35rem 0;
-  font-size: 0.93rem;
-  line-height: 1.5;
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 0.8rem;
-  border-bottom: 1px dotted var(--rule-soft);
-}
-
-.latest-list li:last-child { border-bottom: none; }
-
-.latest-list .when {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  color: var(--ink-mute);
-  letter-spacing: 0.04em;
-  padding-top: 0.15rem;
-}
-
-/* Affiliations bar (sidebar bottom) ---------------------------- */
-.affiliations {
-  margin: 2rem 0 0 0;
-  padding: 1.2rem 0 0 0;
-  border-top: 1px solid var(--rule);
-}
-
-.affiliations-label {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin: 0 0 0.6rem 0;
-  display: block;
-}
-
-.affiliations-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  line-height: 1.55;
-  color: var(--ink-soft);
-}
-
-.affiliations-list li {
-  padding: 0.18rem 0;
-}
-
-.affiliations-list li::before {
-  content: "▸ ";
-  color: var(--ink-mute);
-  font-size: 0.7em;
-  vertical-align: 1px;
-}
-
-.affiliations-list a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  border: none;
-  transition: color 0.18s;
-}
-
-.affiliations-list a:hover {
-  color: var(--accent-h);
 }
 
 /* Latest / news block ---------------------------------------- */
@@ -693,53 +574,6 @@ h3 {
 
 .latest-body strong { color: var(--accent); font-weight: 600; }
 
-/* Logo / affiliations bar ------------------------------------ */
-.logo-bar {
-  margin: 4rem 0 1rem 0;
-  padding: 1.5rem 0 1rem 0;
-  border-top: 1px solid var(--rule);
-}
-
-.logo-bar-label {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 0.8rem;
-}
-
-.logo-bar-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.9rem;
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  align-items: baseline;
-}
-
-.logo-bar-items a,
-.logo-bar-items span.no-link {
-  color: var(--ink-soft);
-  text-decoration: none;
-  border: none;
-  font-variant: small-caps;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-}
-
-.logo-bar-items a:hover {
-  color: var(--accent);
-}
-
-.logo-bar-items .sep {
-  color: var(--rule);
-  user-select: none;
-  font-weight: 300;
-}
-
 /* Project card ----------------------------------------------- */
 .project {
   padding: 1.5rem 0;
@@ -756,6 +590,9 @@ h3 {
 }
 
 .project-title {
+  /* è un <h2>: annulla decorazioni e paragrafo di sezione ereditati */
+  border-bottom: none;
+  padding-bottom: 0;
   font-family: var(--serif);
   font-size: 1.18rem;
   font-weight: 600;
@@ -764,6 +601,8 @@ h3 {
   text-transform: none;
   color: var(--ink);
 }
+
+.project-title::before { content: none; }
 
 .project-status {
   display: inline-block;
@@ -831,7 +670,7 @@ h3 {
   padding: 0.7rem 2rem;
 }
 .top-bar-inner {
-  max-width: 1400px;
+  max-width: var(--maxw);
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
@@ -842,18 +681,26 @@ h3 {
   font-weight: 500;
   letter-spacing: 0.14em;
 }
-.top-bar a {
+.top-bar a,
+.top-bar .active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;      /* WCAG 2.5.8: bersaglio minimo 24x24 px.
+                             Prima erano 15-22 px di larghezza. */
+  min-height: 1.75rem;
   color: var(--ink-mute);
   text-decoration: none;
   border: none;
-  padding: 0.15rem 0;
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
   transition: color 0.15s ease;
 }
 .top-bar a:hover { color: var(--accent); }
-.top-bar a.active {
+.top-bar .active {
   color: var(--ink);
-  border-bottom: 1px solid var(--accent);
+  cursor: default;
+  box-shadow: inset 0 -1px 0 0 var(--accent);
 }
 
 /* Manifesto — bold opening line on About page ----------------- */
@@ -922,13 +769,58 @@ h3 {
   .shell {
     grid-template-columns: 1fr;
   }
+  /* La sidebar precede <main> nel DOM: su mobile diventa una fascia
+     d'intestazione. Prima occupava 1027px — 1,27 schermate di scroll
+     prima di una riga di contenuto, su ogni pagina.
+     NON si inverte l'ordine con `order`: l'ordine visivo divergerebbe
+     da quello di tabulazione (WCAG 1.3.2 e 2.4.3). Si comprime. */
   .sidebar {
     position: static;
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--rule);
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.25rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-content: start;
   }
+  .profile-img {
+    width: 68px;
+    height: 68px;
+    margin: 0;
+    grid-row: span 2;
+    align-self: center;
+  }
+  .name {
+    font-size: 1.3rem;
+    margin: 0;
+    align-self: end;
+  }
+  .tagline {
+    grid-column: 2;
+    align-self: start;
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+  }
+  /* contatti, CV, social e menu vanno a tutta larghezza sotto */
+  .sidebar-block,
+  .site-nav {
+    grid-column: 1 / -1;
+  }
+  .sidebar-block { margin: 0.9rem 0 0 0; }
+  .sidebar-block:first-of-type { margin-top: 1.1rem; }
+  /* menu in riga: sette voci su due righe invece che su sette */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.15rem;
+    margin: 1rem 0 0 0;
+    padding: 0.9rem 0 0 0;
+  }
+  .nav a { padding: 0.45rem 0; }
+  .nav a:hover { padding-left: 0; }
+
   .main {
     padding: 2rem 1.5rem 3rem 1.5rem;
   }
@@ -940,4 +832,85 @@ h3 {
   .latest-item { grid-template-columns: 1fr; gap: 0.1rem; }
   .project-meta { grid-template-columns: 1fr; gap: 0.1rem 0; }
   .project-meta dt { margin-top: 0.4rem; }
+}
+
+
+/* =============================================================
+   Accessibilità e responsività — aggiunte dall'audit
+   ============================================================= */
+
+/* 5. Skip link (WCAG 2.4.1): 16 elementi tabbabili precedevano <main> */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: none;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* Testo riservato agli screen reader (etichette di stato, avvisi) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 11. Focus visibile esplicito (WCAG 2.4.7 / 2.4.11).
+   Prima ereditava il ring di default: presente, ma sottile e quasi
+   invisibile sul bottone CV nero. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+.cv-button:focus-visible {
+  outline-color: var(--accent-h);
+  outline-offset: 3px;
+}
+main:focus,
+main:focus-visible {
+  outline: none;   /* riceve il focus dallo skip link, non va evidenziato */
+}
+
+/* 9b. Il menu è ora dentro <nav class="site-nav">. La sidebar è un blocco,
+   quindi il wrapper è già neutro rispetto al layout: la spaziatura resta
+   sulla <ul>. Niente display:contents — cancellerebbe il landmark
+   dall'albero di accessibilità, che è esattamente ciò che vogliamo esporre. */
+.site-nav { margin: 0; padding: 0; }
+
+/* 7. Breakpoint intermedio mancante: fra 881 e 1100px la colonna di testo
+   scendeva a 441px (~63 caratteri per riga piena) contro i ~101 del
+   desktop. Con questo scaglione resta a 550px / ~79 caratteri a ogni
+   larghezza, come sul desktop. */
+@media (min-width: 881px) and (max-width: 1100px) {
+  .shell { grid-template-columns: 250px 1fr; }
+  .sidebar { padding: 2.5rem 1.5rem 2rem 1.5rem; }
+  .main { padding: 3rem 2.25rem; }
+  .page-title { font-size: 2.2rem; }
+  .profile-img { width: 104px; height: 104px; }
+}
+
+/* 17. Rispetto della preferenza di movimento ridotto (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
