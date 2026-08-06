@@ -1,5 +1,5 @@
 ---
-title: "news"
+title: "Tutti gli aggiornamenti"
 ---
 
-_In costruzione — i contenuti arrivano dai file dati._
+{{< include _generated/it/news.html >}}

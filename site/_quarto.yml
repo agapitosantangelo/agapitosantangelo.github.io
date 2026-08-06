@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: _site
+  pre-render: python3 tools/build_pages.py
 
 website:
   title: "Agapito E. Santangelo"
@@ -15,6 +16,8 @@ website:
     background: "#fbfaf6"
     foreground: "#1a1a1a"
     left:
+      - text: "Chi sono"
+        href: about.qmd
       - text: "Ricerca"
         href: research.qmd
       - text: "Progetti"
