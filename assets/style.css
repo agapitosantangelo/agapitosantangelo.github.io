@@ -59,15 +59,20 @@ body {
 
 /* Sidebar ----------------------------------------------------- */
 .sidebar {
-  position: sticky;
-  top: 0;
+  /* Era: position: sticky + top: 0 + height: 100vh + overflow-y: auto.
+     Il contenuto della sidebar è alto 1012px: su un viewport da 720px
+     finivano 292px dentro una seconda barra di scorrimento, e le voci
+     "Divulgazione" e "Contatti" sparivano sotto.
+
+     Attenzione: NON basta togliere height/overflow. Un elemento sticky
+     più alto del viewport si blocca a top:0 e la sua parte bassa resta
+     permanentemente fuori schermo — peggio di prima, perché senza il
+     contenitore scrollabile il browser non riesce nemmeno a portare in
+     vista la voce che riceve il focus da tastiera (verificato: con Tab
+     su "Contatti" il focus finiva a top 936 in un viewport di 720).
+     Va tolto anche lo sticky: la sidebar scorre con la pagina e tutto
+     resta raggiungibile. */
   align-self: start;
-  /* Era: height: 100vh + overflow-y: auto. Su un viewport da 720px il
-     contenuto della sidebar è alto 1012px, quindi 292px finivano dentro
-     una seconda barra di scorrimento e le voci "Divulgazione" e
-     "Contatti" sparivano. Senza vincolo di altezza la sidebar scorre
-     con la pagina quando è più alta del viewport, e resta sticky
-     quando ci sta: nulla è mai nascosto. */
   padding: 3rem 2rem 2rem 2rem;
   border-right: 1px solid var(--rule);
   background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, transparent 100%);
@@ -699,7 +704,6 @@ h3 {
 .top-bar a:hover { color: var(--accent); }
 .top-bar .active {
   color: var(--ink);
-  cursor: default;
   box-shadow: inset 0 -1px 0 0 var(--accent);
 }
 
@@ -819,7 +823,6 @@ h3 {
     padding: 0.9rem 0 0 0;
   }
   .nav a { padding: 0.45rem 0; }
-  .nav a:hover { padding-left: 0; }
 
   .main {
     padding: 2rem 1.5rem 3rem 1.5rem;
@@ -906,7 +909,17 @@ main:focus-visible {
   .profile-img { width: 104px; height: 104px; }
 }
 
-/* 17. Rispetto della preferenza di movimento ridotto (WCAG 2.3.3) */
+/* Modalità a colori forzati (Contrasto elevato di Windows).
+   Il pallino "in corso" è ora un disco disegnato con `background`, e in
+   forced-colors gli sfondi vengono sovrascritti dal sistema: sparirebbe.
+   Il vecchio glifo "● " sopravviveva perché era testo. Si ridichiara con
+   un colore di sistema, che in questa modalità viene rispettato. */
+@media (forced-colors: active) {
+  .exp-date.current::before { background: CanvasText; }
+  :focus-visible { outline-color: Highlight; }
+}
+
+/* 17. Rispetto della preferenza di movimento ridotto (WCAG 2.3.3, AAA) */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
