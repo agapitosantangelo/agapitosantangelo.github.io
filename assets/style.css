@@ -13,11 +13,9 @@
   --accent:   #1a3a6e;
   --accent-h: #c14b3f;
 
-  /* palette event-study (ggdid, Callaway & Sant'Anna): grafica e varianti testo AA */
+  /* palette event-study: pre alla ggdid (Callaway & Sant'Anna), post = accent del sito */
   --es-pre:      #e87d72;
-  --es-post:     #56bcc2;
   --es-pre-ink:  #b3574e;
-  --es-post-ink: #27737a;
 
   --serif:  "Crimson Pro", "EB Garamond", Georgia, "Times New Roman", serif;
   --sans:   "Geist", "Public Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -351,7 +349,7 @@ h3 {
 
 .entry-tag.peer    { border-color: var(--accent); color: var(--accent); }
 .entry-tag.wp      { border-color: var(--es-pre); color: var(--es-pre-ink); }
-.entry-tag.conf    { border-color: var(--es-post); color: var(--es-post-ink); }
+.entry-tag.conf    { border-color: #6a8859; color: #4f6841; }
 .entry-tag.report  { border-color: var(--ink-mute); color: var(--ink-mute); }
 
 /* Two column timeline (education / experience) */
@@ -476,7 +474,7 @@ h3 {
   width: 0.45em;
   height: 0.45em;
   border-radius: 50%;
-  background: var(--es-post-ink);  /* teal "post": posizione attiva */
+  background: #4f6841;      /* più scuro: 5.93:1, era 3.81:1 */
   margin-right: 0.4em;
   vertical-align: 0.08em;
 }
@@ -626,7 +624,7 @@ h3 {
   border: 1px solid var(--rule);
   color: var(--ink-mute);
 }
-.project-status.ongoing  { border-color: var(--es-post); color: var(--es-post-ink); }
+.project-status.ongoing  { border-color: #6a8859; color: #4f6841; }
 .project-status.review   { border-color: var(--es-pre); color: var(--es-pre-ink); }
 .project-status.published { border-color: var(--accent); color: var(--accent); }
 
