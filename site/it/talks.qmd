@@ -1,5 +1,6 @@
 ---
 title: "Talk e conferenze"
+aliases: [conferences.html]
 ---
 
 {{< include ../_generated/it/talks.html >}}

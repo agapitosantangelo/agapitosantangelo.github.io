@@ -1,5 +1,6 @@
 ---
 title: "Charlas y congresos"
+aliases: [conferences.html]
 ---
 
 {{< include ../_generated/es/talks.html >}}

@@ -29,7 +29,8 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          # il sito pubblicato è l'output Quarto committato nel repo
+          path: site/_site
 
       - id: deployment
         uses: actions/deploy-pages@v4
