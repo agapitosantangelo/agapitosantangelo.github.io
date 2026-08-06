@@ -66,6 +66,11 @@ h2 {
   .navbar-brand img { height: 30px; }
 }
 
+// Le homepage hanno solo pagetitle: Quarto emette comunque un
+// title-block vuoto (~60px con i margini) che spinge giù la nav
+// e fa "saltare" l'header rispetto alle pagine interne.
+#title-block-header:empty { display: none; }
+
 // ------------------------------------------------------------
 // Homepage alla psantanna.com (template "trestles"):
 // sinistra ritratto tondo + nome + aree + lista link con icone,
