@@ -1,0 +1,85 @@
+# Publications data extracted from {en,it,es}/research.html
+# Sections: "Peer-reviewed publications" and "Working papers".
+# Language-invariant fields are scalar; language-dependent fields use {en, it, es}.
+
+- id: text-mining-food-insecurity
+  type: peer-reviewed
+  authors: "Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … & Coffey, K."
+  year: 2025
+  title: "Text mining and machine learning reveal global determinants of food insecurity."
+  venue: "Scientific Reports, 15(1), 36709."
+  links:
+    pdf: "https://www.nature.com/articles/s41598-025-20670-x.pdf"
+  cross_ref: proj-climate-security
+
+- id: sroi-glass-industry-sdgs
+  type: peer-reviewed
+  authors: "Pastore, L., Corvo, L., Santangelo, A. E., Resce, G., & Lelo, A."
+  year: 2025
+  title: "Measuring sustainability impacts through SROI: a case study of the Italian glass industry's contribution to the SDGs."
+  venue: "Accounting, Auditing & Accountability Journal, 38(5), 1483–1498."
+  links:
+    pdf: "https://www.emerald.com/aaaj/article-pdf/38/5/1483/10060781/aaaj-04-2024-7041.pdf"
+
+- id: financial-constraints-innovation
+  type: peer-reviewed
+  authors: "Santangelo, A. E."
+  year: 2023
+  title: "The relationship between financial constraints and innovation, with a supportive analysis on a sample of firms."
+  venue: "Journal of Academic Research in Economics, 15(3), 523–544."
+  links:
+    pdf: "https://www.jare-sh.com/downloads/nov_2023/santangelo.pdf"
+
+- id: divario-nord-sud-molise
+  type: peer-reviewed
+  authors: "Pietrovito, F., & Santangelo, A. E."
+  year: 2022
+  title: "Divario Nord-Sud: un focus sul Molise."
+  venue: "GLOCALE, 18(19)."
+  links:
+    citation: "https://scholar.google.com/citations?view_op=view_citation&hl=it&user=uSsHajYAAAAJ&citation_for_view=uSsHajYAAAAJ:u5HHmVD_uO8C"
+
+- id: eu-cohesion-digital-public-services
+  type: working-paper
+  authors: "Caravaggio, N., Resce, G., & Santangelo, A. E."
+  year: 2025
+  title: "EU cohesion policy and digital public services."
+  venue: "ESDP No. 25100, University of Molise."
+  links:
+    pdf: "http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf"
+  under_review: "Technological Forecasting and Social Change"
+  jmp: true
+
+- id: digital-investment-government-services
+  type: working-paper
+  authors: "Caravaggio, N., Resce, G., & Santangelo, A. E."
+  year: 2026
+  title: "Digital investment and the evolution of government services."
+  venue:
+    en: "ESDP No. 26104, University of Molise."
+    it: "ESDP No. 26104, Università del Molise."
+    es: "ESDP No. 26104, Universidad de Molise."
+  links:
+    pdf: "http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26104.pdf"
+  under_review: "Structural Change and Economic Dynamics"
+
+- id: competition-punctuality-high-speed-rail
+  type: working-paper
+  authors: "Bergantino, A. S., Gabrielli, L., Resce, G., & Santangelo, A. E."
+  year: 2026
+  title: "Competition without punctuality gains: evidence from Italian high-speed rail."
+  venue: "SSRN working paper."
+  links:
+    ssrn: "https://ssrn.com/abstract=6444159"
+  under_review: "Transportation Research Part A: Policy and Practice"
+  cross_ref: proj-themia
+
+- id: fiscal-constraints-health-inequality
+  type: working-paper
+  authors: "Pietrovito, F., Rancan, A., Resce, G., & Santangelo, A. E."
+  year: 2026
+  title: "Do fiscal constraints affect health inequality research? A bibliometric perspective."
+  venue: "ESDP No. 26102, University of Molise."
+  links:
+    pdf: "http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26102.pdf"
+  cross_ref: proj-prin-health

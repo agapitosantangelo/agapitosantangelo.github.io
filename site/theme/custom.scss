@@ -1,0 +1,230 @@
+/*-- scss:defaults --*/
+
+// ============================================================
+// Agapito E. Santangelo — tema Quarto
+// Identità: carta crema, navy, mattone; palette event-study
+// (pre alla Callaway-Sant'Anna, post = accent del sito)
+// ============================================================
+
+// Token identità (invariati rispetto al sito storico)
+$es-bg:        #fbfaf6;
+$es-paper:     #ffffff;
+$es-ink:       #1a1a1a;
+$es-ink-soft:  #4a4a4a;
+$es-ink-mute:  #6b6764;
+$es-rule:      #d6d3cc;
+$es-rule-soft: #ece9e0;
+$es-accent:    #1a3a6e;   // navy — struttura, link, "post"
+$es-accent-h:  #c14b3f;   // mattone — interazione, linea del trattamento
+$es-pre:       #e87d72;   // salmone ggdid — grafica "pre"
+$es-pre-ink:   #b3574e;   // salmone scuro — testo AA in famiglia pre
+
+// Mappatura sui token Bootstrap/Quarto
+$body-bg: $es-bg;
+$body-color: $es-ink;
+$link-color: $es-accent;
+$link-hover-color: $es-accent-h;
+$primary: $es-accent;
+
+$font-family-serif: "Crimson Pro", "EB Garamond", Georgia, "Times New Roman", serif;
+$font-family-sans-serif: "Geist", "Public Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-serif;
+$font-size-root: 18px;
+$headings-font-weight: 600;
+
+$navbar-bg: $es-bg;
+
+/*-- scss:rules --*/
+
+body {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.018) 1px, transparent 0);
+  background-size: 22px 22px;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Righe di lettura comode (misura ~54ch come nel sito storico)
+main p { max-width: 54ch; }
+main .lead { max-width: 50ch; }
+
+h1, h2 {
+  color: $es-ink;
+  letter-spacing: -0.01em;
+}
+h2 {
+  border-bottom: 1px solid $es-rule;
+  padding-bottom: 0.35rem;
+  margin-top: 2.2rem;
+}
+
+.navbar {
+  border-bottom: 1px solid $es-rule;
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  .navbar-brand img { height: 30px; }
+}
+
+// ------------------------------------------------------------
+// Hero della homepage
+// ------------------------------------------------------------
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem 0 2rem;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.05;
+    border: none;
+    margin: 0 0 0.4rem;
+  }
+  .qualifica {
+    font-family: $font-family-sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $es-accent-h;
+    margin-bottom: 1rem;
+  }
+  .descrizione {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: $es-ink-soft;
+    max-width: 46ch;
+  }
+  .cta {
+    margin-top: 1.4rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .hero-viz { text-align: center; }
+  .hero-viz svg { width: 100%; max-width: 360px; height: auto; }
+}
+
+.btn-es {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.3rem;
+  border: 1px solid $es-ink;
+  background: $es-ink;
+  color: $es-bg;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  &:hover { background: $es-accent; border-color: $es-accent; color: $es-bg; }
+  &.ghost {
+    background: transparent;
+    color: $es-ink;
+    &:hover { background: transparent; color: $es-accent-h; border-color: $es-accent-h; }
+  }
+}
+
+// ------------------------------------------------------------
+// Card "ricerca in evidenza"
+// ------------------------------------------------------------
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.1rem;
+  margin: 1.4rem 0 2.2rem;
+}
+.featured-card {
+  p { display: flex; flex-direction: column; gap: 0.45rem; margin: 0; }
+  span { display: block; }
+  background: $es-paper;
+  border: 1px solid $es-rule;
+  padding: 1.2rem 1.35rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: border-color 0.18s, transform 0.18s;
+
+  &:hover { border-color: $es-accent; transform: translateY(-2px); }
+
+  .area {
+    font-family: $font-family-sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $es-pre-ink;
+  }
+  .titolo {
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.25;
+    a { color: $es-ink; text-decoration: none; }
+    a:hover { color: $es-accent; }
+  }
+  .sintesi { font-size: 0.9rem; color: $es-ink-soft; line-height: 1.45; }
+  .stato {
+    margin-top: auto;
+    font-family: $font-family-sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid $es-rule;
+    align-self: flex-start;
+    padding: 0.15rem 0.55rem;
+    &.ongoing   { border-color: #6a8859; color: #4f6841; }
+    &.review    { border-color: $es-pre; color: $es-pre-ink; }
+    &.published { border-color: $es-accent; color: $es-accent; }
+  }
+}
+
+// ------------------------------------------------------------
+// Aggiornamenti (ultimi 3)
+// ------------------------------------------------------------
+.updates {
+  border-left: 3px solid $es-accent;
+  background: $es-paper;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+
+  .update {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px dashed $es-rule;
+    &:last-child { border-bottom: none; }
+    .quando {
+      font-family: $font-family-sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: $es-ink-mute;
+      padding-top: 0.25rem;
+    }
+    .cosa { font-size: 0.95rem; line-height: 1.45; }
+  }
+  .tutti {
+    font-family: $font-family-sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+// Mobile
+@media (max-width: 820px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 1.2rem;
+    h1 { font-size: 2.2rem; }
+    .hero-viz { display: none; }
+  }
+}
+
+// Accessibilità: parità focus/hover
+:focus-visible {
+  outline: 2px solid $es-accent;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

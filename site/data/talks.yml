@@ -1,0 +1,327 @@
+# Talks & conferences — extracted from {en,it,es}/conferences.html (all year sections).
+# Ordered as on the source pages: newest first.
+# Language-variant fields use {en, it, es} subfields; invariant fields are scalar.
+
+- id: carma-2026
+  year: 2026
+  date:
+    en: "1–3 July 2026"
+    it: "1–3 luglio 2026"
+    es: "1–3 de julio de 2026"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title: "Digital Investment and the Evolution of Government Services"
+  venue:
+    en: |-
+      CARMA 2026 — 8th International Conference on Advanced Research Methods and Analytics · Universitat Politècnica de València · 1–3 July 2026.
+      Paper on digital investment, subsidies and the municipal digital divide (with N. Caravaggio and G. Resce), presented under the theme AI, Internet Data and Computational Methods in Social Sciences.
+    it: |-
+      CARMA 2026 — 8ª International Conference on Advanced Research Methods and Analytics · Universitat Politècnica de València · 1–3 luglio 2026.
+      Paper su investimenti digitali, sussidi e divario digitale municipale (con N. Caravaggio e G. Resce), presentato nell'ambito del tema AI, Internet Data and Computational Methods in Social Sciences.
+    es: |-
+      CARMA 2026 — 8.ª International Conference on Advanced Research Methods and Analytics · Universitat Politècnica de València · 1–3 de julio de 2026.
+      Trabajo sobre inversión digital, subvenciones y brecha digital municipal (con N. Caravaggio y G. Resce), presentado en el marco del tema AI, Internet Data and Computational Methods in Social Sciences.
+  photos:
+    - src: "assets/photos/talk-carma-2026-talk.jpg"
+      alt:
+        en: "Presenting the paper Digital Investment and the Evolution of Government Services at CARMA 2026, Valencia, July 2026"
+        it: "Presentazione del paper Digital Investment and the Evolution of Government Services a CARMA 2026, Valencia, luglio 2026"
+        es: "Presentación del trabajo Digital Investment and the Evolution of Government Services en CARMA 2026, Valencia, julio de 2026"
+      caption:
+        en: "Presenting Digital Investment and the Evolution of Government Services — CARMA 2026, Universitat Politècnica de València, 2 July 2026."
+        it: "Presentazione di Digital Investment and the Evolution of Government Services — CARMA 2026, Universitat Politècnica de València, 2 luglio 2026."
+        es: "Presentación de Digital Investment and the Evolution of Government Services — CARMA 2026, Universitat Politècnica de València, 2 de julio de 2026."
+    - src: "assets/photos/talk-carma-2026-group.jpg"
+      alt:
+        en: "Group photo of participants at the CARMA 2026 banner, Universitat Politècnica de València"
+        it: "Foto di gruppo dei partecipanti al banner di CARMA 2026, Universitat Politècnica de València"
+        es: "Foto de grupo de los participantes junto al cartel de CARMA 2026, Universitat Politècnica de València"
+      caption:
+        en: "The research group at the CARMA 2026 banner — Universitat Politècnica de València, 1–3 July 2026."
+        it: "Il gruppo di ricerca al banner di CARMA 2026 — Universitat Politècnica de València, 1–3 luglio 2026."
+        es: "El grupo de investigación junto al cartel de CARMA 2026 — Universitat Politècnica de València, 1–3 de julio de 2026."
+  link: "https://carmaconf.org/"
+
+- id: aisre-2026
+  year: 2026
+  date:
+    en: "24–26 June 2026"
+    it: "24–26 giugno 2026"
+    es: "24–26 de junio de 2026"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title: "Administrative Capture from Within"
+  venue:
+    en: |-
+      AISRe 2026 — XLVII Annual Scientific Conference of the Italian Regional Science Association · University of Florence, Novoli Campus · 24–26 June 2026.
+      Paper on administrative capture and institutional quality (with N. Caravaggio and G. Resce), presented under the theme Regions between innovation and sustainability: challenges for development policies.
+    it: |-
+      AISRe 2026 — XLVII Conferenza Scientifica Annuale dell'Associazione Italiana di Scienze Regionali · Università di Firenze, Campus di Novoli · 24–26 giugno 2026.
+      Paper su cattura amministrativa e qualità delle istituzioni (con N. Caravaggio e G. Resce), nell'ambito del tema «Regioni tra innovazione e sostenibilità: le sfide per le politiche di sviluppo».
+    es: |-
+      AISRe 2026 — XLVII Conferencia Científica Anual de la Asociación Italiana de Ciencia Regional · Universidad de Florencia, Campus de Novoli · 24–26 de junio de 2026.
+      Trabajo sobre captura administrativa y calidad de las instituciones (con N. Caravaggio y G. Resce), en el marco del tema «Regiones entre innovación y sostenibilidad: los retos para las políticas de desarrollo».
+  photos:
+    - src: "assets/photos/talk-aisre-2026-talk.jpg"
+      alt:
+        en: "Presenting the paper Administrative Capture from Within at the AISRe 2026 conference, University of Florence, June 2026"
+        it: "Presentazione del paper Administrative Capture from Within alla conferenza AISRe 2026, Università di Firenze, giugno 2026"
+        es: "Presentación del trabajo Administrative Capture from Within en la conferencia AISRe 2026, Universidad de Florencia, junio de 2026"
+      caption:
+        en: "Presenting Administrative Capture from Within — XLVII AISRe Conference, University of Florence, 26 June 2026."
+        it: "Presentazione di Administrative Capture from Within — XLVII Conferenza AISRe, Università di Firenze, 26 giugno 2026."
+        es: "Presentación de Administrative Capture from Within — XLVII Conferencia AISRe, Universidad de Florencia, 26 de junio de 2026."
+    - src: "assets/photos/talk-aisre-2026-banner.jpg"
+      alt:
+        en: "At the Italian Regional Science Association banner, Novoli Campus, Florence, June 2026"
+        it: "Al banner dell'Associazione Italiana di Scienze Regionali, Campus di Novoli, Firenze, giugno 2026"
+        es: "Junto al cartel de la Asociación Italiana de Ciencia Regional, Campus de Novoli, Florencia, junio de 2026"
+      caption:
+        en: "At the Italian Regional Science Association banner — Novoli Campus, University of Florence, June 2026."
+        it: "Al banner dell'Associazione Italiana di Scienze Regionali — Campus di Novoli, Università di Firenze, giugno 2026."
+        es: "Junto al cartel de la Asociación Italiana de Ciencia Regional — Campus de Novoli, Universidad de Florencia, junio de 2026."
+  link: "https://www.aisre.it/xlvii-conferenza-scientifica-annuale-2026-2/"
+
+- id: aosta-statistica-2026
+  year: 2026
+  date:
+    en: "28 April 2026"
+    it: "28 aprile 2026"
+    es: "28 abril 2026"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title: "Determinanti della sostenibilità finanziaria dei comuni del Lazio"
+  venue:
+    en: |-
+      University of Valle d'Aosta · Polo Universitario, Via Monte Vodice · 28 April 2026.
+      Paper presented at the seminar «Raccontare il territorio attraverso la statistica pubblica: ruolo e offerta di Regioni e Istat» (Aosta, 27–28 April 2026), promoted by the Italian Inter-Regional Statistical Coordination (CSI) and Istat. Joint work with Viviana Borzetti (Regional Statistics Office — Lazio Region), under the cooperation agreement between Lazio Region and the University of Molise.
+    it: |-
+      Università della Valle d'Aosta · Polo Universitario, Via Monte Vodice · 28 aprile 2026.
+      Relazione presentata nell'ambito del seminario «Raccontare il territorio attraverso la statistica pubblica: ruolo e offerta di Regioni e Istat» (Aosta, 27–28 aprile 2026), promosso dal Coordinamento Statistico Interregionale e dall'Istat. Lavoro congiunto con Viviana Borzetti (Ufficio regionale di statistica - Regione Lazio), nell'ambito del Protocollo d'Intesa tra Regione Lazio e Università del Molise.
+    es: |-
+      Universidad de Valle d'Aosta · Polo Universitario, Via Monte Vodice · 28 abril 2026.
+      Ponencia presentada en el seminario «Raccontare il territorio attraverso la statistica pubblica: ruolo e offerta di Regioni e Istat» (Aosta, 27–28 abril 2026), organizado por el Coordinamento Statistico Interregionale (CSI) e Istat. Trabajo conjunto con Viviana Borzetti (Oficina regional de estadística — Región del Lazio), en el marco del Acuerdo de cooperación entre la Región del Lazio y la Universidad de Molise.
+  photos:
+    - src: "assets/photos/talk-aosta-2026-panel.jpg"
+      alt:
+        en: "Speaker panel at the Aosta seminar on regional public statistics, April 2026"
+        it: "Tavolo dei relatori al seminario di Aosta sulla statistica pubblica regionale, aprile 2026"
+        es: "Mesa de ponentes en el seminario de Aosta sobre estadística pública regional, abril 2026"
+      caption:
+        en: "Opening of the seminar Raccontare il territorio attraverso la statistica pubblica, University of Valle d'Aosta, 28 April 2026."
+        it: "Apertura del seminario Raccontare il territorio attraverso la statistica pubblica, Università della Valle d'Aosta, 28 aprile 2026."
+        es: "Apertura del seminario Raccontare il territorio attraverso la statistica pubblica, Universidad de Valle d'Aosta, 28 de abril de 2026."
+    - src: "assets/photos/talk-aosta-2026-talk.jpg"
+      alt:
+        en: "Presenting the paper on financial sustainability of Lazio municipalities, Aosta April 2026"
+        it: "Presentazione del paper sulla sostenibilità finanziaria dei comuni del Lazio, Aosta aprile 2026"
+        es: "Presentación del trabajo sobre la sostenibilidad financiera de los municipios del Lazio, Aosta abril 2026"
+      caption:
+        en: "Presenting the paper on the determinants of financial sustainability of Lazio municipalities — University of Valle d'Aosta, 28 April 2026."
+        it: "Presentazione del paper su determinanti e sostenibilità finanziaria dei comuni del Lazio — Università della Valle d'Aosta, 28 aprile 2026."
+        es: "Presentación del trabajo sobre los determinantes de la sostenibilidad financiera de los municipios del Lazio — Universidad de Valle d'Aosta, 28 de abril de 2026."
+
+- id: territori-foggia-2026
+  year: 2026
+  date:
+    en: "20–21 February 2026"
+    it: "20–21 febbraio 2026"
+    es: "20–21 febrero 2026"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title: "Le transizioni nei sistemi territoriali"
+  venue:
+    en: |-
+      University of Foggia — Department of Economics · Aula Magna “V. Spada” · 20–21 February 2026.
+      Two-day conference on environmental and digital transitions, the Apulian economy, and the inner-areas / urban divide. Day 2 is held in English with a more technical focus.
+    it: |-
+      Università degli Studi di Foggia — Dipartimento di Economia · Aula Magna “V. Spada” · 20–21 febbraio 2026.
+      Convegno di due giornate su transizioni ambientali e digitali, economia pugliese, e divario fra aree interne e aree urbane. La seconda giornata si svolge in lingua inglese con taglio più tecnico.
+    es: |-
+      Universidad de Foggia — Departamento de Economía · Aula Magna “V. Spada” · 20–21 febrero 2026.
+      Congreso de dos jornadas sobre transiciones ambientales y digitales, economía de Apulia, y brecha entre áreas internas y urbanas. La segunda jornada se realiza en inglés con enfoque más técnico.
+  photos:
+    - src: "assets/photos/talk-territori-2026.jpg"
+      alt:
+        en: "Presenting at Le transizioni nei sistemi territoriali, University of Foggia, February 2026"
+        it: "Presentazione a Le transizioni nei sistemi territoriali, Università di Foggia, febbraio 2026"
+        es: "Presentación en Le transizioni nei sistemi territoriali, Universidad de Foggia, febrero 2026"
+      caption:
+        en: "Talk on digital indicators of territorial dynamics — Le transizioni nei sistemi territoriali, University of Foggia, 20–21 February 2026."
+        it: "Talk sugli indicatori digitali delle dinamiche territoriali — Le transizioni nei sistemi territoriali, Università di Foggia, 20–21 febbraio 2026."
+        es: "Charla sobre indicadores digitales de la dinámica territorial — Le transizioni nei sistemi territoriali, Universidad de Foggia, 20–21 febrero 2026."
+  link: "https://www.economia.unifg.it/it/tutte-le-iniziative/le-transizioni-nei-sistemi-territoriali"
+
+- id: eui-digital-democracy-2025
+  year: 2025
+  date:
+    en: "20–21 November 2025"
+    it: "20–21 novembre 2025"
+    es: "20–21 noviembre 2025"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title: "Understanding and Addressing Digital Inequalities"
+  venue:
+    en: "Annual Scientific Conference on Digital Democracy — Centre for a Digital Society, Robert Schuman Centre, European University Institute (EUI) · Florence, 20–21 November 2025"
+    it: "Annual Scientific Conference on Digital Democracy — Centre for a Digital Society, Robert Schuman Centre, European University Institute (EUI) · Firenze, 20–21 novembre 2025"
+    es: "Annual Scientific Conference on Digital Democracy — Centre for a Digital Society, Robert Schuman Centre, European University Institute (EUI) · Florencia, 20–21 noviembre 2025"
+  photos:
+    - src: "assets/photos/talk-eui-2025.jpg"
+      alt:
+        en: "EUI panel on digital inequalities, Florence, November 2025"
+        it: "Panel EUI sulle disuguaglianze digitali, Firenze, novembre 2025"
+        es: "Panel EUI sobre desigualdades digitales, Florencia, noviembre 2025"
+      caption:
+        en: "Panel at the EUI Centre for a Digital Society annual conference on Digital Democracy — presenting web-scraping methodology for measuring digital inequalities (Florence, November 2025)."
+        it: "Panel alla conferenza annuale dell'EUI Centre for a Digital Society sulla Digital Democracy — presentazione della metodologia di web scraping per la misurazione delle disuguaglianze digitali (Firenze, novembre 2025)."
+        es: "Panel en la conferencia anual del EUI Centre for a Digital Society sobre Digital Democracy — presentación de la metodología de web scraping para la medición de desigualdades digitales (Florencia, noviembre 2025)."
+
+- id: sie-2025
+  year: 2025
+  date:
+    en: "23–25 October 2025"
+    it: "23–25 ottobre 2025"
+    es: "23–25 octubre 2025"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title:
+    en: "SIE 2025 — 66th Annual Scientific Meeting"
+    it: "SIE 2025 — 66ª Riunione Scientifica Annuale"
+    es: "SIE 2025 — 66ª Reunión Científica Anual"
+  venue:
+    en: "Italian Economic Association (Società Italiana di Economia) · Università di Napoli Parthenope, 23–25 October 2025"
+    it: "Società Italiana di Economia · Università di Napoli Parthenope, 23–25 ottobre 2025"
+    es: "Asociación Italiana de Economía (Società Italiana di Economia) · Università di Napoli Parthenope, 23–25 octubre 2025"
+
+- id: panel-discussion-2025
+  year: 2025
+  date:
+    en: "October 2025"
+    it: "Ottobre 2025"
+    es: "Octubre 2025"
+  role:
+    en: "Discussant"
+    it: "Discussant"
+    es: "Discussant"
+  title:
+    en: "Panel discussion"
+    it: "Tavola rotonda"
+    es: "Mesa redonda"
+  venue:
+    en: "October 2025."
+    it: "Ottobre 2025."
+    es: "Octubre 2025."
+  photos:
+    - src: "assets/photos/panel-2025.jpg"
+      alt:
+        en: "Panel discussion, October 2025"
+        it: "Panel di discussione, ottobre 2025"
+        es: "Mesa redonda, octubre 2025"
+      caption:
+        en: "Conference panel discussion, October 2025."
+        it: "Tavola rotonda a margine di conferenza, ottobre 2025."
+        es: "Mesa redonda en el marco de un congreso, octubre 2025."
+
+- id: aisre-2025
+  year: 2025
+  date:
+    en: "10–12 September 2025"
+    it: "10–12 settembre 2025"
+    es: "10–12 septiembre 2025"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title:
+    en: "AISRe 2025 — XLVI Annual Scientific Conference"
+    it: "AISRe 2025 — XLVI Conferenza Scientifica Annuale"
+    es: "AISRe 2025 — XLVI Conferencia Científica Anual"
+  venue:
+    en: "Italian Regional Science Association (RSAI Italian Section) · Università “G. d'Annunzio” Chieti-Pescara, 10–12 September 2025"
+    it: "Associazione Italiana di Scienze Regionali (sezione italiana RSAI) · Università “G. d'Annunzio” di Chieti-Pescara, 10–12 settembre 2025"
+    es: "Asociación Italiana de Ciencia Regional (sección italiana de la RSAI) · Università “G. d'Annunzio” Chieti-Pescara, 10–12 septiembre 2025"
+
+- id: carma-2025
+  year: 2025
+  date:
+    en: "2–4 July 2025"
+    it: "2–4 luglio 2025"
+    es: "2–4 julio 2025"
+  role:
+    en: "Organizer & Presenter"
+    it: "Organizzatore e relatore"
+    es: "Organizador y ponente"
+  title:
+    en: "CARMA 2025 — 7th International Conference on Advanced Research Methods and Analytics"
+    it: "CARMA 2025 — 7ª International Conference on Advanced Research Methods and Analytics"
+    es: "CARMA 2025 — 7ª International Conference on Advanced Research Methods and Analytics"
+  venue:
+    en: "Rome, 2–4 July 2025. Two papers presented; co-organiser and session chair."
+    it: "Roma, 2–4 luglio 2025. Due paper presentati; co-organizzatore e session chair."
+    es: "Roma, 2–4 julio 2025. Dos artículos presentados; co-organizador y session chair."
+
+- id: carma-2024
+  year: 2024
+  date:
+    en: "26–28 June 2024"
+    it: "26–28 giugno 2024"
+    es: "26–28 junio 2024"
+  role:
+    en: "Organizer & Presenter"
+    it: "Organizzatore e relatore"
+    es: "Organizador y ponente"
+  title:
+    en: "CARMA 2024 — 6th International Conference on Advanced Research Methods and Analytics"
+    it: "CARMA 2024 — 6ª International Conference on Advanced Research Methods and Analytics"
+    es: "CARMA 2024 — 6ª International Conference on Advanced Research Methods and Analytics"
+  venue:
+    en: "Universitat Politècnica de València, 26–28 June 2024. Three papers presented; co-organiser."
+    it: "Universitat Politècnica de València, 26–28 giugno 2024. Tre paper presentati; co-organizzatore."
+    es: "Universitat Politècnica de València, 26–28 junio 2024. Tres artículos presentados; co-organizador."
+
+- id: head-2024
+  year: 2024
+  date:
+    en: "June 2024"
+    it: "giugno 2024"
+    es: "junio 2024"
+  role:
+    en: "Organizer"
+    it: "Organizzatore"
+    es: "Organizador"
+  title:
+    en: "HEAd'24 — 10th International Conference on Higher Education Advances"
+    it: "HEAd'24 — 10ª International Conference on Higher Education Advances"
+    es: "HEAd'24 — 10ª International Conference on Higher Education Advances"
+  venue:
+    en: "Universitat Politècnica de València, June 2024."
+    it: "Universitat Politècnica de València, giugno 2024."
+    es: "Universitat Politècnica de València, junio 2024."
+
+- id: sofia-2024
+  year: 2024
+  date: "2024"
+  role:
+    en: "Presenter"
+    it: "Relatore"
+    es: "Ponente"
+  title:
+    en: "SoFIA 2024 — 2nd Workshop on Social Health Frailty as Determinants of Inequality in Ageing"
+    it: "SoFIA 2024 — 2° Workshop on Social Health Frailty as Determinants of Inequality in Ageing"
+    es: "SoFIA 2024 — 2.º Workshop on Social Health Frailty as Determinants of Inequality in Ageing"
+  venue:
+    en: "University of Molise."
+    it: "Università del Molise."
+    es: "Universidad de Molise."

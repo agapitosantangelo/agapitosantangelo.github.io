@@ -1,0 +1,125 @@
+# Teaching data extracted from {en,it,es}/teaching.html
+# Fields that differ by language use {en, it, es} subfields; language-invariant fields are scalar.
+# Multi-line org values preserve the <br> line break from the source as "\n".
+
+university:
+  - id: microeconomics
+    current: true
+    period:
+      en: "Dec 2023 — Present"
+      it: "Dic 2023 — In corso"
+      es: "Dic 2023 — Actualidad"
+    role:
+      en: "Cultore della Materia — Microeconomics"
+      it: "Cultore della Materia — Microeconomia"
+      es: "Cultore della Materia — Microeconomía"
+    org:
+      en: "University of Molise · Department of Economics\nCourse held by Prof. Giuliano Resce"
+      it: "Università del Molise · Dipartimento di Economia\nCorso tenuto dal Prof. Giuliano Resce"
+      es: "Universidad de Molise · Departamento de Economía\nCurso impartido por el Prof. Giuliano Resce"
+    description:
+      en: "Recitations and seminars on consumer theory, producer theory, market structures and welfare analysis. Office hours, examination-board participation and exam preparation support, with attention to connecting theoretical concepts to empirical and policy-relevant examples."
+      it: "Esercitazioni e seminari su teoria del consumatore, teoria della produzione, strutture di mercato e analisi del benessere. Ricevimenti, partecipazione alle commissioni d'esame e supporto alla preparazione degli esami, con attenzione al collegamento fra concetti teorici ed esempi empirici e di policy."
+      es: "Sesiones prácticas y seminarios sobre teoría del consumidor, teoría de la producción, estructuras de mercado y análisis del bienestar. Tutorías, participación en tribunales de examen y apoyo a la preparación de los exámenes, con atención a la conexión entre conceptos teóricos y ejemplos empíricos y de política."
+    keywords:
+      en: "Microeconomics · Economics education"
+      it: "Microeconomia · Didattica dell'economia"
+      es: "Microeconomía · Educación en economía"
+
+  - id: public-economics
+    current: true
+    period:
+      en: "Sep 2025 — Present"
+      it: "Set 2025 — In corso"
+      es: "Sep 2025 — Actualidad"
+    role:
+      en: "Cultore della Materia — Public Economics"
+      it: "Cultore della Materia — Public Economics"
+      es: "Cultore della Materia — Public Economics"
+    org:
+      en: "University of Molise · Master's Degree in Public and Health Economics\nCourse held by Prof. Nicola Caravaggio"
+      it: "Università del Molise · Laurea Magistrale in Public and Health Economics\nCorso tenuto dal Prof. Nicola Caravaggio"
+      es: "Universidad de Molise · Máster en Public and Health Economics\nCurso impartido por el Prof. Nicola Caravaggio"
+    description:
+      en: "Seminars and examination-board participation on the public sector, taxation, public-expenditure efficiency and equity, and the use of quantitative methods for evidence-based policy analysis."
+      it: "Seminari e partecipazione alle commissioni d'esame su settore pubblico, tassazione, efficienza ed equità della spesa pubblica, e uso di metodi quantitativi per l'analisi di policy evidence-based."
+      es: "Seminarios y participación en tribunales de examen sobre el sector público, fiscalidad, eficiencia y equidad del gasto público, y uso de métodos cuantitativos para el análisis de políticas basado en evidencia."
+    keywords:
+      en: "Public economics · Policy evaluation"
+      it: "Economia pubblica · Valutazione delle politiche"
+      es: "Economía pública · Evaluación de políticas"
+
+  - id: applied-health-economics
+    current: true
+    period:
+      en: "Sep 2025 — Present"
+      it: "Set 2025 — In corso"
+      es: "Sep 2025 — Actualidad"
+    role:
+      en: "Cultore della Materia — Applied Health Economics"
+      it: "Cultore della Materia — Applied Health Economics"
+      es: "Cultore della Materia — Applied Health Economics"
+    org:
+      en: "University of Molise · Master's Degree in Public and Health Economics\nCourse held by Prof. Giuliano Resce"
+      it: "Università del Molise · Laurea Magistrale in Public and Health Economics\nCorso tenuto dal Prof. Giuliano Resce"
+      es: "Universidad de Molise · Máster en Public and Health Economics\nCurso impartido por el Prof. Giuliano Resce"
+    description:
+      en: "Seminars and examination-board participation on applied health economics: efficiency and equity of healthcare systems, econometric evaluation of health policies, hospital performance, and quantitative methods for health-policy analysis."
+      it: "Seminari e partecipazione alle commissioni d'esame su economia sanitaria applicata: efficienza ed equità dei sistemi sanitari, valutazione econometrica delle politiche sanitarie, performance ospedaliera e metodi quantitativi per l'analisi di policy sanitarie."
+      es: "Seminarios y participación en tribunales de examen sobre economía sanitaria aplicada: eficiencia y equidad de los sistemas sanitarios, evaluación econométrica de políticas sanitarias, desempeño hospitalario y métodos cuantitativos para el análisis de políticas sanitarias."
+    keywords:
+      en: "Health economics · Applied econometrics · Policy evaluation"
+      it: "Economia sanitaria · Econometria applicata · Valutazione delle politiche"
+      es: "Economía sanitaria · Econometría aplicada · Evaluación de políticas"
+
+  - id: teaching-assistant
+    current: true
+    period:
+      en: "2022 — Present"
+      it: "2022 — In corso"
+      es: "2022 — Actualidad"
+    role:
+      en: "Teaching Assistant — Department of Economics"
+      it: "Assistente alla didattica — Dipartimento di Economia"
+      es: "Asistente de docencia — Departamento de Economía"
+    org:
+      en: "University of Molise"
+      it: "Università del Molise"
+      es: "Universidad de Molise"
+    description:
+      en: "Teaching support (recitations, seminars and examination boards) across the economics curriculum: Monetary and Financial Economics and Policy, Macroeconomics, Industrial Economics and Game Theory, Cost-Benefit Analysis and Economic Policy."
+      it: "Supporto alla didattica (esercitazioni, seminari e commissioni d'esame) sui corsi di area economica: Politica ed Economia Monetaria e Finanziaria, Macroeconomia, Economia Industriale e Teoria dei Giochi, Analisi Costi-Benefici ed Economia Politica."
+      es: "Apoyo a la docencia (clases prácticas, seminarios y tribunales de examen) en cursos de economía: Política y Economía Monetaria y Financiera, Macroeconomía, Economía Industrial y Teoría de Juegos, Análisis Coste-Beneficio y Política Económica."
+    keywords:
+      en: "Economics education · Recitations · Examination boards"
+      it: "Didattica dell'economia · Esercitazioni · Commissioni d'esame"
+      es: "Docencia de la economía · Clases prácticas · Tribunales de examen"
+
+targeted:
+  - id: digital-economy-lectures
+    current: false
+    period:
+      en: "Feb 2025"
+      it: "Feb 2025"
+      es: "Feb 2025"
+    role:
+      en: "Lecturer — Digital Economy and Digital Methods"
+      it: "Docente — Economia Digitale e Metodi Digitali"
+      es: "Docente — Economía Digital y Métodos Digitales"
+    org:
+      en: "Sviluppo Italia Molise · Targeted Training Programme"
+      it: "Sviluppo Italia Molise · Programma di formazione mirata"
+      es: "Sviluppo Italia Molise · Programa de formación específica"
+    description:
+      en: "Lectures on the economics of digital platforms and on practical digital methods (web scraping, text mining, basic machine learning) for policy and business analysis. Hands-on case studies on real-time monitoring of public services and territorial dynamics."
+      it: "Lezioni sull'economia delle piattaforme digitali e su metodi digitali pratici (web scraping, text mining, machine learning di base) per l'analisi delle politiche pubbliche e dei contesti aziendali. Casi studio applicati al monitoraggio in tempo reale dei servizi pubblici e delle dinamiche territoriali."
+      es: "Clases sobre la economía de las plataformas digitales y sobre métodos digitales aplicados (web scraping, text mining, machine learning básico) para el análisis de políticas y empresas. Casos prácticos sobre el seguimiento en tiempo real de servicios públicos y dinámica territorial."
+    keywords:
+      en: "Digital economy · Digital methods · Data-driven policy analysis"
+      it: "Economia digitale · Metodi digitali · Analisi delle politiche"
+      es: "Economía digital · Métodos digitales · Análisis de políticas"
+
+philosophy:
+  en: "A good empirical economist needs to be fluent in three languages at once: theory, code, and the institutional details of the policy being studied. None of the three is optional."
+  it: "Un buon economista empirico deve parlare contemporaneamente tre lingue: teoria, codice e dettagli istituzionali della politica oggetto di studio. Nessuna delle tre è opzionale."
+  es: "Un buen economista empírico debe hablar simultáneamente tres lenguas: teoría, código y detalles institucionales de la política objeto de estudio. Ninguna de las tres es opcional."

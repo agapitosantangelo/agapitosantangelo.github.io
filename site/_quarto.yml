@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Agapito E. Santangelo"
+  site-url: https://agapitosantangelo.github.io
+  favicon: assets/favicon.svg
+  open-graph: true
+  twitter-card: true
+  navbar:
+    title: false
+    logo: assets/aes-monogram.svg
+    logo-alt: "AES — Agapito E. Santangelo"
+    background: "#fbfaf6"
+    foreground: "#1a1a1a"
+    left:
+      - text: "Ricerca"
+        href: research.qmd
+      - text: "Progetti"
+        href: projects.qmd
+      - text: "Didattica"
+        href: teaching.qmd
+      - text: "Talk"
+        href: talks.qmd
+      - text: "Divulgazione"
+        href: dissemination.qmd
+    right:
+      - text: "Contatti"
+        href: contact.qmd
+      - text: "EN"
+        href: "#"
+      - text: "ES"
+        href: "#"
+  page-footer:
+    center: "© 2026 Agapito Emanuele Santangelo"
+
+format:
+  html:
+    theme:
+      - litera
+      - theme/custom.scss
+    lang: it
+    toc: false
+    anchor-sections: false
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
