@@ -23,6 +23,9 @@ T = {  # etichette d'interfaccia
         "targeted": "Corsi mirati e lezioni", "experience": "Esperienza professionale",
         "education": "Istruzione", "awards": "Riconoscimenti e affiliazioni",
         "training": "Formazione avanzata",
+        "filter_all": "Tutti", "filters": {"policy-evaluation": "Policy evaluation",
+        "digital-methods": "Metodi digitali", "health": "Sanità", "territorial": "Territorio",
+        "innovation": "Innovazione", "institutions": "Istituzioni"},
     },
     "en": {
         "peer": "Peer-reviewed publications", "wp": "Working papers",
@@ -32,6 +35,9 @@ T = {  # etichette d'interfaccia
         "targeted": "Targeted training & lectures", "experience": "Professional experience",
         "education": "Education", "awards": "Awards & memberships",
         "training": "Advanced training",
+        "filter_all": "All", "filters": {"policy-evaluation": "Policy evaluation",
+        "digital-methods": "Digital methods", "health": "Health", "territorial": "Territorial",
+        "innovation": "Innovation", "institutions": "Institutions"},
     },
     "es": {
         "peer": "Publicaciones peer-reviewed", "wp": "Working papers",
@@ -41,6 +47,9 @@ T = {  # etichette d'interfaccia
         "targeted": "Formaciones específicas y charlas", "experience": "Experiencia profesional",
         "education": "Formación", "awards": "Reconocimientos y afiliaciones",
         "training": "Formación avanzada",
+        "filter_all": "Todos", "filters": {"policy-evaluation": "Policy evaluation",
+        "digital-methods": "Métodos digitales", "health": "Sanidad", "territorial": "Territorio",
+        "innovation": "Innovación", "institutions": "Instituciones"},
     },
 }
 
@@ -82,7 +91,8 @@ def project_title(pid, lang):
 def pub_entry(p, lang, t):
     tagcls = {"peer-reviewed": "peer", "working-paper": "wp"}.get(p["type"], "")
     taglbl = {"peer-reviewed": "Peer-reviewed", "working-paper": "Working paper"}[p["type"]]
-    h = [f'<li class="entry"><span class="entry-tag {tagcls}">{taglbl}</span>']
+    topics = " ".join(p.get("topics") or [])
+    h = [f'<li class="entry" data-topics="{topics}"><span class="entry-tag {tagcls}">{taglbl}</span>']
     title = esc(p["title"].rstrip("."))
     if p.get("jmp"):
         title += f' <em>({t["jmp"]})</em>'
@@ -103,7 +113,12 @@ def pub_entry(p, lang, t):
 def gen_research(lang, t):
     pubs = load("publications")
     cps = load("conference-papers")
-    h = [f"<h2>{t['peer']}</h2>", '<ul class="entries">']
+    h = ['<div class="filter-bar" role="group" aria-label="Filter">']
+    h.append(f'<button class="filter-btn active" data-filter="">{t["filter_all"]}</button>')
+    for key, lbl in t["filters"].items():
+        h.append(f'<button class="filter-btn" data-filter="{key}">{lbl}</button>')
+    h.append('</div>')
+    h += [f"<h2>{t['peer']}</h2>", '<ul class="entries">']
     h += [pub_entry(p, lang, t) for p in pubs if p["type"] == "peer-reviewed"]
     h.append("</ul>")
     h.append(f"<h2>{t['wp']}</h2>")
@@ -115,7 +130,8 @@ def gen_research(lang, t):
     h.append(f"<h2>{t['confpapers']}</h2>")
     h.append('<ul class="entries">')
     for c in cps:
-        h.append(f'<li class="entry"><span class="entry-tag conf">Conference</span>'
+        ctopics = " ".join(c.get("topics") or [])
+        h.append(f'<li class="entry" data-topics="{ctopics}"><span class="entry-tag conf">Conference</span>'
                  f'{esc(c["authors"])} ({c["year"]}). <span class="entry-title">{esc(c["title"].rstrip("."))}.</span>'
                  f'<span class="entry-venue">{esc(L(c.get("venue"), lang))}.{links_html(c.get("links"))}</span></li>')
     h.append("</ul>")

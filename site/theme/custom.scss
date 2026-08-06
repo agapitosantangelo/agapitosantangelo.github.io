@@ -422,3 +422,52 @@ ul.entries {
     100% { opacity: 1; transform: translateY(0); clip-path: inset(0 0 0 0); }
   }
 }
+
+// Filtri pubblicazioni (§13.3)
+.filter-bar {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0 0.4rem;
+}
+.filter-btn {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: 1px solid $es-rule;
+  background: transparent;
+  color: $es-ink-mute;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  &:hover, &:focus-visible { color: $es-accent-h; border-color: $es-accent-h; }
+  &.active { color: $es-bg; background: $es-accent; border-color: $es-accent; }
+}
+
+// Scroll reveal (§13.2): comparsa discreta, gestita da reveal.js
+.to-reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.revealed  { opacity: 1; transform: none; }
+
+// Ricerca (§13.6) — icona in nav + tema Pagefind
+.top-nav .nav-search {
+  margin-left: auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: $es-ink-mute;
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  &:hover, &:focus-visible { color: $es-accent-h; }
+  & + .lang-switch { margin-left: 0.4rem; }
+}
+#search {
+  --pagefind-ui-primary: #{$es-accent};
+  --pagefind-ui-text: #{$es-ink};
+  --pagefind-ui-background: #{$es-paper};
+  --pagefind-ui-border: #{$es-rule};
+  --pagefind-ui-font: #{$font-family-serif};
+  --pagefind-ui-border-radius: 2px;
+}
+
+// il filtro vince su qualsiasi display
+li.entry[hidden], section.level2[hidden] { display: none !important; }

@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d53aa9d8ec21608e9ddab34b8c959c6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cf231a2440e00b4326ff3407f7bfa1fe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -105,6 +105,7 @@ ul.task-list li input[type="checkbox"] {
       </svg>
     </a>
     <div class="nav-links"><a href="about.html">Sobre mí</a><a href="research.html">Investigación</a><a href="projects.html">Proyectos</a><a href="teaching.html">Docencia</a><a href="talks.html">Charlas</a><a href="dissemination.html">Divulgación</a><a href="contact.html">Contacto</a></div>
+    <a class="nav-search" href="search.html" aria-label="Buscar">⌕</a>
     <div class="lang-switch" aria-label="Language"><a data-lang="en" href="../en/index.html" hreflang="en" lang="en">EN</a><a data-lang="it" href="../it/index.html" hreflang="it" lang="it">IT</a><span class="active" aria-current="true">ES</span></div>
   </div>
 </nav>
@@ -132,23 +133,46 @@ document.querySelectorAll(".lang-switch a").forEach(function(a){a.href="../"+a.d
 </header>
 
 
+<div class="filter-bar" role="group" aria-label="Filter">
+<button class="filter-btn active" data-filter="">
+Todos
+</button>
+<button class="filter-btn" data-filter="policy-evaluation">
+Policy evaluation
+</button>
+<button class="filter-btn" data-filter="digital-methods">
+Métodos digitales
+</button>
+<button class="filter-btn" data-filter="health">
+Sanidad
+</button>
+<button class="filter-btn" data-filter="territorial">
+Territorio
+</button>
+<button class="filter-btn" data-filter="innovation">
+Innovación
+</button>
+<button class="filter-btn" data-filter="institutions">
+Instituciones
+</button>
+</div>
 <h2>
 Publicaciones peer-reviewed
 </h2>
 <ul class="entries">
-<li class="entry">
+<li class="entry" data-topics="digital-methods health">
 <span class="entry-tag peer">Peer-reviewed</span> Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … &amp; Coffey, K. (2025). <span class="entry-title">Text mining and machine learning reveal global determinants of food insecurity.</span> <span class="entry-venue">Scientific Reports, 15(1), 36709. <a href="https://www.nature.com/articles/s41598-025-20670-x.pdf">PDF →</a></span>
 <div class="cross-ref">
 → Proyecto relacionado: <a href="projects.html#proj-climate-security">Climate Security Observatory</a>
 </div>
 </li>
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation">
 <span class="entry-tag peer">Peer-reviewed</span> Pastore, L., Corvo, L., Santangelo, A. E., Resce, G., &amp; Lelo, A. (2025). <span class="entry-title">Measuring sustainability impacts through SROI: a case study of the Italian glass industry’s contribution to the SDGs.</span> <span class="entry-venue">Accounting, Auditing &amp; Accountability Journal, 38(5), 1483–1498. <a href="https://www.emerald.com/aaaj/article-pdf/38/5/1483/10060781/aaaj-04-2024-7041.pdf">PDF →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="innovation">
 <span class="entry-tag peer">Peer-reviewed</span> Santangelo, A. E. (2023). <span class="entry-title">The relationship between financial constraints and innovation, with a supportive analysis on a sample of firms.</span> <span class="entry-venue">Journal of Academic Research in Economics, 15(3), 523–544. <a href="https://www.jare-sh.com/downloads/nov_2023/santangelo.pdf">PDF →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="territorial">
 <span class="entry-tag peer">Peer-reviewed</span> Pietrovito, F., &amp; Santangelo, A. E. (2022). <span class="entry-title">Divario Nord-Sud: un focus sul Molise.</span> <span class="entry-venue">GLOCALE, 18(19). <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=it&amp;user=uSsHajYAAAAJ&amp;citation_for_view=uSsHajYAAAAJ:u5HHmVD_uO8C">citation →</a></span>
 </li>
 </ul>
@@ -156,19 +180,19 @@ Publicaciones peer-reviewed
 Working papers
 </h2>
 <ul class="entries">
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation digital-methods">
 <span class="entry-tag wp">Working paper</span> Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2025). <span class="entry-title">EU cohesion policy and digital public services <em>(Job Market Paper)</em>.</span> <span class="entry-venue">ESDP No.&nbsp;25100, University of Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf">PDF →</a><br>En revisión: <em>Technological Forecasting and Social Change</em>.</span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation digital-methods">
 <span class="entry-tag wp">Working paper</span> Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Digital investment and the evolution of government services.</span> <span class="entry-venue">ESDP No.&nbsp;26104, Universidad de Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26104.pdf">PDF →</a><br>En revisión: <em>Structural Change and Economic Dynamics</em>.</span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation territorial">
 <span class="entry-tag wp">Working paper</span> Bergantino, A. S., Gabrielli, L., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Competition without punctuality gains: evidence from Italian high-speed rail.</span> <span class="entry-venue">SSRN working paper. <a href="https://ssrn.com/abstract=6444159">SSRN →</a><br>En revisión: <em>Transportation Research Part A: Policy and Practice</em>.</span>
 <div class="cross-ref">
 → Proyecto relacionado: <a href="projects.html#proj-themia">THEMIA — THE Mood of Infrastructure’s Accessibility</a>
 </div>
 </li>
-<li class="entry">
+<li class="entry" data-topics="health">
 <span class="entry-tag wp">Working paper</span> Pietrovito, F., Rancan, A., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Do fiscal constraints affect health inequality research? A bibliometric perspective.</span> <span class="entry-venue">ESDP No.&nbsp;26102, University of Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26102.pdf">PDF →</a></span>
 <div class="cross-ref">
 → Proyecto relacionado: <a href="projects.html#proj-prin-health">Conciliar Eficiencia y Equidad en el Sistema Sanitario Italiano</a>
@@ -179,25 +203,25 @@ Working papers
 Contribuciones a congresos
 </h2>
 <ul class="entries">
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation digital-methods">
 <span class="entry-tag conf">Conference</span>Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Digital investment and the evolution of government services.</span><span class="entry-venue">CARMA 2026, Universitat Politècnica de València, 1–3 July 2026.</span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="institutions">
 <span class="entry-tag conf">Conference</span>Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Administrative capture from within.</span><span class="entry-venue">AISRe 2026, University of Florence, 24–26 June 2026.</span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="digital-methods">
 <span class="entry-tag conf">Conference</span>Cebrián Cerdá, E., Santangelo, A. E., &amp; Domenech, J. (2025). <span class="entry-title">Are people losing interest in environmental issues? Insights from Google Trends.</span><span class="entry-venue">CARMA 2025, Rome, 2–4 July 2025. <a href="https://www.researchgate.net/publication/403443783_Are_people_losing_interest_in_environmental_issues_Insights_from_Google_Trends">URL →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="innovation digital-methods">
 <span class="entry-tag conf">Conference</span>Nigro, I., Santangelo, A. E., &amp; Modina, M. (2025). <span class="entry-title">Detecting potential fake innovators using web scraping: the case for Italian startups.</span><span class="entry-venue">CARMA 2025, Rome, 2–4 July 2025. <a href="https://www.researchgate.net/publication/403441155_Detecting_potential_fake_innovators_using_web_scraping_the_case_for_Italian_startup">URL →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="policy-evaluation digital-methods">
 <span class="entry-tag conf">Conference</span>Caravaggio, N., Di Renzo, G., Fanelli, L., Resce, G., &amp; Santangelo, A. E. (2024). <span class="entry-title">In what is Europe investing? A text mining approach on cohesion projects.</span><span class="entry-venue">CARMA 2024, Valencia. <a href="https://www.researchgate.net/publication/382321217_In_What_is_Europe_Investing_A_Text_Mining_Approach_on_Cohesion_Projects">URL →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="digital-methods health">
 <span class="entry-tag conf">Conference</span>Carneiro, B., Resce, G., Tucci, G., Ruscica, G., Caravaggio, N., Fanelli, L., Santangelo, A. E., &amp; Cruciata, P. (2024). <span class="entry-title">A multi-platform framework for nowcasting social phenomena: a case study for food insecurity.</span><span class="entry-venue">CARMA 2024, Valencia. <a href="https://www.researchgate.net/publication/382317742_A_multi-platform_framework_for_nowcasting_social_phenomena_a_case_study_for_food_insecurity">URL →</a></span>
 </li>
-<li class="entry">
+<li class="entry" data-topics="innovation digital-methods">
 <span class="entry-tag conf">Conference</span>Santangelo, A. E. (2024). <span class="entry-title">Do websites provide information about innovation activities?.</span><span class="entry-venue">CARMA 2024, Valencia, p.&nbsp;411. <a href="https://doi.org/10.4995/CARMA2024.2024.19017">URL →</a></span>
 </li>
 </ul>
@@ -617,6 +641,8 @@ Contribuciones a congresos
     </div>
   </div>
 </footer>
+<script src="../assets/js/filters.js" defer=""></script>
+<script src="../assets/js/reveal.js" defer=""></script>
 
 
 
