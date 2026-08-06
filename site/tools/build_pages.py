@@ -269,6 +269,73 @@ def gen_dissemination(lang, t):
     return "\n".join(h)
 
 
+def gen_hero(lang, t):
+    """Hero della homepage: il plot event-study si anima da solo all'apertura
+    (vedi assets/js/hero-anim.js); la pagina scorre normalmente.
+    Senza JS o con prefers-reduced-motion il grafico è semplicemente completo."""
+    d = load("hero")
+    p = d["plot"]
+    zero_y = 280
+    pre = [(130, 288, 34), (230, 272, 36), (330, 284, 33), (430, 276, 35)]
+    post = [(490, 175, 44), (590, 148, 40), (690, 132, 38), (790, 126, 36)]
+    xlabels = ["−4", "−3", "−2", "−1", "0", "+1", "+2", "+3"]
+
+    svg = [f'<svg class="es-hero-svg" viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" '
+           f'role="img" aria-label="{esc(L(p["aria"], lang))}">']
+    # strato statico: assi, etichette, legenda (sempre visibile)
+    svg.append('<g font-family="Geist, sans-serif" fill="#6b6764">')
+    svg.append(f'<line x1="70" y1="{zero_y}" x2="850" y2="{zero_y}" stroke="#d6d3cc" stroke-width="1.5"/>')
+    svg.append('<line x1="70" y1="406" x2="850" y2="406" stroke="#ece9e0" stroke-width="1.2"/>')
+    svg.append(f'<text x="56" y="{zero_y + 5}" text-anchor="end" font-size="14">0</text>')
+    for (x, _, _), lab in zip(pre + post, xlabels):
+        svg.append(f'<text x="{x}" y="432" text-anchor="middle" font-size="14">{lab}</text>')
+    svg.append(f'<text x="26" y="220" font-size="14" letter-spacing="1" text-anchor="middle" '
+               f'transform="rotate(-90 26 220)">{esc(L(p["y_title"], lang))}</text>')
+    svg.append('<circle cx="86" cy="44" r="5" fill="#e87d72"/><text x="98" y="49" font-size="14">Pre</text>')
+    svg.append('<circle cx="152" cy="44" r="5" fill="#1a3a6e"/><text x="164" y="49" font-size="14">Post</text>')
+    svg.append('</g>')
+    # coefficienti pre: compaiono in sequenza (data-step = finestra di scroll 0..1)
+    for i, (x, y, ci) in enumerate(pre):
+        a = 0.02 + i * 0.085
+        svg.append(f'<g class="es-anim" data-step="{a:.3f} {a + 0.10:.3f}">'
+                   f'<line x1="{x}" y1="{y - ci}" x2="{x}" y2="{y + ci}" stroke="#e87d72" stroke-width="2.4"/>'
+                   f'<circle cx="{x}" cy="{y}" r="7" fill="#e87d72"/></g>')
+    # linea del trattamento: si disegna dall'alto (data-draw -> clip-path)
+    svg.append(f'<g class="es-anim" data-step="0.400 0.530" data-draw="v">'
+               f'<line x1="460" y1="36" x2="460" y2="406" stroke="#c14b3f" stroke-width="2" stroke-dasharray="7 6"/>'
+               f'<text x="472" y="56" font-family="Geist, sans-serif" font-size="14" fill="#c14b3f" '
+               f'letter-spacing="1">{esc(L(p["treatment"], lang))}</text></g>')
+    # coefficienti post: salgono dallo zero al livello dell'effetto (data-rise)
+    for i, (x, y, ci) in enumerate(post):
+        a = 0.56 + i * 0.085
+        svg.append(f'<g class="es-anim" data-step="{a:.3f} {a + 0.10:.3f}" data-rise="{zero_y - y}">'
+                   f'<line x1="{x}" y1="{y - ci}" x2="{x}" y2="{y + ci}" stroke="#1a3a6e" stroke-width="2.4"/>'
+                   f'<circle cx="{x}" cy="{y}" r="7" fill="#1a3a6e"/></g>')
+    # annotazione finale: staffa dell'effetto
+    svg.append(f'<g class="es-anim" data-step="0.920 1.000" data-rise="10" stroke="#c14b3f">'
+               f'<line x1="836" y1="134" x2="836" y2="274" stroke-width="1.6"/>'
+               f'<line x1="828" y1="134" x2="844" y2="134" stroke-width="1.6"/>'
+               f'<line x1="828" y1="274" x2="844" y2="274" stroke-width="1.6"/>'
+               f'<text x="862" y="204" font-family="Geist, sans-serif" font-size="14" fill="#c14b3f" stroke="none" '
+               f'letter-spacing="1" text-anchor="middle" transform="rotate(-90 862 204)">{esc(L(p["effect"], lang))}</text></g>')
+    svg.append('</svg>')
+
+    aree = "".join(f'<span>{esc(L(a, lang))}</span>' for a in d["areas"])
+    h = ['<div class="hero-es" data-hero-anim>',
+         '<header class="hero-es-testo">',
+         f'<p class="qualifica">{esc(d["qualifica"])}</p>',
+         f'<h1>{esc(d["name"])}</h1>',
+         f'<p class="aree">{aree}</p>',
+         f'<p class="descrizione">{esc(L(d["descrizione"], lang))}</p>',
+         f'<p class="cta"><a class="btn-es" href="research.html">{esc(L(d["cta_research"], lang))}</a> '
+         f'<a class="btn-es ghost" href="../assets/cv.pdf">{esc(L(d["cta_cv"], lang))}</a></p>',
+         '</header>',
+         '<div class="hero-es-plot">'] + svg + [
+         '</div>',
+         '</div>']
+    return "\n".join(h)
+
+
 def main():
     for lang in LANGS:
         t = T[lang]
@@ -278,6 +345,7 @@ def main():
             "research": gen_research, "projects": gen_projects,
             "talks": gen_talks, "teaching": gen_teaching,
             "about": gen_about, "dissemination": gen_dissemination,
+            "hero": gen_hero,
         }
         for name, fn in pages.items():
             with open(os.path.join(out, name + ".html"), "w") as f:

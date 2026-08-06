@@ -1,0 +1,36 @@
+# Hero della homepage (plot event-study animato all'apertura) — testi nelle tre lingue.
+qualifica: "Applied Economist · PhD"
+name: "Agapito E. Santangelo"
+areas:
+  - { it: "Inferenza causale", en: "Causal inference", es: "Inferencia causal" }
+  - { it: "Valutazione delle politiche", en: "Policy evaluation", es: "Evaluación de políticas" }
+  - { it: "Dati digitali & ML", en: "Digital data & ML", es: "Datos digitales & ML" }
+descrizione:
+  it: "Valutazione delle politiche pubbliche con inferenza causale, dati digitali non convenzionali e machine learning."
+  en: "Public-policy evaluation with causal inference, unconventional digital data and machine learning."
+  es: "Evaluación de políticas públicas con inferencia causal, datos digitales no convencionales y machine learning."
+cta_research:
+  it: "Esplora la ricerca"
+  en: "Explore research"
+  es: "Explorar la investigación"
+cta_cv:
+  it: "Scarica il CV"
+  en: "Download CV"
+  es: "Descargar CV"
+plot:
+  y_title:
+    it: "Effetto stimato"
+    en: "Estimated effect"
+    es: "Efecto estimado"
+  treatment:
+    it: "trattamento"
+    en: "treatment"
+    es: "tratamiento"
+  effect:
+    it: "effetto"
+    en: "effect"
+    es: "efecto"
+  aria:
+    it: "Grafico event-study: coefficienti pre-trattamento piatti intorno allo zero in salmone, linea verticale del trattamento, salto positivo dei coefficienti post-trattamento in navy con intervalli di confidenza."
+    en: "Event-study plot: flat pre-treatment coefficients around zero in salmon, vertical treatment line, positive jump of post-treatment coefficients in navy with confidence intervals."
+    es: "Gráfico event-study: coeficientes pre-tratamiento planos en torno a cero en salmón, línea vertical de tratamiento, salto positivo de los coeficientes post-tratamiento en azul marino con intervalos de confianza."

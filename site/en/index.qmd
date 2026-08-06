@@ -5,25 +5,7 @@ image: ../assets/og-card.png
 toc: false
 ---
 
-::: {.hero}
-::: {}
-<p class="qualifica">Applied Economist · PhD</p>
-
-# Agapito E. Santangelo
-
-<p class="descrizione">Public-policy evaluation with causal inference,
-unconventional digital data and machine learning.</p>
-
-::: {.cta}
-<a class="btn-es" href="research.html">Explore research</a>
-<a class="btn-es ghost" href="../assets/cv.pdf">Download CV</a>
-:::
-:::
-
-::: {.hero-viz}
-![](../assets/event-study.svg){fig-alt="Event-study plot: flat pre-trends in salmon, treatment line, post-treatment jump in navy"}
-:::
-:::
+{{< include ../_generated/en/hero.html >}}
 
 ## Featured research
 
