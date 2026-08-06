@@ -437,6 +437,10 @@ ul.entries {
 // ------------------------------------------------------------
 // Navbar custom trilingue
 // ------------------------------------------------------------
+// Due righe a geometria FISSA, uguale nelle tre lingue: sopra logo
+// a sinistra e cerca + cambio lingua a destra (ancore che non si
+// muovono mai), sotto il menu (le cui etichette variano di lunghezza
+// tra le lingue senza spostare il resto).
 .top-nav {
   border-bottom: 1px solid $es-rule;
   background: $es-bg;
@@ -444,29 +448,35 @@ ul.entries {
   .top-nav-inner {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0.55rem 1rem;
+    padding: 0.7rem 1rem 0.45rem;
+  }
+  .nav-bar {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .nav-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   .brand { display: inline-flex; }
   .nav-links {
+    margin-top: 0.55rem;
     display: flex;
-    gap: 1.05rem;
+    gap: 1rem;
     flex-wrap: wrap;
     a {
-      font-size: 0.74rem;
-      letter-spacing: 0.07em;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: $es-ink-soft;
       text-decoration: none;
-      padding: 0.35rem 0;
+      padding: 0.3rem 0;
       &:hover, &:focus-visible { color: $es-accent-h; }
     }
   }
   .lang-switch {
-    margin-left: auto;
     display: flex;
     gap: 0.7rem;
     font-size: 0.74rem;
@@ -505,14 +515,12 @@ ul.entries {
 
 // Ricerca (§13.6) — icona in nav + tema Pagefind
 .top-nav .nav-search {
-  margin-left: auto;
   font-size: 1.25rem;
   line-height: 1;
   color: $es-ink-mute;
   text-decoration: none;
   padding: 0.2rem 0.4rem;
   &:hover, &:focus-visible { color: $es-accent-h; }
-  & + .lang-switch { margin-left: 0.4rem; }
 }
 #search {
   --pagefind-ui-primary: #{$es-accent};
