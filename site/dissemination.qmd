@@ -1,5 +1,0 @@
----
-title: "Divulgazione"
----
-
-{{< include _generated/it/dissemination.html >}}

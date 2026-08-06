@@ -1,5 +1,0 @@
----
-title: "Chi sono"
----
-
-{{< include _generated/it/about.html >}}

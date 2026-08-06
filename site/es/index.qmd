@@ -1,0 +1,66 @@
+---
+pagetitle: "Agapito E. Santangelo — Economista aplicado · Evaluación de políticas"
+description: "Economista aplicado: inferencia causal, datos digitales y machine learning para la evaluación de políticas públicas."
+image: ../assets/og-card.png
+toc: false
+---
+
+::: {.hero}
+::: {}
+<p class="qualifica">Applied Economist · PhD</p>
+
+# Agapito E. Santangelo
+
+<p class="descrizione">Evaluación de políticas públicas con inferencia causal,
+datos digitales no convencionales y machine learning.</p>
+
+::: {.cta}
+<a class="btn-es" href="research.html">Explorar la investigación</a>
+<a class="btn-es ghost" href="../assets/cv.pdf">Descargar CV</a>
+:::
+:::
+
+::: {.hero-viz}
+![](../assets/event-study.svg){fig-alt="Gráfico event-study: pre-tendencias planas en salmón, línea de tratamiento, salto post-tratamiento en azul marino"}
+:::
+:::
+
+## Investigación destacada
+
+::: {.featured-grid}
+
+::: {.featured-card}
+<span class="area">Policy evaluation · Digitalización</span>
+<span class="titolo">[EU Cohesion Policy and Digital Public Services](research.html)</span>
+<span class="sintesi">Efectos de los fondos de cohesión en los servicios digitales municipales, con datos web de archivo y métodos cuasi-experimentales. <em>Job Market Paper.</em></span>
+<span class="stato review">En revisión</span>
+:::
+
+::: {.featured-card}
+<span class="area">Instituciones · Gobernanza</span>
+<span class="titolo">[Administrative Capture from Within](research.html)</span>
+<span class="sintesi">¿Qué hace la captura administrativa a las instituciones — y se puede prever? Presentado en AISRe 2026.</span>
+<span class="stato ongoing">En curso</span>
+:::
+
+::: {.featured-card}
+<span class="area">Infraestructuras · Transporte</span>
+<span class="titolo">[Competition Without Punctuality Gains](research.html)</span>
+<span class="sintesi">La competencia en la alta velocidad italiana no mejoró la puntualidad: evidencia causal.</span>
+<span class="stato review">En revisión</span>
+:::
+
+::: {.featured-card}
+<span class="area">Sanidad · Economía pública</span>
+<span class="titolo">[Fiscal Constraints and Health Inequality Research](research.html)</span>
+<span class="sintesi">¿Los límites fiscales orientan la investigación sobre desigualdad sanitaria? Una perspectiva bibliométrica.</span>
+<span class="stato published">Working paper</span>
+:::
+
+:::
+
+## Novedades
+
+{{< include ../_generated/es/updates.html >}}
+
+[Todas las novedades →](news.html)

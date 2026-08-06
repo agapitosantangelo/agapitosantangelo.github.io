@@ -1,5 +1,0 @@
----
-title: "Talk e conferenze"
----
-
-{{< include _generated/it/talks.html >}}

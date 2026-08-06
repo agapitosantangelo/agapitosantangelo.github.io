@@ -1,0 +1,5 @@
+---
+title: "Investigación"
+---
+
+{{< include ../_generated/es/research.html >}}

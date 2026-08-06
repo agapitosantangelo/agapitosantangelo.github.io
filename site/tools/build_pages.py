@@ -12,7 +12,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 OUT = os.path.join(ROOT, "_generated")
 
-LANGS = ["it"]  # en, es: profili in arrivo
+LANGS = ["it", "en", "es"]
 
 T = {  # etichette d'interfaccia
     "it": {
@@ -23,6 +23,24 @@ T = {  # etichette d'interfaccia
         "targeted": "Corsi mirati e lezioni", "experience": "Esperienza professionale",
         "education": "Istruzione", "awards": "Riconoscimenti e affiliazioni",
         "training": "Formazione avanzata",
+    },
+    "en": {
+        "peer": "Peer-reviewed publications", "wp": "Working papers",
+        "confpapers": "Conference papers", "under_review": "Under review",
+        "jmp": "Job Market Paper", "project_link": "Funded project",
+        "philosophy": "Teaching philosophy", "university": "University teaching",
+        "targeted": "Targeted training & lectures", "experience": "Professional experience",
+        "education": "Education", "awards": "Awards & memberships",
+        "training": "Advanced training",
+    },
+    "es": {
+        "peer": "Publicaciones peer-reviewed", "wp": "Working papers",
+        "confpapers": "Contribuciones a congresos", "under_review": "En revisión",
+        "jmp": "Job Market Paper", "project_link": "Proyecto relacionado",
+        "philosophy": "Filosofía docente", "university": "Docencia universitaria",
+        "targeted": "Formaciones específicas y charlas", "experience": "Experiencia profesional",
+        "education": "Formación", "awards": "Reconocimientos y afiliaciones",
+        "training": "Formación avanzada",
     },
 }
 

@@ -1,0 +1,5 @@
+---
+title: "Sobre mí"
+---
+
+{{< include ../_generated/es/about.html >}}

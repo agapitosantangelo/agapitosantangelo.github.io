@@ -1,0 +1,5 @@
+---
+title: "Teaching"
+---
+
+{{< include ../_generated/en/teaching.html >}}

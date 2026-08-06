@@ -1,0 +1,5 @@
+---
+title: "About"
+---
+
+{{< include ../_generated/en/about.html >}}

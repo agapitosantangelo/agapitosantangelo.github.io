@@ -1,0 +1,5 @@
+---
+title: "Charlas y congresos"
+---
+
+{{< include ../_generated/es/talks.html >}}

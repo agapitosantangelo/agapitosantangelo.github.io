@@ -361,3 +361,64 @@ ul.entries {
   .timeline .exp-item { grid-template-columns: 1fr; gap: 0.2rem; }
   .project .project-meta { grid-template-columns: 1fr; }
 }
+
+// ------------------------------------------------------------
+// Navbar custom trilingue
+// ------------------------------------------------------------
+.top-nav {
+  border-bottom: 1px solid $es-rule;
+  background: $es-bg;
+  font-family: $font-family-sans-serif;
+  .top-nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+  }
+  .brand { display: inline-flex; }
+  .nav-links {
+    display: flex;
+    gap: 1.05rem;
+    flex-wrap: wrap;
+    a {
+      font-size: 0.74rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: $es-ink-soft;
+      text-decoration: none;
+      padding: 0.35rem 0;
+      &:hover, &:focus-visible { color: $es-accent-h; }
+    }
+  }
+  .lang-switch {
+    margin-left: auto;
+    display: flex;
+    gap: 0.7rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    a { color: $es-ink-mute; text-decoration: none; padding: 0.35rem 0.2rem;
+        &:hover, &:focus-visible { color: $es-accent-h; } }
+    .active { color: $es-ink; box-shadow: inset 0 -1px 0 $es-accent; padding: 0.35rem 0.2rem; }
+  }
+}
+
+// ------------------------------------------------------------
+// §13.1 — animazione del motivo event-study nell'hero
+// una sola volta, ~1.2s, disattivata con prefers-reduced-motion
+// ------------------------------------------------------------
+.hero-viz {
+  svg, img { }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-viz img {
+    animation: es-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes es-reveal {
+    0%   { opacity: 0; transform: translateY(10px); clip-path: inset(0 100% 0 0); }
+    45%  { opacity: 1; clip-path: inset(0 45% 0 0); }
+    100% { opacity: 1; transform: translateY(0); clip-path: inset(0 0 0 0); }
+  }
+}

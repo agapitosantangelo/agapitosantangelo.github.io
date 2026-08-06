@@ -1,0 +1,5 @@
+---
+title: "Proyectos"
+---
+
+{{< include ../_generated/es/projects.html >}}

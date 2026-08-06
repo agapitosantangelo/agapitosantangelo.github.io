@@ -1,0 +1,5 @@
+---
+title: "Didattica"
+---
+
+{{< include ../_generated/it/teaching.html >}}

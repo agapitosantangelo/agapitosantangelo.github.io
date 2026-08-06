@@ -2,6 +2,13 @@ project:
   type: website
   output-dir: _site
   pre-render: python3 tools/build_pages.py
+  render:
+    - index.qmd
+    - it/
+    - en/
+    - es/
+  resources:
+    - assets
 
 website:
   title: "Agapito E. Santangelo"
@@ -9,32 +16,6 @@ website:
   favicon: assets/favicon.svg
   open-graph: true
   twitter-card: true
-  navbar:
-    title: false
-    logo: assets/aes-monogram.svg
-    logo-alt: "AES — Agapito E. Santangelo"
-    background: "#fbfaf6"
-    foreground: "#1a1a1a"
-    left:
-      - text: "Chi sono"
-        href: about.qmd
-      - text: "Ricerca"
-        href: research.qmd
-      - text: "Progetti"
-        href: projects.qmd
-      - text: "Didattica"
-        href: teaching.qmd
-      - text: "Talk"
-        href: talks.qmd
-      - text: "Divulgazione"
-        href: dissemination.qmd
-    right:
-      - text: "Contatti"
-        href: contact.qmd
-      - text: "EN"
-        href: "#"
-      - text: "ES"
-        href: "#"
   page-footer:
     center: "© 2026 Agapito Emanuele Santangelo"
 
@@ -43,7 +24,6 @@ format:
     theme:
       - litera
       - theme/custom.scss
-    lang: it
     toc: false
     anchor-sections: false
     link-external-newwindow: true

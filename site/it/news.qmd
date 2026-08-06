@@ -1,0 +1,5 @@
+---
+title: "Tutti gli aggiornamenti"
+---
+
+{{< include ../_generated/it/news.html >}}

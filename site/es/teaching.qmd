@@ -1,0 +1,5 @@
+---
+title: "Docencia"
+---
+
+{{< include ../_generated/es/teaching.html >}}

@@ -1,0 +1,66 @@
+---
+pagetitle: "Agapito E. Santangelo — Applied economist · Policy evaluation"
+description: "Applied economist: causal inference, digital trace data and machine learning for public-policy evaluation."
+image: ../assets/og-card.png
+toc: false
+---
+
+::: {.hero}
+::: {}
+<p class="qualifica">Applied Economist · PhD</p>
+
+# Agapito E. Santangelo
+
+<p class="descrizione">Public-policy evaluation with causal inference,
+unconventional digital data and machine learning.</p>
+
+::: {.cta}
+<a class="btn-es" href="research.html">Explore research</a>
+<a class="btn-es ghost" href="../assets/cv.pdf">Download CV</a>
+:::
+:::
+
+::: {.hero-viz}
+![](../assets/event-study.svg){fig-alt="Event-study plot: flat pre-trends in salmon, treatment line, post-treatment jump in navy"}
+:::
+:::
+
+## Featured research
+
+::: {.featured-grid}
+
+::: {.featured-card}
+<span class="area">Policy evaluation · Digitalisation</span>
+<span class="titolo">[EU Cohesion Policy and Digital Public Services](research.html)</span>
+<span class="sintesi">Effects of cohesion funds on municipal digital services, using archived web data and quasi-experimental methods. <em>Job Market Paper.</em></span>
+<span class="stato review">Under review</span>
+:::
+
+::: {.featured-card}
+<span class="area">Institutions · Governance</span>
+<span class="titolo">[Administrative Capture from Within](research.html)</span>
+<span class="sintesi">What does administrative capture do to institutions — and can we foresee it? Presented at AISRe 2026.</span>
+<span class="stato ongoing">Ongoing</span>
+:::
+
+::: {.featured-card}
+<span class="area">Infrastructure · Transport</span>
+<span class="titolo">[Competition Without Punctuality Gains](research.html)</span>
+<span class="sintesi">Competition in Italian high-speed rail did not improve punctuality: causal evidence.</span>
+<span class="stato review">Under review</span>
+:::
+
+::: {.featured-card}
+<span class="area">Health · Public economics</span>
+<span class="titolo">[Fiscal Constraints and Health Inequality Research](research.html)</span>
+<span class="sintesi">Do fiscal constraints shape research on health inequality? A bibliometric perspective.</span>
+<span class="stato published">Working paper</span>
+:::
+
+:::
+
+## Updates
+
+{{< include ../_generated/en/updates.html >}}
+
+[All updates →](news.html)
