@@ -37,4 +37,3 @@ format:
       text: |
         <script src="/assets/js/filters.js" defer></script>
         <script src="/assets/js/reveal.js" defer></script>
-        <script src="/assets/js/hero-anim.js" defer></script>

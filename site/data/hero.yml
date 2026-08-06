@@ -1,36 +1,38 @@
-# Hero della homepage (plot event-study animato all'apertura) — testi nelle tre lingue.
-qualifica: "Applied Economist · PhD"
+# Homepage alla psantanna.com (template "trestles"): colonna sinistra con
+# ritratto, nome, aree e link; colonna destra con nome, affiliazione e bio.
 name: "Agapito E. Santangelo"
+photo: "../assets/profile.jpg"
+photo_alt:
+  it: "Ritratto di Agapito Emanuele Santangelo"
+  en: "Portrait of Agapito Emanuele Santangelo"
+  es: "Retrato de Agapito Emanuele Santangelo"
 areas:
   - { it: "Inferenza causale", en: "Causal inference", es: "Inferencia causal" }
   - { it: "Valutazione delle politiche", en: "Policy evaluation", es: "Evaluación de políticas" }
   - { it: "Dati digitali & ML", en: "Digital data & ML", es: "Datos digitales & ML" }
-descrizione:
-  it: "Valutazione delle politiche pubbliche con inferenza causale, dati digitali non convenzionali e machine learning."
-  en: "Public-policy evaluation with causal inference, unconventional digital data and machine learning."
-  es: "Evaluación de políticas públicas con inferencia causal, datos digitales no convencionales y machine learning."
-cta_research:
-  it: "Esplora la ricerca"
-  en: "Explore research"
-  es: "Explorar la investigación"
-cta_cv:
-  it: "Scarica il CV"
-  en: "Download CV"
-  es: "Descargar CV"
-plot:
-  y_title:
-    it: "Effetto stimato"
-    en: "Estimated effect"
-    es: "Efecto estimado"
-  treatment:
-    it: "trattamento"
-    en: "treatment"
-    es: "tratamiento"
-  effect:
-    it: "effetto"
-    en: "effect"
-    es: "efecto"
-  aria:
-    it: "Grafico event-study: coefficienti pre-trattamento piatti intorno allo zero in salmone, linea verticale del trattamento, salto positivo dei coefficienti post-trattamento in navy con intervalli di confidenza."
-    en: "Event-study plot: flat pre-treatment coefficients around zero in salmon, vertical treatment line, positive jump of post-treatment coefficients in navy with confidence intervals."
-    es: "Gráfico event-study: coeficientes pre-tratamiento planos en torno a cero en salmón, línea vertical de tratamiento, salto positivo de los coeficientes post-tratamiento en azul marino con intervalos de confianza."
+affiliazione:
+  it: "Economista applicato · PhD — Università del Molise"
+  en: "Applied economist · PhD — University of Molise"
+  es: "Economista aplicado · PhD — Universidad de Molise"
+lead:
+  it: "Sono un economista applicato: valuto le politiche pubbliche con inferenza causale, dati digitali non convenzionali e machine learning."
+  en: "I am an applied economist: I evaluate public policies with causal inference, unconventional digital data and machine learning."
+  es: "Soy un economista aplicado: evalúo políticas públicas con inferencia causal, datos digitales no convencionales y machine learning."
+bio:
+  - it: "Gran parte del mio lavoro recente studia come la digitalizzazione trasforma il settore pubblico — dai fondi di coesione europei ai servizi digitali dei comuni — con disegni difference-in-differences, dati panel e tracce digitali d'archivio. Mi occupo anche di sanità, istituzioni e dinamiche territoriali."
+    en: "Much of my recent work studies how digitalisation transforms the public sector — from EU cohesion funds to municipal digital services — using difference-in-differences designs, panel data and archived web traces. I also work on health, institutions and territorial dynamics."
+    es: "Gran parte de mi trabajo reciente estudia cómo la digitalización transforma el sector público — de los fondos de cohesión europeos a los servicios digitales municipales — con diseños difference-in-differences, datos de panel y trazas digitales de archivo. También trabajo sobre sanidad, instituciones y dinámicas territoriales."
+  - it: "Lavoro inoltre come Data Analysis Strategist per Instant Analytics, applicando text mining e machine learning al monitoraggio in tempo reale di fenomeni socioeconomici: un complemento utile alla ricerca accademica, perché mostra come questi metodi si comportano nella pratica."
+    en: "I also work as a Data Analysis Strategist at Instant Analytics, applying text mining and machine learning to real-time monitoring of socioeconomic phenomena: a useful complement to my academic research, because it shows how these methods behave in practice."
+    es: "Trabajo además como Data Analysis Strategist en Instant Analytics, aplicando text mining y machine learning al seguimiento en tiempo real de fenómenos socioeconómicos: un complemento útil a mi investigación académica, porque muestra cómo se comportan estos métodos en la práctica."
+  - it: "Ho conseguito il dottorato in Economia all'Università del Molise con menzione Doctor Europaeus, con un periodo da visiting scholar alla Universitat Politècnica de València. Sono revisore per PLOS ONE."
+    en: "I hold a PhD in Economics from the University of Molise with the Doctor Europaeus distinction, including a visiting period at the Universitat Politècnica de València. I serve as a reviewer for PLOS ONE."
+    es: "Soy doctor en Economía por la Universidad de Molise con mención Doctor Europaeus, con una estancia como visiting scholar en la Universitat Politècnica de València. Soy revisor de PLOS ONE."
+# lista verticale nella colonna sinistra (etichette universali)
+links:
+  - { icon: "email", label: "Email", url: "mailto:emanuele.santangelo@unimol.it" }
+  - { icon: "scholar", label: "Google Scholar", url: "https://scholar.google.com/citations?user=uSsHajYAAAAJ" }
+  - { icon: "orcid", label: "ORCID", url: "https://orcid.org/0009-0004-5369-1594" }
+  - { icon: "github", label: "GitHub", url: "https://github.com/agapitosantangelo" }
+  - { icon: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/" }
+  - { icon: "cv", label: { it: "Curriculum (PDF)", en: "CV (PDF)", es: "CV (PDF)" }, url: "../assets/cv.pdf" }

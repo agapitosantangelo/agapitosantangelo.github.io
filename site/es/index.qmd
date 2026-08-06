@@ -7,6 +7,8 @@ toc: false
 
 {{< include ../_generated/es/hero.html >}}
 
+{{< include ../_generated/es/updates.html >}}
+
 ## Investigación destacada
 
 ::: {.featured-grid}
@@ -41,8 +43,3 @@ toc: false
 
 :::
 
-## Novedades
-
-{{< include ../_generated/es/updates.html >}}
-
-[Todas las novedades →](news.html)

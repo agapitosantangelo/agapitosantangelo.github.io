@@ -23,6 +23,7 @@ T = {  # etichette d'interfaccia
         "targeted": "Corsi mirati e lezioni", "experience": "Esperienza professionale",
         "education": "Istruzione", "awards": "Riconoscimenti e affiliazioni",
         "training": "Formazione avanzata",
+        "updates_title": "Aggiornamenti recenti", "all_updates": "Tutti gli aggiornamenti →",
         "filter_all": "Tutti", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Metodi digitali", "health": "Sanità", "territorial": "Territorio",
         "innovation": "Innovazione", "institutions": "Istituzioni"},
@@ -35,6 +36,7 @@ T = {  # etichette d'interfaccia
         "targeted": "Targeted training & lectures", "experience": "Professional experience",
         "education": "Education", "awards": "Awards & memberships",
         "training": "Advanced training",
+        "updates_title": "Recent updates", "all_updates": "All updates →",
         "filter_all": "All", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Digital methods", "health": "Health", "territorial": "Territorial",
         "innovation": "Innovation", "institutions": "Institutions"},
@@ -47,6 +49,7 @@ T = {  # etichette d'interfaccia
         "targeted": "Formaciones específicas y charlas", "experience": "Experiencia profesional",
         "education": "Formación", "awards": "Reconocimientos y afiliaciones",
         "training": "Formación avanzada",
+        "updates_title": "Actualizaciones recientes", "all_updates": "Todas las actualizaciones →",
         "filter_all": "Todos", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Métodos digitales", "health": "Sanidad", "territorial": "Territorio",
         "innovation": "Innovación", "institutions": "Instituciones"},
@@ -169,7 +172,7 @@ def gen_talks(lang, t):
                      + (links_html([{"label": "Link", "url": tk["link"]}]) if tk.get("link") else "")
                      + "</span>")
             for ph in tk.get("photos") or []:
-                h.append(f'<figure class="entry-photo"><img src="assets/photos/{os.path.basename(ph["src"])}" '
+                h.append(f'<figure class="entry-photo"><img src="../assets/photos/{os.path.basename(ph["src"])}" '
                          f'alt="{esc(L(ph.get("alt"), lang))}" loading="lazy">'
                          f'<figcaption>{esc(L(ph.get("caption"), lang))}</figcaption></figure>')
             h.append("</li>")
@@ -204,9 +207,11 @@ def gen_teaching(lang, t):
 
 def gen_news(lang, t, limit=None):
     news = load("news")
-    if limit:
-        news = news[:limit]
     h = ['<div class="updates">']
+    if limit:
+        # box della homepage alla Sant'Anna: titolo centrato dentro il box
+        news = news[:limit]
+        h.append(f'<p class="updates-title">{t["updates_title"]}</p>')
     for n in news:
         body = esc(L(n["body"], lang))
         link = n.get("link")
@@ -214,6 +219,8 @@ def gen_news(lang, t, limit=None):
             body += f' <a href="{L(link, lang)}">→</a>'
         h.append(f'<div class="update"><span class="quando">{esc(L(n["date_label"], lang))}</span>'
                  f'<span class="cosa">{body}</span></div>')
+    if limit:
+        h.append(f'<span class="tutti"><a href="news.html">{t["all_updates"]}</a></span>')
     h.append("</div>")
     return "\n".join(h)
 
@@ -225,7 +232,7 @@ def gen_about(lang, t):
         cur = " current" if e.get("current") else ""
         org = esc(L(e["org"], lang))
         if e.get("org_url"):
-            org = f'<a href="{e["org_url"]}">{org}</a>'
+            org = f'<a href="{L(e["org_url"], lang)}">{org}</a>'
         h.append(f'<div class="exp-item" id="{e["id"]}"><div class="exp-date{cur}">{esc(L(e["period"], lang))}</div><div>'
                  f'<span class="exp-role">{esc(L(e["role"], lang))}</span>'
                  f'<div class="exp-org">{org}</div>'
@@ -269,68 +276,45 @@ def gen_dissemination(lang, t):
     return "\n".join(h)
 
 
+# icone 16x16 (tratte da Bootstrap Icons, licenza MIT) per la lista link dell'hero
+ICONS = {
+    "email": '<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a.997.997 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>',
+    "scholar": '<path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/><path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>',
+    "orcid": '<circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.4"/><text x="8" y="10.6" text-anchor="middle" font-family="Geist, sans-serif" font-size="7" font-weight="600">iD</text>',
+    "github": '<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>',
+    "linkedin": '<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>',
+    "cv": '<path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/><path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>',
+}
+
+
 def gen_hero(lang, t):
-    """Hero della homepage: il plot event-study si anima da solo all'apertura
-    (vedi assets/js/hero-anim.js); la pagina scorre normalmente.
-    Senza JS o con prefers-reduced-motion il grafico è semplicemente completo."""
+    """Homepage alla psantanna.com (template 'trestles'): colonna sinistra con
+    ritratto tondo, nome, aree e lista link con icone; colonna destra con
+    nome grande, affiliazione, frase di apertura e paragrafi bio."""
     d = load("hero")
-    p = d["plot"]
-    zero_y = 280
-    pre = [(130, 288, 34), (230, 272, 36), (330, 284, 33), (430, 276, 35)]
-    post = [(490, 175, 44), (590, 148, 40), (690, 132, 38), (790, 126, 36)]
-    xlabels = ["−4", "−3", "−2", "−1", "0", "+1", "+2", "+3"]
-
-    svg = [f'<svg class="es-hero-svg" viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" '
-           f'role="img" aria-label="{esc(L(p["aria"], lang))}">']
-    # strato statico: assi, etichette, legenda (sempre visibile)
-    svg.append('<g font-family="Geist, sans-serif" fill="#6b6764">')
-    svg.append(f'<line x1="70" y1="{zero_y}" x2="850" y2="{zero_y}" stroke="#d6d3cc" stroke-width="1.5"/>')
-    svg.append('<line x1="70" y1="406" x2="850" y2="406" stroke="#ece9e0" stroke-width="1.2"/>')
-    svg.append(f'<text x="56" y="{zero_y + 5}" text-anchor="end" font-size="14">0</text>')
-    for (x, _, _), lab in zip(pre + post, xlabels):
-        svg.append(f'<text x="{x}" y="432" text-anchor="middle" font-size="14">{lab}</text>')
-    svg.append(f'<text x="26" y="220" font-size="14" letter-spacing="1" text-anchor="middle" '
-               f'transform="rotate(-90 26 220)">{esc(L(p["y_title"], lang))}</text>')
-    svg.append('<circle cx="86" cy="44" r="5" fill="#e87d72"/><text x="98" y="49" font-size="14">Pre</text>')
-    svg.append('<circle cx="152" cy="44" r="5" fill="#1a3a6e"/><text x="164" y="49" font-size="14">Post</text>')
-    svg.append('</g>')
-    # coefficienti pre: compaiono in sequenza (data-step = finestra di scroll 0..1)
-    for i, (x, y, ci) in enumerate(pre):
-        a = 0.02 + i * 0.085
-        svg.append(f'<g class="es-anim" data-step="{a:.3f} {a + 0.10:.3f}">'
-                   f'<line x1="{x}" y1="{y - ci}" x2="{x}" y2="{y + ci}" stroke="#e87d72" stroke-width="2.4"/>'
-                   f'<circle cx="{x}" cy="{y}" r="7" fill="#e87d72"/></g>')
-    # linea del trattamento: si disegna dall'alto (data-draw -> clip-path)
-    svg.append(f'<g class="es-anim" data-step="0.400 0.530" data-draw="v">'
-               f'<line x1="460" y1="36" x2="460" y2="406" stroke="#c14b3f" stroke-width="2" stroke-dasharray="7 6"/>'
-               f'<text x="472" y="56" font-family="Geist, sans-serif" font-size="14" fill="#c14b3f" '
-               f'letter-spacing="1">{esc(L(p["treatment"], lang))}</text></g>')
-    # coefficienti post: salgono dallo zero al livello dell'effetto (data-rise)
-    for i, (x, y, ci) in enumerate(post):
-        a = 0.56 + i * 0.085
-        svg.append(f'<g class="es-anim" data-step="{a:.3f} {a + 0.10:.3f}" data-rise="{zero_y - y}">'
-                   f'<line x1="{x}" y1="{y - ci}" x2="{x}" y2="{y + ci}" stroke="#1a3a6e" stroke-width="2.4"/>'
-                   f'<circle cx="{x}" cy="{y}" r="7" fill="#1a3a6e"/></g>')
-    # annotazione finale: staffa dell'effetto
-    svg.append(f'<g class="es-anim" data-step="0.920 1.000" data-rise="10" stroke="#c14b3f">'
-               f'<line x1="836" y1="134" x2="836" y2="274" stroke-width="1.6"/>'
-               f'<line x1="828" y1="134" x2="844" y2="134" stroke-width="1.6"/>'
-               f'<line x1="828" y1="274" x2="844" y2="274" stroke-width="1.6"/>'
-               f'<text x="862" y="204" font-family="Geist, sans-serif" font-size="14" fill="#c14b3f" stroke="none" '
-               f'letter-spacing="1" text-anchor="middle" transform="rotate(-90 862 204)">{esc(L(p["effect"], lang))}</text></g>')
-    svg.append('</svg>')
-
     aree = "".join(f'<span>{esc(L(a, lang))}</span>' for a in d["areas"])
-    h = ['<div class="hero-es" data-hero-anim>',
-         '<header class="hero-es-testo">',
-         f'<p class="qualifica">{esc(d["qualifica"])}</p>',
-         f'<h1>{esc(d["name"])}</h1>',
-         f'<p class="aree">{aree}</p>',
-         f'<p class="descrizione">{esc(L(d["descrizione"], lang))}</p>',
-         f'<p class="cta"><a class="btn-es" href="research.html">{esc(L(d["cta_research"], lang))}</a> '
-         f'<a class="btn-es ghost" href="../assets/cv.pdf">{esc(L(d["cta_cv"], lang))}</a></p>',
-         '</header>',
-         '<div class="hero-es-plot">'] + svg + [
+    links = "".join(
+        f'<li><a href="{l["url"]}">'
+        f'<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">{ICONS[l["icon"]]}</svg>'
+        f'{esc(L(l["label"], lang))}</a></li>'
+        for l in d["links"])
+    bio = "".join(f'<p>{esc(L(par, lang))}</p>' for par in d["bio"])
+    # div e non <aside>: Quarto sposta gli <aside> nella colonna a margine
+    h = ['<div class="hero-es">',
+         '<div class="hero-es-side">',
+         f'<img class="ritratto" src="{d["photo"]}" alt="{esc(L(d["photo_alt"], lang))}" width="720" height="720">',
+         f'<p class="side-nome">{esc(d["name"])}</p>',
+         f'<p class="side-aree">{aree}</p>',
+         f'<ul class="side-links">{links}</ul>',
+         '</div>',
+         '<div class="hero-es-main">',
+         # div con ruolo heading: un <h1> vero verrebbe promosso da Quarto
+         # a titolo di pagina e spostato in cima al documento
+         f'<div class="h1-nome" role="heading" aria-level="1">{esc(d["name"])}</div>',
+         f'<p class="affiliazione">{esc(L(d["affiliazione"], lang))}</p>',
+         f'<p class="lead-bio">{esc(L(d["lead"], lang))}</p>',
+         '<hr>',
+         bio,
          '</div>',
          '</div>']
     return "\n".join(h)

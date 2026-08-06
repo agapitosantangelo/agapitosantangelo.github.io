@@ -67,77 +67,99 @@ h2 {
 }
 
 // ------------------------------------------------------------
-// Hero della homepage: nome + aree di ricerca (alla psantanna.com)
-// e il plot event-study che si anima da solo all'apertura
-// (assets/js/hero-anim.js). La pagina scorre normalmente.
-// Fallback senza JS o con prefers-reduced-motion: grafico completo.
+// Homepage alla psantanna.com (template "trestles"):
+// sinistra ritratto tondo + nome + aree + lista link con icone,
+// destra nome grande + affiliazione + lead + paragrafi bio.
 // ------------------------------------------------------------
 .hero-es {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.4rem;
-  text-align: center;
-  padding: 2.6rem 0 2.2rem;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 2.6rem 0 0.6rem;
 
-  .hero-es-testo {
-    h1 {
-      font-size: clamp(2.2rem, 5.2vw, 3.4rem);
+  .hero-es-side {
+    text-align: left;
+    .ritratto {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid $es-rule;
+      box-shadow: 0 0 0 5px $es-paper, 0 0 0 6px $es-rule;
+      display: block;
+      margin: 0 0 1.1rem 0.2rem;
+    }
+    .side-nome {
       font-weight: 600;
-      line-height: 1.05;
-      border: none;
-      margin: 0 0 0.7rem;
+      font-size: 1.08rem;
+      margin: 0 0 0.5rem;
     }
-    .qualifica {
-      font-family: $font-family-sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: $es-accent-h;
-      margin-bottom: 0.9rem;
-    }
-    .aree {
-      display: flex;
-      gap: 0.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .side-aree {
       margin: 0 0 0.9rem;
       span {
+        display: block;
         font-family: $font-family-sans-serif;
-        font-size: 0.7rem;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        color: $es-accent;
-        border: 1px solid $es-rule;
-        padding: 0.28rem 0.7rem;
+        font-size: 0.78rem;
+        color: $es-ink-mute;
+        line-height: 1.7;
       }
     }
-    .descrizione {
-      font-size: 1.15rem;
-      line-height: 1.5;
-      color: $es-ink-soft;
-      max-width: 52ch;
-      margin: 0 auto;
-    }
-    .cta {
-      margin: 1.2rem 0 0;
-      display: flex;
-      gap: 0.8rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .side-links {
+      list-style: none;
+      margin: 0;
+      padding: 0.9rem 0 0;
+      border-top: 1px solid $es-rule-soft;
+      li { margin: 0.45rem 0; }
+      a {
+        font-family: $font-family-sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.02em;
+        color: $es-ink-soft;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        svg { width: 15px; height: 15px; color: $es-accent; flex: 0 0 auto; }
+        &:hover, &:focus-visible { color: $es-accent-h; svg { color: $es-accent-h; } }
+      }
     }
   }
 
-  .hero-es-plot {
-    width: min(880px, 100%);
-    svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 52vh;
-      margin: 0 auto;
+  .hero-es-main {
+    .h1-nome {
+      font-size: clamp(2.2rem, 4.6vw, 3rem);
+      font-weight: 600;
+      line-height: 1.05;
+      margin: 0 0 0.35rem;
     }
+    .affiliazione {
+      font-family: $font-family-sans-serif;
+      font-size: 1rem;
+      color: $es-ink-mute;
+      margin: 0 0 1.4rem;
+    }
+    .lead-bio {
+      font-size: 1.18rem;
+      line-height: 1.55;
+      color: $es-ink-soft;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid $es-rule;
+      margin: 1.4rem 0;
+      opacity: 1;
+    }
+    p { max-width: 62ch; }
   }
+}
+
+// Box aggiornamenti alla Sant'Anna: titolo centrato dentro il box
+.updates .updates-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0.2rem 0 0.6rem;
 }
 
 .btn-es {
@@ -246,8 +268,22 @@ h2 {
 // Mobile
 @media (max-width: 820px) {
   .hero-es {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
     padding-top: 1.4rem;
-    .hero-es-testo .descrizione { font-size: 1rem; }
+    .hero-es-side {
+      text-align: center;
+      .ritratto { width: 150px; height: 150px; margin: 0 auto 0.9rem; }
+      .side-aree span { display: inline; &::after { content: " · "; color: $es-rule; } }
+      .side-aree span:last-child::after { content: ""; }
+      .side-links {
+        border-top: none;
+        padding-top: 0.2rem;
+        li { display: inline-block; margin: 0.25rem 0.55rem; }
+      }
+    }
+    .hero-es-main .h1-nome { text-align: center; }
+    .hero-es-main .affiliazione { text-align: center; margin-bottom: 1rem; }
   }
 }
 
