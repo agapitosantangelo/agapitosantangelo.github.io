@@ -57,7 +57,8 @@ def main():
             r"\s*<url>\s*<loc>[^<]*(?:/index\.html|/404\.html|/conferences\.html)</loc>.*?</url>",
             re.S)
         sm, dropped = drop.subn("", sm)
-        # le home di lingua rientrano in forma directory pulita
+        # idempotente: via ogni home in forma directory già presente, poi si reinserisce
+        sm = re.sub(r"<url><loc>[^<]*/(?:it|en|es)/</loc></url>", "", sm)
         entries = "".join(f"<url><loc>{BASE}/{l}/</loc></url>" for l in LANGS)
         sm = sm.replace("</urlset>", entries + "</urlset>")
         with open(sm_path, "w") as f:
