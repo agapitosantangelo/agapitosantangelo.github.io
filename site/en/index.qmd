@@ -2,6 +2,7 @@
 pagetitle: "Applied economist · Policy evaluation"
 description: "Applied economist: causal inference, digital trace data and machine learning for public-policy evaluation."
 image: /assets/og-card.png
+aliases: [contact.html]
 toc: false
 ---
 
@@ -15,7 +16,7 @@ toc: false
 
 ::: {.featured-card}
 <span class="area">Policy evaluation · Digitalisation</span>
-<span class="titolo">[EU Cohesion Policy and Digital Public Services](research.html)</span>
+<span class="titolo">[EU Cohesion Policy and Digital Public Services](jmp.html)</span>
 <span class="sintesi">Effects of cohesion funds on municipal digital services, using archived web data and quasi-experimental methods. <em>Job Market Paper.</em></span>
 <span class="stato review">Under review</span>
 :::

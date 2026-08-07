@@ -33,6 +33,7 @@ links:
   - { icon: "email", label: "Email", url: "mailto:emanuele.santangelo@unimol.it" }
   - { icon: "scholar", label: "Google Scholar", url: "https://scholar.google.com/citations?user=uSsHajYAAAAJ" }
   - { icon: "orcid", label: "ORCID", url: "https://orcid.org/0009-0004-5369-1594" }
+  - { icon: "researchgate", label: "ResearchGate", url: "https://www.researchgate.net/profile/Agapito-Santangelo" }
   - { icon: "github", label: "GitHub", url: "https://github.com/agapitosantangelo" }
   - { icon: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/" }
   - { icon: "cv", label: { it: "Curriculum (PDF)", en: "CV (PDF)", es: "CV (PDF)" }, url: "../assets/cv.pdf" }

@@ -2,6 +2,7 @@
 pagetitle: "Economista applicato · Valutazione delle politiche"
 description: "Economista applicato: inferenza causale, dati digitali e machine learning per la valutazione delle politiche pubbliche."
 image: /assets/og-card.png
+aliases: [contact.html]
 toc: false
 ---
 
@@ -15,7 +16,7 @@ toc: false
 
 ::: {.featured-card}
 <span class="area">Policy evaluation · Digitalizzazione</span>
-<span class="titolo">[EU Cohesion Policy and Digital Public Services](research.qmd)</span>
+<span class="titolo">[EU Cohesion Policy and Digital Public Services](jmp.qmd)</span>
 <span class="sintesi">Effetti dei fondi di coesione sui servizi digitali comunali, con dati web d'archivio e metodi quasi-sperimentali. <em>Job Market Paper.</em></span>
 <span class="stato review">In revisione</span>
 :::

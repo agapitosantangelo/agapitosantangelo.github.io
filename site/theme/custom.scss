@@ -73,6 +73,9 @@ h2 {
 // e fa "saltare" l'header rispetto alle pagine interne.
 #title-block-header:empty { display: none; }
 
+// la description serve ai motori (meta/og), non come sottotitolo in pagina
+#title-block-header .description, #title-block-header .quarto-title-meta { display: none; }
+
 // ------------------------------------------------------------
 // Homepage alla psantanna.com (template "trestles"):
 // sinistra ritratto tondo + nome + aree + lista link con icone,
@@ -596,6 +599,40 @@ li.entry[hidden], section.level2[hidden] { display: none !important; }
     border-top: 1px solid $es-rule-soft;
     padding-top: 1rem;
   }
+}
+
+// ------------------------------------------------------------
+// Pagina del Job Market Paper
+// ------------------------------------------------------------
+.jmp-head {
+  padding: 0.4rem 0 0.6rem;
+  .jmp-kicker {
+    font-family: $font-family-sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $es-accent-h;
+    margin: 0 0 0.8rem;
+    em { text-transform: none; letter-spacing: 0.02em; }
+  }
+  .jmp-title {
+    font-size: clamp(1.7rem, 3.6vw, 2.3rem);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.15;
+    margin: 0 0 0.6rem;
+  }
+  .jmp-authors { font-size: 1.05rem; margin: 0 0 0.2rem; }
+  .jmp-venue { color: $es-ink-mute; font-size: 0.92rem; margin: 0 0 1.3rem; }
+  .jmp-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin: 0; }
+}
+.jmp-abstract { font-size: 1.02rem; line-height: 1.6; max-width: 68ch; }
+.jmp-tags {
+  font-family: $font-family-sans-serif;
+  font-size: 0.78rem;
+  color: $es-ink-mute;
+  letter-spacing: 0.03em;
+  margin-top: 1rem;
 }
 
 // ------------------------------------------------------------

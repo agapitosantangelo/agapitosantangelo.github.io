@@ -1,0 +1,34 @@
+---
+title: "Job Market Paper"
+description: "EU Cohesion Policy and Digital Public Services — el efecto de los fondos de cohesión en la digitalización de los municipios italianos, con web scraping y Difference-in-Differences."
+---
+
+```{=html}
+<div class="jmp-head">
+<p class="jmp-kicker">Working paper · 2025 · En revisión en <em>Technological Forecasting and Social Change</em></p>
+<div class="jmp-title" role="heading" aria-level="2">EU Cohesion Policy and Digital Public Services</div>
+<p class="jmp-authors">Nicola Caravaggio · Giuliano Resce · <strong>Agapito Emanuele Santangelo</strong></p>
+<p class="jmp-venue">Economics and Statistics Discussion Paper No. 100/25, Universidad de Molise</p>
+<p class="jmp-cta"><a class="btn-es" href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf">Descargar el PDF</a>
+<a class="btn-es ghost" href="research.html#pub-eu-cohesion-digital-public-services">Toda la investigación</a></p>
+</div>
+```
+
+## En breve
+
+El artículo estima el efecto de los fondos de cohesión europeos en la digitalización
+de los municipios italianos, usando la calidad de los sitios web municipales — medida
+con técnicas de web scraping — como proxy de la capacidad de gobierno electrónico,
+en un diseño de Difference-in-Differences generalizado. Los fondos mejoran los
+estándares tecnológicos básicos (adopción de HTML5, estructura más simple de los
+sitios), con efectos más marcados en los municipios pequeños, del Sur y de las Áreas
+Internas: la política de cohesión puede así apoyar la convergencia digital en contextos
+estructuralmente desfavorecidos. Los avances en la interactividad siguen siendo selectivos.
+
+## Abstract
+
+```{=html}
+<p class="jmp-abstract" lang="en">This paper investigates the impact of European Cohesion Funds on the digitalization of local governments in Italy, using the quality of municipal websites as a proxy for e-government capacity. Using web scraping techniques and a generalized Difference-in-Differences approach, the study examines whether municipalities that received targeted EU funding for digital networks and services experienced improvements in website technological sophistication. The results show that cohesion funds have contributed to the adoption of modern web standards, particularly HTML5, and to the simplification of website structure, indicating progress in the core aspects of digital infrastructure. These effects are especially pronounced in smaller municipalities and those located in the South and Inner Areas, suggesting that the cohesion policy can support digital convergence in structurally disadvantaged contexts. However, the absence of systematic improvements in broader dimensions of web interactivity points to the selective nature of these advancements.</p>
+<p class="jmp-tags">Keywords: Cohesion policy · Digitalization · Italian municipalities &nbsp;—&nbsp; JEL: H77 · L86 · O18</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"EU Cohesion Policy and Digital Public Services","author":[{"@type":"Person","name":"Nicola Caravaggio"},{"@type":"Person","name":"Giuliano Resce"},{"@type":"Person","name":"Agapito Emanuele Santangelo"}],"datePublished":"2025","publisher":{"@type":"Organization","name":"Universidad de Molise"},"url":"https://agapitosantangelo.github.io/es/jmp.html","sameAs":"http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf","keywords":"Cohesion policy, Digitalization, Italian municipalities"}</script>
+```

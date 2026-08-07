@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Talk e conferenze: AISRe, CARMA, EUI e seminari istituzionali — presentazioni su digitalizzazione, politiche pubbliche e metodi quantitativi.">
+<meta name="description" content="EU Cohesion Policy and Digital Public Services — the effect of cohesion funds on the digitalisation of Italian municipalities, using web scraping and Difference-in-Differences.">
 
-<title>Talk e conferenze – Agapito E. Santangelo</title>
+<title>Job Market Paper – Agapito E. Santangelo</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -60,17 +60,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Nessun risultato",
-    "search-matching-documents-text": "documenti trovati",
-    "search-copy-link-title": "Copiare il link nella ricerca",
-    "search-hide-matches-text": "Nascondere i risultati aggiuntivi",
-    "search-more-match-text": "ci sono altri risultati in questo documento",
-    "search-more-matches-text": "ulteriori risultati in questo documento",
-    "search-clear-button-title": "Pulire",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancellare",
-    "search-submit-button-title": "Inviare",
-    "search-label": "Ricerca"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
@@ -79,21 +79,23 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
 
-<meta property="og:title" content="Talk e conferenze – Agapito E. Santangelo">
-<meta property="og:description" content="Talk e conferenze: AISRe, CARMA, EUI e seminari istituzionali — presentazioni su digitalizzazione, politiche pubbliche e metodi quantitativi.">
-<meta property="og:image" content="https://agapitosantangelo.github.io/assets/photos/talk-carma-2026-talk.jpg">
+<meta property="og:title" content="Job Market Paper – Agapito E. Santangelo">
+<meta property="og:description" content="EU Cohesion Policy and Digital Public Services — the effect of cohesion funds on the digitalisation of Italian municipalities, using web scraping and Difference-in-Differences.">
+<meta property="og:image" content="https://agapitosantangelo.github.io/assets/og-card.png">
 <meta property="og:site_name" content="Agapito E. Santangelo">
-<meta property="og:image:alt" content="Presentazione del paper Digital Investment and the Evolution of Government Services a CARMA 2026, Valencia, luglio 2026">
-<meta name="twitter:title" content="Talk e conferenze – Agapito E. Santangelo">
-<meta name="twitter:description" content="Talk e conferenze: AISRe, CARMA, EUI e seminari istituzionali — presentazioni su digitalizzazione, politiche pubbliche e metodi quantitativi.">
-<meta name="twitter:image" content="https://agapitosantangelo.github.io/assets/photos/talk-carma-2026-talk.jpg">
-<meta name="twitter:image:alt" content="Presentazione del paper Digital Investment and the Evolution of Government Services a CARMA 2026, Valencia, luglio 2026">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="Job Market Paper – Agapito E. Santangelo">
+<meta name="twitter:description" content="EU Cohesion Policy and Digital Public Services — the effect of cohesion funds on the digitalisation of Italian municipalities, using web scraping and Difference-in-Differences.">
+<meta name="twitter:image" content="https://agapitosantangelo.github.io/assets/og-card.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://agapitosantangelo.github.io/it/talks.html">
-<link rel="alternate" hreflang="it" href="https://agapitosantangelo.github.io/it/talks.html">
-<link rel="alternate" hreflang="en" href="https://agapitosantangelo.github.io/en/talks.html">
-<link rel="alternate" hreflang="es" href="https://agapitosantangelo.github.io/es/talks.html">
-<link rel="alternate" hreflang="x-default" href="https://agapitosantangelo.github.io/en/talks.html">
+<link rel="canonical" href="https://agapitosantangelo.github.io/en/jmp.html">
+<link rel="alternate" hreflang="it" href="https://agapitosantangelo.github.io/it/jmp.html">
+<link rel="alternate" hreflang="en" href="https://agapitosantangelo.github.io/en/jmp.html">
+<link rel="alternate" hreflang="es" href="https://agapitosantangelo.github.io/es/jmp.html">
+<link rel="alternate" hreflang="x-default" href="https://agapitosantangelo.github.io/en/jmp.html">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -106,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<nav class="top-nav" aria-label="Navigazione">
+<nav class="top-nav" aria-label="Navigation">
   <div class="top-nav-inner">
     <div class="nav-bar">
       <a class="brand" href="index.html" aria-label="AES — home">
@@ -119,10 +121,10 @@ ul.task-list li input[type="checkbox"] {
         </svg>
       </a>
       <div class="nav-meta">
-        <div class="lang-switch" aria-label="Language"><a data-lang="en" href="../en/index.html" hreflang="en" lang="en">EN</a><span class="active" aria-current="true">IT</span><a data-lang="es" href="../es/index.html" hreflang="es" lang="es">ES</a></div>
+        <div class="lang-switch" aria-label="Language"><span class="active" aria-current="true">EN</span><a data-lang="it" href="../it/index.html" hreflang="it" lang="it">IT</a><a data-lang="es" href="../es/index.html" hreflang="es" lang="es">ES</a></div>
       </div>
     </div>
-    <div class="nav-links"><a href="about.html">Chi sono</a><a href="research.html">Ricerca</a><a href="projects.html">Progetti</a><a href="teaching.html">Didattica</a><a href="talks.html">Talk</a><a href="dissemination.html">Divulgazione</a><a href="jmp.html">JMP</a></div>
+    <div class="nav-links"><a href="about.html">About</a><a href="research.html">Research</a><a href="projects.html">Projects</a><a href="teaching.html">Teaching</a><a href="talks.html">Talks</a><a href="dissemination.html">Dissemination</a><a href="jmp.html">JMP</a></div>
   </div>
 </nav>
 <script>
@@ -136,12 +138,12 @@ if(a.getAttribute("href")===pg()){a.classList.add("current");a.setAttribute("ari
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Talk e conferenze</h1>
+<h1 class="title">Job Market Paper</h1>
 </div>
 
 <div>
   <div class="description">
-    Talk e conferenze: AISRe, CARMA, EUI e seminari istituzionali — presentazioni su digitalizzazione, politiche pubbliche e metodi quantitativi.
+    EU Cohesion Policy and Digital Public Services — the effect of cohesion funds on the digitalisation of Italian municipalities, using web scraping and Difference-in-Differences.
   </div>
 </div>
 
@@ -158,116 +160,25 @@ if(a.getAttribute("href")===pg()){a.classList.add("current");a.setAttribute("ari
 </header>
 
 
-<h2>
-2026
-</h2>
-<ul class="entries">
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">Digital Investment and the Evolution of Government Services</span><span class="entry-venue">CARMA 2026 — 8ª International Conference on Advanced Research Methods and Analytics · Universitat Politècnica de València · 1–3 luglio 2026. Paper su investimenti digitali, sussidi e divario digitale municipale (con N. Caravaggio e G. Resce), presentato nell’ambito del tema AI, Internet Data and Computational Methods in Social Sciences. <a href="https://carmaconf.org/">Link →</a></span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-carma-2026-talk.jpg" alt="Presentazione del paper Digital Investment and the Evolution of Government Services a CARMA 2026, Valencia, luglio 2026" loading="lazy" class="figure-img">
-<figcaption>
-Presentazione di Digital Investment and the Evolution of Government Services — CARMA 2026, Universitat Politècnica de València, 2 luglio 2026.
-</figcaption>
-</figure>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-carma-2026-group.jpg" alt="Foto di gruppo dei partecipanti al banner di CARMA 2026, Universitat Politècnica de València" loading="lazy" class="figure-img">
-<figcaption>
-Il gruppo di ricerca al banner di CARMA 2026 — Universitat Politècnica de València, 1–3 luglio 2026.
-</figcaption>
-</figure>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">Administrative Capture from Within</span><span class="entry-venue">AISRe 2026 — XLVII Conferenza Scientifica Annuale dell’Associazione Italiana di Scienze Regionali · Università di Firenze, Campus di Novoli · 24–26 giugno 2026. Paper su cattura amministrativa e qualità delle istituzioni (con N. Caravaggio e G. Resce), nell’ambito del tema «Regioni tra innovazione e sostenibilità: le sfide per le politiche di sviluppo». <a href="https://www.aisre.it/xlvii-conferenza-scientifica-annuale-2026-2/">Link →</a></span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-aisre-2026-talk.jpg" alt="Presentazione del paper Administrative Capture from Within alla conferenza AISRe 2026, Università di Firenze, giugno 2026" loading="lazy" class="figure-img">
-<figcaption>
-Presentazione di Administrative Capture from Within — XLVII Conferenza AISRe, Università di Firenze, 26 giugno 2026.
-</figcaption>
-</figure>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-aisre-2026-banner.jpg" alt="Al banner dell'Associazione Italiana di Scienze Regionali, Campus di Novoli, Firenze, giugno 2026" loading="lazy" class="figure-img">
-<figcaption>
-Al banner dell’Associazione Italiana di Scienze Regionali — Campus di Novoli, Università di Firenze, giugno 2026.
-</figcaption>
-</figure>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">Determinanti della sostenibilità finanziaria dei comuni del Lazio</span><span class="entry-venue">Università della Valle d’Aosta · Polo Universitario, Via Monte Vodice · 28 aprile 2026. Relazione presentata nell’ambito del seminario «Raccontare il territorio attraverso la statistica pubblica: ruolo e offerta di Regioni e Istat» (Aosta, 27–28 aprile 2026), promosso dal Coordinamento Statistico Interregionale e dall’Istat. Lavoro congiunto con Viviana Borzetti (Ufficio regionale di statistica - Regione Lazio), nell’ambito del Protocollo d’Intesa tra Regione Lazio e Università del Molise.</span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-aosta-2026-panel.jpg" alt="Tavolo dei relatori al seminario di Aosta sulla statistica pubblica regionale, aprile 2026" loading="lazy" class="figure-img">
-<figcaption>
-Apertura del seminario Raccontare il territorio attraverso la statistica pubblica, Università della Valle d’Aosta, 28 aprile 2026.
-</figcaption>
-</figure>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-aosta-2026-talk.jpg" alt="Presentazione del paper sulla sostenibilità finanziaria dei comuni del Lazio, Aosta aprile 2026" loading="lazy" class="figure-img">
-<figcaption>
-Presentazione del paper su determinanti e sostenibilità finanziaria dei comuni del Lazio — Università della Valle d’Aosta, 28 aprile 2026.
-</figcaption>
-</figure>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">Le transizioni nei sistemi territoriali</span><span class="entry-venue">Università degli Studi di Foggia — Dipartimento di Economia · Aula Magna “V. Spada” · 20–21 febbraio 2026. Convegno di due giornate su transizioni ambientali e digitali, economia pugliese, e divario fra aree interne e aree urbane. La seconda giornata si svolge in lingua inglese con taglio più tecnico. <a href="https://www.economia.unifg.it/it/tutte-le-iniziative/le-transizioni-nei-sistemi-territoriali">Link →</a></span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-territori-2026.jpg" alt="Presentazione a Le transizioni nei sistemi territoriali, Università di Foggia, febbraio 2026" loading="lazy" class="figure-img">
-<figcaption>
-Talk sugli indicatori digitali delle dinamiche territoriali — Le transizioni nei sistemi territoriali, Università di Foggia, 20–21 febbraio 2026.
-</figcaption>
-</figure>
-</li>
-</ul>
-<h2>
-2025
-</h2>
-<ul class="entries">
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">Understanding and Addressing Digital Inequalities</span><span class="entry-venue">Annual Scientific Conference on Digital Democracy — Centre for a Digital Society, Robert Schuman Centre, European University Institute (EUI) · Firenze, 20–21 novembre 2025</span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/talk-eui-2025.jpg" alt="Panel EUI sulle disuguaglianze digitali, Firenze, novembre 2025" loading="lazy" class="figure-img">
-<figcaption>
-Panel alla conferenza annuale dell’EUI Centre for a Digital Society sulla Digital Democracy — presentazione della metodologia di web scraping per la misurazione delle disuguaglianze digitali (Firenze, novembre 2025).
-</figcaption>
-</figure>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">SIE 2025 — 66ª Riunione Scientifica Annuale</span><span class="entry-venue">Società Italiana di Economia · Università di Napoli Parthenope, 23–25 ottobre 2025</span>
-</li>
-<li class="entry">
-<span class="entry-tag">Discussant</span><span class="entry-title">Tavola rotonda</span><span class="entry-venue">Ottobre 2025.</span>
-<figure class="entry-photo figure">
-<img src="../assets/photos/panel-2025.jpg" alt="Panel di discussione, ottobre 2025" loading="lazy" class="figure-img">
-<figcaption>
-Tavola rotonda a margine di conferenza, ottobre 2025.
-</figcaption>
-</figure>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">AISRe 2025 — XLVI Conferenza Scientifica Annuale</span><span class="entry-venue">Associazione Italiana di Scienze Regionali (sezione italiana RSAI) · Università “G. d’Annunzio” di Chieti-Pescara, 10–12 settembre 2025</span>
-</li>
-<li class="entry">
-<span class="entry-tag">Organizzatore e relatore</span><span class="entry-title">CARMA 2025 — 7ª International Conference on Advanced Research Methods and Analytics</span><span class="entry-venue">Roma, 2–4 luglio 2025. Due paper presentati; co-organizzatore e session chair.</span>
-</li>
-</ul>
-<h2>
-2024
-</h2>
-<ul class="entries">
-<li class="entry">
-<span class="entry-tag">Organizzatore e relatore</span><span class="entry-title">CARMA 2024 — 6ª International Conference on Advanced Research Methods and Analytics</span><span class="entry-venue">Universitat Politècnica de València, 26–28 giugno 2024. Tre paper presentati; co-organizzatore.</span>
-</li>
-<li class="entry">
-<span class="entry-tag">Organizzatore</span><span class="entry-title">HEAd’24 — 10ª International Conference on Higher Education Advances</span><span class="entry-venue">Universitat Politècnica de València, giugno 2024.</span>
-</li>
-<li class="entry">
-<span class="entry-tag">Relatore</span><span class="entry-title">SoFIA 2024 — 2° Workshop on Social Health Frailty as Determinants of Inequality in Ageing</span><span class="entry-venue">Università del Molise.</span>
-</li>
-</ul>
+<div class="jmp-head">
+<p class="jmp-kicker">Working paper · 2025 · Under review at <em>Technological Forecasting and Social Change</em></p>
+<div class="jmp-title" role="heading" aria-level="2">EU Cohesion Policy and Digital Public Services</div>
+<p class="jmp-authors">Nicola Caravaggio · Giuliano Resce · <strong>Agapito Emanuele Santangelo</strong></p>
+<p class="jmp-venue">Economics and Statistics Discussion Paper No. 100/25, University of Molise</p>
+<p class="jmp-cta"><a class="btn-es" href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf">Download the PDF</a>
+<a class="btn-es ghost" href="research.html#pub-eu-cohesion-digital-public-services">All research</a></p>
+</div>
+<section id="abstract" class="level2">
+<h2 data-anchor-id="abstract">Abstract</h2>
+<p class="jmp-abstract" lang="en">This paper investigates the impact of European Cohesion Funds on the digitalization of local governments in Italy, using the quality of municipal websites as a proxy for e-government capacity. Using web scraping techniques and a generalized Difference-in-Differences approach, the study examines whether municipalities that received targeted EU funding for digital networks and services experienced improvements in website technological sophistication. The results show that cohesion funds have contributed to the adoption of modern web standards, particularly HTML5, and to the simplification of website structure, indicating progress in the core aspects of digital infrastructure. These effects are especially pronounced in smaller municipalities and those located in the South and Inner Areas, suggesting that the cohesion policy can support digital convergence in structurally disadvantaged contexts. However, the absence of systematic improvements in broader dimensions of web interactivity points to the selective nature of these advancements.</p>
+<p class="jmp-tags">Keywords: Cohesion policy · Digitalization · Italian municipalities &nbsp;—&nbsp; JEL: H77 · L86 · O18</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"EU Cohesion Policy and Digital Public Services","author":[{"@type":"Person","name":"Nicola Caravaggio"},{"@type":"Person","name":"Giuliano Resce"},{"@type":"Person","name":"Agapito Emanuele Santangelo"}],"datePublished":"2025","publisher":{"@type":"Organization","name":"University of Molise"},"url":"https://agapitosantangelo.github.io/en/jmp.html","sameAs":"http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf","keywords":"Cohesion policy, Digitalization, Italian municipalities"}</script>
 
 
+</section>
 
 </main> <!-- /main -->
-<footer class="site-footer"><div class="footer-inner"><p class="footer-title">Contatti</p><p class="footer-blurb"><a href="mailto:emanuele.santangelo@unimol.it">emanuele.santangelo@unimol.it</a> · Università del Molise, Dipartimento di Economia</p><ul class="footer-links"><li><a href="mailto:emanuele.santangelo@unimol.it"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a.997.997 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>Email</a></li><li><a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"></path><path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"></path></svg>Google Scholar</a></li><li><a href="https://orcid.org/0009-0004-5369-1594"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><text x="8" y="10.6" text-anchor="middle" font-family="Geist, sans-serif" font-size="7" font-weight="600">iD</text></svg>ORCID</a></li><li><a href="https://www.researchgate.net/profile/Agapito-Santangelo"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><text x="8" y="10.6" text-anchor="middle" font-family="Geist, sans-serif" font-size="6.4" font-weight="600">RG</text></svg>ResearchGate</a></li><li><a href="https://github.com/agapitosantangelo"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>GitHub</a></li><li><a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path></svg>LinkedIn</a></li><li><a href="../assets/cv.pdf"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"></path><path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"></path></svg>Curriculum (PDF)</a></li></ul><p class="footer-copy">© 2026 Agapito Emanuele Santangelo</p></div></footer>
+<footer class="site-footer"><div class="footer-inner"><p class="footer-title">Contact</p><p class="footer-blurb"><a href="mailto:emanuele.santangelo@unimol.it">emanuele.santangelo@unimol.it</a> · Università del Molise, Dipartimento di Economia</p><ul class="footer-links"><li><a href="mailto:emanuele.santangelo@unimol.it"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a.997.997 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path></svg>Email</a></li><li><a href="https://scholar.google.com/citations?user=uSsHajYAAAAJ"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"></path><path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"></path></svg>Google Scholar</a></li><li><a href="https://orcid.org/0009-0004-5369-1594"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><text x="8" y="10.6" text-anchor="middle" font-family="Geist, sans-serif" font-size="7" font-weight="600">iD</text></svg>ORCID</a></li><li><a href="https://www.researchgate.net/profile/Agapito-Santangelo"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6.6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><text x="8" y="10.6" text-anchor="middle" font-family="Geist, sans-serif" font-size="6.4" font-weight="600">RG</text></svg>ResearchGate</a></li><li><a href="https://github.com/agapitosantangelo"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg>GitHub</a></li><li><a href="https://www.linkedin.com/in/agapito-emanuele-santangelo-40b1641b6/"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path></svg>LinkedIn</a></li><li><a href="../assets/cv.pdf"><svg viewbox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"></path><path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"></path></svg>CV (PDF)</a></li></ul><p class="footer-copy">© 2026 Agapito Emanuele Santangelo</p></div></footer>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const isCodeAnnotation = (el) => {
@@ -286,12 +197,12 @@ Tavola rotonda a margine di conferenza, ottobre 2025.
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copiato!");
+      button.setAttribute("title", "Copied!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copiato!");
+        button.setAttribute("data-bs-title", "Copied!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
