@@ -53,17 +53,17 @@ def main():
     if os.path.exists(sm_path):
         with open(sm_path) as f:
             sm = f.read()
+        # Quarto emette già le home di lingua in forma /xx/ pulita: qui si
+        # tolgono solo redirect di root, 404 e stub alias (idempotente)
         drop = re.compile(
-            r"\s*<url>\s*<loc>[^<]*(?:/index\.html|/404\.html|/conferences\.html)</loc>.*?</url>",
+            r"\s*<url>\s*<loc>[^<]*(?:github\.io/|/index\.html|/404\.html|/conferences\.html)</loc>.*?</url>",
             re.S)
         sm, dropped = drop.subn("", sm)
-        # idempotente: via ogni home in forma directory già presente, poi si reinserisce
+        # ripulisce eventuali voci compatte residue di versioni precedenti dello script
         sm = re.sub(r"<url><loc>[^<]*/(?:it|en|es)/</loc></url>", "", sm)
-        entries = "".join(f"<url><loc>{BASE}/{l}/</loc></url>" for l in LANGS)
-        sm = sm.replace("</urlset>", entries + "</urlset>")
         with open(sm_path, "w") as f:
             f.write(sm)
-        print(f"[postprocess_seo] sitemap: {dropped} voci rimosse, home di lingua reinserite")
+        print(f"[postprocess_seo] sitemap: {dropped} voci rimosse")
 
     print(f"[postprocess_seo] canonical+hreflang su {injected} pagine")
 
