@@ -1,5 +1,6 @@
 ---
 title: "Chi sono"
+description: "Chi sono: percorso professionale e accademico — dottorato in Economia (Doctor Europaeus), assegni di ricerca e visiting a València."
 ---
 
 {{< include ../_generated/it/about.html >}}

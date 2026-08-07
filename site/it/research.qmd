@@ -1,5 +1,6 @@
 ---
 title: "Ricerca"
+description: "Pubblicazioni, working paper e contributi a conferenze: inferenza causale, digitalizzazione del settore pubblico, sanità, istituzioni e territorio."
 ---
 
 {{< include ../_generated/it/research.html >}}

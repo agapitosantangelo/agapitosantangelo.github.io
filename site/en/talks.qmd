@@ -1,5 +1,6 @@
 ---
 title: "Talks & conferences"
+description: "Talks and conferences: AISRe, CARMA, EUI and institutional seminars — presentations on digitalisation, public policy and quantitative methods."
 aliases: [conferences.html]
 ---
 

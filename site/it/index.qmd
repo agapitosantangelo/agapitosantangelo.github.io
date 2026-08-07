@@ -1,7 +1,7 @@
 ---
-pagetitle: "Agapito E. Santangelo — Economista applicato · Valutazione delle politiche"
+pagetitle: "Economista applicato · Valutazione delle politiche"
 description: "Economista applicato: inferenza causale, dati digitali e machine learning per la valutazione delle politiche pubbliche."
-image: assets/og-card.png
+image: /assets/og-card.png
 toc: false
 ---
 

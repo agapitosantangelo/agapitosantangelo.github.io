@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AES">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Event study">
   <rect width="64" height="64" rx="12" fill="#fbfaf6"/>
-  <text x="32" y="36" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" letter-spacing="0.5" fill="#1a3a6e">AES</text>
-  <!-- sottolineatura event-study: pre salmone · trattamento · post navy -->
-  <line x1="7" y1="49" x2="57" y2="49" stroke="#d6d3cc" stroke-width="1.5"/>
-  <line x1="32" y1="43" x2="32" y2="55" stroke="#c14b3f" stroke-width="1.6" stroke-dasharray="3 2.4"/>
-  <g fill="#e87d72"><circle cx="15" cy="49" r="3.2"/><circle cx="24" cy="49" r="3.2"/></g>
-  <g fill="#1a3a6e"><circle cx="41" cy="46" r="3.2"/><circle cx="50" cy="44" r="3.2"/></g>
+  <!-- solo il motivo event-study: a 16px le lettere sarebbero illeggibili -->
+  <line x1="6" y1="44" x2="58" y2="44" stroke="#d6d3cc" stroke-width="2"/>
+  <line x1="32" y1="14" x2="32" y2="56" stroke="#c14b3f" stroke-width="2.4" stroke-dasharray="4.5 3.6"/>
+  <g fill="#e87d72"><circle cx="14" cy="44" r="5.2"/><circle cx="24" cy="44" r="5.2"/></g>
+  <g fill="#1a3a6e"><circle cx="42" cy="28" r="5.2"/><circle cx="53" cy="23" r="5.2"/></g>
 </svg>

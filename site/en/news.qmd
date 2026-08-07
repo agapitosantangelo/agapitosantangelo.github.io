@@ -1,5 +1,6 @@
 ---
 title: "All updates"
+description: "All updates: publications, conferences, projects and milestones of Agapito E. Santangelo."
 ---
 
 {{< include ../_generated/en/news.html >}}

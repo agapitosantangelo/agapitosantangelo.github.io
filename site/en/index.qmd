@@ -1,7 +1,7 @@
 ---
-pagetitle: "Agapito E. Santangelo — Applied economist · Policy evaluation"
+pagetitle: "Applied economist · Policy evaluation"
 description: "Applied economist: causal inference, digital trace data and machine learning for public-policy evaluation."
-image: ../assets/og-card.png
+image: /assets/og-card.png
 toc: false
 ---
 

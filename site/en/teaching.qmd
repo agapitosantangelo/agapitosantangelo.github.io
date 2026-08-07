@@ -1,5 +1,6 @@
 ---
 title: "Teaching"
+description: "University teaching and targeted training: economics, econometrics and data analysis — University of Molise and professional courses."
 ---
 
 {{< include ../_generated/en/teaching.html >}}

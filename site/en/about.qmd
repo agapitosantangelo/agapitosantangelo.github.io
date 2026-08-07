@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "About: professional and academic path — PhD in Economics (Doctor Europaeus), research fellowships and a visiting period in València."
 ---
 
 {{< include ../_generated/en/about.html >}}

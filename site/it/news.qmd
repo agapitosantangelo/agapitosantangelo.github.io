@@ -1,5 +1,6 @@
 ---
 title: "Tutti gli aggiornamenti"
+description: "Tutti gli aggiornamenti: pubblicazioni, conferenze, progetti e traguardi di Agapito E. Santangelo."
 ---
 
 {{< include ../_generated/it/news.html >}}

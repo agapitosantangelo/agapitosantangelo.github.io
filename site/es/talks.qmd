@@ -1,5 +1,6 @@
 ---
 title: "Charlas y congresos"
+description: "Charlas y congresos: AISRe, CARMA, EUI y seminarios institucionales — presentaciones sobre digitalización, políticas públicas y métodos cuantitativos."
 aliases: [conferences.html]
 ---
 

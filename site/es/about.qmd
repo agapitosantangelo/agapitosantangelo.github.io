@@ -1,5 +1,6 @@
 ---
 title: "Sobre mí"
+description: "Sobre mí: trayectoria profesional y académica — doctorado en Economía (Doctor Europaeus), contratos de investigación y estancia en València."
 ---
 
 {{< include ../_generated/es/about.html >}}

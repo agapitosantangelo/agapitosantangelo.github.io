@@ -2,16 +2,15 @@
   <div class="top-nav-inner">
     <div class="nav-bar">
       <a class="brand" href="index.html" aria-label="AES — home">
-        <svg viewBox="0 0 118 46" width="76" height="30" aria-hidden="true">
-          <text x="1" y="30" font-family="Crimson Pro, Georgia, serif" font-size="32" font-weight="600" letter-spacing="1" fill="#1a3a6e">AES</text>
-          <line x1="2" y1="40" x2="116" y2="40" stroke="#d6d3cc" stroke-width="1"/>
-          <line x1="59" y1="32" x2="59" y2="44" stroke="#c14b3f" stroke-width="1.3" stroke-dasharray="3 2.5"/>
-          <g fill="#e87d72"><circle cx="18" cy="40" r="2.6"/><circle cx="38" cy="40" r="2.6"/></g>
-          <g fill="#1a3a6e"><circle cx="80" cy="36" r="2.6"/><circle cx="100" cy="33" r="2.6"/></g>
+        <svg viewBox="0 0 122 46" width="90" height="34" aria-hidden="true">
+          <text x="1" y="28" font-family="Crimson Pro, Georgia, serif" font-size="30" font-weight="600" letter-spacing="1" fill="#1a3a6e">AES</text>
+          <line x1="2" y1="40" x2="120" y2="40" stroke="#d6d3cc" stroke-width="1.2"/>
+          <line x1="61" y1="24" x2="61" y2="45" stroke="#c14b3f" stroke-width="1.5" stroke-dasharray="3.2 2.6"/>
+          <g fill="#e87d72"><circle cx="18" cy="40" r="3.4"/><circle cx="38" cy="40" r="3.4"/></g>
+          <g fill="#1a3a6e"><circle cx="84" cy="31" r="3.4"/><circle cx="106" cy="28" r="3.4"/></g>
         </svg>
       </a>
       <div class="nav-meta">
-        <a class="nav-search" href="search.html" aria-label="Search">⌕</a>
         <div class="lang-switch" aria-label="Language"><span class="active" aria-current="true">EN</span><a data-lang="it" href="../it/index.html" hreflang="it" lang="it">IT</a><a data-lang="es" href="../es/index.html" hreflang="es" lang="es">ES</a></div>
       </div>
     </div>
@@ -19,6 +18,10 @@
   </div>
 </nav>
 <script>
-(function(){var p=location.pathname.split("/").pop()||"index.html";
-document.querySelectorAll(".lang-switch a").forEach(function(a){a.href="../"+a.dataset.lang+"/"+p;});})();
+(function(){function pg(){return location.pathname.split("/").pop()||"index.html";}
+function sync(a){a.href="../"+a.dataset.lang+"/"+pg()+location.search+location.hash;}
+document.querySelectorAll(".lang-switch a").forEach(function(a){
+sync(a);a.addEventListener("pointerdown",function(){sync(a);});a.addEventListener("focus",function(){sync(a);});});
+document.querySelectorAll(".nav-links a").forEach(function(a){
+if(a.getAttribute("href")===pg()){a.classList.add("current");a.setAttribute("aria-current","page");}});})();
 </script>

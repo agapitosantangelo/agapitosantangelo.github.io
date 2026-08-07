@@ -1,5 +1,6 @@
 ---
 title: "Progetti"
+description: "Progetti di ricerca finanziati: coesione europea e servizi digitali, sanità post-pandemia, insicurezza alimentare e statistica regionale."
 ---
 
 {{< include ../_generated/it/projects.html >}}

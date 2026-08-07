@@ -1,5 +1,6 @@
 ---
 title: "Dissemination"
+description: "Public engagement: interactive dashboards, articles and outreach — from the 2026 World Cup dashboard with Instant Analytics to regional statistics."
 ---
 
 {{< include ../_generated/en/dissemination.html >}}

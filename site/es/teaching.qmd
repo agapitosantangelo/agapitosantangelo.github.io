@@ -1,5 +1,6 @@
 ---
 title: "Docencia"
+description: "Docencia universitaria y formación específica: economía, econometría y análisis de datos — Universidad de Molise y cursos profesionales."
 ---
 
 {{< include ../_generated/es/teaching.html >}}

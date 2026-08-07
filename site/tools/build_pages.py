@@ -5,6 +5,7 @@ Eseguito da Quarto come pre-render (vedi _quarto.yml). Legge site/data/*.yml
 ed emette site/_generated/<lang>/*.html, inclusi dalle pagine .qmd.
 Un solo posto per aggiungere una pubblicazione; tre lingue servite.
 """
+import json
 import os
 import yaml
 
@@ -27,6 +28,12 @@ T = {  # etichette d'interfaccia
         "filter_all": "Tutti", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Metodi digitali", "health": "Sanità", "territorial": "Territorio",
         "innovation": "Innovazione", "institutions": "Istituzioni"},
+        "filter_label": "Filtra per tema:", "filter_aria": "Filtri per tema",
+        "filter_count": "{n} di {m} lavori",
+        "meta_labels": {"funder": "Finanziatore", "period": "Periodo", "pi": "Responsabile",
+                        "role": "Ruolo", "methods": "Metodi"},
+        "footer_title": "Scrivimi", "footer_blurb": "Per collaborazioni, dati o una copia dei paper.",
+        "doi_label": "DOI",
     },
     "en": {
         "peer": "Peer-reviewed publications", "wp": "Working papers",
@@ -37,6 +44,12 @@ T = {  # etichette d'interfaccia
         "education": "Education", "awards": "Awards & memberships",
         "training": "Advanced training",
         "updates_title": "Recent updates", "all_updates": "All updates →",
+        "filter_label": "Filter by topic:", "filter_aria": "Topic filters",
+        "filter_count": "{n} of {m} works",
+        "meta_labels": {"funder": "Funder", "period": "Period", "pi": "Principal investigator",
+                        "role": "Role", "methods": "Methods"},
+        "footer_title": "Get in touch", "footer_blurb": "For collaborations, data, or paper copies.",
+        "doi_label": "DOI",
         "filter_all": "All", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Digital methods", "health": "Health", "territorial": "Territorial",
         "innovation": "Innovation", "institutions": "Institutions"},
@@ -50,6 +63,12 @@ T = {  # etichette d'interfaccia
         "education": "Formación", "awards": "Reconocimientos y afiliaciones",
         "training": "Formación avanzada",
         "updates_title": "Actualizaciones recientes", "all_updates": "Todas las actualizaciones →",
+        "filter_label": "Filtra por tema:", "filter_aria": "Filtros por tema",
+        "filter_count": "{n} de {m} trabajos",
+        "meta_labels": {"funder": "Financiador", "period": "Periodo", "pi": "Investigador principal",
+                        "role": "Rol", "methods": "Métodos"},
+        "footer_title": "Escríbeme", "footer_blurb": "Para colaboraciones, datos o copias de los papers.",
+        "doi_label": "DOI",
         "filter_all": "Todos", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Métodos digitales", "health": "Sanidad", "territorial": "Territorio",
         "innovation": "Innovación", "institutions": "Instituciones"},
@@ -95,7 +114,9 @@ def pub_entry(p, lang, t):
     tagcls = {"peer-reviewed": "peer", "working-paper": "wp"}.get(p["type"], "")
     taglbl = {"peer-reviewed": "Peer-reviewed", "working-paper": "Working paper"}[p["type"]]
     topics = " ".join(p.get("topics") or [])
-    h = [f'<li class="entry" data-topics="{topics}"><span class="entry-tag {tagcls}">{taglbl}</span>']
+    # id stabile: ancorabile da CV, email e JSON-LD
+    h = [f'<li class="entry" id="pub-{p["id"]}" data-topics="{topics}">'
+         f'<span class="entry-tag {tagcls}">{taglbl}</span>']
     title = esc(p["title"].rstrip("."))
     if p.get("jmp"):
         title += f' <em>({t["jmp"]})</em>'
@@ -103,6 +124,8 @@ def pub_entry(p, lang, t):
     venue = L(p.get("venue"), lang)
     line = esc(venue) if venue else ""
     line += links_html(p.get("links"))
+    if p.get("doi"):
+        line += f' · <a href="https://doi.org/{p["doi"]}">{t["doi_label"]} →</a>'
     if p.get("under_review"):
         line += f'<br>{t["under_review"]}: <em>{esc(p["under_review"])}</em>.'
     h.append(f'<span class="entry-venue">{line}</span>')
@@ -116,10 +139,13 @@ def pub_entry(p, lang, t):
 def gen_research(lang, t):
     pubs = load("publications")
     cps = load("conference-papers")
-    h = ['<div class="filter-bar" role="group" aria-label="Filter">']
-    h.append(f'<button class="filter-btn active" data-filter="">{t["filter_all"]}</button>')
+    h = [f'<div class="filter-bar" role="group" aria-label="{t["filter_aria"]}" '
+         f'data-count-tpl="{t["filter_count"]}">']
+    h.append(f'<span class="filter-label">{t["filter_label"]}</span>')
+    h.append(f'<button class="filter-btn active" aria-pressed="true" data-filter="">{t["filter_all"]}</button>')
     for key, lbl in t["filters"].items():
-        h.append(f'<button class="filter-btn" data-filter="{key}">{lbl}</button>')
+        h.append(f'<button class="filter-btn" aria-pressed="false" data-filter="{key}">{lbl}</button>')
+    h.append('<span class="filter-count" aria-live="polite"></span>')
     h.append('</div>')
     h += [f"<h2>{t['peer']}</h2>", '<ul class="entries">']
     h += [pub_entry(p, lang, t) for p in pubs if p["type"] == "peer-reviewed"]
@@ -138,6 +164,16 @@ def gen_research(lang, t):
                  f'{esc(c["authors"])} ({c["year"]}). <span class="entry-title">{esc(c["title"].rstrip("."))}.</span>'
                  f'<span class="entry-venue">{esc(L(c.get("venue"), lang))}.{links_html(c.get("links"))}</span></li>')
     h.append("</ul>")
+    # JSON-LD: le pubblicazioni come ScholarlyArticle, ancorate agli id
+    arts = [{"@type": "ScholarlyArticle",
+             "headline": p["title"].rstrip("."),
+             "author": p["authors"],
+             "datePublished": str(p["year"]),
+             "url": f"https://agapitosantangelo.github.io/{lang}/research.html#pub-{p['id']}"}
+            for p in pubs]
+    h.append('<script type="application/ld+json">'
+             + json.dumps({"@context": "https://schema.org", "@graph": arts}, ensure_ascii=False)
+             + '</script>')
     return "\n".join(h)
 
 
@@ -150,7 +186,7 @@ def gen_projects(lang, t):
                  f'<span class="project-status {p["status"]}">{esc(L(p["status_label"], lang))}</span></div>')
         h.append(f'<p class="project-summary">{esc(L(p["summary"], lang))}</p>')
         rows = "".join(
-            f"<dt>{esc(k.title())}</dt><dd>{esc(L(v, lang))}</dd>"
+            f"<dt>{esc(t['meta_labels'].get(k, k.title()))}</dt><dd>{esc(L(v, lang))}</dd>"
             for k, v in meta.items() if v)
         if rows:
             h.append(f'<dl class="project-meta">{rows}</dl>')
@@ -317,7 +353,40 @@ def gen_hero(lang, t):
          bio,
          '</div>',
          '</div>']
+    # JSON-LD Person: così i motori "capiscono" chi è e collegano i profili
+    person = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Agapito Emanuele Santangelo",
+        "alternateName": "Agapito E. Santangelo",
+        "jobTitle": L(d["affiliazione"], lang).split(" — ")[0],
+        "affiliation": {"@type": "Organization", "name": "Università del Molise"},
+        "url": f"https://agapitosantangelo.github.io/{lang}/",
+        "image": "https://agapitosantangelo.github.io/assets/profile.jpg",
+        "email": "mailto:emanuele.santangelo@unimol.it",
+        "sameAs": [l["url"] for l in d["links"] if str(l["url"]).startswith("https://")],
+    }
+    h.append('<script type="application/ld+json">'
+             + json.dumps(person, ensure_ascii=False) + '</script>')
     return "\n".join(h)
+
+
+def gen_footer(lang, t):
+    """Pre-footer 'Get in touch': email, profili e copyright, generato
+    dagli stessi dati della hero (data/hero.yml)."""
+    d = load("hero")
+    links = "".join(
+        f'<li><a href="{l["url"]}">'
+        f'<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">{ICONS[l["icon"]]}</svg>'
+        f'{esc(L(l["label"], lang))}</a></li>'
+        for l in d["links"])
+    return ('<footer class="site-footer"><div class="footer-inner">'
+            f'<p class="footer-title">{t["footer_title"]}</p>'
+            f'<p class="footer-blurb">{t["footer_blurb"]} '
+            f'<a href="mailto:emanuele.santangelo@unimol.it">emanuele.santangelo@unimol.it</a></p>'
+            f'<ul class="footer-links">{links}</ul>'
+            '<p class="footer-copy">© 2026 Agapito Emanuele Santangelo</p>'
+            '</div></footer>')
 
 
 def main():
@@ -329,7 +398,7 @@ def main():
             "research": gen_research, "projects": gen_projects,
             "talks": gen_talks, "teaching": gen_teaching,
             "about": gen_about, "dissemination": gen_dissemination,
-            "hero": gen_hero,
+            "hero": gen_hero, "footer": gen_footer,
         }
         for name, fn in pages.items():
             with open(os.path.join(out, name + ".html"), "w") as f:

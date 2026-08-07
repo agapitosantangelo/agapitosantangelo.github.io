@@ -1,0 +1,22 @@
+---
+pagetitle: "404"
+---
+
+```{=html}
+<div class="page-404">
+  <img src="/assets/event-study.svg" alt="" width="380" class="motivo-404">
+  <p class="codice-404">404</p>
+  <p class="testo-404">
+    Pagina non trovata &middot; Page not found &middot; P&aacute;gina no encontrada
+  </p>
+  <p class="spiega-404">
+    Il sito &egrave; stato ridisegnato e alcuni indirizzi sono cambiati.<br>
+    The site was redesigned and some addresses have changed.
+  </p>
+  <p class="rientro-404">
+    <a class="btn-es" href="/it/">Italiano</a>
+    <a class="btn-es ghost" href="/en/">English</a>
+    <a class="btn-es ghost" href="/es/">Espa&ntilde;ol</a>
+  </p>
+</div>
+```

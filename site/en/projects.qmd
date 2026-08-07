@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "Funded research projects: EU cohesion and digital services, post-pandemic health, food insecurity and regional statistics."
 ---
 
 {{< include ../_generated/en/projects.html >}}

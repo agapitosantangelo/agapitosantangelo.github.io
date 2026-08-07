@@ -4,8 +4,14 @@
   var btns = bar.querySelectorAll(".filter-btn");
   var entries = document.querySelectorAll("li.entry[data-topics]");
   var sections = document.querySelectorAll("main section.level2, main h2");
+  var count = bar.querySelector(".filter-count");
+  var tpl = bar.dataset.countTpl || "{n} / {m}";
   function apply(key) {
-    btns.forEach(function (b) { b.classList.toggle("active", (b.dataset.filter || "") === key); });
+    btns.forEach(function (b) {
+      var on = (b.dataset.filter || "") === key;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
     entries.forEach(function (e) {
       e.hidden = key !== "" && (" " + e.dataset.topics + " ").indexOf(" " + key + " ") < 0;
     });
@@ -17,6 +23,11 @@
       sec.hidden = !any; ul.hidden = !any;
     });
     entries.forEach(function (e) { if (!e.hidden) e.classList.add("revealed"); });
+    if (count) {
+      var n = document.querySelectorAll("li.entry[data-topics]:not([hidden])").length;
+      count.textContent = key === "" ? "" :
+        tpl.replace("{n}", n).replace("{m}", entries.length);
+    }
     var url = new URL(location);
     if (key) url.searchParams.set("tema", key); else url.searchParams.delete("tema");
     history.replaceState(null, "", url);

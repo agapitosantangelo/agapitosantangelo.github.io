@@ -1,2 +1,3 @@
 lang: en
 include-before-body: ../partials/nav-en.html
+include-after-body: ../_generated/en/footer.html

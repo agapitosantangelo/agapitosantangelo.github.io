@@ -2,9 +2,10 @@ project:
   type: website
   output-dir: _site
   pre-render: python3 tools/build_pages.py
-  post-render: npx -y pagefind --site _site
+  post-render: python3 tools/postprocess_seo.py
   render:
     - index.qmd
+    - 404.qmd
     - it/
     - en/
     - es/
@@ -18,10 +19,9 @@ website:
   title: "Agapito E. Santangelo"
   site-url: https://agapitosantangelo.github.io
   favicon: assets/favicon.svg
+  image: /assets/og-card.png
   open-graph: true
   twitter-card: true
-  page-footer:
-    center: "© 2026 Agapito Emanuele Santangelo"
 
 format:
   html:
@@ -36,7 +36,7 @@ format:
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
     include-after-body:
       text: |
         <script src="/assets/js/filters.js" defer></script>

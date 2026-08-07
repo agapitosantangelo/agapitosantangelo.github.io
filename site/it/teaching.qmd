@@ -1,5 +1,6 @@
 ---
 title: "Didattica"
+description: "Didattica universitaria e formazione mirata: economia, econometria e data analysis — Università del Molise e corsi professionali."
 ---
 
 {{< include ../_generated/it/teaching.html >}}

@@ -1,48 +1,50 @@
-<div class="filter-bar" role="group" aria-label="Filter">
-<button class="filter-btn active" data-filter="">Todos</button>
-<button class="filter-btn" data-filter="policy-evaluation">Policy evaluation</button>
-<button class="filter-btn" data-filter="digital-methods">Métodos digitales</button>
-<button class="filter-btn" data-filter="health">Sanidad</button>
-<button class="filter-btn" data-filter="territorial">Territorio</button>
-<button class="filter-btn" data-filter="innovation">Innovación</button>
-<button class="filter-btn" data-filter="institutions">Instituciones</button>
+<div class="filter-bar" role="group" aria-label="Filtros por tema" data-count-tpl="{n} de {m} trabajos">
+<span class="filter-label">Filtra por tema:</span>
+<button class="filter-btn active" aria-pressed="true" data-filter="">Todos</button>
+<button class="filter-btn" aria-pressed="false" data-filter="policy-evaluation">Policy evaluation</button>
+<button class="filter-btn" aria-pressed="false" data-filter="digital-methods">Métodos digitales</button>
+<button class="filter-btn" aria-pressed="false" data-filter="health">Sanidad</button>
+<button class="filter-btn" aria-pressed="false" data-filter="territorial">Territorio</button>
+<button class="filter-btn" aria-pressed="false" data-filter="innovation">Innovación</button>
+<button class="filter-btn" aria-pressed="false" data-filter="institutions">Instituciones</button>
+<span class="filter-count" aria-live="polite"></span>
 </div>
 <h2>Publicaciones peer-reviewed</h2>
 <ul class="entries">
-<li class="entry" data-topics="digital-methods health"><span class="entry-tag peer">Peer-reviewed</span>
+<li class="entry" id="pub-text-mining-food-insecurity" data-topics="digital-methods health"><span class="entry-tag peer">Peer-reviewed</span>
 Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … &amp; Coffey, K. (2025). <span class="entry-title">Text mining and machine learning reveal global determinants of food insecurity.</span>
 <span class="entry-venue">Scientific Reports, 15(1), 36709. <a href="https://www.nature.com/articles/s41598-025-20670-x.pdf">PDF →</a></span>
 <div class="cross-ref">→ Proyecto relacionado: <a href="projects.html#proj-climate-security">Climate Security Observatory</a></div>
 </li>
-<li class="entry" data-topics="policy-evaluation"><span class="entry-tag peer">Peer-reviewed</span>
+<li class="entry" id="pub-sroi-glass-industry-sdgs" data-topics="policy-evaluation"><span class="entry-tag peer">Peer-reviewed</span>
 Pastore, L., Corvo, L., Santangelo, A. E., Resce, G., &amp; Lelo, A. (2025). <span class="entry-title">Measuring sustainability impacts through SROI: a case study of the Italian glass industry's contribution to the SDGs.</span>
 <span class="entry-venue">Accounting, Auditing &amp; Accountability Journal, 38(5), 1483–1498. <a href="https://www.emerald.com/aaaj/article-pdf/38/5/1483/10060781/aaaj-04-2024-7041.pdf">PDF →</a></span>
 </li>
-<li class="entry" data-topics="innovation"><span class="entry-tag peer">Peer-reviewed</span>
+<li class="entry" id="pub-financial-constraints-innovation" data-topics="innovation"><span class="entry-tag peer">Peer-reviewed</span>
 Santangelo, A. E. (2023). <span class="entry-title">The relationship between financial constraints and innovation, with a supportive analysis on a sample of firms.</span>
 <span class="entry-venue">Journal of Academic Research in Economics, 15(3), 523–544. <a href="https://www.jare-sh.com/downloads/nov_2023/santangelo.pdf">PDF →</a></span>
 </li>
-<li class="entry" data-topics="territorial"><span class="entry-tag peer">Peer-reviewed</span>
+<li class="entry" id="pub-divario-nord-sud-molise" data-topics="territorial"><span class="entry-tag peer">Peer-reviewed</span>
 Pietrovito, F., &amp; Santangelo, A. E. (2022). <span class="entry-title">Divario Nord-Sud: un focus sul Molise.</span>
 <span class="entry-venue">GLOCALE, 18(19). <a href="https://scholar.google.com/citations?view_op=view_citation&hl=it&user=uSsHajYAAAAJ&citation_for_view=uSsHajYAAAAJ:u5HHmVD_uO8C">citation →</a></span>
 </li>
 </ul>
 <h2>Working papers</h2>
 <ul class="entries">
-<li class="entry" data-topics="policy-evaluation digital-methods"><span class="entry-tag wp">Working paper</span>
+<li class="entry" id="pub-eu-cohesion-digital-public-services" data-topics="policy-evaluation digital-methods"><span class="entry-tag wp">Working paper</span>
 Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2025). <span class="entry-title">EU cohesion policy and digital public services <em>(Job Market Paper)</em>.</span>
 <span class="entry-venue">ESDP No. 25100, University of Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf">PDF →</a><br>En revisión: <em>Technological Forecasting and Social Change</em>.</span>
 </li>
-<li class="entry" data-topics="policy-evaluation digital-methods"><span class="entry-tag wp">Working paper</span>
+<li class="entry" id="pub-digital-investment-government-services" data-topics="policy-evaluation digital-methods"><span class="entry-tag wp">Working paper</span>
 Caravaggio, N., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Digital investment and the evolution of government services.</span>
 <span class="entry-venue">ESDP No. 26104, Universidad de Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26104.pdf">PDF →</a><br>En revisión: <em>Structural Change and Economic Dynamics</em>.</span>
 </li>
-<li class="entry" data-topics="policy-evaluation territorial"><span class="entry-tag wp">Working paper</span>
+<li class="entry" id="pub-competition-punctuality-high-speed-rail" data-topics="policy-evaluation territorial"><span class="entry-tag wp">Working paper</span>
 Bergantino, A. S., Gabrielli, L., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Competition without punctuality gains: evidence from Italian high-speed rail.</span>
 <span class="entry-venue">SSRN working paper. <a href="https://ssrn.com/abstract=6444159">SSRN →</a><br>En revisión: <em>Transportation Research Part A: Policy and Practice</em>.</span>
 <div class="cross-ref">→ Proyecto relacionado: <a href="projects.html#proj-themia">THEMIA — THE Mood of Infrastructure’s Accessibility</a></div>
 </li>
-<li class="entry" data-topics="health"><span class="entry-tag wp">Working paper</span>
+<li class="entry" id="pub-fiscal-constraints-health-inequality" data-topics="health"><span class="entry-tag wp">Working paper</span>
 Pietrovito, F., Rancan, A., Resce, G., &amp; Santangelo, A. E. (2026). <span class="entry-title">Do fiscal constraints affect health inequality research? A bibliometric perspective.</span>
 <span class="entry-venue">ESDP No. 26102, University of Molise. <a href="http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP26102.pdf">PDF →</a></span>
 <div class="cross-ref">→ Proyecto relacionado: <a href="projects.html#proj-prin-health">Conciliar Eficiencia y Equidad en el Sistema Sanitario Italiano</a></div>
@@ -58,3 +60,4 @@ Pietrovito, F., Rancan, A., Resce, G., &amp; Santangelo, A. E. (2026). <span cla
 <li class="entry" data-topics="digital-methods health"><span class="entry-tag conf">Conference</span>Carneiro, B., Resce, G., Tucci, G., Ruscica, G., Caravaggio, N., Fanelli, L., Santangelo, A. E., &amp; Cruciata, P. (2024). <span class="entry-title">A multi-platform framework for nowcasting social phenomena: a case study for food insecurity.</span><span class="entry-venue">CARMA 2024, Valencia. <a href="https://www.researchgate.net/publication/382317742_A_multi-platform_framework_for_nowcasting_social_phenomena_a_case_study_for_food_insecurity">URL →</a></span></li>
 <li class="entry" data-topics="innovation digital-methods"><span class="entry-tag conf">Conference</span>Santangelo, A. E. (2024). <span class="entry-title">Do websites provide information about innovation activities?.</span><span class="entry-venue">CARMA 2024, Valencia, p. 411. <a href="https://doi.org/10.4995/CARMA2024.2024.19017">URL →</a></span></li>
 </ul>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ScholarlyArticle", "headline": "Text mining and machine learning reveal global determinants of food insecurity", "author": "Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … & Coffey, K.", "datePublished": "2025", "url": "https://agapitosantangelo.github.io/es/research.html#pub-text-mining-food-insecurity"}, {"@type": "ScholarlyArticle", "headline": "Measuring sustainability impacts through SROI: a case study of the Italian glass industry's contribution to the SDGs", "author": "Pastore, L., Corvo, L., Santangelo, A. E., Resce, G., & Lelo, A.", "datePublished": "2025", "url": "https://agapitosantangelo.github.io/es/research.html#pub-sroi-glass-industry-sdgs"}, {"@type": "ScholarlyArticle", "headline": "The relationship between financial constraints and innovation, with a supportive analysis on a sample of firms", "author": "Santangelo, A. E.", "datePublished": "2023", "url": "https://agapitosantangelo.github.io/es/research.html#pub-financial-constraints-innovation"}, {"@type": "ScholarlyArticle", "headline": "Divario Nord-Sud: un focus sul Molise", "author": "Pietrovito, F., & Santangelo, A. E.", "datePublished": "2022", "url": "https://agapitosantangelo.github.io/es/research.html#pub-divario-nord-sud-molise"}, {"@type": "ScholarlyArticle", "headline": "EU cohesion policy and digital public services", "author": "Caravaggio, N., Resce, G., & Santangelo, A. E.", "datePublished": "2025", "url": "https://agapitosantangelo.github.io/es/research.html#pub-eu-cohesion-digital-public-services"}, {"@type": "ScholarlyArticle", "headline": "Digital investment and the evolution of government services", "author": "Caravaggio, N., Resce, G., & Santangelo, A. E.", "datePublished": "2026", "url": "https://agapitosantangelo.github.io/es/research.html#pub-digital-investment-government-services"}, {"@type": "ScholarlyArticle", "headline": "Competition without punctuality gains: evidence from Italian high-speed rail", "author": "Bergantino, A. S., Gabrielli, L., Resce, G., & Santangelo, A. E.", "datePublished": "2026", "url": "https://agapitosantangelo.github.io/es/research.html#pub-competition-punctuality-high-speed-rail"}, {"@type": "ScholarlyArticle", "headline": "Do fiscal constraints affect health inequality research? A bibliometric perspective", "author": "Pietrovito, F., Rancan, A., Resce, G., & Santangelo, A. E.", "datePublished": "2026", "url": "https://agapitosantangelo.github.io/es/research.html#pub-fiscal-constraints-health-inequality"}]}</script>

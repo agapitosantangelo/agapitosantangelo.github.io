@@ -1,5 +1,6 @@
 ---
 title: "Contatti"
+description: "Contatti: email istituzionale, affiliazione e profili — Google Scholar, ORCID, ResearchGate e LinkedIn."
 ---
 
 **Email** — [emanuele.santangelo@unimol.it](mailto:emanuele.santangelo@unimol.it)

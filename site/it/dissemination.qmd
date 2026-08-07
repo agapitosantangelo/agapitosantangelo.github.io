@@ -1,5 +1,6 @@
 ---
 title: "Divulgazione"
+description: "Divulgazione: dashboard interattive, articoli e contributi pubblici — dal Mondiale 2026 con Instant Analytics alla statistica per i territori."
 ---
 
 {{< include ../_generated/it/dissemination.html >}}

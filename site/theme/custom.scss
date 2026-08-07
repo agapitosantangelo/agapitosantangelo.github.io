@@ -18,6 +18,8 @@ $es-accent:    #1a3a6e;   // navy — struttura, link, "post"
 $es-accent-h:  #c14b3f;   // mattone — interazione, linea del trattamento
 $es-pre:       #e87d72;   // salmone ggdid — grafica "pre"
 $es-pre-ink:   #b3574e;   // salmone scuro — testo AA in famiglia pre
+$es-ok:        #4f6841;   // verde — stati "in corso"
+$es-ok-line:   #6a8859;   // verde chiaro — bordi degli stati ok
 
 // Mappatura sui token Bootstrap/Quarto
 $body-bg: $es-bg;
@@ -210,7 +212,7 @@ h2 {
 
   .area {
     font-family: $font-family-sans-serif;
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: $es-pre-ink;
@@ -226,15 +228,15 @@ h2 {
   .stato {
     margin-top: auto;
     font-family: $font-family-sans-serif;
-    font-size: 0.66rem;
+    font-size: 0.7rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border: 1px solid $es-rule;
     align-self: flex-start;
     padding: 0.15rem 0.55rem;
-    &.ongoing   { border-color: #6a8859; color: #4f6841; }
-    &.review    { border-color: $es-pre; color: $es-pre-ink; }
-    &.published { border-color: $es-accent; color: $es-accent; }
+    &.ongoing   { border-color: $es-ok-line; color: $es-ok; background: rgba($es-ok-line, 0.08); }
+    &.review    { border-color: $es-pre-ink; color: $es-pre-ink; background: rgba($es-pre, 0.10); }
+    &.published { border-color: $es-accent; color: $es-accent; background: rgba($es-accent, 0.05); }
   }
 }
 
@@ -304,22 +306,24 @@ h2 {
 // ------------------------------------------------------------
 // Entry accademiche (portate dal sito storico)
 // ------------------------------------------------------------
+// il cuore del sito si legge almeno quanto la bio
 ul.entries {
   list-style: none;
   padding: 0;
   li.entry {
-    padding: 0.85rem 0;
+    padding: 0.9rem 0;
     border-bottom: 1px solid $es-rule-soft;
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     line-height: 1.5;
     max-width: 72ch;
     &:last-child { border-bottom: none; }
+    &:target { background: rgba($es-pre, 0.07); }  // arrivo da ancora #pub-…
   }
 }
 .entry-tag {
   display: inline-block;
   font-family: $font-family-sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid $es-rule;
@@ -327,13 +331,22 @@ ul.entries {
   padding: 0.1rem 0.5rem;
   margin-right: 0.5rem;
   vertical-align: 0.12em;
-  &.peer   { border-color: $es-accent; color: $es-accent; }
-  &.wp     { border-color: $es-pre; color: $es-pre-ink; }
-  &.conf   { border-color: #6a8859; color: #4f6841; }
+  &.peer   { border-color: $es-accent; color: $es-accent; background: rgba($es-accent, 0.05); }
+  &.wp     { border-color: $es-pre-ink; color: $es-pre-ink; background: rgba($es-pre, 0.10); }
+  &.conf   { border-color: $es-ok-line; color: $es-ok; background: rgba($es-ok-line, 0.08); }
   &.report { border-color: $es-rule; color: $es-ink-mute; }
 }
 .entry-title { font-weight: 600; font-style: italic; }
-.entry-venue { display: block; color: $es-ink-soft; font-size: 0.88rem; margin-top: 0.15rem; }
+.entry-venue { display: block; color: $es-ink-soft; font-size: 0.95rem; margin-top: 0.15rem; }
+
+// la .lead di Bootstrap, riallineata alla palette (usata in Didattica)
+.lead {
+  font-family: $font-family-serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: $es-ink-soft;
+  font-weight: 400;
+}
 .cross-ref {
   font-size: 0.8rem;
   font-style: italic;
@@ -376,7 +389,7 @@ ul.entries {
       display: inline-block;
       width: 0.45em; height: 0.45em;
       border-radius: 50%;
-      background: #4f6841;
+      background: $es-ok;
       margin-right: 0.4em;
       vertical-align: 0.08em;
     }
@@ -474,6 +487,7 @@ ul.entries {
       text-decoration: none;
       padding: 0.3rem 0;
       &:hover, &:focus-visible { color: $es-accent-h; }
+      &.current { color: $es-ink; box-shadow: inset 0 -1px 0 $es-accent; }
     }
   }
   .lang-switch {
@@ -490,13 +504,22 @@ ul.entries {
 // Filtri pubblicazioni (§13.3)
 .filter-bar {
   display: flex;
+  align-items: center;
   gap: 0.45rem;
   flex-wrap: wrap;
   margin: 0.8rem 0 0.4rem;
 }
+.filter-label, .filter-count {
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: $es-ink-mute;
+}
+.filter-label { margin-right: 0.2rem; }
+.filter-count { margin-left: 0.3rem; }
 .filter-btn {
   font-family: $font-family-sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   border: 1px solid $es-rule;
@@ -513,23 +536,113 @@ ul.entries {
 .to-reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .revealed  { opacity: 1; transform: none; }
 
-// Ricerca (§13.6) — icona in nav + tema Pagefind
-.top-nav .nav-search {
-  font-size: 1.25rem;
-  line-height: 1;
-  color: $es-ink-mute;
-  text-decoration: none;
-  padding: 0.2rem 0.4rem;
-  &:hover, &:focus-visible { color: $es-accent-h; }
-}
-#search {
-  --pagefind-ui-primary: #{$es-accent};
-  --pagefind-ui-text: #{$es-ink};
-  --pagefind-ui-background: #{$es-paper};
-  --pagefind-ui-border: #{$es-rule};
-  --pagefind-ui-font: #{$font-family-serif};
-  --pagefind-ui-border-radius: 2px;
-}
-
 // il filtro vince su qualsiasi display
 li.entry[hidden], section.level2[hidden] { display: none !important; }
+
+// ------------------------------------------------------------
+// Pre-footer "Get in touch" (generato da build_pages.py)
+// ------------------------------------------------------------
+.site-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 3rem;
+  border-top: 1px solid $es-rule;
+  background: $es-paper;
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1.6rem;
+    text-align: center;
+  }
+  .footer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+  }
+  .footer-blurb {
+    color: $es-ink-soft;
+    font-size: 0.98rem;
+    margin: 0 auto 1rem;
+    max-width: 60ch;
+  }
+  .footer-links {
+    list-style: none;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    li { display: inline-flex; }
+    a {
+      font-family: $font-family-sans-serif;
+      font-size: 0.8rem;
+      color: $es-ink-soft;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0;
+      svg { width: 14px; height: 14px; color: $es-accent; }
+      &:hover, &:focus-visible { color: $es-accent-h; svg { color: $es-accent-h; } }
+    }
+  }
+  .footer-copy {
+    font-family: $font-family-sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: $es-ink-mute;
+    margin: 0;
+    border-top: 1px solid $es-rule-soft;
+    padding-top: 1rem;
+  }
+}
+
+// ------------------------------------------------------------
+// 404 — il motivo event-study respira in grande
+// ------------------------------------------------------------
+.page-404 {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.4rem;
+  padding: 3rem 1rem;
+  .motivo-404 { max-width: min(380px, 80vw); margin-bottom: 1rem; }
+  .codice-404 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $es-accent;
+    margin: 0;
+  }
+  .testo-404 { font-size: 1.1rem; color: $es-ink-soft; margin: 0; }
+  .spiega-404 {
+    font-size: 0.92rem;
+    color: $es-ink-mute;
+    margin: 0.4rem 0 1.2rem;
+  }
+  .rientro-404 { display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+}
+
+// ------------------------------------------------------------
+// Mobile stretto: menu a riga unica scorrevole, updates a colonna
+// ------------------------------------------------------------
+@media (max-width: 640px) {
+  .top-nav .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+    gap: 1.1rem;
+    a { white-space: nowrap; padding: 0.7rem 0; }
+  }
+  .updates .update {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    .quando { padding-top: 0; }
+  }
+}
