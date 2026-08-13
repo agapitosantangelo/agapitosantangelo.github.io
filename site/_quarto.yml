@@ -12,6 +12,7 @@ project:
   resources:
     - assets
     - mondiale2026
+    - luci-notturne
     - robots.txt
     - google2b234cf325a53a14.html
 

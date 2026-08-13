@@ -174,3 +174,32 @@
       it: "Economia dello sviluppo applicata · Integrazione dati · Disegno di piattaforma policy"
       es: "Economía del desarrollo aplicada · Integración de datos · Diseño de plataforma de políticas"
   cross_ref: exp-ciat
+
+- id: proj-luci-notturne
+  status: published
+  status_label:
+    en: "Personal project · 2026"
+    it: "Progetto personale · 2026"
+    es: "Proyecto personal · 2026"
+  url: /luci-notturne/
+  title:
+    en: "Molise by Night — Ten Years of Satellite Nighttime Lights"
+    it: "Il Molise di notte — Dieci anni di luci notturne satellitari"
+    es: "El Molise de noche — Diez años de luces nocturnas satelitales"
+  summary:
+    en: "Interactive data story on the 136 municipalities of Molise seen from space at night: ten years of VIIRS annual composites (500 m grid) turned into maps, a 2013–2022 before/after comparison and municipal indicators, linking light emissions to demographic trends and EU-funded projects. Self-contained web page: open data (VIIRS VNL, ISTAT boundaries, OpenCoesione), processed and visualised end-to-end."
+    it: "Data story interattiva sui 136 comuni del Molise visti dallo spazio di notte: dieci anni di composizioni annuali VIIRS (griglia 500 m) trasformati in mappe, un confronto 2013–2022 a cursore e indicatori comunali che legano la luce emessa a dinamiche demografiche e progetti finanziati dai fondi europei. Pagina web autonoma: dati aperti (VIIRS VNL, confini ISTAT, OpenCoesione), elaborati e visualizzati da capo a fondo."
+    es: "Data story interactiva sobre los 136 municipios del Molise vistos desde el espacio de noche: diez años de composiciones anuales VIIRS (malla de 500 m) convertidos en mapas, una comparación 2013–2022 con cursor e indicadores municipales que vinculan la luz emitida con dinámicas demográficas y proyectos financiados por fondos europeos. Página web autónoma: datos abiertos (VIIRS VNL, límites ISTAT, OpenCoesione), elaborados y visualizados de principio a fin."
+  meta:
+    period:
+      en: "2026"
+      it: "2026"
+      es: "2026"
+    role:
+      en: "Design, data processing and development"
+      it: "Ideazione, elaborazione dati e sviluppo"
+      es: "Diseño, tratamiento de datos y desarrollo"
+    methods:
+      en: "Satellite remote sensing (VIIRS) · geospatial analysis · interactive visualisation"
+      it: "Telerilevamento satellitare (VIIRS) · analisi geospaziale · visualizzazione interattiva"
+      es: "Teledetección satelital (VIIRS) · análisis geoespacial · visualización interactiva"

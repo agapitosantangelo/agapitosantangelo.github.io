@@ -182,7 +182,10 @@ def gen_projects(lang, t):
     for p in load("projects"):
         meta = p.get("meta") or {}
         h.append(f'<div class="project" id="{p["id"]}">')
-        h.append(f'<div class="project-header"><h2 class="project-title">{esc(L(p["title"], lang))}</h2>'
+        title = esc(L(p["title"], lang))
+        if p.get("url"):
+            title = f'<a href="{p["url"]}">{title} →</a>'
+        h.append(f'<div class="project-header"><h2 class="project-title">{title}</h2>'
                  f'<span class="project-status {p["status"]}">{esc(L(p["status_label"], lang))}</span></div>')
         h.append(f'<p class="project-summary">{esc(L(p["summary"], lang))}</p>')
         rows = "".join(
