@@ -1,205 +1,249 @@
-# Projects data extracted from {en,it,es}/projects.html (the five div.project blocks).
-# Language-invariant fields are scalar; language-dependent fields use {en, it, es}.
-# status reflects the project-status class (ongoing | review | published);
-# status_label is the printed status text. cross_ref is the related-role anchor
-# on index.html (e.g. exp-lazio), when present.
-
+# Projects data — language-dependent fields use {en, it, es}.
 - id: proj-lazio-cpt
   status: ongoing
   status_label:
-    en: "Ongoing · 2025–2026"
-    it: "In corso · 2025–2026"
-    es: "En curso · 2025–2026"
+    en: Ongoing · 2025–2026
+    it: In corso · 2025–2026
+    es: En curso · 2025–2026
   title:
-    en: "Economic Sustainability of Lazio Municipalities — Territorial Public Accounts (CPT)"
-    it: "Sostenibilità Economica dei Comuni Laziali — Conti Pubblici Territoriali"
-    es: "Sostenibilidad Económica de los Municipios del Lacio — Cuentas Públicas Territoriales (CPT)"
+    en: Economic Sustainability of Lazio Municipalities — Territorial Public Accounts (CPT)
+    it: Sostenibilità Economica dei Comuni Laziali — Conti Pubblici Territoriali
+    es: Sostenibilidad Económica de los Municipios del Lacio — Cuentas Públicas Territoriales (CPT)
   summary:
-    en: "Twelve-month research project on the economic sustainability of municipalities in the Lazio region, framed within the Conti Pubblici Territoriali (Territorial Public Accounts) system. Activities include the update, integration and validation of Lazio CPT data; merging CPT and demographic sources into a unified dataset; estimating the spending theoretically required to guarantee constitutionally protected rights (health, education, mobility); building municipal-level sustainability indicators based on the balance between revenue effectively collected, expenditure effectively incurred and the spending needed; constructing measures of territorial cohesion and divergence within Lazio; and producing forecasting scenarios that combine official ISTAT demographic projections with constitutional-reform and public-investment hypotheses. Activities are partly conducted on-site at the Nucleo CPT Lazio premises in Rome."
-    it: "Progetto di ricerca di 12 mesi sulla valutazione della sostenibilità economica dei comuni laziali nell'ambito del sistema dei Conti Pubblici Territoriali (CPT). Le attività comprendono l'aggiornamento, l'integrazione e la validazione dei dati CPT del Lazio; l'integrazione di dati CPT e demografici in un unico dataset; la stima della spesa teoricamente necessaria ad assicurare i diritti costituzionalmente garantiti (salute, istruzione, mobilità); la costruzione di misure di sostenibilità comunale basate sull'equilibrio fra entrate effettivamente incassate, spesa effettivamente sostenuta e spesa teoricamente necessaria; misure di coesione e divergenza territoriale nel Lazio; e scenari di previsione che combinano le proiezioni demografiche ISTAT con ipotesi di riforma costituzionale e di pianificazione di investimenti pubblici. Le attività sono svolte parzialmente presso la sede del Nucleo CPT Lazio a Roma."
-    es: "Proyecto de investigación de 12 meses sobre la sostenibilidad económica de los municipios de la región del Lacio, en el marco del sistema de Conti Pubblici Territoriali (Cuentas Públicas Territoriales). Las actividades incluyen la actualización, integración y validación de los datos CPT del Lacio; la integración en un único conjunto de datos CPT y fuentes demográficas; la estimación del gasto teóricamente necesario para garantizar los derechos constitucionalmente protegidos (salud, educación, movilidad); la construcción de indicadores de sostenibilidad municipal basados en el equilibrio entre ingresos efectivamente percibidos, gasto efectivamente realizado y gasto necesario; medidas de cohesión o divergencia territorial en el Lacio; y escenarios de previsión que combinan las proyecciones demográficas oficiales del ISTAT con hipótesis de reforma constitucional y planificación de inversión pública. Parte de las actividades se desarrolla in situ en la sede del Nucleo CPT Lazio en Roma."
+    en: Twelve-month research project on the economic sustainability of municipalities in the Lazio region, framed within
+      the Conti Pubblici Territoriali (Territorial Public Accounts) system. Activities include the update, integration and
+      validation of Lazio CPT data; merging CPT and demographic sources into a unified dataset; estimating the spending theoretically
+      required to guarantee constitutionally protected rights (health, education, mobility); building municipal-level sustainability
+      indicators based on the balance between revenue effectively collected, expenditure effectively incurred and the spending
+      needed; constructing measures of territorial cohesion and divergence within Lazio; and producing forecasting scenarios
+      that combine official ISTAT demographic projections with constitutional-reform and public-investment hypotheses. Activities
+      are partly conducted on-site at the Nucleo CPT Lazio premises in Rome.
+    it: Progetto di ricerca di 12 mesi sulla valutazione della sostenibilità economica dei comuni laziali nell'ambito del
+      sistema dei Conti Pubblici Territoriali (CPT). Le attività comprendono l'aggiornamento, l'integrazione e la validazione
+      dei dati CPT del Lazio; l'integrazione di dati CPT e demografici in un unico dataset; la stima della spesa teoricamente
+      necessaria ad assicurare i diritti costituzionalmente garantiti (salute, istruzione, mobilità); la costruzione di misure
+      di sostenibilità comunale basate sull'equilibrio fra entrate effettivamente incassate, spesa effettivamente sostenuta
+      e spesa teoricamente necessaria; misure di coesione e divergenza territoriale nel Lazio; e scenari di previsione che
+      combinano le proiezioni demografiche ISTAT con ipotesi di riforma costituzionale e di pianificazione di investimenti
+      pubblici. Le attività sono svolte parzialmente presso la sede del Nucleo CPT Lazio a Roma.
+    es: Proyecto de investigación de 12 meses sobre la sostenibilidad económica de los municipios de la región del Lacio,
+      en el marco del sistema de Conti Pubblici Territoriali (Cuentas Públicas Territoriales). Las actividades incluyen la
+      actualización, integración y validación de los datos CPT del Lacio; la integración en un único conjunto de datos CPT
+      y fuentes demográficas; la estimación del gasto teóricamente necesario para garantizar los derechos constitucionalmente
+      protegidos (salud, educación, movilidad); la construcción de indicadores de sostenibilidad municipal basados en el equilibrio
+      entre ingresos efectivamente percibidos, gasto efectivamente realizado y gasto necesario; medidas de cohesión o divergencia
+      territorial en el Lacio; y escenarios de previsión que combinan las proyecciones demográficas oficiales del ISTAT con
+      hipótesis de reforma constitucional y planificación de inversión pública. Parte de las actividades se desarrolla in
+      situ en la sede del Nucleo CPT Lazio en Roma.
   meta:
     funder:
-      en: "Nucleo regionale CPT Lazio — FSC 2014–2020 “Strengthening of the Territorial Public Accounts System” (CIPE Resolution 48/2017)"
-      it: "Nucleo regionale CPT Lazio — FSC 2014–2020 «Rafforzamento del Sistema dei Conti Pubblici Territoriali» (Delibera CIPE n. 48/2017)"
-      es: "Nucleo regional CPT Lazio — FSC 2014–2020 «Refuerzo del Sistema de Cuentas Públicas Territoriales» (Resolución CIPE n. 48/2017)"
+      en: Nucleo regionale CPT Lazio — FSC 2014–2020 “Strengthening of the Territorial Public Accounts System” (CIPE Resolution
+        48/2017)
+      it: Nucleo regionale CPT Lazio — FSC 2014–2020 «Rafforzamento del Sistema dei Conti Pubblici Territoriali» (Delibera
+        CIPE n. 48/2017)
+      es: Nucleo regional CPT Lazio — FSC 2014–2020 «Refuerzo del Sistema de Cuentas Públicas Territoriales» (Resolución CIPE
+        n. 48/2017)
     period:
-      en: "May 2025 — May 2026"
-      it: "Maggio 2025 — Maggio 2026"
-      es: "Mayo 2025 — Mayo 2026"
+      en: May 2025 — May 2026
+      it: Maggio 2025 — Maggio 2026
+      es: Mayo 2025 — Mayo 2026
     pi:
-      en: "Prof. Cecilia Tomassini — University of Molise (Protocol Regione Lazio – UNIMOL, d.G.r. 837/2024)"
-      it: "Prof.ssa Cecilia Tomassini — Università del Molise (Protocollo d'Intesa Regione Lazio – UNIMOL, d.G.r. 837/2024)"
-      es: "Prof.ª Cecilia Tomassini — Universidad de Molise (Protocolo de entendimiento Regione Lazio – UNIMOL, d.G.r. 837/2024)"
+      en: Prof. Cecilia Tomassini — University of Molise (Protocol Regione Lazio – UNIMOL, d.G.r. 837/2024)
+      it: Prof.ssa Cecilia Tomassini — Università del Molise (Protocollo d'Intesa Regione Lazio – UNIMOL, d.G.r. 837/2024)
+      es: Prof.ª Cecilia Tomassini — Universidad de Molise (Protocolo de entendimiento Regione Lazio – UNIMOL, d.G.r. 837/2024)
     role:
-      en: "Contributor on scientific activities"
-      it: "Collaboratore alle attività scientifiche"
-      es: "Colaborador en las actividades científicas"
+      en: Contributor on scientific activities
+      it: Collaboratore alle attività scientifiche
+      es: Colaborador en las actividades científicas
     methods:
-      en: "Public-finance accounting · Demographic forecasting · Territorial cohesion analysis · Municipal sustainability metrics"
-      it: "Contabilità pubblica · Previsioni demografiche · Analisi della coesione territoriale · Indicatori di sostenibilità comunale"
-      es: "Contabilidad pública · Proyecciones demográficas · Análisis de cohesión territorial · Indicadores de sostenibilidad municipal"
+      en: Public-finance accounting · Demographic forecasting · Territorial cohesion analysis · Municipal sustainability metrics
+      it: Contabilità pubblica · Previsioni demografiche · Analisi della coesione territoriale · Indicatori di sostenibilità
+        comunale
+      es: Contabilidad pública · Proyecciones demográficas · Análisis de cohesión territorial · Indicadores de sostenibilidad
+        municipal
   cross_ref: exp-lazio
-
 - id: proj-themia
   status: published
   status_label:
-    en: "Concluded · 2024–2025"
-    it: "Concluso · 2024–2025"
-    es: "Concluido · 2024–2025"
-  title: "THEMIA — THE Mood of Infrastructure’s Accessibility"
+    en: Concluded · 2024–2025
+    it: Concluso · 2024–2025
+    es: Concluido · 2024–2025
+  title: THEMIA — THE Mood of Infrastructure’s Accessibility
   summary:
-    en: "Assesses infrastructural and territorial accessibility, addressing data challenges for both ex-ante and ex-post evaluations. The project combines real-time activity data from private platforms (Google, Meta, Telegram, X, LinkedIn) with traditional demographic and territorial sources. Machine Learning and Big Data Analytics generate innovative accessibility indicators and predictive models for socio-economic outcomes; user feedback from social networks is integrated into the analysis. Results are released as interactive maps designed for policymakers, practitioners, and citizens, providing a thorough and timely assessment of infrastructure-accessibility policies at the national level in Italy with granular territorial detail."
-    it: "Valuta l’accessibilità infrastrutturale e territoriale, affrontando le sfide dei dati per valutazioni ex-ante ed ex-post. Combina dati di attività in tempo reale da piattaforme private (Google, Meta, Telegram, X, LinkedIn) con fonti demografiche e territoriali tradizionali. Machine Learning e Big Data Analytics generano indicatori innovativi di accessibilità e modelli predittivi per gli esiti socio-economici; il feedback degli utenti dai social network è integrato nell’analisi. I risultati sono restituiti tramite mappe interattive destinate a decisori, operatori e cittadini, garantendo una valutazione tempestiva e completa delle politiche di accessibilità infrastrutturale a livello nazionale italiano con dettaglio territoriale granulare."
-    es: "Evalúa la accesibilidad infraestructural y territorial, abordando los retos de datos tanto en evaluaciones ex-ante como ex-post. Combina datos de actividad en tiempo real de plataformas privadas (Google, Meta, Telegram, X, LinkedIn) con fuentes demográficas y territoriales tradicionales. Machine Learning y Big Data Analytics generan indicadores innovadores de accesibilidad y modelos predictivos de resultados socioeconómicos; el feedback de los usuarios desde redes sociales se integra en el análisis. Los resultados se entregan mediante mapas interactivos destinados a responsables políticos, profesionales y ciudadanos, ofreciendo una evaluación exhaustiva y oportuna de las políticas de accesibilidad infraestructural a escala nacional italiana con detalle territorial granular."
+    en: Assesses infrastructural and territorial accessibility, addressing data challenges for both ex-ante and ex-post evaluations.
+      The project combines real-time activity data from private platforms (Google, Meta, Telegram, X, LinkedIn) with traditional
+      demographic and territorial sources. Machine Learning and Big Data Analytics generate innovative accessibility indicators
+      and predictive models for socio-economic outcomes; user feedback from social networks is integrated into the analysis.
+      Results are released as interactive maps designed for policymakers, practitioners, and citizens, providing a thorough
+      and timely assessment of infrastructure-accessibility policies at the national level in Italy with granular territorial
+      detail.
+    it: Valuta l’accessibilità infrastrutturale e territoriale, affrontando le sfide dei dati per valutazioni ex-ante ed ex-post.
+      Combina dati di attività in tempo reale da piattaforme private (Google, Meta, Telegram, X, LinkedIn) con fonti demografiche
+      e territoriali tradizionali. Machine Learning e Big Data Analytics generano indicatori innovativi di accessibilità e
+      modelli predittivi per gli esiti socio-economici; il feedback degli utenti dai social network è integrato nell’analisi.
+      I risultati sono restituiti tramite mappe interattive destinate a decisori, operatori e cittadini, garantendo una valutazione
+      tempestiva e completa delle politiche di accessibilità infrastrutturale a livello nazionale italiano con dettaglio territoriale
+      granulare.
+    es: Evalúa la accesibilidad infraestructural y territorial, abordando los retos de datos tanto en evaluaciones ex-ante
+      como ex-post. Combina datos de actividad en tiempo real de plataformas privadas (Google, Meta, Telegram, X, LinkedIn)
+      con fuentes demográficas y territoriales tradicionales. Machine Learning y Big Data Analytics generan indicadores innovadores
+      de accesibilidad y modelos predictivos de resultados socioeconómicos; el feedback de los usuarios desde redes sociales
+      se integra en el análisis. Los resultados se entregan mediante mapas interactivos destinados a responsables políticos,
+      profesionales y ciudadanos, ofreciendo una evaluación exhaustiva y oportuna de las políticas de accesibilidad infraestructural
+      a escala nacional italiana con detalle territorial granular.
   meta:
     funder:
-      en: "European Union — NextGenerationEU"
-      it: "Unione Europea — NextGenerationEU"
-      es: "Unión Europea — NextGenerationEU"
+      en: European Union — NextGenerationEU
+      it: Unione Europea — NextGenerationEU
+      es: Unión Europea — NextGenerationEU
     period:
-      en: "October 2024 — October 2025"
-      it: "Ottobre 2024 — Ottobre 2025"
-      es: "Octubre 2024 — Octubre 2025"
+      en: October 2024 — October 2025
+      it: Ottobre 2024 — Ottobre 2025
+      es: Octubre 2024 — Octubre 2025
     pi:
-      en: "Prof. Giuliano Resce — University of Molise"
-      it: "Prof. Giuliano Resce — Università del Molise"
-      es: "Prof. Giuliano Resce — Universidad de Molise"
+      en: Prof. Giuliano Resce — University of Molise
+      it: Prof. Giuliano Resce — Università del Molise
+      es: Prof. Giuliano Resce — Universidad de Molise
     role:
-      en: "Contributor on scientific activities"
-      it: "Collaboratore alle attività scientifiche"
-      es: "Colaborador en las actividades científicas"
+      en: Contributor on scientific activities
+      it: Collaboratore alle attività scientifiche
+      es: Colaborador en las actividades científicas
     methods:
-      en: "Machine Learning · Big Data Analytics · Text Mining · Predictive modelling · Interactive cartography"
-      it: "Machine Learning · Big Data Analytics · Text Mining · Modellazione predittiva · Cartografia interattiva"
-      es: "Machine Learning · Big Data Analytics · Text Mining · Modelado predictivo · Cartografía interactiva"
-
+      en: Machine Learning · Big Data Analytics · Text Mining · Predictive modelling · Interactive cartography
+      it: Machine Learning · Big Data Analytics · Text Mining · Modellazione predittiva · Cartografia interattiva
+      es: Machine Learning · Big Data Analytics · Text Mining · Modelado predictivo · Cartografía interactiva
 - id: proj-prin-health
   status: published
   status_label:
-    en: "Concluded · 2023–2025"
-    it: "Concluso · 2023–2025"
-    es: "Concluido · 2023–2025"
+    en: Concluded · 2023–2025
+    it: Concluso · 2023–2025
+    es: Concluido · 2023–2025
   title:
-    en: "Reconciling Efficiency and Equity in the Italian Healthcare System"
-    it: "Conciliare Efficienza ed Equità nel Sistema Sanitario Italiano"
-    es: "Conciliar Eficiencia y Equidad en el Sistema Sanitario Italiano"
+    en: Reconciling Efficiency and Equity in the Italian Healthcare System
+    it: Conciliare Efficienza ed Equità nel Sistema Sanitario Italiano
+    es: Conciliar Eficiencia y Equidad en el Sistema Sanitario Italiano
   summary:
-    en: "PRIN 2022 project evaluating the performance of the Italian regional healthcare system over the past two decades along the dimensions of efficiency and equity. Three focus areas: (1) hospital efficiency in the wake of the territorial reorganisation, distinguishing public and private providers and accounting for regional heterogeneity in population needs; (2) equity in access to hospital services through analysis of patient mobility across regions; (3) regional healthcare-expenditure allocation, comparing the central-level method currently in use with a needs-based alternative. The project applies state-of-the-art econometric methods and new microeconomics tools to inform the debate on decentralised healthcare."
-    it: "Progetto PRIN 2022 di valutazione della performance del sistema sanitario regionale italiano negli ultimi venti anni lungo le dimensioni di efficienza ed equità. Tre aree di focus: (1) evoluzione dell’efficienza ospedaliera in seguito alla riorganizzazione territoriale, distinguendo strutture pubbliche e private e tenendo conto dell’eterogeneità regionale dei bisogni della popolazione; (2) equità nell’accesso ai servizi ospedalieri attraverso l’analisi della mobilità dei pazienti tra regioni; (3) allocazione della spesa sanitaria regionale, confrontando il metodo centrale attualmente in uso con un’alternativa basata sui bisogni. Il progetto applica metodi econometrici state-of-the-art e nuovi strumenti di microeconomia per alimentare il dibattito sul sistema sanitario decentrato."
-    es: "Proyecto PRIN 2022 que evalúa el desempeño del sistema sanitario regional italiano de las últimas dos décadas en términos de eficiencia y equidad. Tres áreas de enfoque: (1) evolución de la eficiencia hospitalaria tras la reorganización territorial, distinguiendo proveedores públicos y privados y considerando la heterogeneidad regional de las necesidades poblacionales; (2) equidad en el acceso a los servicios hospitalarios mediante el análisis de la movilidad de pacientes entre regiones; (3) asignación del gasto sanitario regional, comparando el método central vigente con una alternativa basada en las necesidades. Aplica métodos econométricos de vanguardia y nuevas herramientas microeconómicas para alimentar el debate sobre el sistema sanitario descentralizado."
+    en: 'PRIN 2022 project evaluating the performance of the Italian regional healthcare system over the past two decades
+      along the dimensions of efficiency and equity. Three focus areas: (1) hospital efficiency in the wake of the territorial
+      reorganisation, distinguishing public and private providers and accounting for regional heterogeneity in population
+      needs; (2) equity in access to hospital services through analysis of patient mobility across regions; (3) regional healthcare-expenditure
+      allocation, comparing the central-level method currently in use with a needs-based alternative. The project applies
+      state-of-the-art econometric methods and new microeconomics tools to inform the debate on decentralised healthcare.'
+    it: 'Progetto PRIN 2022 di valutazione della performance del sistema sanitario regionale italiano negli ultimi venti anni
+      lungo le dimensioni di efficienza ed equità. Tre aree di focus: (1) evoluzione dell’efficienza ospedaliera in seguito
+      alla riorganizzazione territoriale, distinguendo strutture pubbliche e private e tenendo conto dell’eterogeneità regionale
+      dei bisogni della popolazione; (2) equità nell’accesso ai servizi ospedalieri attraverso l’analisi della mobilità dei
+      pazienti tra regioni; (3) allocazione della spesa sanitaria regionale, confrontando il metodo centrale attualmente in
+      uso con un’alternativa basata sui bisogni. Il progetto applica metodi econometrici state-of-the-art e nuovi strumenti
+      di microeconomia per alimentare il dibattito sul sistema sanitario decentrato.'
+    es: 'Proyecto PRIN 2022 que evalúa el desempeño del sistema sanitario regional italiano de las últimas dos décadas en
+      términos de eficiencia y equidad. Tres áreas de enfoque: (1) evolución de la eficiencia hospitalaria tras la reorganización
+      territorial, distinguiendo proveedores públicos y privados y considerando la heterogeneidad regional de las necesidades
+      poblacionales; (2) equidad en el acceso a los servicios hospitalarios mediante el análisis de la movilidad de pacientes
+      entre regiones; (3) asignación del gasto sanitario regional, comparando el método central vigente con una alternativa
+      basada en las necesidades. Aplica métodos econométricos de vanguardia y nuevas herramientas microeconómicas para alimentar
+      el debate sobre el sistema sanitario descentralizado.'
   meta:
     funder:
-      en: "Italian Ministry of University and Research — National Interest Research Projects (PRIN 2022)"
-      it: "Ministero dell’Università e della Ricerca — Progetti di Rilevante Interesse Nazionale (PRIN 2022)"
-      es: "Ministerio italiano de Universidad e Investigación — Proyectos de Investigación de Interés Nacional (PRIN 2022)"
+      en: Italian Ministry of University and Research — National Interest Research Projects (PRIN 2022)
+      it: Ministero dell’Università e della Ricerca — Progetti di Rilevante Interesse Nazionale (PRIN 2022)
+      es: Ministerio italiano de Universidad e Investigación — Proyectos de Investigación de Interés Nacional (PRIN 2022)
     period:
-      en: "October 2023 — October 2025"
-      it: "Ottobre 2023 — Ottobre 2025"
-      es: "Octubre 2023 — Octubre 2025"
+      en: October 2023 — October 2025
+      it: Ottobre 2023 — Ottobre 2025
+      es: Octubre 2023 — Octubre 2025
     pi:
-      en: "Prof. Raffaele Lagravinese — University of Bari Aldo Moro"
-      it: "Prof. Raffaele Lagravinese — Università degli Studi di Bari Aldo Moro"
-      es: "Prof. Raffaele Lagravinese — Universidad de Bari Aldo Moro"
+      en: Prof. Raffaele Lagravinese — University of Bari Aldo Moro
+      it: Prof. Raffaele Lagravinese — Università degli Studi di Bari Aldo Moro
+      es: Prof. Raffaele Lagravinese — Universidad de Bari Aldo Moro
     role:
-      en: "Contributor on scientific activities"
-      it: "Collaboratore alle attività scientifiche"
-      es: "Colaborador en las actividades científicas"
+      en: Contributor on scientific activities
+      it: Collaboratore alle attività scientifiche
+      es: Colaborador en las actividades científicas
     methods:
-      en: "Health-economics microeconomics · Panel-data econometrics · Regional inequality analysis"
-      it: "Microeconomia sanitaria · Econometria dei dati panel · Analisi delle disuguaglianze regionali"
-      es: "Microeconomía sanitaria · Econometría de datos de panel · Análisis de desigualdades regionales"
+      en: Health-economics microeconomics · Panel-data econometrics · Regional inequality analysis
+      it: Microeconomia sanitaria · Econometria dei dati panel · Analisi delle disuguaglianze regionali
+      es: Microeconomía sanitaria · Econometría de datos de panel · Análisis de desigualdades regionales
   cross_ref: exp-prin
-
 - id: proj-back-in-town
   status: published
   status_label:
-    en: "Concluded · 2024–2025"
-    it: "Concluso · 2024–2025"
-    es: "Concluido · 2024–2025"
+    en: Concluded · 2024–2025
+    it: Concluso · 2024–2025
+    es: Concluido · 2024–2025
   title:
-    en: "BACK IN TOWN — Industrial Relations and Social Dialogue for Youth Employment"
-    it: "BACK IN TOWN — Relazioni Industriali e Dialogo Sociale per l'Occupazione Giovanile"
-    es: "BACK IN TOWN — Relaciones Industriales y Diálogo Social para el Empleo Juvenil"
+    en: BACK IN TOWN — Industrial Relations and Social Dialogue for Youth Employment
+    it: BACK IN TOWN — Relazioni Industriali e Dialogo Sociale per l'Occupazione Giovanile
+    es: BACK IN TOWN — Relaciones Industriales y Diálogo Social para el Empleo Juvenil
   summary:
-    en: "EU-funded research collaboration on the role of industrial relations and social dialogue in supporting young people's employment and social inclusion at an urban level. The project covered analysis of the European labour market, of European strategies for youth employment and social inclusion, the production of evidence-based research reports, and the design and creation of an observatory on collective bargaining for young workers."
-    it: "Collaborazione di ricerca finanziata dall'UE sul ruolo delle relazioni industriali e del dialogo sociale a supporto dell'occupazione e dell'inclusione sociale dei giovani a livello urbano. Il progetto ha riguardato l'analisi del mercato del lavoro europeo, lo studio delle strategie europee a favore dell'occupazione giovanile e dell'inclusione sociale, la realizzazione di report di ricerca evidence-based e la progettazione di un osservatorio sulla contrattazione giovanile."
-    es: "Colaboración de investigación financiada por la UE sobre el papel de las relaciones industriales y el diálogo social en el apoyo al empleo y la inclusión social de los jóvenes a nivel urbano. El proyecto incluyó el análisis del mercado laboral europeo, el estudio de las estrategias europeas para el empleo juvenil y la inclusión social, la elaboración de informes de investigación basados en evidencia y el diseño de un observatorio sobre la negociación colectiva juvenil."
+    en: EU-funded research collaboration on the role of industrial relations and social dialogue in supporting young people's
+      employment and social inclusion at an urban level. The project covered analysis of the European labour market, of European
+      strategies for youth employment and social inclusion, the production of evidence-based research reports, and the design
+      and creation of an observatory on collective bargaining for young workers.
+    it: Collaborazione di ricerca finanziata dall'UE sul ruolo delle relazioni industriali e del dialogo sociale a supporto
+      dell'occupazione e dell'inclusione sociale dei giovani a livello urbano. Il progetto ha riguardato l'analisi del mercato
+      del lavoro europeo, lo studio delle strategie europee a favore dell'occupazione giovanile e dell'inclusione sociale,
+      la realizzazione di report di ricerca evidence-based e la progettazione di un osservatorio sulla contrattazione giovanile.
+    es: Colaboración de investigación financiada por la UE sobre el papel de las relaciones industriales y el diálogo social
+      en el apoyo al empleo y la inclusión social de los jóvenes a nivel urbano. El proyecto incluyó el análisis del mercado
+      laboral europeo, el estudio de las estrategias europeas para el empleo juvenil y la inclusión social, la elaboración
+      de informes de investigación basados en evidencia y el diseño de un observatorio sobre la negociación colectiva juvenil.
   meta:
     funder:
-      en: "European Commission — Programme SOCPL-2022-IND-REL (Project GAP 101126432, CUP H93C23001040006)"
-      it: "Commissione Europea — Programma SOCPL-2022-IND-REL (Codice progetto GAP 101126432, CUP H93C23001040006)"
-      es: "Comisión Europea — Programa SOCPL-2022-IND-REL (Código de proyecto GAP 101126432, CUP H93C23001040006)"
-    period: "2024 — 2025"
+      en: European Commission — Programme SOCPL-2022-IND-REL (Project GAP 101126432, CUP H93C23001040006)
+      it: Commissione Europea — Programma SOCPL-2022-IND-REL (Codice progetto GAP 101126432, CUP H93C23001040006)
+      es: Comisión Europea — Programa SOCPL-2022-IND-REL (Código de proyecto GAP 101126432, CUP H93C23001040006)
+    period: 2024 — 2025
     pi:
-      en: "Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Department of Economics and Finance)"
-      it: "Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Dipartimento di Economia e Finanza)"
-      es: "Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Departamento de Economía y Finanzas)"
+      en: Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Department of Economics and Finance)
+      it: Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Dipartimento di Economia e Finanza)
+      es: Prof. Francesco Prota — Università degli Studi di Bari Aldo Moro (Departamento de Economía y Finanzas)
     role:
-      en: "Contributor on scientific activities"
-      it: "Collaboratore alle attività scientifiche"
-      es: "Colaborador en las actividades científicas"
+      en: Contributor on scientific activities
+      it: Collaboratore alle attività scientifiche
+      es: Colaborador en las actividades científicas
     methods:
-      en: "Labour-economics analysis · Industrial relations · Comparative European policy analysis · Observatory design"
-      it: "Analisi di economia del lavoro · Relazioni industriali · Analisi comparata delle politiche europee · Disegno di osservatori"
-      es: "Análisis de economía laboral · Relaciones industriales · Análisis comparativo de políticas europeas · Diseño de observatorios"
-
+      en: Labour-economics analysis · Industrial relations · Comparative European policy analysis · Observatory design
+      it: Analisi di economia del lavoro · Relazioni industriali · Analisi comparata delle politiche europee · Disegno di
+        osservatori
+      es: Análisis de economía laboral · Relaciones industriales · Análisis comparativo de políticas europeas · Diseño de
+        observatorios
 - id: proj-climate-security
   status: published
   status_label:
-    en: "Concluded · 2021–2024"
-    it: "Concluso · 2021–2024"
-    es: "Concluido · 2021–2024"
-  title: "Climate Security Observatory"
+    en: Concluded · 2021–2024
+    it: Concluso · 2021–2024
+    es: Concluido · 2021–2024
+  title: Climate Security Observatory
   summary:
-    en: "Scientific support for the development of a permanent observatory on the climate crisis in Africa, hosted by the International Center for Tropical Agriculture (CIAT). The long-term goal is to migrate, onto a dynamic and policymaker-facing platform, the body of economic research conducted by the organisation on climate-change issues, making it operationally consultable for evidence-based decision-making."
-    it: "Supporto scientifico allo sviluppo di un osservatorio permanente sulla crisi climatica in Africa, in capo all’International Center for Tropical Agriculture (CIAT). L’obiettivo di lungo periodo è trasferire su una piattaforma dinamica e consultabile dai decisori l’intero corpo di ricerca economica condotto dall’organizzazione sui temi del cambiamento climatico, rendendola operativamente fruibile per il decision-making evidence-based."
-    es: "Apoyo científico al desarrollo de un observatorio permanente sobre la crisis climática en África, en el International Center for Tropical Agriculture (CIAT). El objetivo a largo plazo es trasladar a una plataforma dinámica y accesible para los responsables políticos todo el corpus de investigación económica realizado por la organización sobre el cambio climático, haciendo este conocimiento operativamente consultable para la toma de decisiones basada en evidencia."
+    en: Scientific support for the development of a permanent observatory on the climate crisis in Africa, hosted by the International
+      Center for Tropical Agriculture (CIAT). The long-term goal is to migrate, onto a dynamic and policymaker-facing platform,
+      the body of economic research conducted by the organisation on climate-change issues, making it operationally consultable
+      for evidence-based decision-making.
+    it: Supporto scientifico allo sviluppo di un osservatorio permanente sulla crisi climatica in Africa, in capo all’International
+      Center for Tropical Agriculture (CIAT). L’obiettivo di lungo periodo è trasferire su una piattaforma dinamica e consultabile
+      dai decisori l’intero corpo di ricerca economica condotto dall’organizzazione sui temi del cambiamento climatico, rendendola
+      operativamente fruibile per il decision-making evidence-based.
+    es: Apoyo científico al desarrollo de un observatorio permanente sobre la crisis climática en África, en el International
+      Center for Tropical Agriculture (CIAT). El objetivo a largo plazo es trasladar a una plataforma dinámica y accesible
+      para los responsables políticos todo el corpus de investigación económica realizado por la organización sobre el cambio
+      climático, haciendo este conocimiento operativamente consultable para la toma de decisiones basada en evidencia.
   meta:
-    funder: "International Center for Tropical Agriculture (CIAT)"
+    funder: International Center for Tropical Agriculture (CIAT)
     period:
-      en: "November 2021 — September 2024"
-      it: "Novembre 2021 — Settembre 2024"
-      es: "Noviembre 2021 — Septiembre 2024"
+      en: November 2021 — September 2024
+      it: Novembre 2021 — Settembre 2024
+      es: Noviembre 2021 — Septiembre 2024
     pi:
-      en: "Prof. Giuliano Resce — University of Molise"
-      it: "Prof. Giuliano Resce — Università del Molise"
-      es: "Prof. Giuliano Resce — Universidad de Molise"
+      en: Prof. Giuliano Resce — University of Molise
+      it: Prof. Giuliano Resce — Università del Molise
+      es: Prof. Giuliano Resce — Universidad de Molise
     role:
-      en: "Contributor on scientific activities"
-      it: "Collaboratore alle attività scientifiche"
-      es: "Colaborador en las actividades científicas"
+      en: Contributor on scientific activities
+      it: Collaboratore alle attività scientifiche
+      es: Colaborador en las actividades científicas
     methods:
-      en: "Applied development economics · Data integration · Policy-platform design"
-      it: "Economia dello sviluppo applicata · Integrazione dati · Disegno di piattaforma policy"
-      es: "Economía del desarrollo aplicada · Integración de datos · Diseño de plataforma de políticas"
+      en: Applied development economics · Data integration · Policy-platform design
+      it: Economia dello sviluppo applicata · Integrazione dati · Disegno di piattaforma policy
+      es: Economía del desarrollo aplicada · Integración de datos · Diseño de plataforma de políticas
   cross_ref: exp-ciat
-
-- id: proj-luci-notturne
-  status: published
-  status_label:
-    en: "Personal project · 2026"
-    it: "Progetto personale · 2026"
-    es: "Proyecto personal · 2026"
-  url: /luci-notturne/
-  title:
-    en: "Molise by Night — Ten Years of Satellite Nighttime Lights"
-    it: "Il Molise di notte — Dieci anni di luci notturne satellitari"
-    es: "El Molise de noche — Diez años de luces nocturnas satelitales"
-  summary:
-    en: "Interactive data story on the 136 municipalities of Molise seen from space at night: ten years of VIIRS annual composites (500 m grid) turned into maps, a 2013–2022 before/after comparison and municipal indicators, linking light emissions to demographic trends and EU-funded projects. Self-contained web page: open data (VIIRS VNL, ISTAT boundaries, OpenCoesione), processed and visualised end-to-end."
-    it: "Data story interattiva sui 136 comuni del Molise visti dallo spazio di notte: dieci anni di composizioni annuali VIIRS (griglia 500 m) trasformati in mappe, un confronto 2013–2022 a cursore e indicatori comunali che legano la luce emessa a dinamiche demografiche e progetti finanziati dai fondi europei. Pagina web autonoma: dati aperti (VIIRS VNL, confini ISTAT, OpenCoesione), elaborati e visualizzati da capo a fondo."
-    es: "Data story interactiva sobre los 136 municipios del Molise vistos desde el espacio de noche: diez años de composiciones anuales VIIRS (malla de 500 m) convertidos en mapas, una comparación 2013–2022 con cursor e indicadores municipales que vinculan la luz emitida con dinámicas demográficas y proyectos financiados por fondos europeos. Página web autónoma: datos abiertos (VIIRS VNL, límites ISTAT, OpenCoesione), elaborados y visualizados de principio a fin."
-  meta:
-    period:
-      en: "2026"
-      it: "2026"
-      es: "2026"
-    role:
-      en: "Design, data processing and development"
-      it: "Ideazione, elaborazione dati e sviluppo"
-      es: "Diseño, tratamiento de datos y desarrollo"
-    methods:
-      en: "Satellite remote sensing (VIIRS) · geospatial analysis · interactive visualisation"
-      it: "Telerilevamento satellitare (VIIRS) · analisi geospaziale · visualizzazione interattiva"
-      es: "Teledetección satelital (VIIRS) · análisis geoespacial · visualización interactiva"

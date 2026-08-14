@@ -1,18 +1,4 @@
 # News items — newest first.
-- id: luci-notturne-molise
-  date: 2026-08
-  date_label:
-    en: Aug 2026
-    it: Ago 2026
-    es: Ago 2026
-  body:
-    en: 'New personal project: Molise by Night — ten years of satellite nighttime lights across the region''s 136 municipalities,
-      with interactive maps and a 2013–2022 comparison. Explore it →'
-    it: 'Nuovo progetto personale: Il Molise di notte — dieci anni di luci notturne satellitari sui 136 comuni della regione,
-      con mappe interattive e confronto 2013–2022. Esploralo →'
-    es: 'Nuevo proyecto personal: El Molise de noche — diez años de luces nocturnas satelitales sobre los 136 municipios de
-      la región, con mapas interactivos y comparación 2013–2022. Explóralo →'
-  link: /luci-notturne/
 - id: worldcup-2026-dashboard
   date: 2026-06
   date_label:
