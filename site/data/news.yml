@@ -13,6 +13,18 @@
     es: 'Nuevo working paper: el MESWI, índice de bienestar equitativo y sostenible para todos los municipios italianos — 49 indicadores en 12 dominios, construido sobre datos satelitales y administrativos
       de los 7.900 municipios. Léelo →'
   link: https://arxiv.org/abs/2608.26426
+- id: carburanti-dashboard
+  date: 2026-09
+  date_label:
+    en: Sep 2026
+    it: Set 2026
+    es: Sep 2026
+  body:
+    it: 'Online la dashboard sui prezzi della benzina realizzata con Instant Analytics: classifica e mappa delle 110 province, si aggiorna da sola ogni mattina sui dati MIMIT Osservaprezzi. Esplorala →'
+    en: 'New dashboard on petrol prices, built with Instant Analytics: ranking and map of all 110 Italian provinces, rebuilt automatically every morning from Ministry data. Explore it →'
+    es: 'Nuevo panel sobre los precios de la gasolina, realizado con Instant Analytics: clasificación y mapa de las 110 provincias italianas, actualizado automáticamente cada mañana con datos del Ministerio.
+      Explóralo →'
+  link: https://agapitosantangelo.github.io/carburanti/
 - id: worldcup-2026-dashboard
   date: 2026-06
   date_label:

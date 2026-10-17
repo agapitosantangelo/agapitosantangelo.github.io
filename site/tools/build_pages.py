@@ -92,13 +92,19 @@ def esc(s):
     return (s or "").replace("&", "&amp;").replace("<", "&lt;")
 
 
-def links_html(links, sep=" · "):
+def links_html(links, sep=" · ", lang=None):
     if not links:
         return ""
     if isinstance(links, dict):
         links = [{"label": k.replace("_", " ").upper() if len(k) <= 4 else k, "url": u}
                  for k, u in links.items()]
-    parts = [f'<a href="{l["url"]}">{esc(l.get("label") or "Link")} →</a>' for l in links]
+
+    def label(l):
+        # etichette anche {en,it,es}; la freccia la aggiunge questa funzione,
+        # quindi una "→" già presente nel dato non deve raddoppiare
+        return esc(str(L(l.get("label"), lang) or "Link").rstrip(" →"))
+
+    parts = [f'<a href="{L(l["url"], lang)}">{label(l)} →</a>' for l in links]
     return " " + sep.join(parts)
 
 
@@ -123,7 +129,7 @@ def pub_entry(p, lang, t):
     h.append(f'{esc(p["authors"])} ({p["year"]}). <span class="entry-title">{title}.</span>')
     venue = L(p.get("venue"), lang)
     line = esc(venue) if venue else ""
-    line += links_html(p.get("links"))
+    line += links_html(p.get("links"), lang=lang)
     if p.get("doi"):
         line += f' · <a href="https://doi.org/{p["doi"]}">{t["doi_label"]} →</a>'
     if p.get("under_review"):
@@ -162,7 +168,7 @@ def gen_research(lang, t):
         ctopics = " ".join(c.get("topics") or [])
         h.append(f'<li class="entry" data-topics="{ctopics}"><span class="entry-tag conf">Conference</span>'
                  f'{esc(c["authors"])} ({c["year"]}). <span class="entry-title">{esc(c["title"].rstrip("."))}.</span>'
-                 f'<span class="entry-venue">{esc(L(c.get("venue"), lang))}.{links_html(c.get("links"))}</span></li>')
+                 f'<span class="entry-venue">{esc(L(c.get("venue"), lang))}.{links_html(c.get("links"), lang=lang)}</span></li>')
     h.append("</ul>")
     # JSON-LD: le pubblicazioni come ScholarlyArticle, ancorate agli id
     arts = [{"@type": "ScholarlyArticle",
@@ -208,7 +214,7 @@ def gen_talks(lang, t):
             h.append(f'<li class="entry"><span class="entry-tag">{esc(L(tk["role"], lang))}</span>'
                      f'<span class="entry-title">{esc(L(tk["title"], lang))}</span>'
                      f'<span class="entry-venue">{esc(L(tk["venue"], lang))}'
-                     + (links_html([{"label": "Link", "url": tk["link"]}]) if tk.get("link") else "")
+                     + (links_html([{"label": "Link", "url": tk["link"]}], lang=lang) if tk.get("link") else "")
                      + "</span>")
             for ph in tk.get("photos") or []:
                 h.append(f'<figure class="entry-photo"><img src="../assets/photos/{os.path.basename(ph["src"])}" '
@@ -255,7 +261,13 @@ def gen_news(lang, t, limit=None):
         body = esc(L(n["body"], lang))
         link = n.get("link")
         if link:
-            body += f' <a href="{L(link, lang)}">→</a>'
+            url = L(link, lang)
+            testa, punto, cta = body.rpartition(". ")
+            if punto and cta.endswith("→"):
+                # "…nel browser. Esplorala →": il link è "Esplorala", non la freccia
+                body = f'{testa}. <a href="{url}">{cta.rstrip(" →")} →</a>'
+            else:
+                body += f' <a href="{url}">→</a>'
         h.append(f'<div class="update"><span class="quando">{esc(L(n["date_label"], lang))}</span>'
                  f'<span class="cosa">{body}</span></div>')
     if limit:
@@ -310,7 +322,7 @@ def gen_dissemination(lang, t):
             tag = esc(L(it.get("tag"), lang) or "")
             h.append(f'<li class="entry"><span class="entry-tag report">{tag}</span>'
                      f'<span class="entry-title">{esc(L(it.get("title"), lang) or "")}</span>'
-                     f'<span class="entry-venue">{esc(L(it.get("venue"), lang) or "")}{links_html(it.get("links"))}</span></li>')
+                     f'<span class="entry-venue">{esc(L(it.get("venue"), lang) or "")}{links_html(it.get("links"), lang=lang)}</span></li>')
         h.append("</ul>")
     return "\n".join(h)
 
