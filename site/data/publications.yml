@@ -1,3 +1,5 @@
+# Publications — peer-reviewed first, then working papers.
+# type: peer-reviewed | working-paper; jmp: true marks the job market paper.
 - id: text-mining-food-insecurity
   type: peer-reviewed
   authors: Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … & Coffey, K.
@@ -68,6 +70,18 @@
   topics:
   - policy-evaluation
   - digital-methods
+- id: meswi-municipal-wellbeing
+  type: working-paper
+  authors: Caravaggio, N., Resce, G., & Santangelo, A. E.
+  year: 2026
+  title: The Italian Municipality Equitable and Sustainable Well-being Index (MESWI).
+  venue: arXiv preprint arXiv:2608.26426.
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2608.26426
+  topics:
+  - territorial
+  - policy-evaluation
 - id: competition-punctuality-high-speed-rail
   type: working-paper
   authors: Bergantino, A. S., Gabrielli, L., Resce, G., & Santangelo, A. E.
@@ -92,3 +106,15 @@
   cross_ref: proj-prin-health
   topics:
   - health
+- id: aim-mobility-incentives
+  type: working-paper
+  authors: Cicatiello, L., de Angelis, M., Gaeta, G. L., Prota, F., & Santangelo, A. E.
+  year: 2025
+  title: Do Mobility Incentives Improve Research Performance and Career Outcomes? Evidence from Italy's AIM Program.
+  venue: SSRN working paper.
+  links:
+  - label: SSRN
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5343361
+  topics:
+  - policy-evaluation
+  - innovation

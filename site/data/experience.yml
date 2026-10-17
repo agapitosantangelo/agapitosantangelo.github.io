@@ -1,3 +1,5 @@
+# Experience, education, awards and advanced training.
+# Language-invariant fields are scalar; language-dependent ones use {en, it, es}.
 experience:
 - id: exp-lazio
   current: false
@@ -15,9 +17,12 @@ experience:
     es: Regione Lazio — Sistema Estadístico Regional para apoyo a las políticas regionales
   org_url: https://statistica.regione.lazio.it/statistica/it/home
   description:
-    en: Evidence-based regional policy analysis through administrative, territorial and public-finance data; evaluation of municipal economic and financial sustainability under the Territorial Public Accounts framework.
-    it: Analisi di policy regionale evidence-based su dati amministrativi, territoriali e di finanza pubblica; valutazione della sostenibilità economica e finanziaria dei comuni nell'ambito dei Conti Pubblici Territoriali (CPT).
-    es: Análisis de políticas regionales basado en evidencia con datos administrativos, territoriales y de finanzas públicas; evaluación de la sostenibilidad económico-financiera de los municipios en el marco de las Cuentas Públicas Territoriales (CPT).
+    en: Evidence-based regional policy analysis through administrative, territorial and public-finance data; evaluation of municipal economic and financial sustainability under the Territorial Public Accounts
+      framework.
+    it: Analisi di policy regionale evidence-based su dati amministrativi, territoriali e di finanza pubblica; valutazione della sostenibilità economica e finanziaria dei comuni nell'ambito dei Conti Pubblici
+      Territoriali (CPT).
+    es: Análisis de políticas regionales basado en evidencia con datos administrativos, territoriales y de finanzas públicas; evaluación de la sostenibilidad económico-financiera de los municipios en el
+      marco de las Cuentas Públicas Territoriales (CPT).
   keywords:
     en: Regional statistics · Municipal finance · Policy evaluation
     it: Statistica regionale · Finanza locale · Valutazione delle politiche
@@ -37,9 +42,12 @@ experience:
     it: Spinoff universitario
     es: Spin-off universitario
   description:
-    en: Data-driven analytics on web-scraped, social-media and digital-trace data to monitor socioeconomic phenomena in real time. Text mining, readability measures and machine learning applied to public-sector communication, public services and territorial dynamics, with research outputs and policy reports for institutions and decision-makers.
-    it: Analisi data-driven su dati web, social media e tracce digitali per il monitoraggio in tempo reale di fenomeni socioeconomici. Text mining, indici di leggibilità e machine learning applicati alla comunicazione del settore pubblico, ai servizi pubblici e alle dinamiche territoriali, con output di ricerca e report per istituzioni e decisori.
-    es: Analítica basada en datos web, redes sociales y huellas digitales para el seguimiento en tiempo real de fenómenos socioeconómicos. Text mining, índices de legibilidad y machine learning aplicados a la comunicación del sector público, los servicios públicos y la dinámica territorial, con productos de investigación e informes para instituciones y decisores.
+    en: Data-driven analytics on web-scraped, social-media and digital-trace data to monitor socioeconomic phenomena in real time. Text mining, readability measures and machine learning applied to public-sector
+      communication, public services and territorial dynamics, with research outputs and policy reports for institutions and decision-makers.
+    it: Analisi data-driven su dati web, social media e tracce digitali per il monitoraggio in tempo reale di fenomeni socioeconomici. Text mining, indici di leggibilità e machine learning applicati alla
+      comunicazione del settore pubblico, ai servizi pubblici e alle dinamiche territoriali, con output di ricerca e report per istituzioni e decisori.
+    es: Analítica basada en datos web, redes sociales y huellas digitales para el seguimiento en tiempo real de fenómenos socioeconómicos. Text mining, índices de legibilidad y machine learning aplicados
+      a la comunicación del sector público, los servicios públicos y la dinámica territorial, con productos de investigación e informes para instituciones y decisores.
   keywords:
     en: Web scraping · Text mining · ML & NLP · Policy analytics
     it: Web scraping · Text mining · ML e NLP · Policy analytics
@@ -64,9 +72,13 @@ experience:
     it: https://www.unimol.it/
     es: https://www.unimol.it/
   description:
-    en: Doctoral research at the intersection of applied economics and digital methods. Empirical studies using Difference-in-Differences, panel data econometrics, web scraping, machine learning and NLP, with applications to EU cohesion policy, public-sector digitalization, municipal communication and institutional quality. Visiting scholar at Universitat Politècnica de València (Jan–Jul 2024).
-    it: Ricerca dottorale all'incrocio fra economia applicata e metodi digitali. Studi empirici basati su Difference-in-Differences, dati panel, web scraping, machine learning e NLP, applicati alla politica di coesione UE, alla digitalizzazione del settore pubblico, alla comunicazione comunale e alla qualità istituzionale. Visiting scholar presso la Universitat Politècnica de València (gen–lug 2024).
-    es: Investigación doctoral en la frontera entre economía aplicada y métodos digitales. Estudios empíricos con Difference-in-Differences, datos de panel, web scraping, machine learning y NLP, aplicados a la política de cohesión de la UE, la digitalización del sector público, la comunicación municipal y la calidad institucional. Visiting scholar en la Universitat Politècnica de València (ene–jul 2024).
+    en: Doctoral research at the intersection of applied economics and digital methods. Empirical studies using Difference-in-Differences, panel data econometrics, web scraping, machine learning and NLP,
+      with applications to EU cohesion policy, public-sector digitalization, municipal communication and institutional quality. Visiting scholar at Universitat Politècnica de València (Jan–Jul 2024).
+    it: Ricerca dottorale all'incrocio fra economia applicata e metodi digitali. Studi empirici basati su Difference-in-Differences, dati panel, web scraping, machine learning e NLP, applicati alla politica
+      di coesione UE, alla digitalizzazione del settore pubblico, alla comunicazione comunale e alla qualità istituzionale. Visiting scholar presso la Universitat Politècnica de València (gen–lug 2024).
+    es: Investigación doctoral en la frontera entre economía aplicada y métodos digitales. Estudios empíricos con Difference-in-Differences, datos de panel, web scraping, machine learning y NLP, aplicados
+      a la política de cohesión de la UE, la digitalización del sector público, la comunicación municipal y la calidad institucional. Visiting scholar en la Universitat Politècnica de València (ene–jul
+      2024).
   keywords:
     en: Causal inference · DiD · Public economics · Institutional analysis
     it: Inferenza causale · DiD · Economia pubblica · Analisi istituzionale
@@ -91,8 +103,10 @@ experience:
   org_url: null
   description:
     en: Empirical research on public-sector performance, healthcare efficiency and equity in the post-pandemic Italian health system, contributing to outputs on fiscal constraints and health inequality.
-    it: Ricerca empirica sulla performance del settore pubblico, l'efficienza e l'equità del sistema sanitario italiano nel contesto post-pandemico, con contributi su vincoli di bilancio e disuguaglianze di salute.
-    es: Investigación empírica sobre desempeño del sector público, eficiencia y equidad del sistema sanitario italiano en el contexto post-pandémico, con contribuciones sobre restricciones fiscales y desigualdades en salud.
+    it: Ricerca empirica sulla performance del settore pubblico, l'efficienza e l'equità del sistema sanitario italiano nel contesto post-pandemico, con contributi su vincoli di bilancio e disuguaglianze
+      di salute.
+    es: Investigación empírica sobre desempeño del sector público, eficiencia y equidad del sistema sanitario italiano en el contexto post-pandémico, con contribuciones sobre restricciones fiscales y desigualdades
+      en salud.
   keywords:
     en: Health economics · Public economics · Inequality
     it: Economia sanitaria · Economia pubblica · Disuguaglianze
@@ -114,9 +128,12 @@ experience:
     es: Universidad de Molise
   org_url: null
   description:
-    en: Data-driven analysis of food insecurity trends and determinants for the International Center for Tropical Agriculture, combining text mining of textual sources with structured indicators to support evidence-based development policy.
-    it: Analisi data-driven dei trend e dei determinanti dell'insicurezza alimentare per l'International Center for Tropical Agriculture, combinando text mining di fonti testuali e indicatori strutturati a supporto delle politiche di sviluppo evidence-based.
-    es: Análisis data-driven de tendencias y determinantes de la inseguridad alimentaria para el International Center for Tropical Agriculture, combinando text mining de fuentes textuales con indicadores estructurados como apoyo a políticas de desarrollo basadas en evidencia.
+    en: Data-driven analysis of food insecurity trends and determinants for the International Center for Tropical Agriculture, combining text mining of textual sources with structured indicators to support
+      evidence-based development policy.
+    it: Analisi data-driven dei trend e dei determinanti dell'insicurezza alimentare per l'International Center for Tropical Agriculture, combinando text mining di fonti testuali e indicatori strutturati
+      a supporto delle politiche di sviluppo evidence-based.
+    es: Análisis data-driven de tendencias y determinantes de la inseguridad alimentaria para el International Center for Tropical Agriculture, combinando text mining de fuentes textuales con indicadores
+      estructurados como apoyo a políticas de desarrollo basadas en evidencia.
   keywords:
     en: Food insecurity · Development · Text mining
     it: Insicurezza alimentare · Sviluppo · Text mining
@@ -135,9 +152,12 @@ experience:
   org: Eutalia S.p.A.
   org_url: https://www.eutalia.eu/
   description:
-    en: 'Support to the Managing Authority on the implementation of the evaluation plan and impact evaluation of PON Research and Innovation 2014–2020: research mobility, public investment and EU Cohesion Policy.'
-    it: 'Supporto all''Autorità di Gestione nell''attuazione del piano di valutazione e nella valutazione di impatto del PON Ricerca e Innovazione 2014–2020: mobilità dei ricercatori, investimento pubblico e politica di coesione UE.'
-    es: 'Apoyo a la Autoridad de Gestión en la implementación del plan de evaluación y en la evaluación de impacto del PON Investigación e Innovación 2014–2020: movilidad de investigadores, inversión pública y política de cohesión de la UE.'
+    en: 'Support to the Managing Authority on the implementation of the evaluation plan and impact evaluation of PON Research and Innovation 2014–2020: research mobility, public investment and EU Cohesion
+      Policy.'
+    it: 'Supporto all''Autorità di Gestione nell''attuazione del piano di valutazione e nella valutazione di impatto del PON Ricerca e Innovazione 2014–2020: mobilità dei ricercatori, investimento pubblico
+      e politica di coesione UE.'
+    es: 'Apoyo a la Autoridad de Gestión en la implementación del plan de evaluación y en la evaluación de impacto del PON Investigación e Innovación 2014–2020: movilidad de investigadores, inversión pública
+      y política de cohesión de la UE.'
   keywords:
     en: EU Cohesion Policy · Impact evaluation · R&I programmes
     it: Politica di coesione UE · Valutazione di impatto · Programmi R&I
@@ -154,9 +174,12 @@ education:
     it: Università del Molise · Conseguito con menzione Doctor Europaeus
     es: Universidad de Molise · Obtenido con mención Doctor Europaeus
   notes:
-    en: 'Thesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Public economics · Policy evaluation · Development economics · Data analytics. Visiting scholar at Universitat Politècnica de València (Jan–Jul 2024, supervisor: Prof. Josep Domenech).'
-    it: 'Tesi: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economia pubblica · Valutazione delle politiche · Economia dello sviluppo · Data analytics. Visiting scholar presso l''Universitat Politècnica de València (gen–lug 2024, tutor: Prof. Josep Domenech).'
-    es: 'Tesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economía pública · Evaluación de políticas · Economía del desarrollo · Data analytics. Visiting scholar en la Universitat Politècnica de València (ene–jul 2024, tutor: Prof. Josep Domenech).'
+    en: 'Thesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Public economics · Policy evaluation · Development economics · Data analytics. Visiting scholar
+      at Universitat Politècnica de València (Jan–Jul 2024, supervisor: Prof. Josep Domenech).'
+    it: 'Tesi: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economia pubblica · Valutazione delle politiche · Economia dello sviluppo · Data analytics.
+      Visiting scholar presso l''Universitat Politècnica de València (gen–lug 2024, tutor: Prof. Josep Domenech).'
+    es: 'Tesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economía pública · Evaluación de políticas · Economía del desarrollo · Data analytics. Visiting
+      scholar en la Universitat Politècnica de València (ene–jul 2024, tutor: Prof. Josep Domenech).'
 - period: 2017 — 2019
   title:
     en: MSc in Management, Entrepreneurship & Innovation
@@ -214,6 +237,46 @@ awards:
     es: Afiliación
   text: Società Italiana di Economia (SIE) · Associazione Italiana di Scienze Regionali (AISRe).
 training:
+- title:
+    en: Data organization and loading for SAS Visual Analytics
+    it: Organizzazione e caricamento dati per SAS Visual Analytics
+    es: Organización y carga de datos para SAS Visual Analytics
+  venue:
+    en: SAS Training (2025)
+    it: SAS Training (2025)
+    es: SAS Training (2025)
+- title:
+    en: Web Scraping in Python and in R
+    it: Web Scraping in Python e in R
+    es: Web Scraping en Python y en R
+  venue:
+    en: 'DataCamp (2026) — rvest and httr: HTML parsing, CSS and XPath selectors, HTTP requests'
+    it: 'DataCamp (2026) — rvest e httr: parsing HTML, selettori CSS e XPath, richieste HTTP'
+    es: 'DataCamp (2026) — rvest y httr: parsing HTML, selectores CSS y XPath, peticiones HTTP'
+- title:
+    en: Working with Geospatial Data in Python
+    it: Working with Geospatial Data in Python
+    es: Working with Geospatial Data in Python
+  venue:
+    en: DataCamp (2026) — GeoPandas, spatial joins, CRS and projections, overlays, introduction to raster data
+    it: DataCamp (2026) — GeoPandas, spatial join, sistemi di riferimento e proiezioni, overlay, introduzione ai dati raster
+    es: DataCamp (2026) — GeoPandas, uniones espaciales, CRS y proyecciones, overlays, introducción a los datos ráster
+- title: NASA ARSET — Fundamentals of Remote Sensing
+  venue:
+    en: NASA Applied Remote Sensing Training Program (2026)
+    it: NASA Applied Remote Sensing Training Program (2026)
+    es: NASA Applied Remote Sensing Training Program (2026)
+  links:
+  - label: Link
+    url: https://www.earthdata.nasa.gov/learn/trainings/fundamentals-remote-sensing
+- title:
+    en: EO Summer School — Satellite Data in Agricultural and Environmental Economics
+    it: EO Summer School — Satellite Data in Agricultural and Environmental Economics
+    es: EO Summer School — Satellite Data in Agricultural and Environmental Economics
+  venue:
+    en: University of Milan, Dept. of Environmental Science and Policy (2026) — remote sensing and Google Earth Engine, with the Land Economics Group, University of Bonn
+    it: Università degli Studi di Milano, Dip. di Scienze e Politiche Ambientali (2026) — telerilevamento e Google Earth Engine, con il Land Economics Group dell'Università di Bonn
+    es: Universidad de Milán, Dep. de Ciencias y Políticas Ambientales (2026) — teledetección y Google Earth Engine, con el Land Economics Group de la Universidad de Bonn
 - title: SoBigData Academy Camp
   venue: SoBigData Research Infrastructure (2026) — Data Science, Machine Learning, Data Ethics and Social Data Analysis
 - title:
