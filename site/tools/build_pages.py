@@ -142,7 +142,7 @@ def pub_entry(p, lang, t, in_evidenza=False):
     h.append(f'<span class="entry-venue">{line}</span>')
     if p.get("abstract"):
         # <details> nativo: si apre senza JavaScript, è accessibile e si stampa
-        paragrafi = "".join(f"<p>{esc(par.strip())}</p>" for par in p["abstract"].split("\n\n"))
+        paragrafi = "".join(f"<p>{esc(par.strip())}</p>" for par in L(p["abstract"], lang).split("\n\n"))
         aperto = " open" if in_evidenza else ""
         h.append(f'<details class="abstract"{aperto}><summary>{t["abstract"]}</summary>{paragrafi}</details>')
     if p.get("cross_ref"):
