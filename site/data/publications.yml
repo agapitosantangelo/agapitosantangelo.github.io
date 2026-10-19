@@ -1,5 +1,6 @@
 # Publications — peer-reviewed first, then working papers.
 # type: peer-reviewed | working-paper; jmp: true marks the job market paper.
+# abstract: verbatim from the public source (paragraphs separated by a blank line).
 - id: text-mining-food-insecurity
   type: peer-reviewed
   authors: Carneiro, B., Resce, G., Caravaggio, N., Santangelo, A. E., Ruscica, G., Tucci, G., … & Coffey, K.
@@ -12,6 +13,12 @@
   topics:
   - digital-methods
   - health
+  abstract: This study applies Natural Language Processing (NLP) and Machine Learning (ML) to investigate global historical trends in food security. Using USAID’s Famine Early Warning Systems Network’s
+    (FEWS NET) comprehensive reports spanning over two dozen countries, it explores prevalent dimensions such as shocks, outcomes, and coping capacities, offering insights into long-term food security conditions.
+    Results highlight the prevalence of market and climate impacts across the countries and period considered. Based on results from the topic classification, ML models were applied to determine the most
+    important factors that predict food insecurity. The analysis confirmed market shocks as the main predictors of food insecurity globally. The approach demonstrates the potential for extracting valuable
+    insights from narrative sources that can support decision-making and strategic planning. This integrated approach not only enhances understanding of food security but also presents a versatile tool
+    applicable beyond the context of humanitarian aid.
 - id: sroi-glass-industry-sdgs
   type: peer-reviewed
   authors: Pastore, L., Corvo, L., Santangelo, A. E., Resce, G., & Lelo, A.
@@ -22,6 +29,26 @@
     pdf: https://www.emerald.com/aaaj/article-pdf/38/5/1483/10060781/aaaj-04-2024-7041.pdf
   topics:
   - policy-evaluation
+  abstract: 'Purpose. This study investigates the contribution of the Italian glass industry to sustainability, with a focus on its alignment with selected Sustainable Development Goals (SDGs), specifically
+    SDGs 6, 7, 8, 12 and 13.
+
+
+    Design/methodology/approach. The research applies the Social Return on Investment (SROI) methodology to evaluate the socioeconomic and environmental impacts of the Italian glass supply chain from 2022
+    to 2050, with insights gained through extensive stakeholder engagement.
+
+
+    Findings. The results reveal a positive SROI ratio of 2.53, indicating substantial value creation across multiple dimensions. Social impacts emerge as the most significant, representing 44.2% of total
+    value generated, primarily through employment creation. Economic impacts account for 39.5%, driven by energy and material savings, while environmental impacts contribute 16.3% through decarbonisation
+    efforts and improved resource efficiency. The study demonstrates how the glass industry’s sustainability initiatives align with and contribute to multiple SDGs while also highlighting the challenges
+    in balancing environmental imperatives with socioeconomic outcomes.
+
+
+    Practical implications. The findings provide valuable insights for industry practitioners and policymakers on measuring and managing sustainability impacts in energy-intensive sectors, offering a replicable
+    framework for evaluating progress towards SDG targets.
+
+
+    Originality/value. This study contributes to the limited literature on sustainability accounting in energy-intensive sectors by providing a comprehensive assessment of the Italian glass industry’s contribution
+    to SDGs. It offers a novel application of SROI methodology to evaluate long-term sustainability impacts while demonstrating how traditional industries can transform their practices to support SDGs.'
 - id: financial-constraints-innovation
   type: peer-reviewed
   authors: Santangelo, A. E.
@@ -32,6 +59,10 @@
     pdf: https://www.jare-sh.com/downloads/nov_2023/santangelo.pdf
   topics:
   - innovation
+  abstract: The purpose of this study is to investigate the impact of financial constraints on firms' innovative activities. While this topic has been extensively studied in the economic literature, research,
+    and development (R&D) activities present peculiarities that tend to discourage investment due to the uncertainty of outcomes. As a consequence, a firm may have little or no incentive to invest in research,
+    despite the fact that it has the potential to increase the social surplus. To answer this research question, a probit regression analysis was conducted on a heterogeneous sample of European and Asian
+    firms to examine how the presence of financial constraints affects the probability of innovation success.
 - id: divario-nord-sud-molise
   type: peer-reviewed
   authors: Pietrovito, F., & Santangelo, A. E.
@@ -55,6 +86,12 @@
   topics:
   - policy-evaluation
   - digital-methods
+  abstract: This paper investigates the impact of European Cohesion Funds on the digitalization of local governments in Italy, using the quality of municipal websites as a proxy for e-government capacity.
+    Using web scraping techniques and a generalized Difference-in-Differences approach, the study examines whether municipalities that received targeted EU funding for digital networks and services experienced
+    improvements in website technological sophistication. The results show that cohesion funds have contributed to the adoption of modern web standards, particularly HTML5, and to the simplification of
+    website structure, indicating progress in the core aspects of digital infrastructure. These effects are especially pronounced in smaller municipalities and those located in the South and Inner Areas,
+    suggesting that the cohesion policy can support digital convergence in structurally disadvantaged contexts. However, the absence of systematic improvements in broader dimensions of web interactivity
+    points to the selective nature of these advancements.
 - id: digital-investment-government-services
   type: working-paper
   authors: Caravaggio, N., Resce, G., & Santangelo, A. E.
@@ -70,6 +107,12 @@
   topics:
   - policy-evaluation
   - digital-methods
+  abstract: 'This paper examines whether public investments in digital infrastructure improve citizen-facing government performance. We combine administrative data on the staggered rollout of a large-scale
+    digitalization program with high-frequency social-media data for Italian municipalities, using online communication as a proxy for public service delivery. Exploiting variation in treatment timing,
+    we estimate causal effects across access, usage, and outcomes. Digital investments increase municipalities’ online presence and communication activity: treated municipalities are more likely to adopt
+    social media, post more frequently, and generate higher aggregate engagement. However, improvements in effectiveness are limited in the short run. Engagement per post remains unchanged, and gains in
+    communication quality, measured by readability, emerge only gradually. These findings suggest that while digital investments expand activity, translating them into effective communication requires time
+    and complementary capabilities.'
 - id: meswi-municipal-wellbeing
   type: working-paper
   authors: Caravaggio, N., Resce, G., & Santangelo, A. E.
@@ -82,6 +125,11 @@
   topics:
   - territorial
   - policy-evaluation
+  abstract: This paper develops the Municipal Equitable and Sustainable Well-being Index (MESWI) for all Italian municipalities, extending the 12-domain BES framework to the local level through 49 indicators.
+    Results reveal substantial territorial heterogeneity that regional and provincial statistics may conceal. The North-South divide remains the dominant geographical pattern and is considerably stronger
+    than the difference between inner and non-inner areas. At the same time, municipalities within the same regions and territorial categories display markedly different well-being profiles. Remoteness
+    is associated with weaker services and socio-economic opportunities but also with stronger environmental performance. The MESWI provides a fine-grained picture of multidimensional well-being and a potential
+    information base for the programming, monitoring and evaluation of place-based policies.
 - id: competition-punctuality-high-speed-rail
   type: working-paper
   authors: Bergantino, A. S., Gabrielli, L., Resce, G., & Santangelo, A. E.
@@ -95,6 +143,10 @@
   topics:
   - policy-evaluation
   - territorial
+  abstract: This study tests whether competitive pressure improves operational efficiency by examining On-Time Performance (OTP) in the context of Italy’s High Speed Rail (HSR) liberalization. In light
+    of the distinction between the public train operations (Trenitalia/NTV-Italo) and the rail infrastructure entity (RFI), we build a panel of Trenitalia OTP using infrastructure punctuality statistics
+    and measure competition intensity by the entry of NTV-Italo. Using a multi-period event-study design encompassing entry of the competitor and OTP outcomes from 2020 to 2025, we find no robust improvement
+    in the incumbent’s OTP when competitive pressure increases. The analysis indicates that competitive entry, by itself, is not associated with systematic changes in observed delay outcomes.
 - id: fiscal-constraints-health-inequality
   type: working-paper
   authors: Pietrovito, F., Rancan, A., Resce, G., & Santangelo, A. E.
@@ -106,6 +158,12 @@
   cross_ref: proj-prin-health
   topics:
   - health
+  abstract: 'We conduct a bibliometric analysis to examine the evolution of health inequality research over nearly four decades (1986–2023), drawing data from Scopus, with the aim of analysing the influence
+    of economists’ contributions to this interdisciplinary topic. We collect a total of 3,228 peer-reviewed papers using the keywords: “Health”, “Inequality”, and Economics” (including variations such as
+    “economic” and “economy”). In the second part of the paper we assess the impact of external political and economic shocks, specifically the Fiscal Compact, on academic output related to health inequalities
+    issues. To address this objective, a Difference-in-Differences (DiD) approach is applied, comparing research trends in countries that faced severe austerity measures with those that did not experience
+    comparable fiscal constraints. Empirical analysis suggests that research output on health inequalities increased significantly in the aftermath of the Fiscal Compact in the affected countries. Our findings
+    highlight how economic policies and austerity measures can influence academic research priorities, potentially as a response to increased societal concerns.'
 - id: aim-mobility-incentives
   type: working-paper
   authors: Cicatiello, L., de Angelis, M., Gaeta, G. L., Prota, F., & Santangelo, A. E.

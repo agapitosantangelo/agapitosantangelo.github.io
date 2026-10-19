@@ -28,6 +28,7 @@ T = {  # etichette d'interfaccia
         "filter_all": "Tutti", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Metodi digitali", "health": "Sanità", "territorial": "Territorio",
         "innovation": "Innovazione", "institutions": "Istituzioni"},
+        "jmp_section": "Job Market Paper", "jmp_page": "Pagina del paper", "abstract": "Abstract",
         "filter_label": "Filtra per tema:", "filter_aria": "Filtri per tema",
         "filter_count": "{n} di {m} lavori",
         "meta_labels": {"funder": "Finanziatore", "period": "Periodo", "pi": "Responsabile",
@@ -44,6 +45,7 @@ T = {  # etichette d'interfaccia
         "education": "Education", "awards": "Awards & memberships",
         "training": "Advanced training",
         "updates_title": "Recent updates", "all_updates": "All updates →",
+        "jmp_section": "Job Market Paper", "jmp_page": "Paper page", "abstract": "Abstract",
         "filter_label": "Filter by topic:", "filter_aria": "Topic filters",
         "filter_count": "{n} of {m} works",
         "meta_labels": {"funder": "Funder", "period": "Period", "pi": "Principal investigator",
@@ -63,6 +65,7 @@ T = {  # etichette d'interfaccia
         "education": "Formación", "awards": "Reconocimientos y afiliaciones",
         "training": "Formación avanzada",
         "updates_title": "Actualizaciones recientes", "all_updates": "Todas las actualizaciones →",
+        "jmp_section": "Job Market Paper", "jmp_page": "Página del paper", "abstract": "Abstract",
         "filter_label": "Filtra por tema:", "filter_aria": "Filtros por tema",
         "filter_count": "{n} de {m} trabajos",
         "meta_labels": {"funder": "Financiador", "period": "Periodo", "pi": "Investigador principal",
@@ -116,7 +119,7 @@ def project_title(pid, lang):
     return L(_PROJECTS.get(pid, pid), lang)
 
 
-def pub_entry(p, lang, t):
+def pub_entry(p, lang, t, in_evidenza=False):
     tagcls = {"peer-reviewed": "peer", "working-paper": "wp"}.get(p["type"], "")
     taglbl = {"peer-reviewed": "Peer-reviewed", "working-paper": "Working paper"}[p["type"]]
     topics = " ".join(p.get("topics") or [])
@@ -124,7 +127,7 @@ def pub_entry(p, lang, t):
     h = [f'<li class="entry" id="pub-{p["id"]}" data-topics="{topics}">'
          f'<span class="entry-tag {tagcls}">{taglbl}</span>']
     title = esc(p["title"].rstrip("."))
-    if p.get("jmp"):
+    if p.get("jmp") and not in_evidenza:
         title += f' <em>(<a href="jmp.html">{t["jmp"]}</a>)</em>'
     h.append(f'{esc(p["authors"])} ({p["year"]}). <span class="entry-title">{title}.</span>')
     venue = L(p.get("venue"), lang)
@@ -132,9 +135,16 @@ def pub_entry(p, lang, t):
     line += links_html(p.get("links"), lang=lang)
     if p.get("doi"):
         line += f' · <a href="https://doi.org/{p["doi"]}">{t["doi_label"]} →</a>'
+    if p.get("jmp") and in_evidenza:
+        line += f' · <a href="jmp.html">{t["jmp_page"]} →</a>'
     if p.get("under_review"):
         line += f'<br>{t["under_review"]}: <em>{esc(p["under_review"])}</em>.'
     h.append(f'<span class="entry-venue">{line}</span>')
+    if p.get("abstract"):
+        # <details> nativo: si apre senza JavaScript, è accessibile e si stampa
+        paragrafi = "".join(f"<p>{esc(par.strip())}</p>" for par in p["abstract"].split("\n\n"))
+        aperto = " open" if in_evidenza else ""
+        h.append(f'<details class="abstract"{aperto}><summary>{t["abstract"]}</summary>{paragrafi}</details>')
     if p.get("cross_ref"):
         h.append(f'<div class="cross-ref">→ {t["project_link"]}: '
                  f'<a href="projects.html#{p["cross_ref"]}">{esc(project_title(p["cross_ref"], lang))}</a></div>')
@@ -153,13 +163,17 @@ def gen_research(lang, t):
         h.append(f'<button class="filter-btn" aria-pressed="false" data-filter="{key}">{lbl}</button>')
     h.append('<span class="filter-count" aria-live="polite"></span>')
     h.append('</div>')
+    jmp = [p for p in pubs if p.get("jmp")]
+    if jmp:
+        h += [f'<h2 class="jmp-heading">{t["jmp_section"]}</h2>', '<ul class="entries jmp-list">']
+        h += [pub_entry(p, lang, t, in_evidenza=True) for p in jmp]
+        h.append("</ul>")
     h += [f"<h2>{t['peer']}</h2>", '<ul class="entries">']
     h += [pub_entry(p, lang, t) for p in pubs if p["type"] == "peer-reviewed"]
     h.append("</ul>")
     h.append(f"<h2>{t['wp']}</h2>")
     h.append('<ul class="entries">')
-    wps = [p for p in pubs if p["type"] == "working-paper"]
-    wps.sort(key=lambda p: not p.get("jmp"))  # JMP in testa
+    wps = [p for p in pubs if p["type"] == "working-paper" and not p.get("jmp")]
     h += [pub_entry(p, lang, t) for p in wps]
     h.append("</ul>")
     h.append(f"<h2>{t['confpapers']}</h2>")
@@ -308,7 +322,8 @@ def gen_about(lang, t):
     h.append('<ul class="entries">')
     for tr in d["training"]:
         h.append(f'<li class="entry"><span class="entry-title">{esc(L(tr["title"], lang))}</span>'
-                 f'<span class="entry-venue">{esc(L(tr.get("venue"), lang) or "")}</span></li>')
+                 f'<span class="entry-venue">{esc(L(tr.get("venue"), lang) or "")}'
+                 f'{links_html(tr.get("links"), lang=lang)}</span></li>')
     h.append("</ul>")
     return "\n".join(h)
 
@@ -364,6 +379,9 @@ def gen_hero(lang, t):
          # a titolo di pagina e spostato in cima al documento
          f'<div class="h1-nome" role="heading" aria-level="1">{esc(d["name"])}</div>',
          f'<p class="affiliazione">{esc(L(d["affiliazione"], lang))}</p>',
+         (f'<p class="job-market"><strong>{esc(L(d["job_market"], lang))}</strong> '
+          f'<a href="jmp.html">{esc(L(d["job_market_link"], lang))} →</a></p>'
+          if d.get("job_market") else ""),
          f'<p class="lead-bio">{esc(L(d["lead"], lang))}</p>',
          '<hr>',
          bio,

@@ -174,12 +174,12 @@ education:
     it: Università del Molise · Conseguito con menzione Doctor Europaeus
     es: Universidad de Molise · Obtenido con mención Doctor Europaeus
   notes:
-    en: 'Thesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Public economics · Policy evaluation · Development economics · Data analytics. Visiting scholar
-      at Universitat Politècnica de València (Jan–Jul 2024, supervisor: Prof. Josep Domenech).'
-    it: 'Tesi: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economia pubblica · Valutazione delle politiche · Economia dello sviluppo · Data analytics.
-      Visiting scholar presso l''Universitat Politècnica de València (gen–lug 2024, tutor: Prof. Josep Domenech).'
-    es: 'Tesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Economía pública · Evaluación de políticas · Economía del desarrollo · Data analytics. Visiting
-      scholar en la Universitat Politècnica de València (ene–jul 2024, tutor: Prof. Josep Domenech).'
+    en: 'Thesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Supervisor: Prof. Giuliano Resce. Visiting PhD researcher at Universitat Politècnica de València
+      (Jan–Jul 2024, host: Prof. Josep Domenech). Public economics · Policy evaluation · Development economics · Data analytics.'
+    it: 'Tesi: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Relatore: Prof. Giuliano Resce. Visiting PhD researcher presso l''Universitat Politècnica de
+      València (gen–lug 2024, host: Prof. Josep Domenech). Economia pubblica · Valutazione delle politiche · Economia dello sviluppo · Data analytics.'
+    es: 'Tesis: Shocks, Public Policies, and Technological Progress: Four Essays on the Drivers of Innovation. Director: Prof. Giuliano Resce. Investigador doctoral visitante en la Universitat Politècnica
+      de València (ene–jul 2024, anfitrión: Prof. Josep Domenech). Economía pública · Evaluación de políticas · Economía del desarrollo · Data analytics.'
 - period: 2017 — 2019
   title:
     en: MSc in Management, Entrepreneurship & Innovation
@@ -190,9 +190,11 @@ education:
     it: Università del Molise — LM-77, con lode
     es: Universidad de Molise — LM-77, con honores
   notes:
-    en: Microeconomics, macroeconomics, institutional economics, econometrics.
-    it: Microeconomia, macroeconomia, economia istituzionale, econometria.
-    es: Microeconomía, macroeconomía, economía institucional, econometría.
+    en: 'Thesis: La relazione tra vincoli finanziari e innovazione: un''analisi su un campione di imprese (The relationship between financial constraints and innovation: an analysis of a sample of firms).
+      Supervisor: Prof. Filomena Pietrovito. Microeconomics, macroeconomics, institutional economics, econometrics.'
+    it: 'Tesi: La relazione tra vincoli finanziari e innovazione: un''analisi su un campione di imprese. Relatrice: Prof.ssa Filomena Pietrovito. Microeconomia, macroeconomia, economia istituzionale, econometria.'
+    es: 'Tesis: La relazione tra vincoli finanziari e innovazione: un''analisi su un campione di imprese (La relación entre restricciones financieras e innovación: un análisis sobre una muestra de empresas).
+      Directora: Prof.ª Filomena Pietrovito. Microeconomía, macroeconomía, economía institucional, econometría.'
 - period: 2019 — 2020
   title:
     en: Master in Global Marketing Communication & Made in Italy
@@ -232,6 +234,28 @@ awards:
     it: Revisore Legale — Ministero dell'Economia e delle Finanze (2023).
     es: Revisor Legal de Cuentas — Ministerio de Economía y Finanzas de Italia (2023).
 - tag:
+    en: Referee
+    it: Revisore
+    es: Revisor
+  text: The Annals of Regional Science · Italian Economic Journal · Research in International Business and Finance · PLOS ONE · Journal of Infrastructure, Policy and Development · The B.E. Journal of Economic
+    Analysis & Policy.
+- tag:
+    en: Organization
+    it: Organizzazione
+    es: Organización
+  text:
+    en: CARMA 2025 (Rome) · CARMA 2024 (Valencia) · HEAd'24 — 10th International Conference on Higher Education Advances.
+    it: CARMA 2025 (Roma) · CARMA 2024 (València) · HEAd'24 — 10th International Conference on Higher Education Advances.
+    es: CARMA 2025 (Roma) · CARMA 2024 (Valencia) · HEAd'24 — 10th International Conference on Higher Education Advances.
+- tag:
+    en: Languages
+    it: Lingue
+    es: Idiomas
+  text:
+    en: Italian (native) · English (C1) · Spanish (B1).
+    it: Italiano (madrelingua) · Inglese (C1) · Spagnolo (B1).
+    es: Italiano (nativo) · Inglés (C1) · Español (B1).
+- tag:
     en: Membership
     it: Affiliazione
     es: Afiliación
@@ -261,14 +285,16 @@ training:
     en: DataCamp (2026) — GeoPandas, spatial joins, CRS and projections, overlays, introduction to raster data
     it: DataCamp (2026) — GeoPandas, spatial join, sistemi di riferimento e proiezioni, overlay, introduzione ai dati raster
     es: DataCamp (2026) — GeoPandas, uniones espaciales, CRS y proyecciones, overlays, introducción a los datos ráster
-- title: NASA ARSET — Fundamentals of Remote Sensing
+- title: NASA ARSET — Fundamentals of Remote Sensing · Hyperspectral Data for Land and Coastal Systems
   venue:
     en: NASA Applied Remote Sensing Training Program (2026)
     it: NASA Applied Remote Sensing Training Program (2026)
     es: NASA Applied Remote Sensing Training Program (2026)
   links:
-  - label: Link
+  - label: Fundamentals of Remote Sensing
     url: https://www.earthdata.nasa.gov/learn/trainings/fundamentals-remote-sensing
+  - label: Hyperspectral Data
+    url: https://www.earthdata.nasa.gov/learn/trainings/hyperspectral-data-land-coastal-systems
 - title:
     en: EO Summer School — Satellite Data in Agricultural and Environmental Economics
     it: EO Summer School — Satellite Data in Agricultural and Environmental Economics

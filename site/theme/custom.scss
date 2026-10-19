@@ -149,6 +149,20 @@ h2 {
       color: $es-ink-mute;
       margin: 0 0 1.4rem;
     }
+    // job market: la prima cosa che una commissione deve sapere
+    .job-market {
+      font-family: $font-family-sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: $es-ink-soft;
+      background: rgba($es-pre, 0.09);
+      border-left: 3px solid $es-accent-h;
+      padding: 0.55rem 0.9rem;
+      margin: -0.6rem 0 1.4rem;
+      max-width: none;
+      strong { color: $es-ink; font-weight: 600; }
+      a { white-space: nowrap; }
+    }
     .lead-bio {
       font-size: 1.18rem;
       line-height: 1.55;
@@ -504,6 +518,48 @@ ul.entries {
   }
 }
 
+// Job Market Paper in testa alla pagina Ricerca
+h2.jmp-heading { color: $es-accent-h; border-bottom-color: $es-accent-h; }
+ul.entries.jmp-list li.entry {
+  background: $es-paper;
+  border: 1px solid $es-rule;
+  border-top: 3px solid $es-accent-h;
+  padding: 1rem 1.2rem 0.6rem;
+  max-width: none;
+  .entry-title { font-size: 1.12rem; }
+}
+
+// Abstract apribili: <details> nativo, niente JavaScript
+details.abstract {
+  margin: 0.45rem 0 0.1rem;
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: $font-family-sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $es-accent;
+    padding: 0.15rem 0;
+    &::-webkit-details-marker { display: none; }
+    &::before { content: "+"; font-size: 0.95rem; line-height: 1; width: 0.7rem; }
+    &:hover, &:focus-visible { color: $es-accent-h; }
+  }
+  &[open] summary::before { content: "−"; }
+  p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: $es-ink-soft;
+    border-left: 2px solid $es-rule;
+    padding-left: 0.9rem;
+    margin: 0.4rem 0 0.6rem;
+    max-width: 70ch;
+  }
+}
+
 // Filtri pubblicazioni (§13.3)
 .filter-bar {
   display: flex;
@@ -546,8 +602,10 @@ li.entry[hidden], section.level2[hidden] { display: none !important; }
 // Pre-footer "Get in touch" (generato da build_pages.py)
 // ------------------------------------------------------------
 .site-footer {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  // a tutta larghezza tramite la colonna "screen" della griglia di Quarto:
+  // 100vw includerebbe la barra di scorrimento e farebbe scorrere la pagina
+  // in orizzontale (visibile su Windows e ovunque le barre siano sempre attive)
+  grid-column: screen-start / screen-end;
   margin-top: 3rem;
   border-top: 1px solid $es-rule;
   background: $es-paper;

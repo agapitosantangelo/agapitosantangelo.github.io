@@ -49,11 +49,12 @@ bio:
     because it shows how these methods behave in practice.'
   es: 'Trabajo además como Data Analysis Strategist en Instant Analytics, aplicando text mining y machine learning al seguimiento en tiempo real de fenómenos socioeconómicos: un complemento útil a mi investigación
     académica, porque muestra cómo se comportan estos métodos en la práctica.'
-- it: Ho conseguito il dottorato in Economia all'Università del Molise con menzione Doctor Europaeus, con un periodo da visiting scholar alla Universitat Politècnica de València. Sono revisore per PLOS
-    ONE.
-  en: I hold a PhD in Economics from the University of Molise with the Doctor Europaeus distinction, including a visiting period at the Universitat Politècnica de València. I serve as a reviewer for PLOS
-    ONE.
-  es: Soy doctor en Economía por la Universidad de Molise con mención Doctor Europaeus, con una estancia como visiting scholar en la Universitat Politècnica de València. Soy revisor de PLOS ONE.
+- it: Ho conseguito il dottorato in Economia all'Università del Molise con menzione Doctor Europaeus, con un periodo da visiting scholar alla Universitat Politècnica de València. Sono revisore per sei riviste,
+    fra cui The Annals of Regional Science, Italian Economic Journal e PLOS ONE.
+  en: I hold a PhD in Economics from the University of Molise with the Doctor Europaeus distinction, including a visiting period at the Universitat Politècnica de València. I referee for six journals, including
+    The Annals of Regional Science, the Italian Economic Journal and PLOS ONE.
+  es: Soy doctor en Economía por la Universidad de Molise con mención Doctor Europaeus, con una estancia como visiting scholar en la Universitat Politècnica de València. Soy revisor de seis revistas, entre
+    ellas The Annals of Regional Science, Italian Economic Journal y PLOS ONE.
 links:
 - icon: email
   label: Email
@@ -79,3 +80,11 @@ links:
     en: CV (PDF)
     es: CV (PDF)
   url: ../assets/cv.pdf
+job_market:
+  it: Sono sul job market 2026–27 per posizioni accademiche e di policy.
+  en: I am on the 2026–27 job market for academic and policy positions.
+  es: Estoy en el job market 2026–27 para posiciones académicas y de política pública.
+job_market_link:
+  it: Il mio Job Market Paper
+  en: My Job Market Paper
+  es: Mi Job Market Paper
