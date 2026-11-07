@@ -1,4 +1,15 @@
 # News items — newest first.
+- id: climate-observatory
+  date: 2026-11
+  date_label:
+    en: Nov 2026
+    it: Nov 2026
+    es: Nov 2026
+  body:
+    en: 'New in the Portfolio: the Climate Observatory, seventy-five years of temperature, precipitation and snowfall for all 7,903 Italian municipalities from ERA5-Land, as anomalies against 1961–1990, with warming by elevation band and region. Explore it →'
+    it: 'Nuovo nel Portfolio: l''Osservatorio clima, settantacinque anni di temperatura, precipitazione e neve per tutti i 7.903 comuni italiani da ERA5-Land, come anomalie rispetto al 1961–1990, con il riscaldamento per fascia altimetrica e regione. Esploralo →'
+    es: 'Nuevo en el Portafolio: el Observatorio del clima, setenta y cinco años de temperatura, precipitación y nieve para los 7.903 municipios italianos a partir de ERA5-Land, como anomalías respecto a 1961–1990, con el calentamiento por franja altitudinal y región. Explóralo →'
+  link: https://agapitosantangelo.github.io/climate/
 - id: flood-story-map
   date: 2026-11
   date_label:
