@@ -1,0 +1,6 @@
+---
+title: "Portfolio"
+description: "Interactive maps and dashboards built on my research data: night lights of Italian municipalities, the 2026 World Cup, fuel prices, the Emilia-Romagna flood."
+---
+
+{{< include ../_generated/en/portfolio.html >}}

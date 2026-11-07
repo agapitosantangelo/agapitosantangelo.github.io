@@ -1,0 +1,6 @@
+---
+title: "Portfolio"
+description: "Mappe interattive e dashboard costruite sui dati della mia ricerca: luci notturne dei comuni italiani, Mondiale 2026, prezzi dei carburanti, alluvione in Emilia-Romagna."
+---
+
+{{< include ../_generated/it/portfolio.html >}}

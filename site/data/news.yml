@@ -1,4 +1,15 @@
 # News items — newest first.
+- id: nightlights-observatory
+  date: 2026-11
+  date_label:
+    en: Nov 2026
+    it: Nov 2026
+    es: Nov 2026
+  body:
+    en: 'New in the Portfolio: the Night Lights Observatory, an interactive map of night-time light for all 7,903 Italian municipalities, 2012–2024, from NASA Black Marble, with growth and decline by inner-area class. Explore it →'
+    it: 'Nuovo nel Portfolio: l''Osservatorio luci notturne, mappa interattiva della luce notturna di tutti i 7.903 comuni italiani, 2012–2024, dai dati NASA Black Marble, con crescita e declino per classe di area interna. Esplorala →'
+    es: 'Nuevo en el Portafolio: el Observatorio de luces nocturnas, mapa interactivo de la luz nocturna de los 7.903 municipios italianos, 2012–2024, a partir de NASA Black Marble, con crecimiento y declive por clase de área interna. Explóralo →'
+  link: https://agapitosantangelo.github.io/nightlights/
 - id: meswi-working-paper
   date: 2026-10
   date_label:

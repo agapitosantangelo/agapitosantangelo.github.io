@@ -741,3 +741,25 @@ li.entry[hidden], section.level2[hidden] { display: none !important; }
     .quando { padding-top: 0; }
   }
 }
+
+// ------------------------------------------------------------
+// Portfolio: griglia di schede con anteprima (data/portfolio.yml)
+// ------------------------------------------------------------
+.portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.2rem; }
+.portfolio-card {
+  background: $es-paper; border: 1px solid $es-rule; display: flex; flex-direction: column;
+  img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid $es-rule; display: block; }
+  .portfolio-body { padding: 1rem 1.2rem 1.1rem; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; flex-wrap: wrap; }
+  .project-title { font-size: 1.08rem; border: none; margin: 0; padding: 0; line-height: 1.3; &::before { content: none; } }
+  .project-status {
+    font-family: $font-family-sans-serif; font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase;
+    border: 1px solid $es-rule; padding: 0.15rem 0.55rem; white-space: nowrap;
+    &.ongoing   { border-color: $es-ok-line; color: $es-ok; }
+    &.published { border-color: $es-accent; color: $es-accent; }
+  }
+  .project-summary { color: $es-ink-soft; font-size: 0.92rem; margin: 0.5rem 0 0; max-width: none; }
+  .portfolio-stack { font-family: $font-family-sans-serif; font-size: 0.68rem; letter-spacing: 0.04em; color: $es-ink-mute; margin: 0.5rem 0 0; }
+  .portfolio-links { margin: 0.5rem 0 0; font-size: 0.92rem; }
+}
+@media (max-width: 880px) { .portfolio-grid { grid-template-columns: 1fr; } }

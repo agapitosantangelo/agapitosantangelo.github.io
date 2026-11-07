@@ -1,0 +1,6 @@
+---
+title: "Portafolio"
+description: "Mapas interactivos y paneles construidos sobre los datos de mi investigación: luces nocturnas de los municipios italianos, Mundial 2026, precios de los combustibles, inundación de Emilia-Romaña."
+---
+
+{{< include ../_generated/es/portfolio.html >}}

@@ -34,6 +34,7 @@ T = {  # etichette d'interfaccia
         "meta_labels": {"funder": "Finanziatore", "period": "Periodo", "pi": "Responsabile",
                         "role": "Ruolo", "methods": "Metodi"},
         "footer_title": "Contatti",
+        "portfolio_lead": "Mappe interattive e dashboard costruite sui dati della mia ricerca: prodotti, non paper, che mostrano gli strumenti che uso.",
         "doi_label": "DOI",
     },
     "en": {
@@ -51,6 +52,7 @@ T = {  # etichette d'interfaccia
         "meta_labels": {"funder": "Funder", "period": "Period", "pi": "Principal investigator",
                         "role": "Role", "methods": "Methods"},
         "footer_title": "Contact",
+        "portfolio_lead": "Interactive maps and dashboards built on my research data: products, not papers, that show the tools I work with.",
         "doi_label": "DOI",
         "filter_all": "All", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Digital methods", "health": "Health", "territorial": "Territorial",
@@ -71,6 +73,7 @@ T = {  # etichette d'interfaccia
         "meta_labels": {"funder": "Financiador", "period": "Periodo", "pi": "Investigador principal",
                         "role": "Rol", "methods": "Métodos"},
         "footer_title": "Contacto",
+        "portfolio_lead": "Mapas interactivos y paneles construidos sobre los datos de mi investigación: productos, no artículos, que muestran las herramientas que utilizo.",
         "doi_label": "DOI",
         "filter_all": "Todos", "filters": {"policy-evaluation": "Policy evaluation",
         "digital-methods": "Métodos digitales", "health": "Sanidad", "territorial": "Territorio",
@@ -328,6 +331,26 @@ def gen_about(lang, t):
     return "\n".join(h)
 
 
+def gen_portfolio(lang, t):
+    """Portfolio: schede con anteprima per mappe e dashboard (data/portfolio.yml)."""
+    h = [f'<p class="lead">{t["portfolio_lead"]}</p>', '<div class="portfolio-grid">']
+    for p in load("portfolio"):
+        h.append(f'<article class="portfolio-card" id="{p["id"]}">')
+        if p.get("image"):
+            h.append(f'<img src="../{p["image"]}" alt="{esc(L(p["title"], lang))}" loading="lazy" width="1200" height="750">')
+        h.append('<div class="portfolio-body">')
+        h.append(f'<div class="project-header"><h2 class="project-title">{esc(L(p["title"], lang))}</h2>'
+                 f'<span class="project-status {p["status"]}">{esc(L(p["status_label"], lang))}</span></div>')
+        h.append(f'<p class="project-summary">{esc(L(p["summary"], lang))}</p>')
+        if p.get("stack"):
+            h.append(f'<p class="portfolio-stack">{esc(p["stack"])}</p>')
+        if p.get("links"):
+            h.append(f'<p class="portfolio-links">{links_html(p["links"], lang=lang).strip()}</p>')
+        h.append('</div></article>')
+    h.append('</div>')
+    return "\n".join(h)
+
+
 def gen_dissemination(lang, t):
     h = []
     for sec in load("dissemination"):
@@ -432,7 +455,7 @@ def main():
             "research": gen_research, "projects": gen_projects,
             "talks": gen_talks, "teaching": gen_teaching,
             "about": gen_about, "dissemination": gen_dissemination,
-            "hero": gen_hero, "footer": gen_footer,
+            "hero": gen_hero, "footer": gen_footer, "portfolio": gen_portfolio,
         }
         for name, fn in pages.items():
             with open(os.path.join(out, name + ".html"), "w") as f:
