@@ -1,4 +1,5 @@
 ---
+aliases: [jmp.html]
 title: "Research"
 description: "Peer-reviewed publications, working papers and conference papers: causal inference, public-sector digitalisation, health, institutions and territory."
 ---

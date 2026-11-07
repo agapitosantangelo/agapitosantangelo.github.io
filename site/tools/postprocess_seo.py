@@ -56,7 +56,7 @@ def main():
         # Quarto emette già le home di lingua in forma /xx/ pulita: qui si
         # tolgono solo redirect di root, 404 e stub alias (idempotente)
         drop = re.compile(
-            r"\s*<url>\s*<loc>[^<]*(?:github\.io/|/index\.html|/404\.html|/conferences\.html)</loc>.*?</url>",
+            r"\s*<url>\s*<loc>[^<]*(?:github\.io/|/index\.html|/404\.html|/conferences\.html|/jmp\.html)</loc>.*?</url>",
             re.S)
         sm, dropped = drop.subn("", sm)
         # ripulisce eventuali voci compatte residue di versioni precedenti dello script

@@ -1,4 +1,5 @@
 ---
+aliases: [jmp.html]
 title: "Investigación"
 description: "Publicaciones, working papers y contribuciones a congresos: inferencia causal, digitalización del sector público, sanidad, instituciones y territorio."
 ---

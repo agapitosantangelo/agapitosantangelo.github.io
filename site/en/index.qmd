@@ -16,8 +16,8 @@ toc: false
 
 ::: {.featured-card}
 <span class="area">Policy evaluation · Digitalisation</span>
-<span class="titolo">[EU Cohesion Policy and Digital Public Services](jmp.html)</span>
-<span class="sintesi">Effects of cohesion funds on municipal digital services, using archived web data and quasi-experimental methods. <em>Job Market Paper.</em></span>
+<span class="titolo">[EU Cohesion Policy and Digital Public Services](research.html#pub-eu-cohesion-digital-public-services)</span>
+<span class="sintesi">Effects of cohesion funds on municipal digital services, using archived web data and quasi-experimental methods.</span>
 <span class="stato review">Under review</span>
 :::
 

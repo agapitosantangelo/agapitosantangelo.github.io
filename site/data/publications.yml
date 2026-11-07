@@ -1,5 +1,5 @@
 # Publications — peer-reviewed first, then working papers.
-# type: peer-reviewed | working-paper; jmp: true marks the job market paper.
+# type: peer-reviewed | working-paper.
 # abstract: verbatim from the source, in the paper's language; may be {it, en, es}
 # when translated (paragraphs separated by a blank line).
 - id: text-mining-food-insecurity
@@ -106,7 +106,6 @@
   links:
     pdf: http://web.unimol.it/progetti/repec/mol/ecsdps/ESDP25100.pdf
   under_review: Technological Forecasting and Social Change
-  jmp: true
   topics:
   - policy-evaluation
   - digital-methods
