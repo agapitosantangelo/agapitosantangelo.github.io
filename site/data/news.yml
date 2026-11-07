@@ -1,4 +1,15 @@
 # News items — newest first.
+- id: flood-story-map
+  date: 2026-11
+  date_label:
+    en: Nov 2026
+    it: Nov 2026
+    es: Nov 2026
+  body:
+    en: 'New in the Portfolio: Reading a flood from space, a story map on the May 2023 Emilia-Romagna flood, from Maxar before/after imagery and a sediment mask validated against Copernicus EMS to building exposure and house-price effects by OMI zone. Explore it →'
+    it: 'Nuovo nel Portfolio: Leggere un''alluvione dallo spazio, mappa narrativa sull''alluvione dell''Emilia-Romagna del maggio 2023, dalle immagini Maxar prima/dopo e dalla maschera del sedimento validata su Copernicus EMS fino all''esposizione degli edifici e agli effetti sui prezzi delle case per zona OMI. Esplorala →'
+    es: 'Nuevo en el Portafolio: Leer una inundación desde el espacio, mapa narrativo sobre la inundación de Emilia-Romaña de mayo de 2023, de las imágenes Maxar antes/después y la máscara de sedimentos validada con Copernicus EMS a la exposición de edificios y los efectos en los precios de la vivienda por zona OMI. Explóralo →'
+  link: https://agapitosantangelo.github.io/flood/
 - id: nightlights-observatory
   date: 2026-11
   date_label:

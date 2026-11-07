@@ -1,5 +1,5 @@
 # Portfolio — interactive maps and dashboards (non-research products that show the toolkit).
-# Language-dependent fields use {en, it, es}. Order = display order.
+# Language-dependent fields use {en, it, es}. Order = display order. The first link makes the whole card clickable.
 - id: nightlights
   status: published
   status_label:
@@ -11,30 +11,30 @@
     it: Osservatorio luci notturne — comuni italiani, 2012–2024
     es: Observatorio de luces nocturnas — municipios italianos, 2012–2024
   summary:
-    en: Interactive map of night-time light radiance for all 7,903 Italian municipalities from NASA Black Marble, with
-      a year slider, municipal time series, growth and decline by inner-area (SNAI) class, and the key results of my
-      ongoing work on whether night light measures inequality.
+    en: Interactive map of night-time light radiance for all 7,903 Italian municipalities from NASA Black Marble,
+      with a year slider, municipal time series, growth and decline by inner-area (SNAI) class, and the key results
+      of my ongoing work on whether night light measures inequality.
     it: Mappa interattiva della radianza notturna di tutti i 7.903 comuni italiani dai dati NASA Black Marble, con
       slider temporale, serie storica per comune, crescita e declino per classe di area interna (SNAI) e i risultati
       principali del mio lavoro in corso su luce notturna e disuguaglianza.
-    es: Mapa interactivo de la radiancia nocturna de los 7.903 municipios italianos a partir de NASA Black Marble, con
-      control temporal, series por municipio, crecimiento y declive por clase de área interna (SNAI) y los resultados
+    es: Mapa interactivo de la radiancia nocturna de los 7.903 municipios italianos a partir de NASA Black Marble,
+      con control temporal, series por municipio, crecimiento y declive por clase de área interna (SNAI) y los resultados
       principales de mi trabajo en curso sobre luz nocturna y desigualdad.
   stack: MapLibre GL · NASA Black Marble VNP46A4 · ISTAT · SNAI · Python
   image: assets/portfolio/nightlights.png
   links:
-    - label:
-        en: Open the observatory
-        it: Apri l'osservatorio
-        es: Abrir el observatorio
-      url: https://agapitosantangelo.github.io/nightlights/
-    - label:
-        en: Light inequality results
-        it: Risultati su luce e disuguaglianza
-        es: Resultados sobre luz y desigualdad
-      url: https://agapitosantangelo.github.io/nightlights/#inequality
-    - label: GitHub
-      url: https://github.com/agapitosantangelo/nightlights
+  - label:
+      en: Open the observatory
+      it: Apri l'osservatorio
+      es: Abrir el observatorio
+    url: https://agapitosantangelo.github.io/nightlights/
+  - label:
+      en: Light inequality results
+      it: Risultati su luce e disuguaglianza
+      es: Resultados sobre luz y desigualdad
+    url: https://agapitosantangelo.github.io/nightlights/#inequality
+  - label: GitHub
+    url: https://github.com/agapitosantangelo/nightlights
 - id: mondiale2026
   status: published
   status_label:
@@ -49,23 +49,23 @@
     en: With Instant Analytics. Interactive dashboard combining the official draw and FIFA rankings with 10,000
       Monte Carlo tournament simulations, favourites, head-to-head comparisons, team paths and a simulated bracket,
       all running in the browser (English and Italian).
-    it: Con Instant Analytics. Dashboard interattiva che combina il sorteggio ufficiale e il ranking FIFA con
-      10.000 simulazioni Monte Carlo del torneo, favoriti, testa a testa, percorso di ogni squadra e tabellone
-      simulato, tutto nel browser.
-    es: Con Instant Analytics. Panel interactivo que combina el sorteo oficial y el ranking FIFA con 10.000
-      simulaciones Monte Carlo del torneo, favoritos, cara a cara, recorrido de cada selección y cuadro simulado,
-      todo en el navegador (en inglés e italiano).
+    it: Con Instant Analytics. Dashboard interattiva che combina il sorteggio ufficiale e il ranking FIFA con 10.000
+      simulazioni Monte Carlo del torneo, favoriti, testa a testa, percorso di ogni squadra e tabellone simulato,
+      tutto nel browser.
+    es: Con Instant Analytics. Panel interactivo que combina el sorteo oficial y el ranking FIFA con 10.000 simulaciones
+      Monte Carlo del torneo, favoritos, cara a cara, recorrido de cada selección y cuadro simulado, todo en el
+      navegador (en inglés e italiano).
   stack: HTML/JS · Monte Carlo simulation · FIFA data
   image: assets/portfolio/mondiale2026.png
   links:
-    - label:
-        en: Open the dashboard
-        it: Apri la dashboard
-        es: Abrir el panel
-      url:
-        en: https://agapitosantangelo.github.io/mondiale2026/en/
-        it: https://agapitosantangelo.github.io/mondiale2026/
-        es: https://agapitosantangelo.github.io/mondiale2026/en/
+  - label:
+      en: Open the dashboard
+      it: Apri la dashboard
+      es: Abrir el panel
+    url:
+      en: https://agapitosantangelo.github.io/mondiale2026/en/
+      it: https://agapitosantangelo.github.io/mondiale2026/
+      es: https://agapitosantangelo.github.io/mondiale2026/en/
 - id: carburanti
   status: published
   status_label:
@@ -78,43 +78,52 @@
     es: Combustibles — la clasificación de las provincias
   summary:
     en: With Instant Analytics. A dashboard that rebuilds itself every morning from the Ministry's Osservaprezzi
-      data on more than 20,000 stations, with a ranking and map of all 110 provinces, the self-service vs
-      full-service gap, brand comparison and the price distribution (in Italian).
+      data on more than 20,000 stations, with a ranking and map of all 110 provinces, the self-service vs full-service
+      gap, brand comparison and the price distribution (in Italian).
     it: Con Instant Analytics. Dashboard che si ricostruisce da sola ogni mattina sui dati MIMIT Osservaprezzi di
       oltre 20.000 impianti, con classifica e mappa delle 110 province, divario fra self e servito, confronto fra
       bandiere e distribuzione dei prezzi.
-    es: Con Instant Analytics. Panel que se reconstruye solo cada mañana con los datos del Osservaprezzi del
-      MIMIT de más de 20.000 gasolineras, con clasificación y mapa de las 110 provincias, diferencia entre
-      autoservicio y servicio asistido, comparación entre marcas y distribución de precios (en italiano).
+    es: Con Instant Analytics. Panel que se reconstruye solo cada mañana con los datos del Osservaprezzi del MIMIT
+      de más de 20.000 gasolineras, con clasificación y mapa de las 110 provincias, diferencia entre autoservicio
+      y servicio asistido, comparación entre marcas y distribución de precios (en italiano).
   stack: HTML/JS · MIMIT Osservaprezzi open data · automated daily pipeline
   image: assets/portfolio/carburanti.png
   links:
-    - label:
-        en: Open the dashboard
-        it: Apri la dashboard
-        es: Abrir el panel
-      url: https://agapitosantangelo.github.io/carburanti/
+  - label:
+      en: Open the dashboard
+      it: Apri la dashboard
+      es: Abrir el panel
+    url: https://agapitosantangelo.github.io/carburanti/
 - id: alluvione
-  status: ongoing
+  status: published
   status_label:
-    en: In progress
-    it: In lavorazione
-    es: En preparación
+    en: Live · 2026
+    it: Online · 2026
+    es: En línea · 2026
   title:
-    en: Emilia-Romagna 2023 flood — detecting the event from satellite imagery and measuring its footprint
-    it: Alluvione Emilia-Romagna 2023 — rilevare l'evento dalle immagini satellitari e misurarne l'impronta
-    es: Inundación de Emilia-Romaña 2023 — detectar el evento desde imágenes satelitales y medir su huella
+    en: Reading a flood from space — Emilia-Romagna, May 2023
+    it: Leggere un'alluvione dallo spazio — Emilia-Romagna, maggio 2023
+    es: Leer una inundación desde el espacio — Emilia-Romaña, mayo de 2023
   summary:
-    en: Very-high-resolution Maxar Open Data imagery before and after the May 2023 flood, a calibrated sediment
-      mask and landslide detection, validated against the Copernicus EMS delineation, then exposure of buildings
-      and services (Overture) and the effect on real-estate prices by OMI zone. Interactive map coming soon.
-    it: Immagini Maxar Open Data ad altissima risoluzione prima e dopo l'alluvione del maggio 2023, maschera
-      calibrata del sedimento e rilevamento delle frane, validati sulla perimetrazione Copernicus EMS, poi
-      esposizione di edifici e servizi (Overture) ed effetto sui prezzi immobiliari per zona OMI. Mappa
-      interattiva in arrivo.
-    es: Imágenes Maxar Open Data de muy alta resolución antes y después de la inundación de mayo de 2023,
-      máscara calibrada de sedimentos y detección de deslizamientos, validadas con la delimitación de
-      Copernicus EMS, y después exposición de edificios y servicios (Overture) y efecto en los precios
-      inmobiliarios por zona OMI. Mapa interactivo próximamente.
-  stack: Maxar Open Data · Copernicus EMS · Overture Maps · OMI · Python/GDAL
+    en: 'A story map from the satellite pixel to the economic ledger: Maxar before/after imagery, a calibrated sediment
+      mask validated against the Copernicus EMS footprint, landslide candidates in the hills, exposure of buildings
+      and services, the null result on annual income and population, and the transitory discount on house prices
+      by OMI zone.'
+    it: 'Una mappa narrativa dal pixel satellitare ai dati economici: immagini Maxar prima/dopo, maschera del sedimento
+      calibrata e validata sulla perimetrazione Copernicus EMS, frane candidate in collina, esposizione di edifici
+      e servizi, il risultato nullo su reddito e popolazione annuali e lo sconto transitorio sui prezzi delle case
+      per zona OMI.'
+    es: 'Un mapa narrativo del píxel satelital a los datos económicos: imágenes Maxar antes/después, máscara de
+      sedimentos calibrada y validada con la delimitación de Copernicus EMS, deslizamientos candidatos en las colinas,
+      exposición de edificios y servicios, el resultado nulo sobre renta y población anuales y el descuento transitorio
+      en los precios de la vivienda por zona OMI.'
+  stack: MapLibre GL · Maxar Open Data · Copernicus EMS · Overture Maps · OMI · Python/GDAL
   image: assets/portfolio/alluvione.jpg
+  links:
+  - label:
+      en: Open the story map
+      it: Apri la mappa narrativa
+      es: Abrir el mapa narrativo
+    url: https://agapitosantangelo.github.io/flood/
+  - label: GitHub
+    url: https://github.com/agapitosantangelo/flood

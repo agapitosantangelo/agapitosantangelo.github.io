@@ -336,10 +336,16 @@ def gen_portfolio(lang, t):
     h = [f'<p class="lead">{t["portfolio_lead"]}</p>', '<div class="portfolio-grid">']
     for p in load("portfolio"):
         h.append(f'<article class="portfolio-card" id="{p["id"]}">')
+        # la prima URL rende cliccabili anteprima e titolo (card intera)
+        first = L(p["links"][0]["url"], lang) if p.get("links") else None
+        title = esc(L(p["title"], lang))
+        if first:
+            title = f'<a class="card-link" href="{first}">{title}</a>'
         if p.get("image"):
-            h.append(f'<img src="../{p["image"]}" alt="{esc(L(p["title"], lang))}" loading="lazy" width="1200" height="750">')
+            img = f'<img src="../{p["image"]}" alt="{esc(L(p["title"], lang))}" loading="lazy" width="1200" height="750">'
+            h.append(f'<a class="card-img" href="{first}" tabindex="-1" aria-hidden="true">{img}</a>' if first else img)
         h.append('<div class="portfolio-body">')
-        h.append(f'<div class="project-header"><h2 class="project-title">{esc(L(p["title"], lang))}</h2>'
+        h.append(f'<div class="project-header"><h2 class="project-title">{title}</h2>'
                  f'<span class="project-status {p["status"]}">{esc(L(p["status_label"], lang))}</span></div>')
         h.append(f'<p class="project-summary">{esc(L(p["summary"], lang))}</p>')
         if p.get("stack"):
