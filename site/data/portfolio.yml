@@ -35,6 +35,36 @@
     url: https://agapitosantangelo.github.io/nightlights/#inequality
   - label: GitHub
     url: https://github.com/agapitosantangelo/nightlights
+- id: reach
+  status: published
+  status_label:
+    en: Live · 2026
+    it: Online · 2026
+    es: En línea · 2026
+  title:
+    en: Reach Observatory — essential services by car, Italian municipalities
+    it: Osservatorio raggiungibilità — servizi essenziali in auto, comuni italiani
+    es: Observatorio de accesibilidad — servicios esenciales en coche, municipios italianos
+  summary:
+    en: Pick a municipality and drag a travel-time threshold, chronotrains-style, to see which hospitals (DEA I/II),
+      upper-secondary schools and railway stations it reaches by car, with the road routes and counts; the idle map
+      shows minutes to the nearest service for all 7,896 municipalities, with the SNAI inner-area classes.
+    it: Scegli un comune e muovi la soglia di tempo, come in chronotrains, per vedere quali ospedali (DEA I/II),
+      scuole superiori e stazioni raggiunge in auto, con le tratte stradali e i conteggi; la mappa di base mostra i
+      minuti al servizio più vicino per tutti i 7.896 comuni, con le classi SNAI delle aree interne.
+    es: Elige un municipio y mueve el umbral de tiempo, al estilo chronotrains, para ver qué hospitales (DEA I/II),
+      institutos de secundaria y estaciones de tren alcanza en coche, con las rutas y los recuentos; el mapa base
+      muestra los minutos al servicio más cercano para los 7.896 municipios, con las clases SNAI de áreas interiores.
+  stack: MapLibre GL · OSRM · OpenStreetMap · Ministero della Salute · MIM · RFI · Python
+  image: assets/portfolio/reach.png
+  links:
+  - label:
+      en: Open the observatory
+      it: Apri l'osservatorio
+      es: Abrir el observatorio
+    url: https://agapitosantangelo.github.io/reach/
+  - label: GitHub
+    url: https://github.com/agapitosantangelo/reach
 - id: climate
   status: published
   status_label:

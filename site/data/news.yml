@@ -1,4 +1,15 @@
 # News items — newest first.
+- id: reach-observatory
+  date: 2026-11
+  date_label:
+    en: Nov 2026
+    it: Nov 2026
+    es: Nov 2026
+  body:
+    en: 'New in the Portfolio: the Reach Observatory, a chronotrains-style map of car access to hospitals, upper-secondary schools and railway stations for all 7,896 Italian municipalities: pick a municipality, drag the threshold and see what it reaches, route by route. Explore it →'
+    it: 'Nuovo nel Portfolio: l''Osservatorio raggiungibilità, una mappa in stile chronotrains dell''accesso in auto a ospedali, scuole superiori e stazioni per tutti i 7.896 comuni italiani: scegli un comune, muovi la soglia e guarda cosa raggiunge, tratta per tratta. Esploralo →'
+    es: 'Nuevo en el Portafolio: el Observatorio de accesibilidad, un mapa al estilo chronotrains del acceso en coche a hospitales, institutos y estaciones de tren para los 7.896 municipios italianos: elige un municipio, mueve el umbral y mira qué alcanza, ruta por ruta. Explóralo →'
+  link: https://agapitosantangelo.github.io/reach/
 - id: climate-observatory
   date: 2026-11
   date_label:
