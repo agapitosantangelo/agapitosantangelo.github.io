@@ -22,9 +22,9 @@ toc: false
 :::
 
 ::: {.featured-card}
-<span class="area">Bienestar territorial · Datos satelitales</span>
+<span class="area">Bienestar territorial · Índices compuestos</span>
 <span class="titolo">[The Italian Municipality Equitable and Sustainable Well-being Index (MESWI)](research.html#pub-meswi-municipal-wellbeing)</span>
-<span class="sintesi">Un índice de bienestar equitativo y sostenible para los 7.900 municipios italianos: 49 indicadores en 12 dominios, construido sobre datos satelitales y administrativos.</span>
+<span class="sintesi">Un índice de bienestar equitativo y sostenible para los 7.896 municipios italianos: 49 indicadores en 12 dominios, a partir de fuentes estadísticas y administrativas.</span>
 <span class="stato published">Preprint · arXiv</span>
 :::
 

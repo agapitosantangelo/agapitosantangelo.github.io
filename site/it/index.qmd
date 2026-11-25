@@ -22,9 +22,9 @@ toc: false
 :::
 
 ::: {.featured-card}
-<span class="area">Benessere territoriale · Dati satellitari</span>
+<span class="area">Benessere territoriale · Indici compositi</span>
 <span class="titolo">[The Italian Municipality Equitable and Sustainable Well-being Index (MESWI)](research.qmd#pub-meswi-municipal-wellbeing)</span>
-<span class="sintesi">Un indice di benessere equo e sostenibile per tutti i 7.900 comuni italiani: 49 indicatori in 12 domini, costruito su dati satellitari e amministrativi.</span>
+<span class="sintesi">Un indice di benessere equo e sostenibile per tutti i 7.896 comuni italiani: 49 indicatori in 12 domini, da fonti statistiche e amministrative.</span>
 <span class="stato published">Preprint · arXiv</span>
 :::
 

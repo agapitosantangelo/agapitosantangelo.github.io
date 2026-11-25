@@ -35,14 +35,14 @@ bio:
   es: Gran parte de mi trabajo reciente estudia cómo la digitalización transforma el sector público — de los fondos de cohesión europeos a los servicios digitales municipales — con diseños difference-in-differences,
     datos de panel y trazas digitales de archivo. También trabajo sobre sanidad, instituciones y dinámicas territoriales.
 - it: 'Da ultimo ho aperto una linea di ricerca geospaziale: ho costruito un panel di tutti i 7.900 comuni italiani a partire da venti famiglie di fonti satellitari e amministrative — luci notturne VIIRS,
-    GHSL, ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — estratte via Earth Engine con pipeline riproducibili. Su quella base nasce il MESWI, l''indice di benessere equo e
-    sostenibile dei comuni italiani: 49 indicatori in 12 domini.'
+    GHSL, ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — estratte via Earth Engine con pipeline riproducibili. Con Nicola Caravaggio e Giuliano Resce ho sviluppato inoltre il MESWI,
+    l''indice di benessere equo e sostenibile dei comuni italiani: 49 indicatori in 12 domini, da fonti statistiche e amministrative.'
   en: 'More recently I opened a geospatial research line: I built a panel of all 7,900 Italian municipalities from twenty families of satellite and administrative sources — VIIRS night-time lights, GHSL,
-    ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — extracted through Earth Engine with reproducible pipelines. On that base sits the MESWI, an equitable and sustainable well-being
-    index for every Italian municipality: 49 indicators across 12 domains.'
+    ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — extracted through Earth Engine with reproducible pipelines. With Nicola Caravaggio and Giuliano Resce I also developed the MESWI,
+    an equitable and sustainable well-being index for every Italian municipality: 49 indicators across 12 domains, drawn from statistical and administrative sources.'
   es: 'Más recientemente abrí una línea de investigación geoespacial: he construido un panel de los 7.900 municipios italianos a partir de veinte familias de fuentes satelitales y administrativas — luces
-    nocturnas VIIRS, GHSL, ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — extraídas mediante Earth Engine con pipelines reproducibles. Sobre esa base se apoya el MESWI, un
-    índice de bienestar equitativo y sostenible para todos los municipios italianos: 49 indicadores en 12 dominios.'
+    nocturnas VIIRS, GHSL, ESA WorldCover, Hansen Global Forest Change, MODIS, Sentinel-5P, ERA5-Land — extraídas mediante Earth Engine con pipelines reproducibles. Con Nicola Caravaggio y Giuliano Resce he desarrollado además el MESWI,
+    un índice de bienestar equitativo y sostenible para todos los municipios italianos: 49 indicadores en 12 dominios, a partir de fuentes estadísticas y administrativas.'
 - it: 'Lavoro inoltre come Data Analysis Strategist per Instant Analytics, applicando text mining e machine learning al monitoraggio in tempo reale di fenomeni socioeconomici: un complemento utile alla
     ricerca accademica, perché mostra come questi metodi si comportano nella pratica.'
   en: 'I also work as a Data Analysis Strategist at Instant Analytics, applying text mining and machine learning to real-time monitoring of socioeconomic phenomena: a useful complement to my academic research,
