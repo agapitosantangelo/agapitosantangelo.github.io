@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.primo.outputs.page_url || steps.secondo.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -32,9 +32,24 @@ jobs:
           # il sito pubblicato è l'output Quarto committato nel repo
           path: site/_site
 
-      - id: deployment
+      # GitHub a volte elenca l'artefatto appena caricato con 0,5-46 secondi di
+      # ritardo ("No artifacts named github-pages", issue aperta di deploy-pages).
+      # Si aspetta, e se non basta si riprova una volta.
+      - run: sleep 20
+
+      - id: primo
+        continue-on-error: true
         uses: actions/deploy-pages@v4
         with:
           # Il workflow gestito da GitHub si arrende dopo 10 minuti (600000 ms).
           # Qui aspettiamo fino a 30 minuti perché la coda di Pages si liberi.
+          timeout: 1800000
+
+      - if: steps.primo.outcome == 'failure'
+        run: sleep 60
+
+      - id: secondo
+        if: steps.primo.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
           timeout: 1800000
